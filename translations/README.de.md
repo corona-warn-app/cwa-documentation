@@ -26,7 +26,7 @@ Wir entwickeln diese Anwendung für Deutschland. Wir möchten so offen und trans
 Dieses Repository enthält die Entwickler:innendokumentation und zugehörige Inhalte.
 
 ### Projektumfang (Scoping-Dokument)
-Der Projektumfang wurde gemeinsam von der Deutschen Telekom AG sowie der SAP SE als Auftragnehmer und der deutschen Bundesregierung sowie dem Robert-Koch-Institut als Auftraggeber festgelegt. Der Projektumfang könnte sich im Laufe der Zeit ändern, wenn neue Anforderungen einbezogen werden müssen oder wenn sich bestehende Anforderungen ändern. Wir begrüßen Rückmeldungen zu allen Bestandteilen dieses Dokuments zum Projektumfang. Allerdings müssen zusätzliche Funktionen oder andere inhaltliche Änderungen, die über das Beheben von Grammatik- oder Schreibfehlern hinausgehen, zwischen den Partnern abgestimmt werden bevor sie in das Dokument aufgenommen werden können. Vielen Dank für Ihr Verständnis!
+Der Projektumfang wurde gemeinsam von der Deutschen Telekom AG sowie der SAP SE als Auftragnehmende und der deutschen Bundesregierung sowie dem Robert-Koch-Institut als Auftraggebende festgelegt. Der Projektumfang könnte sich im Laufe der Zeit ändern, wenn neue Anforderungen einbezogen werden müssen oder wenn sich bestehende Anforderungen ändern. Wir begrüßen Rückmeldungen zu allen Bestandteilen dieses Dokuments zum Projektumfang. Allerdings müssen zusätzliche Funktionen oder andere inhaltliche Änderungen, die über das Beheben von Grammatik- oder Schreibfehlern hinausgehen, zwischen den Partner:innen abgestimmt werden bevor sie in das Dokument aufgenommen werden können. Vielen Dank für Ihr Verständnis!
 - [Corona-Warn-App - Scoping-Dokument](scoping_document.de.md)
 
 ## Lizenzierung
