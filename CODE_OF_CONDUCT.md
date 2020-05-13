@@ -55,8 +55,8 @@ Given that community leaders have such broad enforcing rights, it is necessary t
 have an election mechanism for these. Otherwise, it is expected that said leaders
 may misuse their rights and apply arbitrary SJW-influenced pattern-matching to
 criticism or other free speech to suppress those not in line with political
-correctness. Note that politcal correctness is just another word for consorship.
-We will see how the conflict between the states "Being respectful of differing opinions,r
+correctness. Note that politcal correctness is just another word for censorship.
+We will see how the conflict between the states "Being respectful of differing opinions,
 viewpoints, and experiences" and reality evolves, i.e. how this PR is treated.
 
 ## Scope
