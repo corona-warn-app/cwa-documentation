@@ -64,7 +64,7 @@ Die Phase der Anwendung ist in vier weitere Bereiche unterteilt, in welchen der 
 
 2. **Kontaktfall**
 
-   Im festgestellten Kontaktfall zu infizierten Personen erhält der App-Nutzer jeweils eine Benachrichtigung und verhaltensbezogene Empfehlungen. Hier kann zum Beispiel die Kontaktaufnahme mit der Hausärtzin/dem Hausarzt, mit dem zuständigen Gesundheitsamt und/oder die freiwillige häusliche Isolation empfohlen werden.
+   Im festgestellten Kontaktfall zu infizierten Personen erhält der App-Nutzer jeweils eine Benachrichtigung und verhaltensbezogene Empfehlungen. Hier kann zum Beispiel die Kontaktaufnahme mit der Hausärztin/dem Hausarzt, mit dem zuständigen Gesundheitsamt und/oder die freiwillige häusliche Isolation empfohlen werden.
 
 3. **Testing**
 
