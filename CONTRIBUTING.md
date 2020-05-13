@@ -1,6 +1,6 @@
 # Contributing
 
-## Code of conduct
+## Code of Conduct
 
 All members of the project community must abide by the [Contributor Covenant, version 2.0](CODE_OF_CONDUCT.md).
 Only by respecting each other we can develop a productive, collaborative community.
@@ -8,7 +8,7 @@ Instances of abusive, harassing, or otherwise unacceptable behavior may be repor
 
 We appreciate your courtesy of avoiding political questions here. Issues which are not related to the project itself will be closed by our community managers. 
 
-## Engaging in our project
+## Engaging in Our Project
 
 We use GitHub to manage reviews of pull requests.
 
