@@ -24,7 +24,7 @@ Dieses Dokument beschreibt die funktionalen Anforderungen an die Gestaltung der 
 
 In der Gesamtplanung ist die Veröffentlichung weiterer Dokumente aus der Entwicklung vorgesehen, um frühzeitig Rückmeldungen zu erhalten und gegebenenfalls aufzunehmen. Nachfolgend werden zunächst das Release-Architektur-Dokument  sowie der Backend Source Code alpha verfügbar gemacht.
 
-Die Definition und Gliederung der Anforderungen folgen einer nutzerzentrierten Methodik. Dabei erfolgt die Gestaltung des gesamten Prozessablaufs aus Sicht der jeweiligen Benutzers der App bzw. der im Prozess eingebundenen Stakeholder. Das Ziel ist es, die Bedürfnisse der Nutzer so abzubilden, dass eine hohe Akzeptanz erreicht wird, und die jeweiligen Funktionen intuitiv bedienbar sind.
+Die Definition und Gliederung der Anforderungen folgen einer nutzerzentrierten Methodik. Dabei erfolgt die Gestaltung des gesamten Prozessablaufs aus Sicht der jeweiligen Benutzer der App bzw. der im Prozess eingebundenen Stakeholder. Das Ziel ist es, die Bedürfnisse der Nutzer so abzubilden, dass eine hohe Akzeptanz erreicht wird, und die jeweiligen Funktionen intuitiv bedienbar sind.
 
 Anhand einer User Journey (Kundenreise) sind die Interaktionspunkte und das Erlebnis der Nutzer aufgezeigt. Die daraus entstehenden Anforderungen werden sogenannten Epics (Beschreibung einer Anforderung auf einer hohen Abstraktionsebene) zugeordnet. Die Epics beschreiben die einzelnen Kontakt-Ereignisse sowie übergreifende Funktionalitäten im gesamten Prozess, die für die Nutzung und Akzeptanz der App erforderlich sind. Aus den Epic heraus werden die detaillierten Anforderungen in Form sogenannter User Stories (eine in Alltagssprache formulierte Software-Anforderung) abgeleitet. Die einzelnen Anforderungen werden so strukturiert in den Entwicklungsprozess gebracht.
 
@@ -114,7 +114,7 @@ Die zugehörigen Akzeptanzkriterien ergänzen die Spezifikation der Anforderunge
 | E01.03          | Als App-Nutzer möchte ich bei erstmaliger Nutzung der Applikation gefragt werden, ob ich der Erstellung pseudonymer IDs und deren Aussendung an Geräte in meiner Nähe durch die App zustimme, damit ich über die Funktionsweise der Applikation informiert bin. | 1. Eine Bestätigung der Erstellung pseudonymer IDs und deren Aussendung an Geräte in der Nähe durch die Applikation ist Voraussetzung für die App Nutzung. <hr/> 2. Nach der erstmaligen Nutzung erfolgt die Abfrage nicht.
 | E01.04          | Als App-Nutzer möchte ich bei erstmaliger Nutzung der Applikation gefragt werden, ob die Applikation auf die Bluetooth Funktion des Smartphones zugreifen darf, damit ich die Mobiltelefonseitige Nutzung der Applikation kontrollieren kann. | 1. Eine Bestätigung der Bluetooth Nutzung (BLE) erfolgt durch die Nutzung der Applikation.
 | E01.05          | Als App-Nutzer möchte ich bei erstmaliger Nutzung der Applikation gefragt werden, ob die Applikation mir Benachrichtigungen schicken darf, damit in verschiedenen Situationen Push-Notifications ausgespielt werden können. | 1. Eine Abfrage zu den Benachrichtigungseinstellungen der Applikation findet vor erstmaliger Nutzung statt. <hr/> 2. Nach der erstmaligen Nutzung erfolgt die Abfrage nicht.
-| E01.06          | Als App-Nutzer möchte ich bei erstmaliger Nutzung der Applikation in meiner Sprache angezeigt bekommen, damit die Nutzung der App für mich verständlich ist. | 1. Erkennung der eingestellten Systemsprache wird durchgeführt <hr/> 2. Wenn die erkannte Systemsprache nicht im Content hinterlegt ist, wird im Default Englisch ausgewählt. <hr/> 3. In der ersten Version der App ist Mehrsprachigkeit vorgesehen.
+| E01.06          | Als App-Nutzer möchte ich bei erstmaliger Nutzung der Applikation in meiner Sprache angezeigt bekommen, damit die Nutzung der App für mich verständlich ist. | 1. Erkennung der eingestellten Systemsprache wird durchgeführt. <hr/> 2. Wenn die erkannte Systemsprache nicht im Content hinterlegt ist, wird im Default Englisch ausgewählt. <hr/> 3. In der ersten Version der App ist Mehrsprachigkeit vorgesehen.
 | E01.07          | Als App-Nutzer möchte ich bereits während des Onboardings Hilfen und Einstellungen zur Barrierefreiheit bekommen, um die App nutzen zu können. | 1. Die Barrierefreiheit wird im Rahmen der Möglichkeiten der Version des jeweils hinterlegten Betriebssystems verfügbar gemacht.
 
 ### Informationen und Instruktionen zur Nutzung der Applikation
@@ -144,7 +144,7 @@ Die zugehörigen Akzeptanzkriterien ergänzen die Spezifikation der Anforderunge
 | # User Story ID | User Story | Akzeptanzkriterien |
 |-----------------|------------|--------------------|
 | E05.01          | Als RKI möchte ich, dass ausschließlich positiv getestete Nutzer einmalig eine Warnung auslösen können, um Missbrauch zu vermeiden. | 1. Nur positive Tests können eine Warnung auslösen. <hr/> 2. Für jeden Test kann nur einmal eine Warnung ausgelöst werden.
-| E05.02          | Als App-Nutzer möchte ich im Falle eines positiven Testergebnis Informationen über die Erkrankung und nötige nächste Schritte bekommen, um mein Verhalten an die Handlungsempfehlungen des RKI anpassen zu können. | 1. Benachrichtigung über den Eingang des Testergebnisses <hr/> 2. Anzeige eines Infotextes in der App mit definiertem Inhalt (z.B.: Informationen zum Ausgang des Testergebnisses, Informationen über erforderliche Maßnahmen, eine Hotline Nummer)
+| E05.02          | Als App-Nutzer möchte ich im Falle eines positiven Testergebnisses Informationen über die Erkrankung und nötige nächste Schritte bekommen, um mein Verhalten an die Handlungsempfehlungen des RKI anpassen zu können. | 1. Benachrichtigung über den Eingang des Testergebnisses. <hr/> 2. Anzeige eines Infotextes in der App mit definiertem Inhalt (z.B.: Informationen zum Ausgang des Testergebnisses, Informationen über erforderliche Maßnahmen, eine Hotline Nummer)
 
 ### Auslösen einer Warnung
 | # User Story ID | User Story | Akzeptanzkriterien |
@@ -159,7 +159,7 @@ Die zugehörigen Akzeptanzkriterien ergänzen die Spezifikation der Anforderunge
 ### Parametrisierung
 | # User Story ID | User Story | Akzeptanzkriterien |
 |-----------------|------------|--------------------|
-| E07.01          | Als RKI möchte ich die Parameter zur Risiko Score Bestimmung (im Rahmen der technischen Möglichkeiten durch die API) einstellen können, um stets den aktuellen Forschungsergebnissen zur Virusübertragung zu entsprechen. | 1. In Abhängigkeit von der bereitgestellten API können Schwellenwerte konfiguriert werden. <hr/> 2. Die Anpassung wird auf den Endgeräten vorgenommen, ohne dass ein Update der App erforderlich ist.
+| E07.01          | Als RKI möchte ich die Parameter zur Risiko-Score-Bestimmung (im Rahmen der technischen Möglichkeiten durch die API) einstellen können, um stets den aktuellen Forschungsergebnissen zur Virusübertragung zu entsprechen. | 1. In Abhängigkeit von der bereitgestellten API können Schwellenwerte konfiguriert werden. <hr/> 2. Die Anpassung wird auf den Endgeräten vorgenommen, ohne dass ein Update der App erforderlich ist.
 
 ### Technische Unterstützung
 | # User Story ID | User Story | Akzeptanzkriterien |
@@ -176,4 +176,4 @@ Die zugehörigen Akzeptanzkriterien ergänzen die Spezifikation der Anforderunge
 ### Content Management
 | # User Story ID | User Story | Akzeptanzkriterien |
 |-----------------|------------|--------------------|
-| E10.01          | Als RKI möchte ich die Inhalte der Applikation zentral verwalten, um Aktualisierungen von Texten, Links, Hotlines, etc. einmalig für alle Stellen in der App durchführen zu können. | 1. Das Content Management erfolgt auf Grundlage der Anforderungen des RKI <hr/> 2. Der Content wird auf statische und dynamische Inhalte entsprechend der technischen Machbarkeit differenziert <hr/> 3. Aktualisierungen erfolgen in der ersten Version über ein App-Update.
+| E10.01          | Als RKI möchte ich die Inhalte der Applikation zentral verwalten, um Aktualisierungen von Texten, Links, Hotlines, etc. einmalig für alle Stellen in der App durchführen zu können. | 1. Das Content Management erfolgt auf Grundlage der Anforderungen des RKI. <hr/> 2. Der Content wird auf statische und dynamische Inhalte entsprechend der technischen Machbarkeit differenziert. <hr/> 3. Aktualisierungen erfolgen in der ersten Version über ein App-Update.
