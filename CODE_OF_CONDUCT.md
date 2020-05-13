@@ -49,6 +49,16 @@ comments, commits, code, wiki edits, issues, and other contributions that are
 not aligned to this Code of Conduct, and will communicate reasons for moderation
 decisions when appropriate.
 
+## Election of Community Leaders
+
+Given that community leaders have such broad enforcing rights, it is necessary to
+have an election mechanism for these. Otherwise, it is expected that said leaders
+may misuse their rights and apply arbitrary SJW-influenced pattern-matching to
+criticism or other free speech to suppress those not in line with political
+correctness. Note that politcal correctness is just another word for consorship.
+We will see how the conflict between the states "Being respectful of differing opinions,r
+viewpoints, and experiences" and reality evolves, i.e. how this PR is treated.
+
 ## Scope
 
 This Code of Conduct applies within all community spaces, and also applies when
