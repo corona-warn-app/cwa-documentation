@@ -41,7 +41,7 @@ Jeder potenzielle Nutzer, der die App benutzt, um über mögliche Begegnungen mi
 Unterstützen die Nutzer der App in der Beantwortung von Fragestellungen zur Nutzung der App, zur Technik, zum Datenschutz und geben auf Nachfrage verhaltensbezogene Informationen sowie weitere Informationsmöglichkeiten im Kontakt- bzw. Infektionsfall weiter.
 Unterstützen bei Verifikation und Freischaltung von Testergebnissen in der App für infizierte Personen und können diesen die Kontaktaufnahme mit dem zuständigen Gesundheitsamt empfehlen.
 
-#### RKI
+#### Robert Koch-Institut (RKI)
 Stellt epidemiologische Informationen und Handlungsempfehlungen für die Nutzer der App zur Verfügung (Content). Bestimmt die Parameter für die Messung der Kontakte (im Rahmen der technischen Möglichkeiten durch die API).
  
 ## User Journey
