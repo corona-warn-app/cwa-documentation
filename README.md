@@ -33,7 +33,7 @@ This repository contains the developer documentation and related content.
 
 ### Project Scope
 The project scope has been agreed on jointly by Deutsche Telekom AG and SAP SE as contractors and the German Federal Government and the Robert-Koch-Institut as clients. The project scope might change over time as new requirements need to be included or existing ones change. We appreciate feedback to all elements of this project scope document. However, additional features or any other content changes beyond fixes to grammatical issues or typos need to be aligned on by these partners before they can be included in the document. Thank you for your understanding!
-- [Corona-Warn-App - Project Scope](translations/scoping_document.de.md) _(Currently German only, English translation follows soon)_
+- [Corona-Warn-App - Scoping Document](scoping_document.md)
 
 ## Licensing
 

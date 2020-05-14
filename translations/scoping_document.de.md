@@ -17,6 +17,8 @@
           9.  [Barrierefreiheit](#barrierefreiheit)
           10. [Content Management](#content-management)
 
+HINWEIS: Dieses Scoping-Dokument ist auch [auf Englisch](../scoping_document.md) verfügbar. 
+
 # EINLEITUNG
 Ziel der Corona-Warn-App ist es, SARS-CoV-2-Infektionsketten schnellstmöglich zu erkennen und zu durchbrechen. Nutzer sollen zuverlässig und schnell über Begegnungen mit infizierten Nutzern der App und damit mögliche Übertragungen des Virus informiert werden, damit sie sich freiwillig isolieren können, um damit zu einer Eindämmung der SARS-CoV-2-Pandemie beizutragen.
 
