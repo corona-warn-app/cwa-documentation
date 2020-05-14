@@ -14,11 +14,11 @@ We use GitHub to manage reviews of pull requests.
 
 * If you are a new contributor, see: [Steps to Contribute](#steps-to-contribute)
 
-* If you have a trivial fix or improvement, go ahead and create a pull request, addressing (with `@...`) a suitable maintainer of this repository (see [CODEOWNERS](CODEOWNERS) of the  repository you want to contribute to) in the description of the pull request.
+* If you have a trivial fix or improvement, go ahead and create a pull request, addressing (with `@...`) a suitable maintainer of this repository (see [CODEOWNERS](CODEOWNERS) of the repository you want to contribute to) in the description of the pull request.
 
 * If you plan to do something more involved, please reach out to us and send an [email](mailto:corona-warn-app.opensource@sap.com). This will avoid unnecessary work and surely give you and us a good deal of inspiration.
 
-* Relevant coding style guidelines are available in the respective sub-repositories as they are programming language-dependent.
+* Relevant coding style guidelines are available in the respective sub repositories as they are programming language dependent.
 
 ## Steps to Contribute
 
@@ -46,7 +46,7 @@ The following rule governs documentation contributions:
 
 ## Pull Request Checklist
 
-* Branch from the master branch and, if needed, rebase to the current master branch before submitting your pull request. If it doesn't merge cleanly with master you may be asked to rebase your changes.
+* Branch from the master branch and, if needed, rebase to the current master branch before submitting your pull request. If it doesn't merge cleanly with master, you may be asked to rebase your changes.
 
 * Commits should be as small as possible while ensuring that each commit is correct independently (i.e., each commit should compile and pass tests).
 
