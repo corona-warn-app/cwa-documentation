@@ -158,7 +158,7 @@ The data on the all involved servers will only be retained as long as required. 
 
 ## MOBILE APPLICATIONS
 
-The functional scope of the mobile applications is defined in the corresponding [scoping document](https://github.com/corona-warn-app/cwa-documentation/blob/master/scoping_document.md). The applications will be developed natively for Apple’s iOS and Google’s Android operating system. They will make use of the respective interfaces for the exposure notification (i.e. broadcasting and scanning for Bluetooth advertisement packages, see *Figure 9*). For Apple devices (starting from _<to be determined>_) an OS version of at least _<to be determined>_ will be required for the system to work, as the framework is integrated into the operating system.
+The functional scope of the mobile applications is defined in the corresponding [scoping document](https://github.com/corona-warn-app/cwa-documentation/blob/master/scoping_document.md). The applications will be developed natively for Apple’s iOS and Google’s Android operating system. They will make use of the respective interfaces for the exposure notification (i.e. broadcasting and scanning for Bluetooth advertisement packages, see *Figure 9*). For Apple devices (starting from _<to be determined>_) an OS version of at least 13.5 will be required for the system to work, as the framework is integrated into the operating system.
 
 For Android, the features will be integrated into the [Google Play Services](https://9to5google.com/2020/04/13/android-contact-tracing-google-play-services/), which means that only this specific application needs to be updated for it to work. Devices starting with Android _<to be determined>_ and integrated BLE chips will be supported.
 
