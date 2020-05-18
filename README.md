@@ -48,6 +48,9 @@ To be published:
 * Technical Security Concept
 * Data Privacy Concept
 
+### Glossary
+For an easier understanding of the used acronyms and special terms in our documents please see our [glossary](glossary.md).
+
 ## Licensing
 
 Copyright (c) 2020 Deutsche Telekom AG and SAP SE or an SAP affiliate company.
