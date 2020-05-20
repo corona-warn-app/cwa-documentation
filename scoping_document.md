@@ -104,7 +104,7 @@ The app functions are divided into user process phases (with direct ties to the 
 ## Overview of User Stories
 The requirements the Corona-Warn-App must satisfy, and which define its functional scope, are formulated below in the usual format of a user story:
 
-_“As a <stakeholder>, I want to <perform action>, to <achieve the desired result>.”_
+_“As a &lt;stakeholder&gt;, I want to &lt;perform action&gt;, to &lt;achieve the desired result&gt;.”_
 
 The corresponding acceptance criteria supplement the specification of the requirements by defining the conditions that the software must fulfill to satisfy customer needs.
 
