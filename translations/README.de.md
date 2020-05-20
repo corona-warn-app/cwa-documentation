@@ -1,9 +1,26 @@
-# Corona-Warn-App
+<p align="center">
+    <a href="https://www.coronawarn.app/de/"><img src="https://raw.githubusercontent.com/corona-warn-app/cwa-documentation/master/images/CWA_title.png" width="400"></a>
+</p>
+
+<hr />
+<p align="center">
+    <a href="#über-dieses-projekt">Über dieses Projekt</a> • 
+    <a href="#wer-wir-sind">Wer wir sind</a> •
+    <a href="#danksagungen">Danksagungen</a> •
+    <a href="#datenschutz">Datenschutz</a> •
+    <a href="#code-of-conduct">Code of Conduct</a> •
+    <a href="#arbeitssprache">Arbeitssprache</a> •
+    <a href="#unsere-dokumentation">Unsere Dokumentation</a> •
+    <a href="#lizenzierung">Lizenzierung</a> •
+    <a href="#informationen-zur-teilnahme">Informationen zur Teilnahme</a> •
+    <a href="https://www.coronawarn.app/de/">Webseite</a>
+</p>
+<hr />
 
 HINWEIS: Die [englische Version](../README.md) der README-Datei ist die maßgebliche Fassung. Bitte haben Sie dafür Verständnis, dass die deutsche Version möglicherweise nicht durchgängig auf dem neuesten Stand ist.
 
 ## Über dieses Projekt
-Wir entwickeln die offizielle COVID-19-App zur Kontaktfallbenachrichtigung für Deutschland, die sogenannte "Corona-Warn-App". Dieses Projekt hat zum Ziel, eine Anwendung auf der Grundlage einer Technologie mit einem dezentralisierten Ansatz zu entwickeln. Als Grundlage dienen die Protokolle [DP-3T](https://github.com/DP-3T/documents) (Decentralized Privacy-Preserving Proximity Tracing) und [TCN](https://tcn-coalition.org/) sowie die Spezifikationen für [Privacy-Preserving Contact Tracing](https://www.apple.com/covid19/contacttracing/) von Apple und Google. Wie DP-3T und TCN folgen auch die Apps und die Backend-Infrastruktur dem Open-Source-Prinzip - lizenziert unter [Apache 2.0 ](../LICENSE). Die Apps (für iOS und Android) werden pseudonymisierte Daten von Mobiltelefonen in der Umgebung mit Hilfe von Bluetooth-Technologie sammeln. Die Daten werden lokal auf den einzelnen Geräten gespeichert, um so den Zugriff auf die Daten und die Kontrolle über die Daten durch Behörden oder andere Instanzen zu verhindern. Wir erfüllen die geltenden Datenschutzvorgaben und garantieren höchste IT-Sicherheitsstandards. Auf diese Weise stellen wir uns den Datenschutzbedenken der Bevölkerung und hoffen dadurch, die Nutzung der Anwendung zu steigern.
+Wir entwickeln die offizielle COVID-19-App zur Kontaktfallbenachrichtigung für Deutschland, die sogenannte "<a href="https://www.coronawarn.app/de/">Corona-Warn-App</a>". Dieses Projekt hat zum Ziel, eine Anwendung auf der Grundlage einer Technologie mit einem dezentralisierten Ansatz zu entwickeln. Als Grundlage dienen die Protokolle [DP-3T](https://github.com/DP-3T/documents) (Decentralized Privacy-Preserving Proximity Tracing) und [TCN](https://tcn-coalition.org/) sowie die Spezifikationen für [Privacy-Preserving Contact Tracing](https://www.apple.com/covid19/contacttracing/) von Apple und Google. Wie DP-3T und TCN folgen auch die Apps und die Backend-Infrastruktur dem Open-Source-Prinzip - lizenziert unter [Apache 2.0 ](../LICENSE). Die Apps (für iOS und Android) werden pseudonymisierte Daten von Mobiltelefonen in der Umgebung mit Hilfe von Bluetooth-Technologie sammeln. Die Daten werden lokal auf den einzelnen Geräten gespeichert, um so den Zugriff auf die Daten und die Kontrolle über die Daten durch Behörden oder andere Instanzen zu verhindern. Wir erfüllen die geltenden Datenschutzvorgaben und garantieren höchste IT-Sicherheitsstandards. Auf diese Weise stellen wir uns den Datenschutzbedenken der Bevölkerung und hoffen dadurch, die Nutzung der Anwendung zu steigern.
 
 ## Wer wir sind
 
@@ -16,6 +33,10 @@ Wir möchten allen danken, die an diesem wichtigen Projekt gleich von Beginn an 
 ## Datenschutz
 
 In diesem Projekt berücksichtigen wir die Prinzipien der Datenschutzgrundverordnung (DSGVO), um die Privatsphäre aller zu schützen. Wir verarbeiten ausschließlich notwendige Daten und ausschließlich zu dem Zweck, alle wissen zu lassen, ob sie in engem Kontakt mit anderen, bereits infizierten Personen standen, ohne die jeweilige Identität zu offenbaren. Die Einhaltung dieser Grundsätze wird durch verschiedene Schritte sichergestellt, zum Beispiel durch die Implementierung technischer und organisatorischer Maßnahmen, die sich sorgfältig an die hohen Standards der DSGVO halten. Selbstverständlich wird die Anwendung eine verständliche Datenschutzerklärung vorhalten, um so transparent und klar wie möglich zu sein. Da wir die Anwendung als Open-Source-Projekt entwickeln, kann die Community dies überprüfen. Wir begrüßen Ihre Rückmeldungen!
+
+## Code of Conduct
+
+Dieses Projekt hat den [Contributor Covenant](https://www.contributor-covenant.org/) in Version 2.0 als unseren Code of Conduct übernommen. Bitte beachten Sie die Einzelheiten in unserem [CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md). Alle Mitwirkenden müssen sich an den Code of Conduct halten.
 
 ## Arbeitssprache
 
