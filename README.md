@@ -1,11 +1,28 @@
-# Corona-Warn-App
+<p align="center">
+ <a href="https://www.coronawarn.app/en/"><img src="https://raw.githubusercontent.com/corona-warn-app/cwa-documentation/master/images/CWA_title.png" width="400"></a>
+</p>
+
+<hr />
+<p align="center">
+    <a href="#about-this-project">About this Project</a> • 
+    <a href="#who-we-are">Who We Are</a> •
+    <a href="#credits">Credits</a> •
+    <a href="#data-privacy">Data Privacy</a> •
+    <a href="#code-of-conduct">Code of Conduct</a> •
+    <a href="#working-language">Working Language</a> •
+    <a href="#our-documentation">Our Documentation</a> •
+    <a href="#licensing">Licensing</a> •
+    <a href="#how-to-contribute">How to Contribute</a> •
+    <a href="https://www.coronawarn.app/en/">Web Site</a>
+</p>
+<hr />
 
 NOTE: This README is also available [in German](translations/README.de.md). Thank you for understanding that the German version might not always be up-to-date with the English one.
 
 HINWEIS: Diese README ist ebenfalls [auf Deutsch](translations/README.de.md) verfügbar. Bitte haben Sie Verständnis, dass die deutsche Version nicht immer auf dem gleichen Stand wie die englische Version ist.
 
 ## About this Project
-We are developing the official COVID-19 exposure notification app for Germany, called "Corona-Warn-App". This project has the goal to develop an app based on technology with a decentralized approach -  heavily inspired by the [DP-3T](https://github.com/DP-3T/documents) (Decentralized Privacy-Preserving Proximity Tracing) and [TCN](https://tcn-coalition.org/) protocols and based on the [Privacy-Preserving Contact Tracing specifications](https://www.apple.com/covid19/contacttracing/) by Apple and Google. Like DP-3T and the TCN Protocol, the apps and backend infrastructure will be entirely open source - licensed under the [Apache 2.0 license](LICENSE)! The apps (for iOS and Android) will collect pseudonymous data from nearby mobile phones using Bluetooth technology. The data will be stored locally on each device preventing access and control over data by authorities or anyone else. We will meet the applicable data protection standards and guarantee a high level of IT security. By doing so, we are addressing people's privacy concerns and thereby aiming to increase the adoption of the app.
+We are developing the official COVID-19 exposure notification app for Germany, called "<a href="https://www.coronawarn.app/en/">Corona-Warn-App</a>". This project has the goal to develop an app based on technology with a decentralized approach -  heavily inspired by the [DP-3T](https://github.com/DP-3T/documents) (Decentralized Privacy-Preserving Proximity Tracing) and [TCN](https://tcn-coalition.org/) protocols and based on the [Privacy-Preserving Contact Tracing specifications](https://www.apple.com/covid19/contacttracing/) by Apple and Google. Like DP-3T and the TCN Protocol, the apps and backend infrastructure will be entirely open source - licensed under the [Apache 2.0 license](LICENSE)! The apps (for iOS and Android) will collect pseudonymous data from nearby mobile phones using Bluetooth technology. The data will be stored locally on each device preventing access and control over data by authorities or anyone else. We will meet the applicable data protection standards and guarantee a high level of IT security. By doing so, we are addressing people's privacy concerns and thereby aiming to increase the adoption of the app.
 
 ## Who We Are
 
