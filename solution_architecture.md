@@ -45,7 +45,7 @@ The app pursues two objectives: First, supporting individuals in finding out whe
 
 ### Retrieval of lab results and verification process
 
-Reporting positive tests to the app is crucial for others to get informed about a relevant exposure and potential infection. On the other hand, a verification before the uploaded of diagnosis keys is required in order to prevent misuse. 
+Reporting positive tests to the app is crucial for others to get informed about a relevant exposure and potential infection. However, a verification before the upload of any diagnosis keys is required in order to prevent misuse. 
 There are two main approaches for this verification: The first option is to use the integrated functionality of the Corona-Warn-App to retrieve the results of a SARS-CoV-2 test. Through this integration, the positive test result is already verified and the diagnosis keys can be uploaded right after users have given their consent. The second option is to receive a human-readable token (e.g. a number or a combination of words) and provide this as verification to the app. This token is called teleTAN.
 
 ![Figure 2: Interaction flow for verification process](images/solution_architecture/figure_2.svg "Figure 2: Interaction flow for verification process")
