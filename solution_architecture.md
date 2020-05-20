@@ -50,7 +50,7 @@ There are two main approaches for this verification: The first option is to use 
 
 ![Figure 2: Interaction flow for verification process](images/solution_architecture/figure_2.svg "Figure 2: Interaction flow for verification process")
 
-Both, *Figure 2* and *Figure 3* illustrate the verification process. While *Figure 2* shows the interaction flow of the user, *Figure 3* focuses on the flow and storage of data. Additions to the preexisting 'conventional' process through the introduction of the Corona-Warn-App and the integrated test result retrieval are marked blue in *Figure 2*.
+Both, *Figure 2* and *Figure 3* illustrate the verification process. While *Figure 2* shows the interaction flow of the user, *Figure 3* focuses on the flow and storage of data. Additions to the preexisting 'conventional contact tracing' process through the introduction of the Corona-Warn-App and the integrated test result retrieval are marked blue in *Figure 2*.
 
 This preexisting process for the processing of lab results includes that the doctor requesting the test also receives the results, so patients can be informed in a timely manner. As required by law ([§9 IfSG](https://www.gesetze-im-internet.de/ifsg/__9.html)), the responsible health authority (“Gesundheitsamt”) is notified by the lab about the test results as well. The notifications in case of a positive test includes amongst others name, address and date of birth of the affected patients, so they can be contacted and be informed about the implications of their positive test. This is also represented in step 3 of *Figure 2*.
 
