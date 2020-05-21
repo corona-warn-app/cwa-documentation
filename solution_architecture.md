@@ -107,7 +107,6 @@ The Corona-Warn-App Server needs to fulfill the following tasks:
 	- Verify association with a positive test through the Verification Server and the associated workflow (explained in the chapter “Retrieval of lab results and verification process”, shown in the center of the left side of *Figure 6*).
 	- Accept uploaded diagnosis keys and store them (optional) together with the corresponding transmission risk level parameter (integer value of 1-8) into the database. Note that the transport of metadata (e.g. IP) of the incoming connections for the upload of diagnosis keys is removed in a dedicated actor, labelled “Transport Metadata Removal” in *Figure 6*.
 - Provide [configuration parameters](#data-format) to the mobile applications
-	- Weights for the risk score categories
 	- Risk scores for defined values
 	- Threshold values for risk categories and alerts
 - On a regular schedule (e.g. hourly)
@@ -140,7 +139,7 @@ The server will make the following information available through a RESTful inter
 - available items through index endpoints (not all implemented in first iteration)
 - the newly added Diagnosis Keys (Temporary Exposure Keys) for the time frame
 - configuration parameters
-	- 36 parameters for configuring the risk score of the Apple/Google Exposure Notification Framework
+	- 32 parameters for configuring the risk score of the Apple/Google Exposure Notification Framework
 	- Risk score threshold to issue a warning
 	- Risk score ranges for individual risk levels
 
