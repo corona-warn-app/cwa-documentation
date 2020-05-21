@@ -124,7 +124,9 @@ It is to note that even if a user has not been tested positive, the app randomly
 
 If diagnosis keys need to be uploaded on subsequent days of the submission of a positive test result, also that behavior should be represented within the random (dummy) submissions.
 
-The possibility to identify temporary exposure keys belonging together (i.e. to the same user) is given, as they are posted together – resulting in them being in a sequential order in the database. To prevent this, the aggregated files will be shuffled, e.g. by using an ORDER BY RANDOM on the database side while fetching the data for the corresponding file. Alternatively, returning them in the lexicographic order of the RPIs (which are random) is a valid option as well. 
+The possibility to identify temporary exposure keys belonging together (i.e. to the same user) is given, as they are posted together – resulting in them being in a sequential order in the database.
+To prevent this, the aggregated files will be shuffled, e.g. by using an ORDER BY RANDOM on the database side while fetching the data for the corresponding file.
+Alternatively, returning them in the lexicographic order of the RPIs (which are random) is a valid option as well. The latter might be more efficient for compressing the data afterwards.
 
 The configuration parameters mentioned above allow the health authorities to dynamically adjust the behavior of the mobile applications to the current epidemiological situation. For example, the risk score thresholds for the risk levels can be adjusted, as well as how the individual data from exposure events influence the overall score.
  
