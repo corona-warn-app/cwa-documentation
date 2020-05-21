@@ -107,6 +107,7 @@ The Corona-Warn-App Server needs to fulfill the following tasks:
 	- Verify association with a positive test through the Verification Server and the associated workflow (explained in the chapter “Retrieval of lab results and verification process”, shown in the center of the left side of *Figure 6*).
 	- Accept uploaded diagnosis keys and store them (optional) together with the corresponding transmission risk level parameter (integer value of 1-8) into the database. Note that the transport of metadata (e.g. IP) of the incoming connections for the upload of diagnosis keys is removed in a dedicated actor, labelled “Transport Metadata Removal” in *Figure 6*.
 - Provide [configuration parameters](#data-format) to the mobile applications
+	- Threshold values for [attenuation buckets](#attenuation-buckets)
 	- Risk scores for defined values
 	- Threshold values for risk categories and alerts
 - On a regular schedule (e.g. hourly)
@@ -140,6 +141,7 @@ The server will make the following information available through a RESTful inter
 - the newly added Diagnosis Keys (Temporary Exposure Keys) for the time frame
 - configuration parameters
 	- 32 parameters for configuring the risk score of the Apple/Google Exposure Notification Framework
+	- [Attenuation bucket](#attenuation-buckets) thresholds
 	- Risk score threshold to issue a warning
 	- Risk score ranges for individual risk levels
 
@@ -179,12 +181,21 @@ The encapsulation especially applies to the part where matches are calculated, a
 
 [Information provided from the framework API to the app per exposure](https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ExposureNotification-FrameworkDocumentationv1.2.pdf):
 -	**Attenuation value** (Reported Transmit Power - Measured RSSI)
--	**Attenuation “buckets”**, i.e. time spent with an attenuation <=50 and >50
+-	**Attenuation “buckets”**, i.e. times spent within certain attenuation ranges (see below)
 -	**Date** when the exposure occurred (with reduced precision, i.e. one day)
 -	**Duration** of the exposure (<5/5/10/15/20/25/30/>30 minutes)
 -	**Transmission risk level** associated with diagnosis key of other person (downloaded from server, together with diagnosis key)
--	**Total Risk Score** calculated exposure risk level according to the defined parameters
+-	**Total Risk Score** calculated exposure risk level (with a range from 0-4096) according to the defined parameters
 
+### Attenuation Buckets
+
+Both, Apple and Google allow to define a low and a high threshold for the attenuation, forming three individual buckets:
+- attenuation < low threshold
+- low threshold <= attenuation < high threshold
+- high threshold <= attenuation
+
+While in the Google implementations of the Exposure Notification framework, those buckets are contained within the `ExposureSummary` (`attenuationDurations`), Apple has added them to the [`metadata`](https://developer.apple.com/documentation/exposurenotification/enexposureinfo/3586326-metadataenexposureinfo) attribute of the [`ENExposureInfo`](https://developer.apple.com/documentation/exposurenotification/enexposureinfo).
+In the latter implementation, the [`attenuationDurations`](https://developer.apple.com/documentation/exposurenotification/enexposureinfo/3586325-attenuationdurations) of the `ENExposureInfo` contains two buckets around a fixed threshold of 50.
 
 ### Risk score calculation
 
