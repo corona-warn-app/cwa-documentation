@@ -115,7 +115,7 @@ The Corona-Warn-App Server needs to fulfill the following tasks:
 	- Store chunks as static files (in protocol buffers, compatible with format specified by Apple/Google)
 	- Transfer files to a storage service (shown at the bottom of *Figure 6*), which acts as a source for the Content Delivery Network (CDN)
 
-Those tasks are visualized in *Figure 7*. Each of swim lanes (vertical sections of the diagram) on the left side (Phone 1, Phone 2, Phone n) represent one device with the Corona-Warn-App installed. The user of Phone 1 has taken a SARS-CoV-2 test (which comes back positive later). The users of Phone 1 and Phone n only use the functionality to trace potential exposure.
+Those tasks are visualized in *Figure 7*. Each of swim lanes (vertical sections of the diagram) on the left side (Phone 1, Phone 2, Phone n) represent one device with the Corona-Warn-App installed. The user of Phone 1 has taken a SARS-CoV-2 test (which comes back positive later). The users of Phone 2 and Phone n only use the functionality to trace potential exposure.
 The Corona-Warn-App Server represents the outside picture of the individual service working in the backend. For a better understanding, the database has been visualized separately.
 
 ![Figure 7: Interaction of the mobile application(s) with the backend servers and CDN](images/solution_architecture/figure_7.svg "Figure 7: Interaction of the mobile application(s) with the backend servers and CDN")
