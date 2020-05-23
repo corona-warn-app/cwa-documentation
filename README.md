@@ -54,12 +54,13 @@ The project scope has been agreed on jointly by Deutsche Telekom AG and SAP SE a
 
 ### Technical Documentation
 The technical documents are intended for a technical audience and represent the most recent state of the architecture. The solution architecture and concepts might change over time as external dependencies (e.g. the framework provided by Apple/Google) are still changing and new requirements need to be included or existing ones change. We appreciate feedback to all elements of these technical documents. 
+
 * [Corona-Warn-App - Solution Architecture](solution_architecture.md)
+* [Verification Server - Software Design](https://github.com/corona-warn-app/cwa-verification-server/blob/master/docs/architecture-overview.md)
 
 To be published:
 * Corona-Warn-App - Mobile Architecture for iOS and Android
 * Corona-Warn-App - Server Architecture
-* Verification Server Architecture
 * Portal Server Architecture
 * System Operation
 * Technical Security Concept
