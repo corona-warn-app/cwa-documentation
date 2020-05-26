@@ -179,3 +179,8 @@ The corresponding acceptance criteria supplement the specification of the requir
 | # of user story ID | User story | Acceptance criteria |
 |-----------------|------------|--------------------|
 | E10.01 | As the RKI, I want to manage the app content centrally, so that I can update texts, links, hotlines, and so on once for all the places in the app. | 1. Content management will be carried out based on RKI requirements.<hr/>2. Content will be differentiated by static and dynamic content, in line with technical feasibility.<hr/>3. In the initial version, updates will be performed through an app update. |
+
+### App Security
+| # of user story ID | User story | Acceptance criteria |
+|-----------------|------------|--------------------|
+| E11.01 | As a user of the app, I want to be able to verify that the app I downloaded from a public repository was compiled from publicly available source code and that no additional, security critical code was added or changed. | 1. The build version of the app can be retrieved from the running app. 2. There is a way to obtain a full build environment for building the app for each available platform. 3. Users can use that environment to build the app as it is published to the app stores.  4. The public app and the app built by the customer can be checked for identity with existing tools. |
