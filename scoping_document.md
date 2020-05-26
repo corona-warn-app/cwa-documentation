@@ -74,7 +74,7 @@ The usage phase is subdivided into four further areas, in which app users have d
 
 4. **Infection case**
 
-   If an app user tests positive for infection, they can voluntarily publish the pseudonymized warn ID's saved in their app. That way, other app users can use their smartphone to find out whether they were in contact with the infected user.
+   If an app user tests positive for infection, they can voluntarily publish the pseudonymized warn IDs saved in their app. That way, other app users can use their smartphone to find out whether they were in contact with the infected user.
 
 #### Uninstallation phase
 An app user can uninstall the app at any time, and completely delete all the data stored in it.
