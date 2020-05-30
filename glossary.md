@@ -16,6 +16,7 @@ This overview provides a description for all acronyms and special terms which ar
 | CWA | The [Corona-Warn-App](https://github.com/corona-warn-app/cwa-documentation), the official COVID-19 exposure notification app for Germany. |
 | Diagnosis Key(s) | The subset of Temporary Exposure Keys uploaded when the device owner is diagnosed as positive for the coronavirus. See also the [Exposure Notification Bluetooth Specification](https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ExposureNotification-BluetoothSpecificationv1.2.pdf) | 
 | DP-3T | [Decentralized Privacy-Preserving Proximity Tracing](https://github.com/DP-3T/documents), another approach to an exposure notification app, mainly driven by institutions from Switzerland. |
+| ENA | Acronym for "Exposure Notification App", used as internal identifier for the Corona-Warn-App in certain locations. |
 | FAQ | Frequently Asked Questions |
 | GUID | Acronym for "[Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)". |
 | IfSG | The [German Prevention and Control Act of infectious diseases among humans](https://www.gesetze-im-internet.de/ifsg/index.html), acronym for "Infektionsschutzgesetz", long term: "Gesetz zur Verhütung und Bekämpfung von Infektionskrankheiten beim Menschen". | 
