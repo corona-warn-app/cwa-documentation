@@ -50,6 +50,11 @@ Dieses Repository enthält die Entwicklungsdokumentation und zugehörige Inhalte
 Der Projektumfang wurde gemeinsam von der Deutschen Telekom AG sowie der SAP SE als Auftragnehmer und der deutschen Bundesregierung sowie dem Robert Koch-Institut als Auftraggeber festgelegt. Der Projektumfang kann sich im Laufe der Zeit ändern, wenn neue Anforderungen einbezogen werden müssen oder wenn sich bestehende Anforderungen ändern. Wir begrüßen Rückmeldungen zu allen Bestandteilen dieses Dokuments zum Projektumfang. Allerdings müssen zusätzliche Funktionen oder andere inhaltliche Änderungen, die über das Beheben von Grammatik- oder Schreibfehlern hinausgehen, zwischen den Verantwortlichen abgestimmt werden, bevor sie in das Dokument aufgenommen werden können. Vielen Dank für Ihr Verständnis.
 - [Corona-Warn-App - Scoping-Dokument](scoping_document.de.md)
 
+### Technische Dokumentation
+Die technischen Dokumente sind für ein technisches Publikum bestimmt und repräsentieren den neuesten Stand der Architektur. Die Lösungsarchitektur und die Konzepte können sich im Laufe der Zeit ändern, da sich externe Abhängigkeiten (z.B. das von Apple/Google bereitgestellte Framework) noch immer ändern und neue Anforderungen aufgenommen werden müssen oder sich bestehende ändern. Wir freuen uns über Rückmeldungen zu allen Elementen dieser technischen Dokumente. 
+
+* [Prüfsteine für die Beurteilung von "Contact Tracing"-Apps](pruefsteine.de.md)
+
 ## Lizenzierung
 
 Copyright (c) 2020 Deutsche Telekom AG und SAP SE oder ein SAP-Konzernunternehmen.
