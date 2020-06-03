@@ -1,11 +1,28 @@
-# Corona-Warn-App
+<p align="center">
+ <a href="https://www.coronawarn.app/en/"><img src="https://raw.githubusercontent.com/corona-warn-app/cwa-documentation/master/images/CWA_title.png" width="400"></a>
+</p>
+
+<hr />
+<p align="center">
+    <a href="#about-this-project">About this Project</a> • 
+    <a href="#who-we-are">Who We Are</a> •
+    <a href="#credits">Credits</a> •
+    <a href="#data-privacy">Data Privacy</a> •
+    <a href="#code-of-conduct">Code of Conduct</a> •
+    <a href="#working-language">Working Language</a> •
+    <a href="#our-documentation">Our Documentation</a> •
+    <a href="#licensing">Licensing</a> •
+    <a href="#how-to-contribute">How to Contribute</a> •
+    <a href="https://www.coronawarn.app/en/">Web Site</a>
+</p>
+<hr />
 
 NOTE: This README is also available [in German](translations/README.de.md). Thank you for understanding that the German version might not always be up-to-date with the English one.
 
 HINWEIS: Diese README ist ebenfalls [auf Deutsch](translations/README.de.md) verfügbar. Bitte haben Sie Verständnis, dass die deutsche Version nicht immer auf dem gleichen Stand wie die englische Version ist.
 
 ## About this Project
-We are developing the official COVID-19 exposure notification app for Germany, called "Corona-Warn-App". This project has the goal to develop an app based on technology with a decentralized approach -  heavily inspired by the [DP-3T](https://github.com/DP-3T/documents) (Decentralized Privacy-Preserving Proximity Tracing) and [TCN](https://tcn-coalition.org/) protocols and based on the [Privacy-Preserving Contact Tracing specifications](https://www.apple.com/covid19/contacttracing/) by Apple and Google. Like DP-3T and the TCN Protocol, the apps and backend infrastructure will be entirely open source - licensed under the [Apache 2.0 license](LICENSE)! The apps (for iOS and Android) will collect pseudonymous data from nearby mobile phones using Bluetooth technology. The data will be stored locally on each device preventing access and control over data by authorities or anyone else. We will meet the applicable data protection standards and guarantee a high level of IT security. By doing so, we are addressing people's privacy concerns and thereby aiming to increase the adoption of the app.
+We are developing the official COVID-19 exposure notification app for Germany, called "<a href="https://www.coronawarn.app/en/">Corona-Warn-App</a>". This project has the goal to develop an app based on technology with a decentralized approach -  heavily inspired by the [DP-3T](https://github.com/DP-3T/documents) (Decentralized Privacy-Preserving Proximity Tracing) and [TCN](https://tcn-coalition.org/) protocols and based on the [Privacy-Preserving Contact Tracing specifications](https://www.apple.com/covid19/contacttracing/) by Apple and Google. Like DP-3T and the TCN Protocol, the apps and backend infrastructure will be entirely open source - licensed under the [Apache 2.0 license](LICENSE)! The apps (for iOS and Android) will collect pseudonymous data from nearby mobile phones using Bluetooth technology. The data will be stored locally on each device preventing access and control over data by authorities or anyone else. We will meet the applicable data protection standards and guarantee a high level of IT security. By doing so, we are addressing people's privacy concerns and thereby aiming to increase the adoption of the app.
 
 ## Who We Are
 
@@ -34,16 +51,21 @@ This repository contains the developer documentation and related content.
 ### Project Scope
 The project scope has been agreed on jointly by Deutsche Telekom AG and SAP SE as contractors and the German Federal Government and the Robert-Koch-Institut as clients. The project scope might change over time as new requirements need to be included or existing ones change. We appreciate feedback to all elements of this project scope document. However, additional features or any other content changes beyond fixes to grammatical issues or typos need to be aligned on by these partners before they can be included in the document. Thank you for your understanding!
 - [Corona-Warn-App - Scoping Document](scoping_document.md)
+- [Corona-Warn-App - User Interface Screens](ui_screens.md)
 
 ### Technical Documentation
 The technical documents are intended for a technical audience and represent the most recent state of the architecture. The solution architecture and concepts might change over time as external dependencies (e.g. the framework provided by Apple/Google) are still changing and new requirements need to be included or existing ones change. We appreciate feedback to all elements of these technical documents. 
+
 * [Corona-Warn-App - Solution Architecture](solution_architecture.md)
+* [Corona-Warn-App Server Architecture](https://github.com/corona-warn-app/cwa-server/blob/master/docs/architecture-overview.md)
+* [Corona-Warn-App Verification Server Software Design](https://github.com/corona-warn-app/cwa-verification-server/blob/master/docs/architecture-overview.md)
+* [Corona-Warn-App Verification Portal Server Software Design](https://github.com/corona-warn-app/cwa-verification-portal/blob/master/docs/architecture-overview.md)
+* [Corona-Warn-App Test Result Server Software Design](https://github.com/corona-warn-app/cwa-testresult-server/blob/master/docs/architecture-overview.md)
+* [Corona-Warn-App Mobile Client (Android) Architecture](https://github.com/corona-warn-app/cwa-app-android/blob/master/docs/architecture-overview.md)
+* [Corona-Warn-App Mobile Client (iOS) Architecture](https://github.com/corona-warn-app/cwa-app-ios/blob/development/docs/architecture-overview.md)
+* [Criteria for the Evaluation of Contact Tracing Apps](pruefsteine.md)
 
 To be published:
-* Corona-Warn-App - Mobile Architecture for iOS and Android
-* Corona-Warn-App - Server Architecture
-* Verification Server Architecture
-* Portal Server Architecture
 * System Operation
 * Technical Security Concept
 * Data Privacy Concept
@@ -60,6 +82,8 @@ Licensed under the **Apache License, Version 2.0** (the "License"); you may not 
 You may obtain a copy of the License at https://www.apache.org/licenses/LICENSE-2.0.
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the [LICENSE](./LICENSE) for the specific language governing permissions and limitations under the License.
+
+The "Corona-Warn-App" logo is a registered trademark of The Press and Information Office of the Federal Government. For more information please see [bundesregierung.de](https://www.bundesregierung.de/breg-en/federal-government/federal-press-office).
 
 ## How to Contribute
 

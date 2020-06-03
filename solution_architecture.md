@@ -29,24 +29,28 @@ Assuming a close association of a mobile phone and its user, we equate the devic
 
 ## INTRODUCTION
 
-To reduce the spread of [COVID-19](https://www.ecdc.europa.eu/en/covid-19-pandemic) it is necessary to inform people about their close proximity to positively tested individuals. So far, health departments and citizens identified these in personal dialogues based on people’s memory, which led to a high number of unknown connections, e.g. when using public transport. 
+To reduce the spread of [COVID-19](https://www.ecdc.europa.eu/en/covid-19-pandemic) it is necessary to inform people about their close proximity to positively tested individuals. So far, health departments and affected individuals identified these in personal dialogues based on people’s memory, which led to a high number of unknown connections, e.g. when using public transport. 
 
 ![Figure 1: High-level architecture overview](images/solution_architecture/figure_1.svg "Figure 1: High-level architecture overview")
 
-With the Corona-Warn-App (see [scoping document](https://github.com/corona-warn-app/cwa-documentation/blob/master/scoping_document.md )), shown centrally in *Figure 1*, individuals are enabled to trace their personal exposure risk through the means of their mobile phones. The application makes use of a new API made available by Apple and Google, called [Exposure Notification Framework](https://www.apple.com/covid19/contacttracing). It employs [Bluetooth Low Energy (BLE)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy) mechanics that let the individual phones act as beacons (constantly broadcasting a temporary identifier (called Rolling Proximity Identifier – RPI) to be remembered by), while scanning for identifiers of other phones at the same time (shown on the right side of *Figure 1*). 
+With the Corona-Warn-App (see [scoping document](https://github.com/corona-warn-app/cwa-documentation/blob/master/scoping_document.md )), shown centrally in *Figure 1*, individuals are enabled to trace their personal exposure risk through the means of their mobile phones. The application makes use of a new framework made available by Apple and Google, called [Exposure Notification Framework](https://www.apple.com/covid19/contacttracing). It employs [Bluetooth Low Energy (BLE)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy) mechanics that let the individual phones act as beacons (constantly broadcasting a temporary identifier (called Rolling Proximity Identifier – RPI) to be remembered by), while scanning for identifiers of other phones at the same time (shown on the right side of *Figure 1*). 
 Identifiers are ID numbers sent out by the phones. To ensure privacy and prevent tracking of movement patterns of the app user, those broadcasted identifiers are only temporary and  change constantly. New identifiers are derived from a Temporary Exposure Key (TEK) that substitutes daily at midnight (UTC) through means of cryptography, which will be explained in more detail in *Figure 10*. When the TEKs are linked to a positive test, they remain technically the same, but are called Diagnosis Keys.
 
-The collected identifiers of other users, as well as the own keys (which can later be used to derive the identifiers) are stored locally on the phone within the secure storage of the framework provided by Apple and Google. This secure storage cannot be accessed directly by the application, but only through the interfaces provided by the Exposure Notification Framework. Some of those interfaces are subjected to [rate limiting](https://developer.apple.com/documentation/exposurenotification/enmanager/3586331-detectexposures), in order to prevent misuse. In case users were tested positively for SARS-CoV-2, they can update their status in the app by providing a verification of their test and select an option to send their recent keys of up to 14 days. Once the keys have been uploaded to the Corona-Warn-App backend server, all keys of positively tested people are aggregated. This list of keys is then made available to all mobile phones with the app installed. Additionally, configuration parameters for the framework are available for download, so that adjustments to the calulation of the risk score can be taken (see the section regarding *Risk Scores*).
-Once the keys and the exposure detection configuration have been downloaded, the data is handed over to the Exposure Notification API, which analyzes whether one of the identifiers collected by the phone matches to those of an infected person. Additionally, meta data that has been broadcasted together with the identifiers (e.g. sending power), can now be decrypted and used. Based on the collected data a risk score for each individual exposure as well as for the overall situation is calculated for every single user within the Exposure Notification framework by Apple and Google. Exposures are defined as an aggregation of all encounters of an individual on a single calendar day (UTC timezone). For privacy reasons it is not possible to track encounters with other individuals across multiple days.
+The collected identifiers of other users, as well as the own keys (which can later be used to derive the identifiers) are stored locally on the phone within the secure storage of the framework provided by Apple and Google. This secure storage cannot be accessed directly by the application, but only through the interfaces provided by the Exposure Notification Framework. Some of those interfaces are subjected to [rate limiting](https://developer.apple.com/documentation/exposurenotification/enmanager/3586331-detectexposures), in order to prevent misuse. In case users were tested positively for SARS-CoV-2, they can update their status in the app by providing a verification of their test and select an option to send their recent keys of up to 14 days. Once the keys have been uploaded to the Corona-Warn-App backend server, all keys of positively tested people are aggregated. This list of keys is then made available to all mobile phones with the app installed. Additionally, configuration parameters for the framework are available for download, so that adjustments to the calculation of the risk score can be taken (see the section regarding *Risk Scores*).
+Once the keys and the exposure detection configuration have been downloaded, the data is handed over to the Exposure Notification framework, which analyzes whether one of the identifiers collected by the phone matches to those of an infected person. Additionally, meta data that has been broadcasted together with the identifiers (e.g. transmit power), can now be decrypted and used. Based on the collected data a risk score for each individual exposure as well as for the overall situation is calculated for every single user within the Exposure Notification framework by Apple and Google. Exposures are defined as an aggregation of all encounters with another person on a single calendar day (UTC timezone). For privacy reasons it is not possible to track encounters with other individuals across multiple days.
 
 It is important to notice at this point, that the people that have been exposed to a positively tested person are **not informed by a central instance**, but the risk of an exposure is calculated locally on their phones. The information about the exposure remains on the user’s phone and is not shared.
 
-The app pursues two objectives: First, supporting individuals in finding out whether they have been exposed to a person that has later been tested positively, and second receiving results of a SARS-CoV-2 test on their phone through an online system. This helps to reduce the period until necessary precautions (e.g. contact reduction and testing) can be taken. In order to prevent misuse, users need to verify that they have been tested positively before being able to upload their keys. Through this integrated approach, the verification needed for the upload of the diagnosis keys does not require any action from the users. They only have to confirm to the app and the Exposure Notification Framework that they are willing to share their diagnosis keys. Manual verification is also possible, if the lab that performed the testing does not support the direct electronic transmission of test results to the users' phone or if users have decided against the electronic transmission of their test results. 
+The app pursues two objectives: First, supporting individuals in finding out whether they have been exposed to a person that has later been tested positively, and second receiving results of a SARS-CoV-2 test on their phone through an online system. This helps to reduce the period until necessary precautions (e.g. contact reduction and testing) can be taken.
+In order to prevent misuse, users need to provide proof that they have been tested positive before being able to upload their keys. Through this integrated approach, the verification needed for the upload of the diagnosis keys does not require any further action from the users. 
+They only have to confirm to the app and the Exposure Notification Framework that they are willing to share their diagnosis keys. Manual verification is also possible, if the lab that performed the testing does not support the direct electronic transmission of test results to the users' phone or if users have decided against the electronic transmission of their test results. 
 
 ### Retrieval of lab results and verification process
 
-Reporting positive tests to the app is crucial for others to get informed about a relevant exposure and potential infection. On the other hand, a verification before the uploaded of diagnosis keys is required in order to prevent misuse. 
-There are two main approaches for this verification: The first option is to use the integrated functionality of the Corona-Warn-App to retrieve the results of a SARS-CoV-2 test. Through this integration, the positive test result is already verified and the diagnosis keys can be uploaded right after users have given their consent. The second option is to receive a human-readable token (e.g. a number or a combination of words) and provide this as verification to the app. This token is called teleTAN.
+Reporting positive tests to the app is crucial for others to get informed about a relevant exposure and potential infection. However, a verification before the upload of any diagnosis keys is required in order to prevent misuse. 
+There are two ways for receiving this verification: 
+1. Use of the integrated functionality of the Corona-Warn-App to retrieve the results of a SARS-CoV-2 test from a verification server (see Figure 2, Step 4a). Through this integration, the positive test result is already verified, and the diagnosis keys can be uploaded right after users have given their consent. 
+2. Use of a human-readable token (e.g. a number or a combination of words) and provide this as verification to the app. This token is called teleTAN (see Figure 2, Step 4b).
 
 ![Figure 2: Interaction flow for verification process](images/solution_architecture/figure_2.svg "Figure 2: Interaction flow for verification process")
 
@@ -56,17 +60,17 @@ This preexisting process for the processing of lab results includes that the doc
 
 The flow for using the app is as follows, referencing the steps from *Figure 2*:
 
-- **Step 1:** Citizens are using the Corona-Warn-App (i.e. broadcasting and collecting RPIs)
+- **Step 1:** Users of the Corona-Warn-App (i.e. broadcasting and collecting RPIs)
 	- (1) When a test is conducted, they receive an information flyer with a custom QR code. The code is either created on-site or is already available as a stack of pre-printed QR codes. The QR code contains a globally unique identifier (GUID).
 	- (2) Optionally, they can scan the QR code with the Corona-Warn-App (*Figure 3*, step 1) – if users decide against using the test retrieval functionality of the Corona-Warn-App, they still receive their test results through the regular channels explained before.
 	- (3) When the code is scanned, a web service call (REST) is placed against the Verification Server (*Figure 3*, step 2), linking the phone with the data from the QR code through a registration token, which is generated on the server  (*Figure 3*, step 3) and stored on the phone  (*Figure 3*, step 4).
 - **Step 2:** The samples are transported to the lab (together with a “Probenbegleitschein”, which has a machine-readable QR code on it, as well as multiple other barcodes (lab ID, sample IDs).
-- **Step 3:** As soon as the test result is available (i.e. the samples have been processed), the software running locally in the lab (lab client) transmits the test result to the Laboratory Information System, together with the GUID from the QR code. The Laboratory Information System hashes the GUID and the test result. It is made available to the Verification Server through a REST interface.
-- **Step 4a:** After signing up for notifications in step 1, the user’s phone regularly check on the Verification Server whether test results are available (polling, figure 3, steps 5-8). This way, no external push servers need to be used. If results are available, the user is informed about the availability of information and only after opening the app, the result is displayed, together with recommandations for further actions (see scoping document for more details).
-- In case the test returned a positive result, users are asked to upload their keys to allow others to find out that they were exposed. If the users agree, the app retrieves a short-lived token (TAN) from the Verification Server (see also *Figure 3*, steps 6-8). The TAN is uploaded together with the diagnosis keys of up to the last 14 days to the Corona-Warn-App Server (*Figure 3*, step 12).
-- The Corona-Warn-App Server uses the TAN to verify the authenticity (*Figure 3*, steps 13-15) of the submission with the Verification Server.
-	- The TAN is consumed by the Verification Server and becomes invalid (*Figure 3*, step 14)
-	- If the Corona-Warn-App Server receives a positive confirmation, the uploaded diagnosis keys are stored in the database (*Figure 3*, step 16). 
+- **Step 3:** As soon as the test result is available (i.e. the samples have been processed), the software running locally in the lab (lab client) transmits the test result to the Laboratory Information System, together with the GUID from the QR code. The Laboratory Information System hashes the GUID and posts it together with the test result to the Test Result Server through a REST interface (*Figure 3*, step A), which in turn makes it available to the verification server.
+- **Step 4a:** After signing up for notifications in step 1, the user’s phone regularly checks the Verification Server for available test results (polling, figure 3, steps 5-8). This way, no external push servers need to be used. If results are available, the user is informed about the availability of information and only after opening the app, the result is displayed, together with recommendations for further actions (see scoping document for more details).
+- In case the test returned a positive result, users are asked to upload their keys to allow others to find out that they were exposed. If the users agree, the app retrieves a short-lived token (TAN) from the Verification Server (see also *Figure 3*, steps 9-13). As then Verification Server does not persist the test result, it is fetched from the Test Result Server once more (*Figure 3*, steps 10-11). The TAN is uploaded together with the diagnosis keys of up to the last 14 days to the Corona-Warn-App Server (*Figure 3*, step 14).
+- The Corona-Warn-App Server uses the TAN to verify the authenticity (*Figure 3*, steps 15-17) of the submission with the Verification Server.
+	- The TAN is consumed by the Verification Server and becomes invalid (*Figure 3*, step 16)
+	- If the Corona-Warn-App Server receives a positive confirmation, the uploaded diagnosis keys are stored in the database (*Figure 3*, step 18). 
 	- The TAN is never persisted on the Corona-Warn-App Server.
 	- In case of a failing request, the device receives corresponding feedback to make the user aware that the data needs to be re-submitted.
 
@@ -74,7 +78,7 @@ The flow for using the app is as follows, referencing the steps from *Figure 2*:
 
 Note regarding *Figure 3* and *Figure 4*: The white boxes with rounded corners represent data storage. The HTTP method POST is used instead of GET for added security, so data (e.g. the registration token or the TAN) can be transferred in the body.
 
-As mentioned before, users might have decided against retrieving test results electronically or the electronic process might not be supported by the lab. Within step 3 of *Figure 2*, it is shown, that in these cases the health authority (“Gesundheitsamt”) reach out to the patient directly. Also during this conversation the teleTAN can be provided to the patient, which can be used to authorize the upload of diagnosis keys from the app to the Corona-Warn-App Server (step 4b of *Figure 2*). This process is also visualized in *Figure 4*. Whenever patients are contacted regarding positive test results, they can choose to receive a teleTAN. The teleTan is retrieved from the web interface (*Figure 4*, step 1) of the portal service by a public health officer. This service in turn is requesting it from the Verification Server (2-3). The teleTAN is then issued to the officer (4-5), who transfers it to the patient (6). Once the patient has entered the teleTAN into the app (7), it uses the teleTAN to retrieve a registration token from the Verification Server (8-10). Once the user has confirmed the upload of the Diagnosis Keys, the application requests a TAN from the server, using the registration token (11-13). This TAN is needed by the server to ensure that the device is allowed to do the upload. These TANs are not visible to the user. After uploading the TAN and the diagnosis keys to the Corona-Warn-App Server (14), the Corona-Warn-App Server can verify the authenticity of the TAN with the Verification Server (15-16) and upon receiving a confirmation, store the diagnosis keys in the database (17).
+As mentioned before, users might have decided against retrieving test results electronically or the electronic process might not be supported by the lab. Within step 3 of *Figure 2*, it is shown, that in these cases the health authority (“Gesundheitsamt”) reaches out to the patient directly. Also during this conversation, the teleTAN can be provided to the patient, which can be used to authorize the upload of diagnosis keys from the app to the Corona-Warn-App Server (step 4b of *Figure 2*). This process is also visualized in *Figure 4*. Whenever patients are contacted regarding positive test results, they can choose to receive a teleTAN. The teleTan is retrieved from the web interface (*Figure 4*, step 1) of the portal service by a public health officer. This service in turn is requesting it from the Verification Server (2-3). The teleTAN is then issued to the officer (4-5), who transfers it to the patient (6). Once the patient has entered the teleTAN into the app (7), it uses the teleTAN to retrieve a registration token from the Verification Server (8-10). Once the user has confirmed the upload of the Diagnosis Keys, the application requests a TAN from the server, using the registration token (11-13). This TAN is needed by the server to ensure that the device is allowed to do the upload. These TANs are not visible to the user. After uploading the TAN and the diagnosis keys to the Corona-Warn-App Server (14), the Corona-Warn-App Server can verify the authenticity of the TAN with the Verification Server (15-16) and upon receiving a confirmation, store the diagnosis keys in the database (17).
 
 ![Figure 4: Verification process for teleTAN received via phone](images/solution_architecture/figure_4.svg "Figure 4: Verification process for teleTAN received via phone")
 
@@ -100,10 +104,10 @@ As of now, two uploads are required from the same phone (past diagnosis keys and
 
 The Corona-Warn-App Server needs to fulfill the following tasks:
 - Accept upload requests from clients
-	- Verify association with a positive test through the Verification Server and the associated workflow.(explained in the chapter “Retrieval of lab results and verification process”, shown in the center of the left side of *Figure 6*)
+	- Verify association with a positive test through the Verification Server and the associated workflow (explained in the chapter “Retrieval of lab results and verification process”, shown in the center of the left side of *Figure 6*).
 	- Accept uploaded diagnosis keys and store them (optional) together with the corresponding transmission risk level parameter (integer value of 1-8) into the database. Note that the transport of metadata (e.g. IP) of the incoming connections for the upload of diagnosis keys is removed in a dedicated actor, labelled “Transport Metadata Removal” in *Figure 6*.
 - Provide [configuration parameters](#data-format) to the mobile applications
-	- Weights for the risk score categories
+	- Threshold values for [attenuation buckets](#attenuation-buckets)
 	- Risk scores for defined values
 	- Threshold values for risk categories and alerts
 - On a regular schedule (e.g. hourly)
@@ -111,7 +115,7 @@ The Corona-Warn-App Server needs to fulfill the following tasks:
 	- Store chunks as static files (in protocol buffers, compatible with format specified by Apple/Google)
 	- Transfer files to a storage service (shown at the bottom of *Figure 6*), which acts as a source for the Content Delivery Network (CDN)
 
-Those tasks are visualized in *Figure 7*. Each of swim lanes (vertical sections of the diagram) on the left side (Phone 1, Phone 2, Phone n) represent one device with the Corona-Warn-App installed. The user of Phone 1 has taken a SARS-CoV-2 test (which comes back positive later). The users of Phone 1 and Phone n only use the functionality to trace potential exposure.
+Those tasks are visualized in *Figure 7*. Each of swim lanes (vertical sections of the diagram) on the left side (Phone 1, Phone 2, Phone n) represent one device with the Corona-Warn-App installed. The user of Phone 1 has taken a SARS-CoV-2 test (which comes back positive later). The users of Phone 2 and Phone n only use the functionality to trace potential exposure.
 The Corona-Warn-App Server represents the outside picture of the individual service working in the backend. For a better understanding, the database has been visualized separately.
 
 ![Figure 7: Interaction of the mobile application(s) with the backend servers and CDN](images/solution_architecture/figure_7.svg "Figure 7: Interaction of the mobile application(s) with the backend servers and CDN")
@@ -120,7 +124,9 @@ It is to note that even if a user has not been tested positive, the app randomly
 
 If diagnosis keys need to be uploaded on subsequent days of the submission of a positive test result, also that behavior should be represented within the random (dummy) submissions.
 
-The possibility to identify temporary exposure keys belonging together (i.e. to the same user) is given, as they are posted together – resulting in them being in a sequential order in the database. To prevent this, the aggregated files will shuffled, e.g. by using an ORDER BY RANDOM on the database side while fetching the data for the corresponding file. Alternatively, returning them in the lexicographic order of the RPIs (which are random) is a valid option as well. 
+The possibility to identify temporary exposure keys belonging together (i.e. to the same user) is given, as they are posted together – resulting in them being in a sequential order in the database.
+To prevent this, the aggregated files will be shuffled, e.g. by using an ORDER BY RANDOM on the database side while fetching the data for the corresponding file.
+Alternatively, returning them in the lexicographic order of the RPIs (which are random) is a valid option as well. The latter might be more efficient for compressing the data afterwards.
 
 The configuration parameters mentioned above allow the health authorities to dynamically adjust the behavior of the mobile applications to the current epidemiological situation. For example, the risk score thresholds for the risk levels can be adjusted, as well as how the individual data from exposure events influence the overall score.
  
@@ -134,7 +140,8 @@ The server will make the following information available through a RESTful inter
 - available items through index endpoints (not all implemented in first iteration)
 - the newly added Diagnosis Keys (Temporary Exposure Keys) for the time frame
 - configuration parameters
-	- 36 parameters for configuring the risk score of the Apple/Google Exposure Notification Framework
+	- 32 parameters for configuring the risk score of the Apple/Google Exposure Notification Framework
+	- [Attenuation bucket](#attenuation-buckets) thresholds
 	- Risk score threshold to issue a warning
 	- Risk score ranges for individual risk levels
 
@@ -154,13 +161,13 @@ Further details of the API are explained in the documentation of the Corona-Warn
 
 ### Data retention
 
-The data on the all involved servers will only be retained as long as required. Diagnosis Keys will be removed from Corona-Warn-App Server once they refer to a period more than 14 days ago. TANs on the Verification Server will be removed as soon as they have been used. The hashed GUID on the Verification Server needs to be retained as long as the GUID can be used to retrieve test results from the Laboratory Information System, as otherwise a second upload privilege (i.e. a registration token) could be fetched with the same GUID.
+The data on the all involved servers will only be retained as long as required. Diagnosis Keys will be removed from Corona-Warn-App Server once they refer to a period more than 14 days ago. TANs on the Verification Server will be removed as soon as they have been used. The hashed GUID on the Verification Server needs to be retained as long as the GUID can be used to retrieve test results from the test result server, as otherwise a second upload privilege (i.e. a registration token) could be fetched with the same GUID.
 
 ## MOBILE APPLICATIONS
 
 The functional scope of the mobile applications is defined in the corresponding [scoping document](https://github.com/corona-warn-app/cwa-documentation/blob/master/scoping_document.md). The applications will be developed natively for Apple’s iOS and Google’s Android operating system. They will make use of the respective interfaces for the exposure notification (i.e. broadcasting and scanning for Bluetooth advertisement packages, see *Figure 9*). For Apple devices (starting from _<to be determined>_) an OS version of at least 13.5 will be required for the system to work, as the framework is integrated into the operating system.
 
-For Android, the features will be integrated into the [Google Play Services](https://9to5google.com/2020/04/13/android-contact-tracing-google-play-services/), which means that only this specific application needs to be updated for it to work. Devices starting with Android _<to be determined>_ and integrated BLE chips will be supported.
+For Android, the features will be integrated into the [Google Play Services](https://9to5google.com/2020/04/13/android-contact-tracing-google-play-services/), which means that only this specific application needs to be updated for it to work. Devices starting with Android 6.0 (API version 23) and integrated BLE chips will be [supported](https://static.googleusercontent.com/media/www.google.com/de//covid19/exposurenotifications/pdfs/Android-Exposure-Notification-API-documentation-v1.3.2.pdf).
 
 ![Figure 9: Architecture overview of the mobile application (focused on API usage/BLE communication)](images/solution_architecture/figure_9.svg "Figure 9: Architecture overview of the mobile application (focused on API usage/BLE communication)")
 
@@ -174,12 +181,21 @@ The encapsulation especially applies to the part where matches are calculated, a
 
 [Information provided from the framework API to the app per exposure](https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ExposureNotification-FrameworkDocumentationv1.2.pdf):
 -	**Attenuation value** (Reported Transmit Power - Measured RSSI)
--	**Attenuation “buckets”**, i.e. time spent with an attenuation <=50 and >50
+-	**Attenuation “buckets”**, i.e. times spent within certain attenuation ranges (see below)
 -	**Date** when the exposure occurred (with reduced precision, i.e. one day)
 -	**Duration** of the exposure (<5/5/10/15/20/25/30/>30 minutes)
 -	**Transmission risk level** associated with diagnosis key of other person (downloaded from server, together with diagnosis key)
--	**Total Risk Score** calculated exposure risk level according to the defined parameters
+-	**Total Risk Score** calculated exposure risk level (with a range from 0-4096) according to the defined parameters
 
+### Attenuation Buckets
+
+Both, Apple and Google allow to define a low and a high threshold for the attenuation, forming three individual buckets:
+- attenuation < low threshold
+- low threshold <= attenuation < high threshold
+- high threshold <= attenuation
+
+While in the Google implementations of the Exposure Notification framework, those buckets are contained within the `ExposureSummary` (`attenuationDurations`), Apple has added them to the [`metadata`](https://developer.apple.com/documentation/exposurenotification/enexposureinfo/3586326-metadataenexposureinfo) attribute of the [`ENExposureInfo`](https://developer.apple.com/documentation/exposurenotification/enexposureinfo).
+In the latter implementation, the [`attenuationDurations`](https://developer.apple.com/documentation/exposurenotification/enexposureinfo/3586325-attenuationdurations) of the `ENExposureInfo` contains two buckets around a fixed threshold of 50.
 
 ### Risk score calculation
 
@@ -225,7 +241,7 @@ If the backend calls from the mobile applications cannot be spread as evenly as 
 
 ## Cross-border interoperability
 
-A definite prerequisite for compatibility is, that the identifiers of the mobile devices can be matched, i.e. the API by Apple/Google is being used. 
+A definite prerequisite for compatibility is, that the identifiers of the mobile devices can be matched, i.e. the framework by Apple/Google is being used. 
 
 Further details will be added as soon as they are available.
 
