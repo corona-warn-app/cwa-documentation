@@ -6,7 +6,7 @@ The diagrams  reflect the current state but may also change at a later point of 
 
 Please note that further technical details on the individual components, the security concept, and the data protection concept are provided at a later date.
 
-We assume a close association of a mobile phone and its user and, thus, equate the device (phone, app) and the person using it (person, user, individual) and use these terms interchangeablly. 
+We assume a close association of a mobile phone and its user and, thus, equate the device (phone, app) and the person using it (person, user, individual) and use these terms interchangeably. 
 
 ![Corona-Warn-App Components](images/solution_architecture/CWA_Components.png "Corona-Warn-App Components")
 
