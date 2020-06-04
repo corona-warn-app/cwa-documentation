@@ -15,7 +15,7 @@ Risks and threats identified during the conducted workshops are listed below. Pl
 		- [PostgreSQL SQL injection](#threat-postgresql-sql-injection)
 		- [Code injection flaws](#threat-code-injection-flaws)
 		- [Security misconfiguration](#threat-security-misconfiguration)
-		- [Privacy issues through wrong choice of technology](#threat-wrong-choice-of-technology)
+		- [Wrong choice of technology](#threat-wrong-choice-of-technology)
 		- [Spoofing of mobile application](#threat-spoofing-of-mobile-application)
 		- [Misbehavior of mobile application due to backup and/or restore of phone and/or mobile application](#threat-misbehavior-of-mobile-application-backup-restore)
 		- [Information leakage of unprotected phone and/or mobile application](#threat-information-leakage-unprotected-phone)
@@ -27,7 +27,7 @@ Risks and threats identified during the conducted workshops are listed below. Pl
 		- [Insecure design](#threat-insecure-design)
    		- [Insecure programming](#threat-insecure-programming)
 		- [Security misconfiguration](#threat-security-misconfiguration)
-		- [Privacy issues through wrong choice of technology](#threat-wrong-choice-of-technology)
+		- [Wrong choice of technology](#threat-wrong-choice-of-technology)
 		- [Identity disclosure through metadata correlation](#threat-identity-disclosure-meta-data-correlation)
  - <a name="risk-social-network-disclosure">Social network disclosure</a>
  	- Related threats
@@ -40,7 +40,7 @@ Risks and threats identified during the conducted workshops are listed below. Pl
 		- [Code injection flaws](#threat-code-injection-flaws)
 		- [Transaction hijacking](#threat-transaction-hijacking)
 		- [Security misconfiguration](#threat-security-misconfiguration)
-		- [Privacy issues through wrong choice of technology](#threat-wrong-choice-of-technology)
+		- [Wrong choice of technology](#threat-wrong-choice-of-technology)
 		- [Spoofing of mobile application](#threat-spoofing-of-mobile-application)
 		- [Misbehavior of mobile application due to backup and/or restore of phone and/or mobile application](#threat-misbehavior-of-mobile-application-backup-restore)
 		- [Information leakage of unprotected phone and/or mobile application](#threat-information-leakage-unprotected-phone)
@@ -55,7 +55,7 @@ Risks and threats identified during the conducted workshops are listed below. Pl
 		- [Code injection flaws](#threat-code-injection-flaws)
 		- [Transaction hijacking](#threat-transaction-hijacking)
 		- [Security misconfiguration](#threat-security-misconfiguration)
-		- [Privacy issues through wrong choice of technology](#threat-wrong-choice-of-technology)
+		- [Wrong choice of technology](#threat-wrong-choice-of-technology)
 		- [Spoofing of mobile application](#threat-spoofing-of-mobile-application)
 		- [Misbehavior of mobile application due to backup and/or restore of phone and/or mobile application](#threat-misbehavior-of-mobile-application-backup-restore)
 		- [Information leakage of unprotected phone and/or mobile application](#threat-information-leakage-unprotected-phone)
@@ -138,7 +138,7 @@ Risks and threats identified during the conducted workshops are listed below. Pl
 		- Distributed denial-of-service countermeasures
 		- Use of mutual TLS v1.3 for server to server communication
 #### Tracing Only
- - <a name="threat-wrong-choice-of-technology">Privacy issues through wrong choice of technology</a>
+ - <a name="threat-wrong-choice-of-technology">Wrong choice of technology</a>
  	- Proposed controls
 		- App-specific notification mechanism
 		- Minimal logging
