@@ -2,7 +2,7 @@
 
 This document is intended for a technical audience. It represents the most **recent state of the architecture and is still subject to change** as external dependencies (e.g. the framework provided by Apple/Google) are also still changing.
 
-The diagrams  reflect the current state but may also change at a later point of time. For some of the diagrams, [Technical Architecture Modeling (TAM)](http://www.fmc-modeling.org/fmc-and-tam) is used.
+The diagrams  reflect the current state but may also change at a later point in time. For some of the diagrams, [Technical Architecture Modeling (TAM)](http://www.fmc-modeling.org/fmc-and-tam) is used.
 
 Please note that further technical details on the individual components, the security concept, and the data protection concept are provided at a later date.
 
