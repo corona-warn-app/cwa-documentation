@@ -107,7 +107,7 @@ As of now, two uploads are required from the same mobile phone (past diagnosis k
 
 The Corona-Warn-App Server needs to fulfill the following tasks:
 - Accept upload requests from clients
-	- Verify association with a positive test through the Verification Server and the associated workflow as explained in the “Retrieval of Lab Results and Verification Process” section and shown on the center of the left side of *Figure 6*.
+	- Verify association with a positive test through the Verification Server and the associated workflow as explained in the “Retrieval of Lab Results and Verification Process” section and shown in the center of the left side of *Figure 6*.
 	- Accept uploaded diagnosis keys and store them (optional) together with the corresponding transmission risk level parameter (integer value of 1-8) into the database. Note that the transport of metadata (e.g. IP) of the incoming connections for the upload of diagnosis keys is removed in a dedicated actor, labeled “Transport Metadata Removal” in *Figure 6*.
 - Provide [configuration parameters](#data-format) to the mobile applications
 	- Threshold values for [attenuation buckets](#attenuation-buckets)
@@ -119,9 +119,9 @@ The Corona-Warn-App Server needs to fulfill the following tasks:
 	- Transfer files to a storage service as shown at the bottom of *Figure 6* which acts as a source for the Content Delivery Network (CDN)
 
 Those tasks are visualized in *Figure 7*. Each of swim lanes (vertical sections of the diagram) on the left side (Phone 1, Phone 2, Phone n) represent one device that has the Corona-Warn-App installed. The user of Phone 1 has taken a SARS-CoV-2 test (which comes back positive later). The users of Phone 2 and Phone n only use the functionality to trace potential exposure.
-The Corona-Warn-App Server represents the outside picture of the individual service working in the backend. For a better understanding, the database has been visualized separately.
+The Corona-Warn-App Server represents the outside picture of the individual service working in the back end. For a better understanding, the database has been visualized separately.
 
-![Figure 7: Interaction of the mobile application(s) with the backend servers and CDN](images/solution_architecture/figure_7.svg "Figure 7: Interaction of the mobile application(s) with the backend servers and CDN")
+![Figure 7: Interaction of the mobile application(s) with the back-end servers and CDN](images/solution_architecture/figure_7.svg "Figure 7: Interaction of the mobile application(s) with the back-end servers and CDN")
 
 Note that even if a user has not been tested positive, the app randomly submits requests to the Corona-Warn-App Server (represented in *Figure 7* by Phone 2) which on the server side can easily be ignored, but from an outside perspective exactly looks as if a user has uploaded positive test results. This helps to preserve the privacy of users who are actually submitting their diagnosis keys due to positive test results. Without dummy requests, a malicious third party monitoring the traffic could easily find out that users uploading something to the server have been infected. With our approach, no pattern can be detected and, thus, no assumption can be taken.
 
@@ -141,7 +141,7 @@ The current base unit for data chunks will be one hour. Data will be encoded in 
 
 The server will make the following information available through a RESTful interface:
 - Available items through index endpoints (not all implemented in first iteration)
-- Newly added Diagnosis Keys (Temporary Exposure Keys) for the time frame
+- Newly-added Diagnosis Keys (Temporary Exposure Keys) for the time frame
 - Configuration parameters
 	- 32 parameters for configuring the risk score of the Apple/Google Exposure Notification Framework
 	- [Attenuation bucket](#attenuation-buckets) thresholds
@@ -150,7 +150,7 @@ The server will make the following information available through a RESTful inter
 
 Return data needs to be signed and will contain a timestamp (please refer to protocol buffer files for further information). Using index endpoints will not increase the number of requests, as they can be handled within a single HTTP session. In case the hourly endpoint does not hold diagnosis keys for the selected hour, the mobile application does not need to download it. If, on the other hand multiple files need to be downloaded (e.g. because the client was switched off overnight), they can be handled in a single session as well.
 
-In order to ensure the authenticity of the files, they need to be signed (according to the specifications of the API) on a server side with a private key, while the app uses the public key to verify that signature. To ensure roaming qualities (protocol interoperability with servers in other geographical regions), it is planned to move to a single agreed protocol once finally defined.
+In order to ensure the authenticity of the files, they need to be signed (according to the specifications of the API) on server side with a private key, while the app uses the public key to verify that signature. To ensure roaming qualities (protocol interoperability with servers in other geographical regions), it is planned to move to a single agreed protocol once finally defined.
 
 ![Figure 8: Data format (protocol buffer) specified by Apple/Google](images/solution_architecture/figure_8.svg "Figure 8: Data format (protocol buffer) specified by Apple/Google")
 
@@ -168,7 +168,7 @@ The data on all involved servers is only retained as long as required. Diagnosis
 
 ## MOBILE APPLICATIONS
 
-The functional scope of the mobile applications (apps) is defined in the corresponding [scoping document](https://github.com/corona-warn-app/cwa-documentation/blob/master/scoping_document.md). The apps are developed natively for Apple’s iOS and Google’s Android operating system. They make use of the respective interfaces for the exposure notification, i.e. broadcasting and scanning for Bluetooth advertisement packages, see *Figure 9*.
+The functional scope of the mobile applications (apps) is defined in the corresponding [scoping document](https://github.com/corona-warn-app/cwa-documentation/blob/master/scoping_document.md). The apps are developed natively for Apple’s iOS and Google’s Android operating systems. They make use of the respective interfaces for the exposure notification, i.e. broadcasting and scanning for Bluetooth advertisement packages, see *Figure 9*.
 
 For Apple devices (starting from _<to be determined>_), an OS version of at least 13.5 will be required for the system to work, as the framework is integrated into the operating system.
 
@@ -176,7 +176,7 @@ For Android devices, the features will be integrated into the [Google Play Servi
 
 ![Figure 9: Architecture overview of the mobile application (focused on API usage/BLE communication)](images/solution_architecture/figure_9.svg "Figure 9: Architecture overview of the mobile application (focused on API usage/BLE communication)")
 
-The app itself does not have access to the collected exposures, i.e. the Rolling Proximity Identifiers, and neither is it informed if a new one has been collected by the framework. As depicted in the figures *Figure 10* and *Figure 11*, the Exposure Notification encapsulates handling of the keys, including all cryptographic operations on them. The only output of the black box upon an infection is a collection of temporary exposure keys as shown in *Figure 10*. Those are subsequently called diagnosis key.
+The app itself does not have access to the collected exposures, i.e. the Rolling Proximity Identifiers, and neither is it informed if a new one has been collected by the framework. As depicted in the *Figure 10* and *Figure 11*, the Exposure Notification encapsulates handling of the keys, including all cryptographic operations on them. The only output of the black box upon an infection is a collection of temporary exposure keys as shown in *Figure 10*. Those are subsequently called diagnosis keys.
 
 ![Figure 10: Key flow from the sending perspective (as described in the specification by Apple/Google)](images/solution_architecture/figure_10.svg "Figure 10: Key flow from the sending perspective (as described in the specification by Apple/Google)")
 
@@ -202,9 +202,9 @@ Both, Apple and Google allow to define a low and a high threshold for the attenu
 While in the Google implementation of the Exposure Notification Framework, those buckets are contained within the `ExposureSummary` (`attenuationDurations`), Apple has added them to the [`metadata`](https://developer.apple.com/documentation/exposurenotification/enexposureinfo/3586326-metadataenexposureinfo) attribute of the [`ENExposureInfo`](https://developer.apple.com/documentation/exposurenotification/enexposureinfo).
 In the latter implementation, the [`attenuationDurations`](https://developer.apple.com/documentation/exposurenotification/enexposureinfo/3586325-attenuationdurations) of the `ENExposureInfo` contains two buckets around a fixed threshold of 50.
 
-### Risk score calculation
+### Risk Score Calculation
 
-The information listed above is not visible to the user, but is used internally to calculate a risk score, which again is mapped to one specific app-defined risk level. This easy to understand risk level is displayed to the user. Further information regarding the individual exposure events (such as the matched Rolling Proximity Identifier, the Temporary Exposure Key or the exact time) remains within the secure storage of the framework and cannot be retrieved by the application.
+The information listed above is not visible to the user, but is used internally to calculate a risk score, which again is mapped to one specific app-defined risk level. This easy-to-understand risk level is displayed to the user. Further information regarding the individual exposure events (such as the matched Rolling Proximity Identifier, the Temporary Exposure Key or the exact time) remains within the secure storage of the framework and cannot be retrieved by the application.
 
 ![Figure 12: Risk calculation](images/solution_architecture/figure_12.svg "Figure 12: Risk calculation")
 
@@ -218,15 +218,15 @@ Note that the transmission risk level plays a special role: It can be defined by
 
 In order to be able to regularly match the RPIs associated with positive tests (derived from Diagnosis Keys) against the RPIs stored in the framework, the mobile applications need to download the former regularly.
 
-In order to prevent load peaks in the backend, the downloads need to be spread evenly across the set time interval (currently an hour). To achieve that, each client needs to randomly decide on a point of time within the given hour, when it will download the data. With a large number of clients, this should statistically lead to an even distribution of requests.
+In order to prevent load peaks in the back end, the downloads need to be spread evenly across the set time interval (currently an hour). To achieve that, each client needs to randomly decide on a point of time within the given hour, when it will download the data. With a large number of clients, this should statistically lead to an even distribution of requests.
 
 However, [Apple’s background tasks](https://developer.apple.com/documentation/backgroundtasks) don’t allow a specific point of time when the download task shall be distributed, but instead only let the developer define a [minimum time interval](https://developer.apple.com/documentation/backgroundtasks/bgtaskrequest/3142244-earliestbegindate) after which the tasks should be executed. Even though exact execution times cannot be guaranteed, we expect a behavior as specified above. 
 
-To ensure that not more requests are made than being absolutely necessary, the earliest point in time should be at the beginning of the next availability interval. A random number should be added to ensure that the earliest start dates are spread evenly across all clients. For an hourly interval this could be calculated as follows:
+To ensure that as few requests as absolutely necessary are made, the earliest point in time should be at the beginning of the next availability interval. A random number should be added to ensure that the earliest start dates are spread evenly across all clients. For an hourly interval this could be calculated as follows:
 
 `minimum seconds until execution = (seconds until beginning of next interval) + random(3600)`
 
-In some scenarios, it is possible that a client has been unable to retrieve data for one or more intervals. This might be due to the device being turned off, background activations not firing automatically (e.g. during the night, as described above), or unavailability of an internet connection. It is very important, that the client ensures that after one of those breaks, all available data is being caught up to and a match for the last 14 days might be contained.
+In some scenarios, it is possible that a client has been unable to retrieve data for one or more intervals. This might be due to the device being turned off, background activations not firing automatically (e.g. during the night, as described above), or unavailability of an internet connection. It is very important that the client ensures that after one of those breaks, all available data is being caught up to and a match for the last 14 days might be contained.
 
 In case the download of the diagnosis keys and the exposure detection configuration from the server fails, the client application needs to retry gracefully, i.e. use a random time component for the retry, as well as extending retry intervals. However, it needs to be ensured that all diagnosis keys are downloaded from the server. Otherwise, possible matches could be skipped.
 
@@ -234,15 +234,15 @@ Further details can be found in the dedicated architecture documents for the mob
 
 ## RUNTIME ENVIRONMENT (HOSTING)
 
-The backend will be made available through the [Open Telekom Cloud (OTC)](https://open-telekom-cloud.com/).
+The back end will be made available through the [Open Telekom Cloud (OTC)](https://open-telekom-cloud.com/).
 
-For the operation of the backend, several bandwidth estimations need to be taken. As a high adoption rate of the app is an important requirement, we are considering up to 60 million active users.
+For the operation of the back end, several bandwidth estimations need to be taken. As a high adoption rate of the app is an important requirement, we are considering up to 60 million active users.
 
 ### Bandwidth Estimations
 
-While each set of 14 diagnosis keys only has the small size of 392 Byte, all newly submitted diagnosis keys of a time period need to be downloaded by all mobile phones having the application installed. When considering 2000 new cases for a day, a transmission overhead (through headers, handshakes, failed downloads, etc.) of 100% and 30 million clients, this adds up to approximately 1.5MB per client, i.e. **42.8TB** overall traffic. If a day is split into 24 chucks (one per hour), this results in a total number of **720 million requests per day**. If the requests are evenly spread throughout the corresponding hour, approximately **8,500 session requests** per second need to be handled. Detailed descriptions of the connections can be found in the chapter ["Data transfer and data processing"](#data-transfer-and-data-processing). Those number exclude possible interoperability with other countries.
+While each set of 14 diagnosis keys only has the small size of 392 bytes, all newly submitted diagnosis keys of a time period need to be downloaded by all mobile phones having the application installed. When considering 2000 new cases for a day, a transmission overhead (through headers, handshakes, failed downloads, etc.) of 100% and 30 million clients, this adds up to approximately 1.5MB per client, i.e. **42.8TB** of overall traffic. If a day is split into 24 chucks (one per hour), this results in a total number of **720 million requests per day**. If the requests are evenly spread throughout the corresponding hour, approximately **8,500 session requests** per second need to be handled. Detailed descriptions of the connections can be found in the chapter ["Data transfer and data processing"](#data-transfer-and-data-processing). Those number exclude possible interoperability with other countries.
 
-If the backend calls from the mobile applications cannot be spread as evenly as we expect, we might experience peaks. To achieve an even spread (and to be able to handle a peak), we will employ a Content Delivery Network (CDN) by T-Systems to make the individual aggregated files available. According to an evaluation with T-Systems, the estimated throughput and request number can be handled by their infrastructure.
+If the back end calls from the mobile applications cannot be spread as evenly as we expect, we might experience peaks. To achieve an even spread (and to be able to handle a peak), we will employ a Content Delivery Network (CDN) by T-Systems to make the individual aggregated files available. According to an evaluation with T-Systems, the estimated throughput and request number can be handled by their infrastructure.
 
 ## Cross-Border Interoperability
 
@@ -256,6 +256,6 @@ Even though the system can support individuals in finding out whether they have 
 
 ![Figure 13: Limitations of the Bluetooth Low Energy approach](images/solution_architecture/figure_13.svg "Figure 13: Limitations of the Bluetooth Low Energy approach")
 
-In *Figure 13*, this is visualized while focusing on the captured Rolling Proximity Identifiers by only a single device. We are assuming that devices broadcast their own RPI every 250ms and use listening windows with a length of two seconds, five minutes apart. There are five other active devices – each representing a different kind of possible exposure. In the example, devices 3 and 4 go completely unnoticed, while a close proximity with the user of device 2 cannot be detected. In contrast to that very brief, but close connection with the user of device 5 (e.g. only brushing the other person in the supermarket) is noticed and logged accordingly. The duration and interval of scanning needs to be balanced by Apple and Google against battery life, as more frequent scanning consumes more energy.
+In *Figure 13*, this is visualized while focusing on the captured Rolling Proximity Identifiers by only a single device. We assume that devices broadcast their own RPI every 250ms and use listening windows with a length of two seconds, five minutes apart. There are five other active devices – each representing a different kind of possible exposure. In the example, devices 3 and 4 go completely unnoticed, while a close proximity with the user of device 2 cannot be detected. In contrast to that very brief, but close connection with the user of device 5 (e.g. only brushing the other person in the supermarket) is noticed and logged accordingly. The duration and interval of scanning needs to be balanced by Apple and Google against battery life, as more frequent scanning consumes more energy.
 
-It must be noted, that some of the encounters described above are corner cases. While especially the cases with a very short proximity time cannot be detected due to technical limitations, the framework will be able to detect longer exposures. As only exposures of longer duration within a certain proximity range are considered relevant for the intended purpose of this app, most of them will be covered.
+It must be noted that some of the encounters described above are corner cases. While especially the cases with a very short proximity time cannot be detected due to technical limitations, the framework will be able to detect longer exposures. As only exposures of longer duration within a certain proximity range are considered relevant for the intended purpose of this app, most of them will be covered.
