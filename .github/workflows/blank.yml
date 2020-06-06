@@ -31,3 +31,6 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+        - name: Terraform Apply for GorillaStack
+  uses: GorillaStack/github-action-apply-on-merge@v0.1.0
+
