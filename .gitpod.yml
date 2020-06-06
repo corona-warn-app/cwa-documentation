@@ -1,0 +1,7 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: "- name: Terraform Apply for GorillaStack   uses:
+      GorillaStack/github-action-apply-on-merge@v0.1.0"
+    command: 'echo "TODO: Replace with command to start project"'
