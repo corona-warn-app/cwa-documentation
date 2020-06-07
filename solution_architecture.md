@@ -222,7 +222,7 @@ Additionally, a central threshold for the combined risk score specifies whether 
 
 ![Figure 13: Calculation of the combined risk score](images/solution_architecture/figure_13.svg "Figure 13: Calculation of the combined risk score")
 
-Note that the transmission risk level plays a special role: It can be defined by the app and be associated with each individual diagnosis key (i.e. specific for each day of an infected person) that is being sent to the server. It contains a value from 1 to 8, which can be used to represent a calculated risk defined by the health authority.
+Note that the transmission risk level plays a special role: It can be defined by the app and be associated with each individual diagnosis key (i.e. specific for each day of an infected person) that is being sent to the server. It contains a value from 1 to 8, which can be used to represent a calculated risk defined by the health authority and estimates the infectiousness and hence the likelihood of transmitting the disease.
 
 ### Data Transfer and Data Processing
 
