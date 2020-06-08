@@ -133,7 +133,7 @@ Risks and threats identified during the conducted workshops are listed below. Pl
 		- Infrastructure as code
 		- Configuration change management
 		- Automated configuration checks
- - <a name="threat-dos-against-internet-endpoints">Denial of service attack agains endpoints exposed to the internet</a>
+ - <a name="threat-dos-against-internet-endpoints">Denial of service attack against endpoints exposed to the internet</a>
  	- Proposed controls
 		- Distributed denial-of-service countermeasures
 		- Use of mutual TLS v1.3 for server to server communication
