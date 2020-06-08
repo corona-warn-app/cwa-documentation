@@ -8,7 +8,7 @@ At the very beginning of the development process of this solution, development t
 Risks and threats identified during the conducted workshops are listed below. Please note that listed risks, threats and proposed controls are non-exhaustive and will be updated regularly.
 
 ### Technical Risks
- - <a name="risk-identificiation-of-infected-person">Identification of infected persons and/or persons under test</a>
+ - <a name="risk-identification-of-infected-person">Identification of infected persons and/or persons under test</a>
  	- Related threats
 		- [Insecure design](#threat-insecure-design)
    		- [Insecure programming](#threat-insecure-programming)
@@ -133,7 +133,7 @@ Risks and threats identified during the conducted workshops are listed below. Pl
 		- Infrastructure as code
 		- Configuration change management
 		- Automated configuration checks
- - <a name="threat-dos-against-internet-endpoints">Denial of service attack agains endpoints exposed to the internet</a>
+ - <a name="threat-dos-against-internet-endpoints">Denial of service attack against endpoints exposed to the internet</a>
  	- Proposed controls
 		- Distributed denial-of-service countermeasures
 		- Use of mutual TLS v1.3 for server to server communication
