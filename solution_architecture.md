@@ -219,7 +219,11 @@ In order to incorporate the time spent within the ranges of attenuation buckets 
 
 The combined risk score is used to determine which defined risk level should be displayed to the user, e.g. “low risk” or “high risk”. For this decision, app-defined thresholds for the individual risk levels apply. 
 As the values above are multiplied with each other, a single category with a risk score of 0 means that the overall risk score is also 0. 
-Additionally, a central threshold for the combined risk score specifies whether an exposure event should be considered or not.
+Additionally, a central threshold for the combined risk score specifies whether an exposure event should be considered or not. 
+Furthermore the Google/Apple framework allows to set a [```minimalRiskScore```](https://developer.apple.com/documentation/exposurenotification/enexposureconfiguration/3583692-minimumriskscore) to exclude exposure incidents with scores lower than the value of this property. 
+In the current version of the API the time spent within the ranges of attenuation buckets are accumulated over all exposure incidents during one matching session. 
+Since the number of requests is currently limited, it is not possible to get these values for each day and each exposure incident seperately. 
+While by default there is no minimum value set, this value is being configured accordingly, so that resumably irrelevant exposure incidents are excluded. 
 
 ![Figure 13: Calculation of the combined risk score](images/solution_architecture/figure_13.svg "Figure 13: Calculation of the combined risk score")
 
