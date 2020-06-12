@@ -355,7 +355,7 @@ The following chapters contain a brief introduction to each capability.
 
 ### Technical Cyber Resilience
 #### Subject
-- Technical Cyber Resilience solutions defend against specific threats. They are planed, built and operated based on threat exposure. This includes reaction processes for alerts. 
+- Technical Cyber Resilience solutions defend against specific threats. They are planned, built and operated based on threat exposure. This includes reaction processes for alerts. 
 - Examples: distributed denial-of-service (DDoS) attack protection, intrusion detection systems (IDS) / intrusion prevention systems (IPS), APT detection, antivirus, web application firewalls, proxies, spam filter. 
 #### Objective
 - Minimize impact of specific threats and attacks that consist of: 
