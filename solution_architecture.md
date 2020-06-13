@@ -209,7 +209,10 @@ The information listed above is not visible to the user, but is used internally 
 
 ![Figure 12: Risk calculation](images/solution_architecture/figure_12.svg "Figure 12: Risk calculation")
 
-*Figure 12* displays how the total risk score is being calculated. The application is provided with a set of parameters, which are marked in blue within the figure. Each risk category (days since exposure, exposure duration, weighted signal attenuation, and the transmission risk factor) receives an input value from the event which is then mapped to a predefined value range. According to the [documentation of the framework](https://developer.apple.com/documentation/exposurenotification/enexposureconfiguration), "the attenuation is weighted by the duration at each risk level and averaged for the overall duration". 
+*Figure 12* displays how the total risk score is being calculated. The application is provided with a set of parameters, which are marked in blue within the figure. 
+Those parameters are regularly downloaded from the CWA Server, which means they can be modified without requiring a new version of the application. 
+Each risk category (days since exposure, exposure duration, weighted signal attenuation, and the transmission risk factor) receives an input value from the event which is then mapped to a predefined value range. 
+According to the [documentation of the framework](https://developer.apple.com/documentation/exposurenotification/enexposureconfiguration), "the attenuation is weighted by the duration at each risk level and averaged for the overall duration". 
 Each of those value ranges is assigned a risk score from 0-8, where 0 represents a very low risk and 8 represents a very high risk. This means that from each of the rows in the figure, one value is selected according to the input value for the corresponding category. The product of the risk scores is used as the **total risk score** of the individual exposure.
 
 In order to incorporate the time spent within the ranges of attenuation buckets mentioned before, each of those three buckets is assigned a weight value as shown in *Figure 13*.
