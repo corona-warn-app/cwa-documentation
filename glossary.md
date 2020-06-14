@@ -7,6 +7,7 @@ This overview provides a description for all acronyms and special terms which ar
 | AEM | Acronym for "[Associated Encrypted Metadata](https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ExposureNotification-BluetoothSpecificationv1.2.pdf)". A privacy preserving encrypted metadata that shall be used to carry protocol versioning and transmit (Tx) power for better distance approximation. The Associated Encrypted Metadata changes about every 15 minutes, at the same cadence as the Rolling Proximity Identifier, to prevent wireless tracking of the device.  |
 | AES | Acronym for "[Advanced Encryption Standard](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)", used in the [Exposure Notification Framework](https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ExposureNotification-CryptographySpecificationv1.2.pdf) |
 | API | An [Application Programming Interface](https://en.wikipedia.org/wiki/Application_programming_interface) (API) is a computing interface which defines interactions between multiple software intermediaries. |
+| APNs | Acronym for "[Apple Push Notification service](https://en.wikipedia.org/wiki/Apple_Push_Notification_service)", a platform notification service created by Apple Inc. |
 | BGG | The [German Equality of Persons with Disabilities Act](https://www.gesetze-im-internet.de/bgg/), acronym for "Behindertengleichstellungsgesetz", long term: "Gesetz zur Gleichstellung von Menschen mit Behinderungen". |
 | BLE, BTLE | [Bluetooth Low Energy](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy) is a wireless personal area network technology. It is used in the Corona-Warn-App. |
 | BMG | German [Federal Ministry of Health](https://www.bundesgesundheitsministerium.de/en/en.html), acronym for "Bundesministerium für Gesundheit". |
@@ -18,6 +19,7 @@ This overview provides a description for all acronyms and special terms which ar
 | DP-3T | [Decentralized Privacy-Preserving Proximity Tracing](https://github.com/DP-3T/documents), another approach to an exposure notification app, mainly driven by institutions from Switzerland. |
 | ENA | Acronym for "Exposure Notification App", used as internal identifier for the Corona-Warn-App in certain locations. |
 | FAQ | Frequently Asked Questions |
+| FCM | Acronym for "[Firebase Cloud Messaging](https://en.wikipedia.org/wiki/Firebase_Cloud_Messaging)", a cross-platform cloud solution for messages and notifications. |
 | GUID | Acronym for "[Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)". |
 | IfSG | The [German Prevention and Control Act of infectious diseases among humans](https://www.gesetze-im-internet.de/ifsg/index.html), acronym for "Infektionsschutzgesetz", long term: "Gesetz zur Verhütung und Bekämpfung von Infektionskrankheiten beim Menschen". | 
 | OTC | Acronym for "[Open Telekom Cloud](https://open-telekom-cloud.com/)"

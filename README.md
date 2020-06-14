@@ -57,17 +57,17 @@ The project scope has been agreed on jointly by Deutsche Telekom AG and SAP SE a
 The technical documents are intended for a technical audience and represent the most recent state of the architecture. The solution architecture and concepts might change over time as external dependencies (e.g. the framework provided by Apple/Google) are still changing and new requirements need to be included or existing ones change. We appreciate feedback to all elements of these technical documents. 
 
 * [Corona-Warn-App - Solution Architecture](solution_architecture.md)
-* [Corona-Warn-App Server Architecture](https://github.com/corona-warn-app/cwa-server/blob/master/docs/architecture-overview.md)
+* [Corona-Warn-App Server Architecture](https://github.com/corona-warn-app/cwa-server/blob/master/docs/ARCHITECTURE.md)
 * [Corona-Warn-App Verification Server Software Design](https://github.com/corona-warn-app/cwa-verification-server/blob/master/docs/architecture-overview.md)
 * [Corona-Warn-App Verification Portal Server Software Design](https://github.com/corona-warn-app/cwa-verification-portal/blob/master/docs/architecture-overview.md)
 * [Corona-Warn-App Test Result Server Software Design](https://github.com/corona-warn-app/cwa-testresult-server/blob/master/docs/architecture-overview.md)
 * [Corona-Warn-App Mobile Client (Android) Architecture](https://github.com/corona-warn-app/cwa-app-android/blob/master/docs/architecture-overview.md)
 * [Corona-Warn-App Mobile Client (iOS) Architecture](https://github.com/corona-warn-app/cwa-app-ios/blob/development/docs/architecture-overview.md)
 * [Criteria for the Evaluation of Contact Tracing Apps](pruefsteine.md)
+* [Corona-Warn-App Security Overview](overview-security.md)
 
 To be published:
 * System Operation
-* Technical Security Concept
 * Data Privacy Concept
 
 ### Glossary
