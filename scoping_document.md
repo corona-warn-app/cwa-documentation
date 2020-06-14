@@ -133,7 +133,7 @@ The corresponding acceptance criteria supplement the specification of the requir
 ### Use in the Regular Process
 | # of user story ID | User story | Acceptance criteria |
 |-----------------|------------|--------------------|
-| E03.01 | As an app user, I want to be able to activate and deactivate the app, so that I can switch the functions on and off. | 1. The functions for generating pseudonymized IDs and sending them to nearby devices can be activated and deactivated. <hr/>2. The consequences of activation/deactivation are explained. |
+| E03.01 | As an app user, I want to be able to activate and deactivate the app, so that I can switch the functions on and off. | 1. The functions for generating pseudonymized IDs and sending them to nearby devices can be activated and deactivated. <hr/>2. If the user activated the app, the app explains the consequences of activation. If the user deactived the app, the app explains the consequences of deactivation. |
 | E03.02 | As an app user, I want to be able to reset to the app to the delivery defaults, so that I can reconfigure it. | 1. The app can be reset to the delivery defaults with a setting option. The saved traces have to be deleted through the system settings. |
 | E03.03 | As an app user, I want to be able to adjust the app settings (access permissions, such as notifications) in a menu, so that I can manage the app functions and accesses. | 1. App users can call a menu for app settings. <hr/>2. Notifications can be activated and deactivated.<hr/>3. Access to the functions for generating pseudonymized IDs and sending them to nearby devices can be activated and deactivated.<hr/>4. Before access permissions are deactivated, I receive information as to which app functions will no longer work (in full). |
 
@@ -173,7 +173,7 @@ The corresponding acceptance criteria supplement the specification of the requir
 | # of user story ID | User story | Acceptance criteria |
 |-----------------|------------|--------------------|
 | E09.01 | As an app user, I want it to have audio output, so that I can use the app even if I have impaired vision (or am blind), for example. | 1. Accessibility regarding audio output is provided depending on the options available in the respective operating system. |
-| E09.02 | As an app user, I want to have good contrast settings, modifiable font sizes, and an easily readable font, so that I can read the texts in the app easily. | 1. Accessibility regarding contrast and font size/type is provided depending on the options available in the respective operating system. |
+| E09.02 | As an app user, I want to have good contrast settings, modifiable font sizes, and an easily readable font, so that I can read the texts in the app easily. | 1. Accessibility regarding contrast, font size, and font type is provided depending on the options available in the respective operating system. |
 | E09.03 | As an app user, I want to have the content in simplified language, so that I can easily understand how to use the app and why I should use it. | 1. The texts and languages are defined by the ordering party. |
 
 ### Content Management
