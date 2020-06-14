@@ -103,7 +103,7 @@ The app functions are divided into user process phases (with direct ties to the 
 | 10 | Content Management | To adjust and update content in the app (texts, links, hotlines, and so on) |
 
 ## Overview of User Stories
-The requirements the Corona-Warn-App must satisfy, and which define its functional scope, are formulated below in the usual format of a user story, unless specified otherwise:
+The requirements the Corona-Warn-App must satisfy, and which define its functional scope, are formulated below in the Connextra template, unless specified otherwise:
 
 _“As &lt;stakeholder&gt;, I want &lt;goal&gt;, so that &lt;reason&gt;.“_
 
