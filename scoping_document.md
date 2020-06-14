@@ -123,7 +123,7 @@ The corresponding acceptance criteria supplement the specification of the requir
 ### Information and Instructions for Using the App
 | # of user story ID | User story | Acceptance criteria |
 |-----------------|------------|--------------------|
-| E02.01 | As an app user, I want to have access to a FAQ list, so that I can find answers to questions I might have about the app. | 1. The app will either contain a link to a web page with FAQs, which is displayed in a browser window, or the web page will be displayed within the app itself. |
+| E02.01 | As an app user, I want to be able to read an FAQ list, so that I can find answers to questions I have about the app. | 1. The app will either contain a link to a web page with FAQs, which is displayed in a browser window, or the web page will be displayed within the app itself. |
 | E02.02 | As an app user, I want to have access to instructions, so that I can understand the app and its functions. | 1. An explanation of the app’s various functions will be provided. |
 | E02.03 | As an app user, I want to have access to an explanatory video, so that I can understand how to use the app and its functions. | 1. An explanation of the app’s various functions will be provided. |
 | E02.04 | As an app user, I want to be able to display publication information for the app, so that I can see who is responsible for development and content of the app. | 1. There is a “Publication information” item in the menu.<hr/>2. The publication information contains the usual information required. |
