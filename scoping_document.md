@@ -167,7 +167,7 @@ The corresponding acceptance criteria supplement the specification of the requir
 ### Technical Support
 | # of user story ID | User story | Acceptance criteria |
 |-----------------|------------|--------------------|
-| E08.01 | As an app user, I want to be able to contact a hotline, so that I can resolve any technical problems with the app. | 1. The phone number of the technical hotline is stored in the app. |
+| E08.01 | As an app user, I want to be able to contact a hotline, so that I can resolve any technical problems with the app. | 1. The phone number of the technical hotline is shown in the app. |
 
 ### Accessibility
 | # of user story ID | User story | Acceptance criteria |
