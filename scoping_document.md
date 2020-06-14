@@ -52,10 +52,10 @@ App usage is divided into different phases, based on contact points and interact
 ![Figure 1: User Journey](user_journey.png "User Journey")
 
 #### *Idea* phase
-In this phase, a person decides to get more information about the app. In this phase, persons may have different questions regarding usage of the app (application, data privacy, accessibility, and so on). It should be possible to have these questions answered before downloading the app (hotline, information on the websites of the RKI and Federal Ministry of Health (BMG), App Store/Google Play Store).
+In this phase, a person decides to get more information about the app. In this phase, persons may have different questions regarding usage of the app (application, data privacy, accessibility, and so on). It should be possible to have these questions answered before downloading the app (hotline, information on the websites of the RKI and Federal Ministry of Health (BMG), App Store, Google Play Store).
 
 #### *Installation* phase
-A person decides to download the app (App Store/Google Play Store) and, after the technical installation process, is given an introduction to the app the first time it is opened. In this introductory phase, app users are given an overview of the functionality, terms of use, and privacy provisions; are asked for the necessary consent; and guided through the notification and other settings.
+A person decides to download the app (App Store or Google Play Store) and, after the technical installation process, is given an introduction to the app the first time it is opened. In this introductory phase, app users are given an overview of the functionality, terms of use, and privacy provisions; are asked for the necessary consent; and guided through the notification and other settings.
 
 #### *Usage* phase
 The usage phase is subdivided into four further areas, in which people who use the app have different needs.
@@ -89,7 +89,7 @@ The app functions are divided into user process phases (with direct ties to the 
 |---:|--------|--------------|
 | 1 | Onboarding and Installation | All processes that take place the first time the app is used (such as consent, data privacy, language selection) |
 | 2 | Information and Instructions for Using the App | Help tools for using the app (such as user manual, tutorial), as well as publication information for the app |
-| 3 | Use in the Regular Process | App functions in idle mode (such as activate/deactivate, changing settings, monitoring app activities) |
+| 3 | Use in the Regular Process | App functions in idle mode (such as activate, deactivate, changing settings, monitoring app activities) |
 | 4 | Exposure (Contact with an Infected Person) | All functions associated with contact points (such as notifications, recommended actions) |
 | 5 | Notification of Covid-19 Test Results | Functions related to the notification of test results |
 | 6 | Warning trigger | Process to trigger a warning if a test result is positive |
