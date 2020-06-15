@@ -10,3 +10,6 @@
 # Solution architecture document and its translations
 solution_architecture*.md @tklingbeil @SebastianWolf-SAP @tkowark @LukasMasuch @raethlein
 /images/solution_architecture/ @tklingbeil @SebastianWolf-SAP @tkowark @LukasMasuch @raethlein
+
+# Epidemiological Motivation of the Transmission Risk Level
+transmission_risk* @kirchnergo @hoehleatsu @weidemannf @dirkschumacher @benzlerj
