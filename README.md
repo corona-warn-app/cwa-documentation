@@ -66,6 +66,7 @@ The technical documents are intended for a technical audience and represent the 
 * [Criteria for the Evaluation of Contact Tracing Apps](pruefsteine.md)
 * [Corona-Warn-App Security Overview](overview-security.md)
 * [Corona-Warn-App Backend Infrastructure Architecture Overview](https://github.com/corona-warn-app/cwa-documentation/blob/master/backend-infrastructure-architecture.pdf)
+* [Epidemiological Motivation of the Transmission Risk Level (PDF)](https://github.com/corona-warn-app/cwa-documentation/blob/master/transmission_risk.pdf), [(Rmd file)](https://github.com/corona-warn-app/cwa-documentation/blob/master/transmission_risk.Rmd), [(bib references)](https://github.com/corona-warn-app/cwa-documentation/blob/master/transmission_risk_references.bib)
 
 To be published:
 * System Operation
