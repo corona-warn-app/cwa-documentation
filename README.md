@@ -67,10 +67,10 @@ The technical documents are intended for a technical audience and represent the 
 * [Corona-Warn-App Security Overview](overview-security.md)
 * [Corona-Warn-App Backend Infrastructure Architecture Overview](https://github.com/corona-warn-app/cwa-documentation/blob/master/backend-infrastructure-architecture.pdf)
 * [Epidemiological Motivation of the Transmission Risk Level (PDF)](https://github.com/corona-warn-app/cwa-documentation/blob/master/transmission_risk.pdf), [(Rmd file)](https://github.com/corona-warn-app/cwa-documentation/blob/master/transmission_risk.Rmd), [(bib references)](https://github.com/corona-warn-app/cwa-documentation/blob/master/transmission_risk_references.bib)
+* [Corona-Warn-App Data Privacy Impact Assessment/DPIA (PDF, German)](http://localhost:8080/assets/documents/cwa-datenschutz-folgenabschaetzung.pdf), [DPIA Annex 1](http://localhost:8080/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage1.pdf), [DPIA Annex 2](http://localhost:8080/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage2.pdf), [DPIA Annex 3](http://localhost:8080/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage3.pdf), [DPIA Annex 4](http://localhost:8080/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage4.pdf), [DPIA Annex 5](http://localhost:8080/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage5.pdf)
 
 To be published:
 * System Operation
-* Data Privacy Concept
 
 ### Glossary
 For an easier understanding of the used acronyms and special terms in our documents please see our [glossary](glossary.md).
