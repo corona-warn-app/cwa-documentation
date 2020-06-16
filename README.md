@@ -66,6 +66,7 @@ The technical documents are intended for a technical audience and represent the 
 * [Criteria for the Evaluation of Contact Tracing Apps](pruefsteine.md)
 * [Corona-Warn-App Security Overview](overview-security.md)
 * [Corona-Warn-App Backend Infrastructure Architecture Overview](https://github.com/corona-warn-app/cwa-documentation/blob/master/backend-infrastructure-architecture.pdf)
+* [How does the Corona-Warn-App identify an increased risk?](cwa-risk-assessment.md)
 * [Epidemiological Motivation of the Transmission Risk Level (PDF)](https://github.com/corona-warn-app/cwa-documentation/blob/master/transmission_risk.pdf), [(Rmd file)](https://github.com/corona-warn-app/cwa-documentation/blob/master/transmission_risk.Rmd), [(bib references)](https://github.com/corona-warn-app/cwa-documentation/blob/master/transmission_risk_references.bib)
 * [Corona-Warn-App Data Privacy Impact Assessment/DPIA (PDF, German)](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung.pdf), [DPIA Annex 1](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage1.pdf), [DPIA Annex 2](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage2.pdf), [DPIA Annex 3](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage3.pdf), [DPIA Annex 4](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage4.pdf), [DPIA Annex 5](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage5.pdf)
 
