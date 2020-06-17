@@ -220,7 +220,7 @@ Based on the results of the risk assessment, the teams derive the security and a
 The teams performs further verifications of the implemented security controls by security testing, following the security test plan the teams created. 
 
 ### Static Application Security Testing (SAST)
-Whenever possible, the developers integrate these tools directly into their tool environment and use them daily. If this is not possible, the teams sets up daily or weekly runs of the static-code analyzers and feeds the results back to the developers for immediate audit and analysis during the development. 
+Whenever possible, the developers integrate these tools directly into their tool environment and use them daily. If this is not possible, the teams set up daily or weekly runs of the static-code analyzers and feeds the results back to the developers for immediate audit and analysis during the development. 
 
  - [cwa-app-android](https://github.com/corona-warn-app/cwa-app-android)
 	 - Checkmarx Static Application Security Testing (CxSAST)  
@@ -276,7 +276,7 @@ Deutsche Telekom AG deploys a secure operations framework to maintain security d
 - [Lifecycle Management](#lifecycle-management)
 - [Privileged Access Management](#privileged-access-management)
 - [Physical Security](#physical-security)
-- [Security Trainings and Skill Assessment](#security-trainings-and-skill-assessment)
+- [Security Training and Skill Assessment](#security-training-and-skill-assessment)
 - [Customer and Authority Interaction](#customer-and-authority-interaction)
 
 The following chapters contain a brief introduction to each capability.
@@ -444,13 +444,13 @@ The following chapters contain a brief introduction to each capability.
 #### Objective
 - Maintain confidentiality, integrity and availability from a physical access perspective.
 
-### Security Trainings and Skill Assessment
+### Security Training and Skill Assessment
 #### Subject
-- Security trainings and skill assessments
+- Security training and skill assessments
 	- inform about the specific company guidelines and processes for security. Participants receive information on which procedures to follow or which persons to inform when security-relevant events are detected.
 	- inform about specific threat scenarios which should be known by all employees. 
 	- provide guidance for administrators in form of how-tos (e.g. log file extraction and transfer, etc.). 
-- Specific trainings for security/operation staff (e.g. incident response, IDS, etc.) must be available.
+- Specific training for security/operation staff (e.g. incident response, IDS, etc.) must be available.
 #### Objective
 - Strengthen the overall safety awareness and minimize the risks to IT security caused by internal and external employees 
 - Gain awareness to handle security threats.
