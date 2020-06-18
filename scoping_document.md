@@ -172,7 +172,7 @@ The corresponding acceptance criteria supplement the specification of the requir
 ### Accessibility
 | # of user story ID | User story | Acceptance criteria |
 |-----------------|------------|--------------------|
-| E09.01 | As a user, I want the app to provide audio output, so that I can use the app even if, for example, I have impaired vision or I am blind. | 1. Accessibility regarding audio output is provided depending on the options available in the respective operating system. |
+| E09.01 | As a user, I want the app to provide audio output, so that I can use the app even if, for example, I have impaired vision or blindness. | 1. Accessibility regarding audio output is provided depending on the options available in the respective operating system. |
 | E09.02 | As a user, I want to have good contrast settings, modifiable font sizes, and an easily readable font, so that I can read the texts in the app easily. | 1. Accessibility regarding contrast, font size, and font type is provided depending on the options available in the respective operating system. |
 | E09.03 | As a user, I want to have the content of the app in simplified language, so that I can easily understand how to use the app and why I should use it. | 1. The texts and languages are defined by the ordering party. |
 
