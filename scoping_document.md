@@ -66,7 +66,7 @@ The usage phase is subdivided into four further areas, in which people who use t
 
 2. **Exposure**
 
-   If exposure to infected persons is determined, the user receives a notification and recommendations on what to do. For instance, the user is asked to contact a medical professional or their responsible health department, or the user is asked to self-isolate or the user is notified that there is no need to self-isolate.
+   If exposure to infected persons is determined, the user receives a notification and recommendations on what to do. For instance, the app recommends the user to contact a medical professional or their responsible health department, or alternatively, the app recommends the user to self-isolate. Contrarily, the app can also notify the user that there is no need to self-isolate.
 
 3. **Testing**
 
