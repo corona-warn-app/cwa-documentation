@@ -12,7 +12,7 @@ Diagnosis keys do not give any indication as to the identity of a person who has
 
 Several times per day, all active Corona-Warn-Apps download the diagnosis keys released on the Corona-Warn-App server and pass them on to the operating system in batches through an interface. The app checks whether any of these received, recorded rolling proximity identifiers match any of the diagnosis keys. If there is a match, this indicates that the user’s smartphone encountered the smartphone of a person who has uploaded a diagnosis key on the day to which the diagnosis key belongs.
 
-In the next step, the app analyzes all the matching rolling proximity identifiers for each diagnosis key, to estimate how long the exposure lasted in total on the day in question and how close the smartphones were to each other on average during the exposure. The distance is calculated from the measured reduction in strength of the Bluetooth signal, which is specified in dBm (decibel-milliwatts). All exposures for a diagnosis key that lasted less than 10 minutes in total (regardless of how close the smartphones came during that time) or during which the smartphones were more than 8 meters (73 dBm) apart on average (regardless of how long the exposure lasted) are discarded as harmless.
+In the next step, the app analyzes all the matching rolling proximity identifiers for each diagnosis key, to estimate how long the exposure lasted in total on the day in question and how close the smartphones were to each other on average during the exposure. The distance is calculated from the measured reduction in strength of the Bluetooth signal, which is specified in dBm (decibel-milliwatts). All exposures for a diagnosis key that lasted less than 10 minutes in total (regardless of how close the smartphones came during that time) or during which the smartphones were more than 8 meters (-73 dBm) apart on average (regardless of how long the exposure lasted) are discarded as harmless.
 
 > NB: In the following, the total of all exposures that belong to a diagnosis key, that is, all exposures over a day between the same two smartphones, is referred to as the “exposure set”.
 
@@ -20,7 +20,7 @@ For the remaining exposures that have not been discarded as harmless, a *total r
 
 All exposure sets that exceed a certain threshold (the *minimum risk score*) are considered to be risk exposures. The other exposure sets are discarded as harmless, like the sets that were previously discarded for being too short and/or too distant.
 
-At the same time, the remaining risk exposures are added together to determine how much time exposure took place within a very close range below 1.5 meters (55 dBm) and how much time exposure took place in a close range between 1.5 and 3 meters (63 dBm).
+At the same time, the remaining risk exposures are added together to determine how much time exposure took place within a very close range below 1.5 meters (-55 dBm) and how much time exposure took place in a close range between 1.5 and 3 meters (-63 dBm).
 
 The total calculated time is then cross- calculated against the *maximum risk score*, the exposure with the highest risk: the time remains unchanged if this risk is estimated as average (for risk exposures), it is extended to one and a half times if the risk is above average, and it is reduced significantly (to around one-sixth) if the risk is below average. As a result, an exposure time of 10 minutes can be extended to more than 15 minutes and an exposure time of 45 minutes can be reduced to less than 10 minutes.
 
