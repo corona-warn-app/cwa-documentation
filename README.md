@@ -62,7 +62,7 @@ The technical documents are intended for a technical audience and represent the 
 * [Corona-Warn-App Verification Portal Server Software Design](https://github.com/corona-warn-app/cwa-verification-portal/blob/master/docs/architecture-overview.md)
 * [Corona-Warn-App Test Result Server Software Design](https://github.com/corona-warn-app/cwa-testresult-server/blob/master/docs/architecture-overview.md)
 * [Corona-Warn-App Mobile Client (Android) Architecture](https://github.com/corona-warn-app/cwa-app-android/blob/master/docs/architecture-overview.md)
-* [Corona-Warn-App Mobile Client (iOS) Architecture](https://github.com/corona-warn-app/cwa-app-ios/blob/development/docs/architecture-overview.md)
+* [Corona-Warn-App Mobile Client (iOS) Architecture](https://github.com/corona-warn-app/cwa-app-ios/blob/master/docs/architecture-overview.md)
 * [Criteria for the Evaluation of Contact Tracing Apps](pruefsteine.md)
 * [Corona-Warn-App Security Overview](overview-security.md)
 * [Corona-Warn-App Backend Infrastructure Architecture Overview](https://github.com/corona-warn-app/cwa-documentation/blob/master/backend-infrastructure-architecture.pdf)
