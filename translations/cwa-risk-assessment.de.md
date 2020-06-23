@@ -31,3 +31,12 @@ Am Ende wird die die CWA nutzende Person immer dann über ein erhöhtes Risiko b
 Bei der Bewertung der von der CWA ermittelten Zeiten und Entfernungen muss berücksichtigt werden, dass beide Parameter nicht exakt gemessen werden können. Die einzelnen gemessenen Zeiten können bis zu 5 Minuten in beide Richtungen abweichen und die ermittelten Entfernungen sind Näherungswerte unter Idealbedingungen, d.h., wenn z.B. keine Hindernisse zwischen den beiden Smartphones sind. Schon bei kleineren Hindernissen, z.B. einer Person zwischen den beiden Smartphones oder wenn das Smartphone abgeschirmt verstaut ist, kann die Entfernung doppelt so groß erscheinen wie sie wirklich ist.
 
 Aufgrund von Datenschutzerwägungen können die oben beschriebenen Eigenschaften an der Schnittstelle zum Betriebssystem vorerst nur für die Gesamtheit aller Risikobegegnungen abgefragt werden, nicht aber für einzelne Risikobegegnungen oder tageweise. Solange die Anzahl neuer Fälle vergleichsweise gering bleibt, dürfte das keinen großen Unterschied machen, da vermutlich nur wenige die CWA nutzende Personen im Zeitraum vor ihrer Benachrichtigung Risikobegegnungen mit mehreren positiv getesteten Personen haben, die die CWA nutzen.
+
+## Aktuelle Konfiguration
+
+Wie im [Abschnitt 'Risk Score Calculation'](https://github.com/corona-warn-app/cwa-documentation/blob/master/solution_architecture.md#risk-score-calculation) des Solution-Architecture-Dokuments beschrieben, werden die jeweilgen Parameter für die Berechnung von einer Menge an Parametern bestimmt, die von cwa-server zur Verfügung gestellt werden. Diese Konfiguration kann sich über die Zeit auf Basis der jüngsten Forschungsergebnisse ändern. Die jeweils aktuell gültigen Parameterwerte können im [cwa-server-Repository](https://github.com/corona-warn-app/cwa-server) eingesehen werden:
+
+- [Konfiguration von Begegnungen](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/master-config/exposure-config.yaml)
+- [Konfiguration von Dämpfung & Dauer](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/master-config/attenuation-duration.yaml)
+- [App-Konfiguration, inkl. des minimalen Risikowerts](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/master-config/app-config.yaml)
+- [Risikowertklassifizierung](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/master-config/risk-score-classification.yaml)
