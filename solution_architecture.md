@@ -109,7 +109,7 @@ As of now, two uploads are required from the same mobile phone (past diagnosis k
 The Corona-Warn-App Server needs to fulfill the following tasks:
 - Accept upload requests from clients
 	- Verify association with a positive test through the Verification Server and the associated workflow as explained in the “Retrieval of Lab Results and Verification Process” section and shown in the center of the left side of *Figure 6*.
-	- Accept uploaded diagnosis keys and store them (optional) together with the corresponding transmission risk level parameter (integer value of 1-8) into the database. Note that the transport of metadata (e.g. IP) of the incoming connections for the upload of diagnosis keys is removed in a dedicated actor, labeled “Transport Metadata Removal” in *Figure 6*.
+	- Accept uploaded diagnosis keys and store them (optional) together with the corresponding transmission risk level parameter (integer value of 0-8) into the database. Note that the transport of metadata (e.g. IP) of the incoming connections for the upload of diagnosis keys is removed in a dedicated actor, labeled “Transport Metadata Removal” in *Figure 6*.
 - Provide [configuration parameters](#data-format) to the mobile applications
 	- Threshold values for [attenuation buckets](#attenuation-buckets)
 	- Risk scores for defined values
