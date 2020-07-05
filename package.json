@@ -1,0 +1,32 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "A central repository for documentation",
+  "main": "README.md",
+  "dependencies": {
+    "alex": "^8.1.1",
+    "markdown-link-check": "^3.8.1",
+    "markdown-spellcheck": "^1.3.1",
+    "markdownlint": "^0.20.4",
+    "markdownlint-cli": "^0.23.1",
+    "npm-run-all": "^4.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "run-s markdownlint checklinks spellcheck format-spelling detect-inconsiderate-language",
+    "spellcheck": "mdspell '**/*.md' --en-us -t -n -a --report '!**/node_modules/**/*.md' '!**/.github/**/*.md' '!**/translations/**/*.md'",
+    "markdownlint": "markdownlint '**/*.md' --ignore node_modules",
+    "checklinks": "find . -not -path \"*node_modules*\" -not -path \"*.github*\" -name \"*.md\" | xargs -n 1 markdown-link-check",
+    "detect-inconsiderate-language": "alex",
+    "format-spelling": "sort < .spelling | sort | uniq | tee .spelling.tmp > /dev/null && mv .spelling.tmp .spelling"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:corona-warn-app/cwa-documentation.git"
+  },
+  "keywords": [
+    "docs"
+  ],
+  "author": "Johannes Amorosa",
+  "license": "Apache 2.0"
+}

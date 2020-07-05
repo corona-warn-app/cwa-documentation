@@ -1,10 +1,14 @@
 # Contributing
 
+## Build status
+
+![Checks](https://github.com/corona-warn-app/cwa-documentation/workflows/Checks/badge.svg)
+
 ## Code of Conduct
 
 All members of the project community must abide by the [Contributor Covenant, version 2.0](CODE_OF_CONDUCT.md).
 Only by respecting each other we can develop a productive, collaborative community.
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting [corona-warn-app.opensource@sap.com](mailto:corona-warn-app.opensource@sap.com) and/or a project maintainer. 
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting [corona-warn-app.opensource@sap.com](mailto:corona-warn-app.opensource@sap.com) and/or a project maintainer.
 
 We appreciate your courtesy of avoiding political questions here. Issues which are not related to the project itself will be closed by our community managers. 
 
@@ -38,7 +42,8 @@ The following rule governs code contributions:
 
 ## Contributing Documentation
 
-You are welcome to contribute documentation to the project.
+You are welcome to contribute documentation to the project. Please see the
+installation [document](INSTALL.md)
 
 The following rule governs documentation contributions:
 
@@ -64,7 +69,7 @@ The following rule governs documentation contributions:
 
 ## Issues and Planning
 
-* We use GitHub issues to track bugs and enhancement requests. 
+* We use GitHub issues to track bugs and enhancement requests.
 
 * Please provide as much context as possible when you open an issue. The information you provide must be comprehensive enough to reproduce that issue for the assignee. Therefore, contributors should use but aren't restricted to the issue template provided by the project maintainers.
 
