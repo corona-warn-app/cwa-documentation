@@ -2,10 +2,10 @@
 
 ## tl;dr
 
-**You will need to use following `make targets` before creating a pull request!**
+**You will need to use following `npm scripts` before creating a pull request!**
 
-1. `make install`
-2. `make check`
+1. `npm install`
+2. `npm test`
 
 ## Features
 
@@ -37,38 +37,24 @@ For linting and all the checks you need several npm packages. The following
 command installs all necessary npm dependencies:
 
 ```shell
-make install
+npm install
 ```
 
-This installs all dependencies into a local `node_modules` folder. `Make` adds
-this to your execution path automatically. If you install the modules somewhere
-else please make sure this folder is in your execution path. On macOS or Linux
-you probably need to export your Path like this:
-
-```shell
-export PATH=my/path/to/node_modules/.bin:$PATH
-```
+This installs all dependencies into a local `node_modules` folder.
 
 ## Checks
 
 To enforce good spelling and specification conformity there are several checks
-as `Makefile` targets defined. To run all checks please execute:
+defined as `npm run-script` targets. To run all checks please execute:
 
 ```shell
-make check
-```
-
-As an alternative to make it is possible to utilize *npm-run-all* for testing:
-
-```shell
-npm run-script test
+npm test
 ```
 
 ### Individual checks
 
 If you want to run individual checks see the targets and the description below.
-There are always Makefile targets. If you prefer npm for testing you can run
-every individual check like so:
+Every individual check can be run like so:
 
 ```shell
 npm runscript my-individual-check
@@ -80,7 +66,7 @@ See the package-json file for help.
 Markdown linting. See the rules [here](https://github.com/DavidAnson/markdownlint).
 
 ```shell
-make markdownlint
+npm run-script markdownlint
 ```
 
 ##### Overrides
@@ -124,7 +110,7 @@ documentation mentioned above.
 Spell checking in American English (en_US).
 
 ```shell
-make spellcheck-en
+npm run-script spellcheck
 ```
 
 ##### German
@@ -133,11 +119,11 @@ Not implemented yet.
 
 ##### Overrides
 
-Add any additional words to the .spelling file and use the make target to sort
+Add any additional words to the .spelling file and use the target to sort
 and clean them before adding these to master.
 
 ```shell
-make format-spelling
+npm run-script format-spelling
 ```
 
 Please note sometimes overriding is not the way to go. For example there may be
@@ -149,7 +135,7 @@ documents should stick to one variation.
 All cross references and external URLs are resolved.
 
 ```shell
-make checklinks
+npm run-script checklinks
 ```
 
 #### Inconsiderate language scanner
@@ -159,5 +145,5 @@ non-natives to detect words that could be inconsiderate. This utilizes
 [alex](https://github.com/get-alex/alex)
 
 ```shell
-make detect-inconsiderate-language
+npm run-script detect-inconsiderate-language
 ```

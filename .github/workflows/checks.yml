@@ -17,24 +17,24 @@ jobs:
       - name: Install npm dependencies
         if: always()
         run: |
-          make install
+          npm install
 
-      - name: Linting markdown
-        if: always()
-        run: |
-          make markdownlint
+      #- name: Linting markdown
+      #  if: always()
+      #  run: |
+      #    npm run-script markdownlint
 
       - name: Checking for broken links
         if: always()
         run: |
-          make checklinks
+          npm run-script checklinks
 
-      - name: Spellchecking english
-        if: always()
-        run: |
-          make spellcheck-en
+      #- name: Spellchecking english
+      #  if: always()
+      #  run: |
+      #    npm run-script spellcheck
 
-      - name: Detect inconsiderate language
-        if: always()
-        run: |
-          make detect-inconsiderate-language
+      #- name: Detect inconsiderate language
+      #  if: always()
+      #  run: |
+      #    npm run-script detect-inconsiderate-language
