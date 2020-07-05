@@ -32,7 +32,7 @@ jobs:
       - name: Spellchecking english
         if: always()
         run: |
-          npm run-script spellcheck-en
+          npm run-script spellcheck
 
       #- name: Detect inconsiderate language
       #  if: always()
