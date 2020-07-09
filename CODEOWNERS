@@ -13,3 +13,7 @@ solution_architecture*.md @tklingbeil @SebastianWolf-SAP @tkowark @LukasMasuch @
 
 # Epidemiological Motivation of the Transmission Risk Level
 transmission_risk* @kirchnergo @hoehleatsu @weidemannf @dirkschumacher @benzlerj
+
+# How does the Corona-Warn-App identify an increased risk?
+cwa-risk* @benzlerj @hoehleatsu @kirchnergo @SebastianWolf-SAP
+translations/cwa-risk* @benzlerj @hoehleatsu @kirchnergo @SebastianWolf-SAP
