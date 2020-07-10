@@ -85,7 +85,7 @@ Anton and Aisha regularly travel to work together.
 Betty takes the same route and occasionally rides the same bus.
 All three of them use their smartphones during the journey, which means there are no impediments to the Bluetooth signals.
 Betty met Anton and Aisha on the 9th and the 16th, for 10 minutes each in the morning and in the evening.
-Anton sat one meter away from Betty, while Aisha sat and two meters away.
+Anton sat one meter away from Betty, while Aisha sat two meters away.
 
 When Betty’s CWA retrieves Anton’s diagnosis keys on the 21st and passes them on to her smartphone's operating system's interface, an encounter set is recognized for the 16th.
 (Anton’s CWA did not upload a diagnosis key for the 9th.)
