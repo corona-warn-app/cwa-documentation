@@ -1,0 +1,28 @@
+{
+    "default": true,
+    "MD013": false,
+    "MD033": {
+        "allowed_elements": [
+            "a",
+            "blockquote",
+            "br",
+            "code",
+            "em",
+            "hr",
+            "li",
+            "ol",
+            "p",
+            "pre",
+            "sup",
+            "table",
+            "tbody",
+            "td",
+            "th",
+            "thead",
+            "tr",
+            "u",
+            "ul"
+        ]
+    },
+    "MD034": false
+}
