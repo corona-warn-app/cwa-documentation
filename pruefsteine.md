@@ -22,19 +22,19 @@ Even if the central Corona-Warn-App server is compromised, this information cann
 
 As mandated by the General Data Protection Regulation (GDPR), [data minimization](https://www.privacy-regulation.eu/en/article-5-principles-relating-to-processing-of-personal-data-GDPR.htm) is a paramount principle in the implementation of the Corona-Warn-App.
 
-Data collection is limited to the minimum data required for the app to function. Users only provide the following input: 
+Data collection is limited to the minimum data required for the app to function. Users only provide the following input:
 
- * Permission to use the Exposure Notification framework
- * QR Code scan during testing
- * TeleTAN in case of hotline-based result verification
- * Consent to upload daily diagnosis keys
- 
+* Permission to use the Exposure Notification framework
+* QR Code scan during testing
+* TeleTAN in case of hotline-based result verification
+* Consent to upload daily diagnosis keys
+
 Location data is not and cannot be collected by apps using the Exposure Notification framework:
 
 * [Section 3.3 Exposure Notification APIs Addendum](https://developer.apple.com/contact/request/download/Exposure_Notification_Addendum.pdf)
-* [Section 3.c Google COVID-19 Exposure Notifications Service Additional Terms](https://blog.google/documents/72/Exposure_Notifications_Service_Additional_Terms.pdf). 
+* [Section 3.c Google COVID-19 Exposure Notifications Service Additional Terms](https://blog.google/documents/72/Exposure_Notifications_Service_Additional_Terms.pdf).
 
-The diagnosis keys are only stored centrally for the epidemiologically relevant period of 14 days and are removed automatically after that period. 
+The diagnosis keys are only stored centrally for the epidemiologically relevant period of 14 days and are removed automatically after that period.
 
 ## Anonymity
 
@@ -50,9 +50,9 @@ Users only have to identify themselves when they obtain the permission to upload
 
 ## No Creation of Central Movement or Contact Profiles
 
-Movement or contact data is not collected centrally. 
+Movement or contact data is not collected centrally.
 
-Neither location data, nor the rolling proximity identifiers that are part of potential exposure events are ever stored centrally. At any given point in time, the system is only aware that diagnosis keys belong to individuals that have tested positive, not whom they met, where they met, or when they met. 
+Neither location data, nor the rolling proximity identifiers that are part of potential exposure events are ever stored centrally. At any given point in time, the system is only aware that diagnosis keys belong to individuals that have tested positive, not whom they met, where they met, or when they met.
 
 To use the app for exposure detection, no identification is required. An identification is only necessary for the results retrieval and diagnosis key transmission functions. Linking the app to social media profiles is not and will not be implemented in this project.
 
@@ -70,4 +70,4 @@ The Corona-Warn-App takes state of the art measures to make individual messages 
 
 Well-established encryption mechanisms such as HTTP over TLS (HTTPS) ensure that messages are not readable for outside viewers. Metadata is removed before processing payload in diagnosis key submissions and can therefore not be linked to them on a database level. To further reduce the possibility of man-in-the-middle attacks, certificate pinning shall ensure that trusted communication only happens between the Corona-Warn-App and the server.
 
-Besides shielding individual messages that are transmitted by the system, also communication patterns  need to be disguised. Consider, for example, that polling for test results and submitting diagnosis keys would only happen in case of a real infection. In this case, observing network traffic would be sufficient to know that users took a SARS-CoV-2 test and had a positive result. This attack surface is mitigated by random fake messages that are indistinguishable from valid ones. This way, key submission and the retrieval of test results are indistinguishable from the system's background noise, creating plausible deniability for users even if network traffic is observed. 
+Besides shielding individual messages that are transmitted by the system, also communication patterns  need to be disguised. Consider, for example, that polling for test results and submitting diagnosis keys would only happen in case of a real infection. In this case, observing network traffic would be sufficient to know that users took a SARS-CoV-2 test and had a positive result. This attack surface is mitigated by random fake messages that are indistinguishable from valid ones. This way, key submission and the retrieval of test results are indistinguishable from the system's background noise, creating plausible deniability for users even if network traffic is observed.

@@ -57,6 +57,7 @@ Every individual check can be run like so:
 ```shell
 npm runscript my-individual-check
 ```
+
 See the package.json file for help.
 
 #### Markdown linter
@@ -67,7 +68,7 @@ Markdown linting. See the rules [here](https://github.com/DavidAnson/markdownlin
 npm run-script markdownlint
 ```
 
-##### Overrides
+##### Markdown linter overrides
 
 Sometimes it is not possible to be commonmark conform. In this rare cases an inline tag to skip linting is possible.
 
@@ -80,9 +81,11 @@ Candidates are tables.
 <!-- markdownlint-enable-->
 ```
 
-Additionally HTML image tags can be allowed globally. This is useful if you need to resize images, since commonmark has no annotation for this.
+Additionally HTML image tags can be allowed globally. This is useful if you need
+to resize images, since commonmark has no annotation for this.
 
-This is done with a .markdownlint.json override file which would look something like this:
+This is done with a .markdownlint.json override file which would look something
+like this:
 
 ```json
 {
@@ -95,7 +98,8 @@ This is done with a .markdownlint.json override file which would look something 
 }
 ```
 
-For more information how to tweak overrides consult the markdown linter documentation mentioned above.
+For more information how to tweak overrides consult the markdown linter
+documentation mentioned above.
 
 #### Spell checker
 
@@ -111,15 +115,17 @@ npm run-script spellcheck
 
 Not implemented yet.
 
-##### Overrides
+##### Spell checker overrides
 
-Add any additional words to the .spelling file and use the target to sort and clean them before adding these to master.
+Add any additional words to the .spelling file and use the target to sort and
+clean them before adding these to master.
 
 ```shell
 npm run-script format-spelling
 ```
 
-Please note sometimes overriding is not the way to go. Our terminology should be applied consistently.
+Please note sometimes overriding is not the way to go. Our terminology should be
+applied consistently.
 
 #### Link resolver
 
@@ -131,7 +137,8 @@ npm run-script checklinks
 
 #### Inconsiderate language scanner
 
-This checks against profanity and inconsiderate language. This is help full for non-natives to detect words that could be inconsiderate. This utilizes [alex](https://github.com/get-alex/alex)
+This checks against profanity and inconsiderate language. This is help full for
+non-natives to detect words that could be inconsiderate. This utilizes [alex](https://github.com/get-alex/alex)
 
 ```shell
 npm run-script detect-inconsiderate-language

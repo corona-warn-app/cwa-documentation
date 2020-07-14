@@ -10,7 +10,7 @@ All members of the project community must abide by the [Contributor Covenant, ve
 Only by respecting each other we can develop a productive, collaborative community.
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting [corona-warn-app.opensource@sap.com](mailto:corona-warn-app.opensource@sap.com) and/or a project maintainer.
 
-We appreciate your courtesy of avoiding political questions here. Issues which are not related to the project itself will be closed by our community managers. 
+We appreciate your courtesy of avoiding political questions here. Issues which are not related to the project itself will be closed by our community managers.
 
 ## Engaging in Our Project
 

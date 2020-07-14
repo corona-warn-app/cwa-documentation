@@ -1,7 +1,7 @@
 {
   "name": "docs",
   "version": "1.0.0",
-  "description": "A central repository for documentation",
+  "description": "Corona-Warn-App: Documentation repository",
   "main": "README.md",
   "dependencies": {
     "alex": "^8.1.1",
@@ -13,7 +13,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "run-s markdownlint checklinks spellcheck format-spelling detect-inconsiderate-language",
+    "test": "run-s markdownlint checklinks format-spelling",
     "spellcheck": "mdspell '**/*.md' --en-us -t -n -a --report '!**/node_modules/**/*.md' '!**/.github/**/*.md' '!**/translations/**/*.md'",
     "markdownlint": "markdownlint '**/*.md' --ignore node_modules",
     "checklinks": "find . -not -path \"*node_modules*\" -not -path \"*.github*\" -name \"*.md\" | xargs -n 1 markdown-link-check",

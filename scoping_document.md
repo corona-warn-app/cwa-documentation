@@ -185,7 +185,7 @@ The requirements the Corona-Warn-App must satisfy, and which define its
 functional scope, are formulated below in the usual format of a user story,
 unless specified otherwise:
 
-“As &lt;stakeholder&gt;, I want &lt;goal&gt;, so that &lt;reason&gt;.“_
+"As &lt;stakeholder&gt;, I want &lt;goal&gt;, so that &lt;reason&gt;."
 
 The corresponding acceptance criteria supplement the specification of the
 requirements by defining the conditions that the software must fulfill to

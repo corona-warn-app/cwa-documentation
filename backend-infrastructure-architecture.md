@@ -1,4 +1,5 @@
 # German Corona Warn App (CWA)
+
 ## Backend Infrastructure Architecture Overview
 
 The file ``backend-infrastructure-architecture.pdf`` complements the "CWA Solution Architecture" document. It is intended as a technical overview document of Corona Warn App (CWA) and its underlying infrastructure and network.

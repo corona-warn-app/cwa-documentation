@@ -9,7 +9,7 @@ A user who has tested positive for coronavirus uploads up to 15 diagnosis keys: 
 The latter is necessary because diagnosis keys can only be uploaded for past days in order to prevent abuse of diagnosis keys that are still active.
 
 Diagnosis keys do not give any indication as to the identity of a person who has tested positive, but a diagnosis key from a certain day can be matched with the *rolling proximity identifiers* that a user’s smartphone has transmitted via Bluetooth throughout a given day and were received and recorded by other smartphones nearby.
-Each diagnosis key is appended with a value that indicates the *transmission risk level* that likely existed for the person who has tested positive on the day that the diagnosis key belongs to. 
+Each diagnosis key is appended with a value that indicates the *transmission risk level* that likely existed for the person who has tested positive on the day that the diagnosis key belongs to.
 This transmission risk is [estimated in a mathematical procedure](transmission_risk.pdf), which is based on empirical evidence and takes the latest scientific findings into account.
 Every diagnosis key expires after 14 days. Therefore, only the diagnosis keys from the last 14 days are available.
 
@@ -145,7 +145,6 @@ In contrast, the risk exposure on the 16th is taken into account in the summary 
 The calculated 30 minutes are once again cross-calculated with Betty’s risk exposure with Anton, which at 40 is still the highest exposure risk from all risk encounters identified in the recorded 14-day period, resulting in 30 x 40/25 = 48 minutes.
 
 Betty’s updated risk notification now shows 2 risk encounters, the most recent of which took place 6 days ago.
-
 
 ## Current Configuration
 

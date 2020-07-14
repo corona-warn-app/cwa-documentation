@@ -1,6 +1,10 @@
 {
     "default": true,
     "MD013": false,
+    "MD026": false,
+    "MD024": {
+        "allow_different_nesting": true
+    },
     "MD033": {
         "allowed_elements": [
             "a",
@@ -9,6 +13,7 @@
             "code",
             "em",
             "hr",
+            "img",
             "li",
             "ol",
             "p",
@@ -24,5 +29,6 @@
             "ul"
         ]
     },
-    "MD034": false
+    "MD034": false,
+    "MD036": false
 }
