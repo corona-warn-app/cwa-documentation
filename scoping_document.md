@@ -141,7 +141,7 @@ the app have different needs.
 
 4. **Infection case**
 
-   If an app user tests positive for SARS-COV-2 infection, they can voluntarily
+   If an app user tests positive for SARS-CoV-2 infection, they can voluntarily
    publish the pseudonymized warn IDs saved in their app. That way, other app
    users can use their smartphones to find out whether they have been exposed
    to the infected user.

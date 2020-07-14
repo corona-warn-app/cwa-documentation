@@ -33,8 +33,7 @@ To run all the linters please install for your OS:
 
 ## Installation
 
-For linting and all the checks you need several npm packages. The following
-command installs all necessary npm dependencies:
+For linting and all the checks you need several npm packages. The following command installs all necessary npm dependencies:
 
 ```shell
 npm install
@@ -44,8 +43,7 @@ This installs all dependencies into a local `node_modules` folder.
 
 ## Checks
 
-To enforce good spelling and specification conformity there are several checks
-defined as `npm run-script` targets. To run all checks please execute:
+To enforce good spelling and specification conformity there are several checks defined as `npm run-script` targets. To run all checks please execute:
 
 ```shell
 npm test
@@ -59,7 +57,7 @@ Every individual check can be run like so:
 ```shell
 npm runscript my-individual-check
 ```
-See the package-json file for help.
+See the package.json file for help.
 
 #### Markdown linter
 
@@ -71,8 +69,7 @@ npm run-script markdownlint
 
 ##### Overrides
 
-Sometimes it is not possible to be commonmark conform. In this
-rare cases an inline tag to skip linting is possible.
+Sometimes it is not possible to be commonmark conform. In this rare cases an inline tag to skip linting is possible.
 
 Candidates are tables.
 
@@ -83,11 +80,9 @@ Candidates are tables.
 <!-- markdownlint-enable-->
 ```
 
-Additionally html image tags can be allowed globally. This is useful if you need
-to resize images, since commonmark has no annotation for this.
+Additionally HTML image tags can be allowed globally. This is useful if you need to resize images, since commonmark has no annotation for this.
 
-This is done with a .markdownlint.json override file which would look something
-like this:
+This is done with a .markdownlint.json override file which would look something like this:
 
 ```json
 {
@@ -100,8 +95,7 @@ like this:
 }
 ```
 
-For more information how to tweak overrides consult the markdown linter
-documentation mentioned above.
+For more information how to tweak overrides consult the markdown linter documentation mentioned above.
 
 #### Spell checker
 
@@ -119,16 +113,13 @@ Not implemented yet.
 
 ##### Overrides
 
-Add any additional words to the .spelling file and use the target to sort
-and clean them before adding these to master.
+Add any additional words to the .spelling file and use the target to sort and clean them before adding these to master.
 
 ```shell
 npm run-script format-spelling
 ```
 
-Please note sometimes overriding is not the way to go. For example there may be
-three ways for the word TeleTan (TeleTAN, teleTAN) in this repository. The
-documents should stick to one variation.
+Please note sometimes overriding is not the way to go. Our terminology should be applied consistently.
 
 #### Link resolver
 
@@ -140,9 +131,7 @@ npm run-script checklinks
 
 #### Inconsiderate language scanner
 
-This checks against profanity and inconsiderate language. This is help full for
-non-natives to detect words that could be inconsiderate. This utilizes
-[alex](https://github.com/get-alex/alex)
+This checks against profanity and inconsiderate language. This is help full for non-natives to detect words that could be inconsiderate. This utilizes [alex](https://github.com/get-alex/alex)
 
 ```shell
 npm run-script detect-inconsiderate-language
