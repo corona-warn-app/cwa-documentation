@@ -1,0 +1,34 @@
+{
+    "default": true,
+    "MD013": false,
+    "MD026": false,
+    "MD024": {
+        "allow_different_nesting": true
+    },
+    "MD033": {
+        "allowed_elements": [
+            "a",
+            "blockquote",
+            "br",
+            "code",
+            "em",
+            "hr",
+            "img",
+            "li",
+            "ol",
+            "p",
+            "pre",
+            "sup",
+            "table",
+            "tbody",
+            "td",
+            "th",
+            "thead",
+            "tr",
+            "u",
+            "ul"
+        ]
+    },
+    "MD034": false,
+    "MD036": false
+}

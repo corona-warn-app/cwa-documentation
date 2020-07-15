@@ -22,17 +22,17 @@ Selbst wenn der zentrale Corona-Warn-App-Server kompromittiert sein sollte, kön
 
 Wie in der Datenschutz-Grundverordnung (DSGVO) vorgeschrieben, ist die [Datenminimierung](https://www.privacy-regulation.eu/de/5.htm) einer der wichtigsten Grundsätze für die Umsetzung der Corona-Warn-App.
 
-Es werden nur die Daten gesammelt, die für ein Funktionieren der App nötig sind. Die nutzenden Personen können und müssen in Verbindung mit der App ausschließlich die folgenden Angaben machen: 
+Es werden nur die Daten gesammelt, die für ein Funktionieren der App nötig sind. Die nutzenden Personen können und müssen in Verbindung mit der App ausschließlich die folgenden Angaben machen:
 
- * Zustimmung zur Nutzung des Exposure Notification Frameworks
- * Scannen eines QR-Codes mit dem Testergebnis
- * Eingabe einer TeleTAN bei der Verifizierung eines Testergebnisses per Hotline
- * Zustimmung zum Upload der täglichen Diagnoseschlüssel
- 
+* Zustimmung zur Nutzung des Exposure Notification Frameworks
+* Scannen eines QR-Codes mit dem Testergebnis
+* Eingabe einer TeleTAN bei der Verifizierung eines Testergebnisses per Hotline
+* Zustimmung zum Upload der täglichen Diagnoseschlüssel
+
 Apps können über das Exposure Notification Framework keine Daten zum Standort sammeln:
 
 * [Section 3.3 Exposure Notification APIs Addendum](https://developer.apple.com/contact/request/download/Exposure_Notification_Addendum.pdf)
-* [Section 3.c Google COVID-19 Exposure Notifications Service Additional Terms](https://blog.google/documents/72/Exposure_Notifications_Service_Additional_Terms.pdf). 
+* [Section 3.c Google COVID-19 Exposure Notifications Service Additional Terms](https://blog.google/documents/72/Exposure_Notifications_Service_Additional_Terms.pdf).
 
 Die Diagnoseschlüssel werden nur für den epidemiologisch relevanten Zeitraum von 14 Tagen zentral gespeichert und nach den 14 Tagen automatisch entfernt.
 
@@ -63,7 +63,6 @@ Die Corona-Warn-App und das zugrunde liegende Exposure Notification Framework se
 Temporary Exposure Keys (TEK) werden täglich neu und ausschließlich auf dem Gerät der nutzenden Person generiert. Über diese TEKs werden alle 10 bis 20 Minuten Rolling Proximity Identifiers (RPI) erzeugt. Solange die TEKs nicht hochgeladen (und damit zu Diagnoseschlüsseln) werden, können RPIs nicht mit einer bestimmten nutzenden Person verknüpft werden. Wenn die Diagnoseschlüssel hochgeladen wurden, können die Diagnoseschlüssel nur mit RPIs verkettet werden, aber nicht direkt mit einer nutzenden Person.
 
 In einem seltenen Grenzfall könnten Diagnoseschlüssel auf eine Einzelperson zurückführbar sein, und zwar wenn sich diese Person über einen längeren Zeitraum als einzige als positiv getestete Person meldet. Indem Diagnoseschlüssel nur veröffentlicht werden, sobald über eine gewisse Zeit ein bestimmter Schwellenwert erreicht ist, wird dieses Risiko gemindert. Darüber hinaus werden Diagnoseschlüssel nur für die letzten 14 Tage vor dem positiven Testergebnis hochgeladen, sodass eine Verkettung von Kontaktereignissen über den epidemiologisch relevanten Zeitraum hinaus nicht möglich ist.
-
 
 ## Unbeobachtbarkeit der Kommunikation
 

@@ -1,0 +1,40 @@
+name: Checks
+
+on: [push]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install requirements
+        run: |
+          sudo apt install -y automake npm nodejs
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install npm dependencies
+        if: always()
+        run: |
+          npm install
+
+      - name: Linting markdown
+        if: always()
+        run: |
+          npm run-script markdownlint
+
+      - name: Checking for broken links
+        if: always()
+        run: |
+          npm run-script checklinks
+
+      #- name: Spellchecking english
+      #  if: always()
+      #  run: |
+      #    npm run-script spellcheck
+
+      #- name: Detect inconsiderate language
+      #  if: always()
+      #  run: |
+      #    npm run-script detect-inconsiderate-language
