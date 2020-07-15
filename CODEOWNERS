@@ -5,11 +5,11 @@
 # For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.
 
 # These are the default owners for the whole content of this repository. The default owners are automatically added as reviewers when you open a pull request, unless different owners are specified in the file.
-* @SebastianWolf-SAP @tkowark @LukasMasuch @raethlein
+* @SebastianWolf-SAP @tkowark
 
 # Solution architecture document and its translations
-solution_architecture*.md @tklingbeil @SebastianWolf-SAP @tkowark @LukasMasuch @raethlein
-/images/solution_architecture/ @tklingbeil @SebastianWolf-SAP @tkowark @LukasMasuch @raethlein
+solution_architecture*.md @tklingbeil @SebastianWolf-SAP @tkowark
+/images/solution_architecture/ @tklingbeil @SebastianWolf-SAP @tkowark
 
 # Epidemiological Motivation of the Transmission Risk Level
 transmission_risk* @kirchnergo @hoehleatsu @weidemannf @dirkschumacher @benzlerj
