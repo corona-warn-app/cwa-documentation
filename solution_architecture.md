@@ -215,28 +215,29 @@ The information listed above is not visible to the user, but is used internally 
 
 ![Figure 12: Risk calculation](images/solution_architecture/figure_12.svg "Figure 12: Risk calculation")
 
-*Figure 12* displays how the total risk score is being calculated. The application is provided with a set of parameters, which are marked in blue within the figure.
-Those parameters are regularly downloaded from the CWA Server, which means they can be modified without requiring a new version of the application.
-Each risk category (days since exposure, exposure duration, weighted signal attenuation, and the transmission risk factor) receives an input value from the event which is then mapped to a predefined value range.
-According to the [documentation of the framework](https://developer.apple.com/documentation/exposurenotification/enexposureconfiguration), "the attenuation is weighted by the duration at each risk level and averaged for the overall duration".
-Each of those value ranges is assigned a risk score from 0-8, where 0 represents a very low risk and 8 represents a very high risk. This means that from each of the rows in the figure, one value is selected according to the input value for the corresponding category. The product of the risk scores is used as the **total risk score** of the individual exposure.
 
-In order to incorporate the time spent within the ranges of attenuation buckets mentioned before, each of those three buckets is assigned a weight value as shown in *Figure 13*.
- The individual time values are multiplied with their according weight (*weight_1*, *weight_2* and *weight_3*).
- Their sum and a default bucket offset (called *weight_4* in *Figure 13*) forms the *Exposure Score*.
- The *total risk score* provided by the Exposure Notification Framework is then normalized and multiplied with the exposure score, resulting in the combined risk score.
+*Figure 12* displays how the total risk score is being calculated. The application is provided with a set of parameters, which are marked in blue within the figure. 
+Those parameters are regularly downloaded from the CWA Server, which means they can be modified without requiring a new version of the application (see [`exposure-config.yaml`](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/master-config/exposure-config.yaml) for details).
+Each of the four risk categories (days since exposure, exposure duration, weighted signal attenuation, and the transmission risk factor) receives an input value from the event which is then mapped to a predefined input value interval.
+ Each of those input value intervals is then assigned a risk score from 0-8, where 0 represents a very low risk and 8 represents a very high risk. This means that from each of the rows in the figure, one value is selected according to the input value for the corresponding category. As an example: an exposure duration input value of D=15.3 minutes is mapped to the interval 15 < D <= 20, which in the current implementation has a value of 1 assigned to it, i.e. the *Exposure Risk* would be equal to 1 in this example. The product of the four risk scores is used as the **total risk score** of the individual exposure.
 
-The combined risk score is used to determine which defined risk level should be displayed to the user, e.g. “low risk” or “high risk”. For this decision, app-defined thresholds for the individual risk levels apply.
-As the values above are multiplied with each other, a single category with a risk score of 0 means that the overall risk score is also 0.
-Additionally, a central threshold for the combined risk score specifies whether an exposure event should be considered or not.
-Furthermore the Google/Apple framework allows to set a [```minimalRiskScore```](https://developer.apple.com/documentation/exposurenotification/enexposureconfiguration/3583692-minimumriskscore) to exclude exposure incidents with scores lower than the value of this property.
-In the current version of the API the time spent within the ranges of attenuation buckets are accumulated over all exposure incidents during one matching session.
-Since the number of requests is currently limited, it is not possible to get these values for each day and each exposure incident separately.
+According to the [documentation of the framework](https://developer.apple.com/documentation/exposurenotification/enexposureconfiguration), "the attenuation is weighted by the duration at each risk level and averaged for the overall duration". In order to incorporate the time spent within the ranges of attenuation buckets mentioned before, each of those three buckets is assigned a weight value as shown in *Figure 13*.
+ The individual time values are multiplied with their according weight (*weight_1*, *weight_2* and *weight_3*). 
+ Their sum and a default bucket offset (called *weight_4* in *Figure 13*) forms the *Exposure Score*. 
+Finally, the maximum of the *total risk score* over all the considered events, i.e. the largest risk score, is normalized and then multiplied with the above exposure score. The resulting product of the *exposure score* and the *normalized maximum total risk score* then forms the so called **combined risk score**.
+
+The combined risk score is used to determine which defined risk level should be displayed to the user, e.g. “low risk” or “high risk”. For this decision, [app-defined thresholds](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/master-config/risk-score-classification.yaml) for the individual risk levels apply. 
+As the values above are multiplied with each other, a single category with a risk score of 0 means that the overall risk score is also 0. 
+Additionally, a central threshold for the combined risk score specifies whether an exposure event should be considered or not. 
+Furthermore the Google/Apple framework allows to set a [```minimalRiskScore```](https://developer.apple.com/documentation/exposurenotification/enexposureconfiguration/3583692-minimumriskscore) to exclude exposure incidents with scores lower than the value of this property. 
+In the current version of the API the time spent within the ranges of attenuation buckets are accumulated over all exposure incidents during one matching session. 
+Since the number of requests is currently limited, it is not possible to get these values for each day and each exposure incident separately. 
 While by default there is no minimum value set, this value is being configured accordingly, so that presumably irrelevant exposure incidents are excluded.
 
 ![Figure 13: Calculation of the combined risk score](images/solution_architecture/figure_13.svg "Figure 13: Calculation of the combined risk score")
 
-Note that the transmission risk level plays a special role: It can be defined by the app and be associated with each individual diagnosis key (i.e. specific for each day of an infected person) that is being sent to the server. It contains a value from 1 to 8, which can be used to represent a calculated risk defined by the health authority and estimates the infectiousness and hence the likelihood of transmitting the disease.
+Note that the transmission risk level plays a special role in the above calculations: It can be defined by the app and be associated with each individual diagnosis key (i.e. specific for each day of an infected person) that is being sent to the server. It contains a value from 1 to 8, which can be used to represent a calculated risk defined by the health authority. As an example it could contain an estimate of the infectiousness of the potential infector at the time of contact and, hence, the likelihood of transmitting the disease. The specific values are defined as part of the [app](https://github.com/corona-warn-app/cwa-app-android/blob/master/Corona-Warn-App/src/main/java/de/rki/coronawarnapp/util/ProtoFormatConverterExtensions.kt) - a motivation of the parameter choices is found in the document [Epidemiological Motivation of the Transmission Risk Level](https://github.com/corona-warn-app/cwa-documentation/blob/master/transmission_risk.pdf). 
+
 
 ### Data Transfer and Data Processing
 
