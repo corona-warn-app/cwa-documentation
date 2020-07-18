@@ -37,8 +37,8 @@ Dabei wird die Zeit im sehr nahen Bereich ganz und die Zeit im nahen Bereich zur
 Die in einer Entfernung von mehr als ca. 3 Metern verbrachte Zeit wird nicht gezählt.
 
 Die so errechnete Gesamtzeit aller Risikobegegnungen der letzten 14 Tage wird dann noch mit dem Begegnungsrisiko der Risikobegegnung mit dem höchsten Risiko (*Maximum Risk Score*) verrechnet.
-Und zwar so, dass sie unverändert bleibt, wenn dieses Risiko als durchschnittlich (für Risikobegegnungen) eingeschätzt wird, dass sie sich bis auf das ungefähr anderthalbfache verlängert, wenn dieses Risiko überdurchschnittlich ist, und deutlich (bis auf ungefähr ein Sechstel) verkürzt, wenn dieses Risiko unterdurchschnittlich ist.
-Dadurch kann eine Zeit, die zuvor 10 Minuten betrug, auf über 15 Minuten verlängert werden und eine Zeit, die zuvor 45 Minuten betrug, auf unter 10 Minuten verkürzt werden.
+Und zwar so, dass sie unverändert bleibt, wenn dieses Risiko als "durchschnittlich" (für Risikobegegnungen) eingeschätzt wird, dass sie sich bis auf das ungefähr anderthalbfache verlängert, wenn dieses Risiko überdurchschnittlich ist, und entsprechend verkürzt, wenn dieses Risiko unterdurchschnittlich ist.
+Dadurch kann eine Zeit, die zuvor 10 Minuten betrug, auf über 15 Minuten verlängert werden und eine Zeit, die zuvor 25 Minuten betrug, auf 15 Minuten verkürzt werden.
 
 ## Folgen und Einschränkungen
 
@@ -82,7 +82,7 @@ Für die 7 noch weiter zurückliegenden Tage, den Zeitraum vom 7. bis zum 13. de
 
 Tabelle 2: Übertragungsrisikograd für Aishas 14 geteilte Positivkennungen, basierend auf dem Abstand zum Tag der Upload-Zustimmung (21.)
 
-Anton und Aisha fahren regelmäßig zusammen zur Arbeit.
+Anton und Aisha fahren regelmäßig zusammen mit dem Bus zur Arbeit.
 Betty hat denselben Arbeitsweg und sitzt gelegentlich im selben Bus.
 Alle drei beschäftigen sich während der Fahrt mit ihren Smartphones, so dass den Bluetooth-Signalen keine Hindernisse im Weg sind.
 Betty hat Anton und Aisha am 9. und am 16. morgens und abends für jeweils 10 Minuten getroffen.
@@ -100,12 +100,12 @@ Der Grenzwert von 11 wird überschritten, womit die Begegnungsmenge als Risikobe
 
 | | | | | | | | | |
 |-|-|-|-|-|-|-|-|-|
-|Verzugsrisiko| >=14d (5) | 12-13d (5) | 10-11d (5) | 8-9d (5) | 6-7d (5) | **4-5d (5)** | 2-3d (5) | 0-1d (5) |
-|Dämpfung| >73dB (0) | >63-<=73dB (1) | >51-<=63dB (1) | **>33-<=51dB (1)** | >27-<=33dB (1) | >15-<=27dB (1) | >10-<=15dB (1) | <=10dB (1) |
-|Dauer| 0min (0) | >0-<=5min (0) | >5-<=10min (0) | >10-<=15min (1) | **>15-<=20min (1)** | >20-<=25min (1) | >25-<=30min (1) | >30min (1) |
+|Verzugsrisiko| ≥14d (5) | 12-13d (5) | 10-11d (5) | 8-9d (5) | 6-7d (5) | **4-5d (5)** | 2-3d (5) | 0-1d (5) |
+|Dämpfung| >73dB (0) | >63-≤73dB (1) | >51-≤63dB (1) | **>33-≤51dB (1)** | >27-≤33dB (1) | >15-≤27dB (1) | >10-≤15dB (1) | ≤10dB (1) |
+|Dauer| 0min (0) | >0-≤5min (0) | >5-≤10min (0) | >10-≤15min (1) | **>15-≤20min (1)** | >20-≤25min (1) | >25-≤30min (1) | >30min (1) |
 |Übertragungsrisiko| I (1) | II (2) | III (3) | IV (4) | V (5) | VI (6) | VII (7) | **VIII (8)** |
 
-Tabelle 3: Parameterwerte für Bettys Begegnungsmenge mit Anton am 16.
+Tabelle 3: Parameterwerte für Bettys Begegnungsmenge mit Anton am 16. (zutreffende Werte fett)
 
 Da diese Risikobegegnung zugleich die einzige Risikobegegnung ist, die Bettys CWA bekannt ist, wird auch nur sie bei der summarischen Auswertung ihrer Aufenthaltszeiten in den Entfernungsräumen bis 1,5 Meter und bis 3 Meter berücksichtigt.
 Betty hielt sich 20 Minuten im Entfernungsraum unter 1,5 Meter auf, die zur Gänze gezählt werden.
@@ -126,21 +126,21 @@ Die Begegnungsmenge des 9. erreicht den Grenzwert nicht und zählt damit nicht a
 
 || | | | | | | | |
 |-|-|-|-|-|-|-|-|-|
-|Verzugsrisiko| >=14d (5) | 12-13d (5) | 10-11d (5) | 8-9d (5) | **6-7d (5)** | 4-5d (5) | 2-3d (5) | 0-1d (5) |
-|Dämpfung| >73dB (0) | >63-<=73dB (1) | **>51-<=63dB (1)** | >33-<=51dB (1) | >27-<=33dB (1) | >15-<=27dB (1) | >10-<=15dB (1) | <=10dB (1) |
-|Dauer| 0min (0) | >0-<=5min (0) | >5-<=10min (0) | >10-<=15min (1) | **>15-<=20min (1)** | >20-<=25min (1) | >25-<=30min (1) | >30min (1) |
+|Verzugsrisiko| ≥14d (5) | 12-13d (5) | 10-11d (5) | 8-9d (5) | **6-7d (5)** | 4-5d (5) | 2-3d (5) | 0-1d (5) |
+|Dämpfung| >73dB (0) | >63-≤73dB (1) | **>51-≤63dB (1)** | >33-≤51dB (1) | >27-≤33dB (1) | >15-≤27dB (1) | >10-≤15dB (1) | ≤10dB (1) |
+|Dauer| 0min (0) | >0-≤5min (0) | >5-≤10min (0) | >10-≤15min (1) | **>15-≤20min (1)** | >20-≤25min (1) | >25-≤30min (1) | >30min (1) |
 |Übertragungsrisiko| I (1) | II (2) | III (3) | IV (4) | **V (5)** | VI (6) | VII (7) | VIII (8) |
 
-Tabelle 4: Parameterwerte für Bettys Begegnungsmenge mit Aisha am 16.
+Tabelle 4: Parameterwerte für Bettys Begegnungsmenge mit Aisha am 16. (zutreffende Werte fett)
 
 || | | | | | | | |
 |-|-|-|-|-|-|-|-|-|
-|Verzugsrisiko| >=14d (5) | **12-13d (5)** | 10-11d (5) | 8-9d (5) | 6-7d (5) | 4-5d (5) | 2-3d (5) | 0-1d (5) |
-|Dämpfung| >73dB (0) | >63-<=73dB (1) | **>51-<=63dB (1)** | >33-<=51dB (1) | >27-<=33dB (1) | >15-<=27dB (1) | >10-<=15dB (1) | <=10dB (1) |
-|Dauer| 0min (0) | >0-<=5min (0) | >5-<=10min (0) | >10-<=15min (1) | **>15-<=20min (1)** | >20-<=25min (1) | >25-<=30min (1) | >30min (1) |
+|Verzugsrisiko| ≥14d (5) | **12-13d (5)** | 10-11d (5) | 8-9d (5) | 6-7d (5) | 4-5d (5) | 2-3d (5) | 0-1d (5) |
+|Dämpfung| >73dB (0) | >63-≤73dB (1) | **>51-≤63dB (1)** | >33-≤51dB (1) | >27-≤33dB (1) | >15-≤27dB (1) | >10-≤15dB (1) | ≤10dB (1) |
+|Dauer| 0min (0) | >0-≤5min (0) | >5-≤10min (0) | >10-≤15min (1) | **>15-≤20min (1)** | >20-≤25min (1) | >25-≤30min (1) | >30min (1) |
 |Übertragungsrisiko| **I (1)** | II (2) | III (3) | IV (4) | V (5) | VI (6) | VII (7) | VIII (8) |
 
-Tabelle 5: Parameterwerte für Bettys Begegnungsmenge mit Aisha am 9.
+Tabelle 5: Parameterwerte für Bettys Begegnungsmenge mit Aisha am 9. (zutreffende Werte fett)
 
 Die Risikobegegnung des 16. wird hingegen bei der aktualisierten summarischen Auswertung mit berücksichtigt, so dass Bettys CWA nun 20 Minuten (mit Anton) im Entfernungsraum bis 1,5 Metern ganz und weitere 20 Minuten (mit Aisha) im Entfernungsraum bis 3 Meter zur Hälfte (also als 10 Minuten) zählt.
 Die so ermittelten 30 Minuten werden wieder mit Bettys Risikobegegnung mit Anton verrechnet, die mit 40 nach wie vor das höchste Begegnungsrisiko aller erkannten Risikobegegnungen des aufgezeichneten 14-Tage-Zeitraums hat, so dass sich 30 x 40/25 = 48 Minuten ergeben.
