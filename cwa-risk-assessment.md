@@ -8,7 +8,7 @@ These diagnosis keys are the basis for risk identification for all other CWA use
 A user who has tested positive for coronavirus uploads up to 15 diagnosis keys: one for each of the up to 14 days before the upload, as well as (still to be implemented) one for the current day, which is uploaded the next day.
 The latter is necessary because diagnosis keys can only be uploaded for past days in order to prevent abuse of diagnosis keys that are still active.
 
-Diagnosis keys do not give any indication as to the identity of a person who has tested positive, but a diagnosis key from a certain day can be matched with the *rolling proximity identifiers* that a user’s smartphone has transmitted via Bluetooth throughout a given day and were received and recorded by other smartphones nearby.
+Diagnosis keys do not give any indication as to the identity of a person who has tested positive, but a diagnosis key from a certain day can be matched with the *rolling proximity identifiers* that a user's smartphone has transmitted via Bluetooth throughout a given day and were received and recorded by other smartphones nearby.
 Each diagnosis key is appended with a value that indicates the *transmission risk level* that likely existed for the person who has tested positive on the day that the diagnosis key belongs to.
 This transmission risk is [estimated in a mathematical procedure](transmission_risk.pdf), which is based on empirical evidence and takes the latest scientific findings into account.
 Every diagnosis key expires after 14 days. Therefore, only the diagnosis keys from the last 14 days are available.
@@ -17,27 +17,27 @@ Every diagnosis key expires after 14 days. Therefore, only the diagnosis keys fr
 
 Daily, all active Corona-Warn-Apps download the diagnosis keys released on the Corona-Warn-App server and pass them on to the smartphone's operating system in batches through an interface.
 The operating system checks whether any of the rolling proximity identifiers that it has received and recorded over the past 14 days match any of the diagnosis keys.
-If there is a match, this indicates that the user’s smartphone encountered the smartphone of a person who has uploaded the diagnosis key, on the day to which the diagnosis key belongs.
+If there is a match, this indicates that the user's smartphone encountered the smartphone of a person who has uploaded the diagnosis key, on the day to which the diagnosis key belongs.
 
 > Note: Days in the context of the Corona-Warn-App and thus in this document are calendar days according to UTC (Coordinated Universal Time). They change at 1 am Central European Time and 2 am Central European Summer Time, respectively.
 
 In the next step, the operating system analyzes all the matching rolling proximity identifiers for each diagnosis key, to estimate how long the encounter lasted in total on the day in question and how close both smartphones were to each other on average during the encounter.
 The distance is calculated from the measured reduction in strength of the Bluetooth signal, which is specified in dB (decibel).
-Under perfect circumstances, i.e. without any obstacle in the signal pathway (see also section “Consequences and Constraints”), each dB value is associated with a particular distance.
+Under perfect circumstances, i.e. without any obstacle in the signal pathway (see also section "Consequences and Constraints"), each dB value is associated with a particular distance.
 All encounters for a diagnosis key that lasted less than 10 minutes in total (regardless of how close the smartphones came during that time) or during which the smartphones were more than 8 meters (>73 dB attenuation) apart on average (regardless of how long the encounter lasted) are discarded as negligible risk.
 
-> Note: In the following, the total of all encounters that belong to a particular diagnosis key, that is, all encounters over a given day between the same two smartphones, is referred to as the “encounter set”.
+> Note: In the following, the total of all encounters that belong to a particular diagnosis key, that is, all encounters over a given day between the same two smartphones, is referred to as the "encounter set".
 
-For the remaining encounters that have not been discarded, a *total risk score* is calculated for each encounter set, by multiplying the transmission risk score described above by the *days since last exposure value*, which is derived from the day count since the most recent encounter to the current day.
+For the remaining encounters that have not been discarded, a *total risk score* is calculated for each encounter set, by multiplying the transmission risk score described above by the *days since last exposure* value, which is derived from the day count since the most recent encounter to the current day.
 
 All encounter sets whose total risk score exceeds a certain threshold (the *minimum risk score*) are considered to be risk exposures.
 The other encounter sets are discarded as negligible risk, like the sets that were previously discarded for being too short and/or too distant.
 
-At the same time, all remaining risk exposures are added together to determine how much time exposure took place within a very close range below 1.5 meters (<55 dB attenuation) and how much time exposure took place in a close range between 1.5 and 3 meters (55 to 63 dB attenuation).
+At the same time, all remaining risk exposures are summarised to determine the total time of exposure that took place within a very close range below 1.5 meters (<55 dB attenuation) and the total time of exposure that took place in a close range between 1.5 and 3 meters (55 to 63 dB attenuation).
 Time spent in a distance greater than 3 meters apart will not be considered.
 
-The total calculated time of all exposures of the latest 14 days is then adjusted using the *maximum risk score* of the exposure with the highest risk: the time remains unchanged if this risk is estimated as average (for risk exposures), it is extended to one and a half times if the risk is above average, and it is reduced significantly (to around one-sixth) if the risk is below average.
-As a result, an exposure time of 10 minutes can be extended to more than 15 minutes and an exposure time of 45 minutes can be reduced to less than 10 minutes.
+The above calculated total time of all exposures of the latest 14 days is then adjusted using the *maximum risk score* of the exposure with the highest risk as follows: the time remains unchanged if this risk is estimated as being "average" (for risk exposures), it is extended to up to one and a half times if the risk is estimated as being "above average", and it is reduced accordingly if the risk is estimated to be "below average".
+As a result, an exposure time of 10 minutes can be extended to more than 15 minutes and an exposure time of 25 minutes can be reduced to 15 minutes.
 
 ## Consequences and Constraints
 
@@ -65,7 +65,7 @@ They are assigned the transmission risk levels VI (for the previous day), three 
 |Days until upload consent granted|1|2|3|4|5|6|7|
 |Generation date of the key|19th|18th|17th|16th|15th|14th|13th|
 
-Table 1: Transmission risk level for Anton’s 7 shared diagnosis keys, based on the interval from the day upload consent is granted (20th)
+Table 1: Transmission risk level for Anton's 7 shared diagnosis keys, based on the interval from the day upload consent is granted (20th)
 
 Aisha hesitates for a day and does not grant consent until the 21st of the month.
 Since she activated her CWA several weeks ago and has been running it in the background ever since, her temporary exposure keys from the latest 14 days are available to upload.
@@ -79,42 +79,42 @@ The 7 older days, the period from the 7th to the 13th of the month, are each ass
 |Days until upload consent granted|1|2|3|4|5|6|7|8|9|10|11|12|13|14|
 |Generation date of the key|20th|19th|18th|17th|16th|15th|14th|13th|12th|11th|10th|9th|8th|7th|
 
-Table 2: Transmission risk level for Aisha’s 14 shared diagnosis keys, based on the interval from the day upload consent is granted (21st)
+Table 2: Transmission risk level for Aisha's 14 shared diagnosis keys, based on the interval from the day upload consent is granted (21st)
 
-Anton and Aisha regularly travel to work together.
+Anton and Aisha regularly travel to work together by bus.
 Betty takes the same route and occasionally rides the same bus.
 All three of them use their smartphones during the journey, which means there are no impediments to the Bluetooth signals.
 Betty met Anton and Aisha on the 9th and the 16th, for 10 minutes each in the morning and in the evening.
 Anton sat one meter away from Betty, while Aisha sat two meters away.
 
 When Betty’s CWA retrieves Anton’s diagnosis keys on the 21st and passes them on to her smartphone's operating system's interface, an encounter set is recognized for the 16th.
-(Anton’s CWA did not upload a diagnosis key for the 9th.)
+(Anton's CWA did not upload a diagnosis key for the 9th.)
 This encounter set lasted a total of 20 minutes and the smartphones were an average of one meter apart.
-This results in values of 1 for both duration and attenuation (also see “Exposure Configuration” in the section “Current Configuration”).
+This results in values of 1 for both duration and attenuation (also see "Exposure Configuration" in the section "Current Configuration").
 
 This ensures that this encounter set is not discarded.
-The value of the parameter for the delay risk (21 - 16 = 5 days) is configured at 5 continuously and the value for the transmission risk is taken directly from the transmission risk level, which means it is 8.
+The value of the parameter for the delay risk (21 - 16 = 5 days) is configured to be 5 throughout and the value for the transmission risk is taken directly from the transmission risk level, which means it is 8.
 The total risk level is therefore calculated as 1 x 1 x 5 x 8 = 40, which incidentally is the highest value that can be reached with the current configuration.
 The threshold of 11 is exceeded, which means the encounter set counts as a risk exposure.
 
 | | | | | | | | | |
 |-|-|-|-|-|-|-|-|-|
-|Days since most recent exposure| >=14d (5) | 12-13d (5) | 10-11d (5) | 8-9d (5) | 6-7d (5) | **4-5d (5)** | 2-3d (5) | 0-1d (5) |
-|Attenuation| >73dB (0) | >63-<=73dB (1) | >51-<=63dB (1) | **>33-<=51dB (1)** | >27-<=33dB (1) | >15-<=27dB (1) | >10-<=15dB (1) | <=10dB (1) |
-|Duration| 0min (0) | >0-<=5min (0) | >5-<=10min (0) | >10-<=15min (1) | **>15-<=20min (1)** | >20-<=25min (1) | >25-<=30min (1) | >30min (1) |
+|Days since last exposure| ≥14d (5) | 12-13d (5) | 10-11d (5) | 8-9d (5) | 6-7d (5) | **4-5d (5)** | 2-3d (5) | 0-1d (5) |
+|Attenuation| >73dB (0) | >63-≤73dB (1) | >51-≤63dB (1) | **>33-≤51dB (1)** | >27-≤33dB (1) | >15-≤27dB (1) | >10-≤15dB (1) | ≤10dB (1) |
+|Duration| 0min (0) | >0-≤5min (0) | >5-≤10min (0) | >10-≤15min (1) | **>15-≤20min (1)** | >20-≤25min (1) | >25-≤30min (1) | >30min (1) |
 |Transmission risk| I (1) | II (2) | III (3) | IV (4) | V (5) | VI (6) | VII (7) | **VIII (8)** |
 
-Table 3: Parameter values for Betty’s encounter set with Anton on the 16th
+Table 3: Parameter values for Betty's encounter set with Anton on the 16th (relevant values in bold)
 
 Since this risk exposure is the only risk exposure known to Betty’s CWA, it is the only one taken into account in the summary evaluation of her times spent in the distance ranges up to 1.5 meters and up to 3 meters.
 Betty spent 20 minutes in the distance range below 1.5 meters, which are counted fully.
 
-Even if these 20 minutes are cross-calculated against the risk exposure with the highest risk, only this one risk exposure is taken into account, with its exposure risk of 40.
-The multiplication of these 20 minutes by 40/25 (25 is the currently configured value for “average risk” exposures; also see the risk score normalization divisor in "Configuration of Attenuation and Duration” in the section “Current Configuration”) equals 32 minutes.
-Since the CWA sends notifications of increased risk starting with 15 minutes, Betty’s app sends her a notification.
+Even if these 20 minutes are adjusted by the risk exposure with the highest risk, only this one risk exposure is taken into account, with its exposure risk of 40.
+The multiplication of these 20 minutes by 40/25 (25 is the currently configured value for "average risk" exposures; also see the risk score normalization divisor in "Configuration of Attenuation and Duration" in the section "Current Configuration") equals 32 minutes.
+Since the CWA sends notifications of increased risk starting with 15 minutes, Betty's app sends her a notification.
 She is notified that she had a risk exposure 5 days ago.
 
-The next day, the 22nd, Betty’s CWA also retrieves Aisha’s diagnosis keys.
+The next day, the 22nd, Betty's CWA also retrieves Aisha's diagnosis keys.
 It identifies additional encounters on the 16th and the 9th of the month.
 Both encounter sets lasted a total of 20 minutes each and the smartphones were an average of two meters apart.
 This also results in values of 1 for duration and attenuation.
@@ -125,26 +125,26 @@ The encounter set from the 9th does not reach the threshold and is therefore not
 
 | | | | | | | | | |
 |-|-|-|-|-|-|-|-|-|
-|Days since most recent exposure| >=14d (5) | 12-13d (5) | 10-11d (5) | 8-9d (5) | **6-7d (5)** | 4-5d (5) | 2-3d (5) | 0-1d (5) |
-|Attenuation| >73dB (0) | >63-<=73dB (1) | **>51-<=63dB (1)** | >33-<=51dB (1) | >27-<=33dB (1) | >15-<=27dB (1) | >10-<=15dB (1) | <=10dB (1) |
-|Duration| 0min (0) | >0-<=5min (0) | >5-<=10min (0) | >10-<=15min (1) | **>15-<=20min (1)** | >20-<=25min (1) | >25-<=30min (1) | >30min (1) |
+|Days since last exposure| ≥14d (5) | 12-13d (5) | 10-11d (5) | 8-9d (5) | **6-7d (5)** | 4-5d (5) | 2-3d (5) | 0-1d (5) |
+|Attenuation| >73dB (0) | >63-≤73dB (1) | **>51-≤63dB (1)** | >33-≤51dB (1) | >27-≤33dB (1) | >15-≤27dB (1) | >10-≤15dB (1) | ≤10dB (1) |
+|Duration| 0min (0) | >0-≤5min (0) | >5-≤10min (0) | >10-≤15min (1) | **>15-≤20min (1)** | >20-≤25min (1) | >25-≤30min (1) | >30min (1) |
 |Transmission risk| I (1) | II (2) | III (3) | IV (4) | **V (5)** | VI (6) | VII (7) | VIII (8) |
 
-Table 4: Parameter values for Betty’s encounter set with Aisha on the 16th
+Table 4: Parameter values for Betty's encounter set with Aisha on the 16th (relevant values in bold)
 
 | | | | | | | | | |
 |-|-|-|-|-|-|-|-|-|
-|Days since most recent exposure| >=14d (5) | **12-13d (5)** | 10-11d (5) | 8-9d (5) | 6-7d (5) | 4-5d (5) | 2-3d (5) | 0-1d (5) |
-|Attenuation| >73dB (0) | >63-<=73dB (1) | **>51-<=63dB (1)** | >33-<=51dB (1) | >27-<=33dB (1) | >15-<=27dB (1) | >10-<=15dB (1) | <=10dB (1) |
-|Duration| 0min (0) | >0-<=5min (0) | >5-<=10min (0) | >10-<=15min (1) | **>15-<=20min (1)** | >20-<=25min (1) | >25-<=30min (1) | >30min (1) |
+|Days since last exposure| ≥14d (5) | **12-13d (5)** | 10-11d (5) | 8-9d (5) | 6-7d (5) | 4-5d (5) | 2-3d (5) | 0-1d (5) |
+|Attenuation| >73dB (0) | >63-≤73dB (1) | **>51-≤63dB (1)** | >33-≤51dB (1) | >27-≤33dB (1) | >15-≤27dB (1) | >10-≤15dB (1) | ≤10dB (1) |
+|Duration| 0min (0) | >0-≤5min (0) | >5-≤10min (0) | >10-≤15min (1) | **>15-≤20min (1)** | >20-≤25min (1) | >25-≤30min (1) | >30min (1) |
 |Transmission risk| **I (1)** | II (2) | III (3) | IV (4) | V (5) | VI (6) | VII (7) | VIII (8) |
 
-Table 5: Parameter values for Betty’s encounter set with Aisha on the 9th
+Table 5: Parameter values for Betty's encounter set with Aisha on the 9th (relevant values in bold)
 
-In contrast, the risk exposure on the 16th is taken into account in the summary evaluation, which means Betty’s CWA now counts 20 minutes (with Anton) in the distance range up to 1.5 meters fully and an additional 20 minutes (with Aisha) in the distance range up to 3 meters half (that is, 10 minutes).
-The calculated 30 minutes are once again cross-calculated with Betty’s risk exposure with Anton, which at 40 is still the highest exposure risk from all risk encounters identified in the recorded 14-day period, resulting in 30 x 40/25 = 48 minutes.
+In contrast, the risk exposure on the 16th is taken into account in the summary evaluation, which means Betty's CWA now counts 20 minutes (with Anton) in the distance range up to 1.5 meters fully and an additional 20 minutes (with Aisha) in the distance range up to 3 meters half (that is, 10 minutes).
+The calculated 30 minutes are once again adjusted by Betty’s risk exposure with Anton, which at 40 is still the highest exposure risk from all risk encounters identified in the recorded 14-day period, resulting in 30 x 40/25 = 48 minutes.
 
-Betty’s updated risk notification now shows 2 risk encounters, the most recent of which took place 6 days ago.
+Betty's updated risk notification now shows 2 risk encounters, the most recent of which took place 6 days ago.
 
 ## Current Configuration
 
