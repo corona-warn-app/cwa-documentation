@@ -3,18 +3,18 @@ title: "Epidemiological Motivation of the Transmission Risk Level"
 author: "CWA Team"
 date: "`r Sys.Date()`"
 output:
+  html_document:
+    theme: united
+    toc: yes
+    number_sections: true
+  word_document:
+    toc: yes
   pdf_document:
     toc: yes
     latex_engine: xelatex
     number_sections: true
     fig_caption: yes
     keep_tex:  true        #necessary for proper debugging
-  word_document:
-    toc: yes
-  html_document:
-    theme: united
-    toc: yes
-    number_sections: true
 editor_options:
   chunk_output_type: console
 header-includes:
@@ -135,10 +135,17 @@ setwd(wd)
 # The following parameter estimates for the shifted gamma distribution are derived 
 # from the "Fig1c_RScript.R" script referenced above and hardcoded here for ease 
 # of computation.
-inf.par <- c(2.11577895060007, 0.689858288192386, 2.30669123253302)
+#inf.par <- c(2.11577895060007, 0.689858288192386, 2.30669123253302)
+# **Update 2020-08-01** new results by He et al. (2020) after
+# updating their analysis script on github. 
+# See https://github.com/ehylau/COVID-19/issues/2 for details,
+# but no comment as of 2020-08-28 by the code owner
+# New values:
+inf.par <-
+  c(20.516508177600997, 1.5921240103299878, 12.272481068609684)
 
 # Grid where to compute the values
-x_grid <- seq(-3, 13, by = 1)
+x_grid <- seq(-8, 13, by = 1)
 
 # Calculate CDF of the shifted gamma
 cdf <- pgamma(x_grid + inf.par[3], inf.par[1], inf.par[2])
@@ -149,14 +156,26 @@ names(pmf) <- x_grid[-length(x_grid)]
 
 # Show result
 (d_infprofile_check <- round(pmf, digits = 3))
+
+#Dump for copy paste into next chunk
+#dump(list=c("d_infprofile_check"), file="")
 ```
 
 ```{r infectiousness_profile, fig.cap = "Assumed infectiousness profile."}
-d_infprofile <- c(
-  "-3" = 0.015, "-2" = 0.185, "-1" = 0.237, "0" = 0.197, "1" = 0.139,
-  "2" = 0.091, "3" = 0.057, "4" = 0.034, "5" = 0.02, "6" = 0.011,
-  "7" = 0.006, "8" = 0.004, "9" = 0.002, "10" = 0.001, "11" = 0.001,
-  "12" = 0
+# d_infprofile <- c(
+#   "-3" = 0.015, "-2" = 0.185, "-1" = 0.237, "0" = 0.197, "1" = 0.139,
+#   "2" = 0.091, "3" = 0.057, "4" = 0.034, "5" = 0.02, "6" = 0.011,
+#   "7" = 0.006, "8" = 0.004, "9" = 0.002, "10" = 0.001, "11" = 0.001,
+#   "12" = 0
+# )
+# New profile as a result of b24b01e - see  https://github.com/ehylau/COVID-19/issues/2
+d_infprofile <-
+c(`-8` = 0.00, `-7` = 0.002, `-6` = 0.009, `-5` = 0.025, 
+`-4` = 0.054, `-3` = 0.0900, `-2` = 0.122, 
+`-1` = 0.140, `0` = 0.140, `1` = 0.124, 
+`2` = 0.100, `3` = 0.073, `4` = 0.049, 
+`5` = 0.031, `6` = 0.019, `7` = 0.010, `8` = 0.006, 
+`9` = 0.003, `10` = 0.001, `11` = 0.001, `12` = 0
 )
 d_infprofile <- d_infprofile / max(d_infprofile)
 
@@ -273,7 +292,7 @@ plot_it <- function(t0_minus_tS, xlim) {
     ggtitle(substitute(t[0] - t[S]^A == a, list(a = t0_minus_tS))) +
     xlim(xlim)
 }
-gridExtra::grid.arrange(plot_it(1, xlim = c(-5, 10)), plot_it(2, xlim = c(-5, 10)))
+gridExtra::grid.arrange(plot_it(1, xlim = c(-10, 10)), plot_it(2, xlim = c(-10, 10)))
 ```
 
 
