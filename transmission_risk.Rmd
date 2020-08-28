@@ -3,18 +3,18 @@ title: "Epidemiological Motivation of the Transmission Risk Level"
 author: "CWA Team"
 date: "`r Sys.Date()`"
 output:
-  html_document:
-    theme: united
-    toc: yes
-    number_sections: true
-  word_document:
-    toc: yes
   pdf_document:
     toc: yes
     latex_engine: xelatex
     number_sections: true
     fig_caption: yes
     keep_tex:  true        #necessary for proper debugging
+  word_document:
+    toc: yes
+  html_document:
+    theme: united
+    toc: yes
+    number_sections: true
 editor_options:
   chunk_output_type: console
 header-includes:
@@ -138,7 +138,7 @@ setwd(wd)
 #inf.par <- c(2.11577895060007, 0.689858288192386, 2.30669123253302)
 # **Update 2020-08-01** new results by He et al. (2020) after
 # updating their analysis script on github. 
-# See https://github.com/ehylau/COVID-19/issues/2 for details,
+# See   for details,
 # but no comment as of 2020-08-28 by the code owner
 # New values:
 inf.par <-
