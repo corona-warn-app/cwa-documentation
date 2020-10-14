@@ -9,16 +9,17 @@ output:
     number_sections: true
     fig_caption: yes
     keep_tex:  true        #necessary for proper debugging
-  word_document:
-    toc: yes
   html_document:
     theme: united
     toc: yes
     number_sections: true
+  word_document:
+    toc: yes
 editor_options:
   chunk_output_type: console
 header-includes:
   - \usepackage{float}
+  - \usepackage{romannum}
   - \usepackage{hyperref}
   - \hypersetup{colorlinks = true, linkcolor = [rgb]{.1,.1,.44}, urlcolor = blue, citecolor = [rgb]{.0,.39,.0}}
 bibliography: transmission_risk_references.bib
@@ -41,6 +42,7 @@ set.seed(42)
 ```{r init, ref.label=c("convolute","helper_pmf_plot", "helper_discretize"), eval=TRUE, echo = FALSE, purl=FALSE}
 ```
 
+\pagenumbering{arabic}
 # Abstract
 
 This document contains an epidemiological description of the *transmission risk level* used in the German [Corona-Warn-App](https://github.com/corona-warn-app/cwa-documentation) (CWA). As its name suggests, the transmission risk is an essential part when estimating the overall risk of a person to get infected in an exposure incident. Usage of the transmission risk level is specified in the [ExposureNotification API](https://developer.apple.com/documentation/exposurenotification) and in the [CWA Architecture](https://github.com/corona-warn-app/cwa-documentation/blob/master/solution_architecture.md#risk-score-calculation). In particular we use epidemiological information about COVID-19 from the literature to motivate the choice of levels for this parameter. To enhance transparency and reproducibility of the computations, we provide the mathematical derivations and the computations in one [Rmarkdown](https://rmarkdown.rstudio.com/) document. The methods sketched below are likely to be subject to change, once additional information about the characteristics of COVID-19 is obtained or as feedback from the use of the app arrives.
@@ -48,20 +50,23 @@ This document contains an epidemiological description of the *transmission risk 
 
 # Introduction
 
-We are interested in the situation where a person **A** (potential infector) at time $t_0$ uploads information about being a laboratory confirmed SARS-CoV-2 case. The upload happens in terms of *A*'s *diagnosis keys* [see @ExposureNotificationCrypto]. Each *diagnosis key* is associated with a particular day in A's history (past 14 days) and also has an optional *transmission risk level* from I--VIII [see @AndroidExposureNotificationsApi]. 
+We are interested in the situation where a person **A** (potential infector) at time $t_0$ uploads information about being a laboratory confirmed SARS-CoV-2 case. The upload happens in terms of *A*'s *diagnosis keys* [see @ExposureNotificationCrypto]. Each *diagnosis key* is associated with a particular day in A's history (current and past 14 days) and also has an optional *transmission risk level* from I--VIII [see @AndroidExposureNotificationsApi]. 
 
 Users can periodically download *diagnosis keys* from the *diagnosis server*. For each app user **B** (potential infectee), who downloads the list of valid *diagnosis keys* and discovers he or she has been in contact with *A*, a risk assessment will be made.[^a2b] This risk assessment is operationalized by the *total risk score*, of which one component is the *transmission risk level* $\lambda_A$ computed by *A*. The *transmission risk level* (provided by *A*) and its associated *transmission risk value* (set by *B*) are app-defined and should be based on the probability of transmission between the two persons being in close contact. In the present document we interpret this probability as a function of epidemiological information about *A* and the time of contact. Information about the closeness and the duration of the contact are not considered part of the transmission risk component, because they are handled separately in the computation of the *total risk score*. For more information on how to calculate the *total risk score* see the [Exposure Notification API](https://developer.apple.com/documentation/exposurenotification).
 
 As the *transmission risk level* is computed on *A*'s device, additional information about *A* such as *being symptomatic or not*, *date of onset of symptoms*, *date of sampling* or *date of test result* could be used to estimate the **infectiousness of A** more precisely. We will use the currently known characteristics of COVID-19, especially its [infectiousness profile due to viral shedding](#viral-shedding) and the [operational delays](#delays) of its handling to estimate the infectiousness at certain times. We can obtain the information on how many days ago from **now** (i.e. $t_0$) the contact between *A* and *B* was: Let $t_C$ be the time of contact between *A* and *B*, then the contact was $d=t_0-t_C$ days ago. The aim of this document is thus to parametrize the time-dependent infectiousness of *A* as a function of $d$.
 
-The better we can assess the probability of a transmission from *A* to *B*, the more accurate is the *combined risk score* that is used to warn the user to take further action, e.g., to contact a local health authority. Having digital support for this type of contact tracing appears helpful in order to obtain a more complete coverage of contact tracing and to do this much quicker.
+The better we can assess the probability of a transmission from *A* to *B*, the more accurate is the *combined risk score*[^risk] that is used to warn the user to take further action, e.g., to contact a local health authority. Having digital support for this type of contact tracing appears helpful in order to obtain a more complete coverage of contact tracing and to do this much quicker.
 
-The present document is structured as follows. In section [Scenarios](#scenarios) we distinguish between four possible information states about *A* at the time of upload[^upload] depending on whether an onset of COVID-19 symptoms has occurred or not and whether this information can be used or not. We calculate a transmission risk for each of the four cases. However, since the initial version of the app will not allow a distinction between cases 1--4, and since the *transmission risk level* is only one of 4 components for the *total risk score*, we thus normalize the *transmission risk level* in a so called [base case](#base_case), which will be used by the initial version of the app. A section [Discussion](#discussion) summarizes the results and points out important limitations.
+The present document is structured as follows. In section [Scenarios](#scenarios) we distinguish between four possible information states about *A* at the time of upload[^upload] depending on whether an onset of COVID-19 symptoms has occurred or not and whether this information can be used or not. We calculate a transmission risk for each of the four cases. However, since the initial version of the app did not allow a distinction between cases 1--4, and since the *transmission risk level* is only one of 4 components for the *total risk score*, we thus normalize the *transmission risk level* in a so called [base case](#base_case), which was used by the initial version of the app and is still used if no information on symptoms is provided. A section [Discussion](#discussion) summarizes the results and points out important limitations.
 
 
 [^a2b]: Throughout we will assume that the contact between *A* and *B* was such that *A* infected *B*. At this point we explicitly ignore the possibility that *B* actually infected *A*. 
 
+[^risk]: For a more detailed description of the connection between the *total risk score* and the *combined risk score* see the [risk score calculation section](https://github.com/corona-warn-app/cwa-documentation/blob/master/solution_architecture.md#risk-score-calculation) of the [solution architecture document](https://github.com/corona-warn-app/cwa-documentation/blob/master/solution_architecture.md).
+
 [^upload]: Due to technical restrictions, the upload of the diagnosis keys may not be a single-point-in-time event, but may happen over two consecutive days, without further interaction with the user after his or her initial consent. Given that the time point of the user's consent for upload may also be the last opportunity for providing additional information such as date of onset of symptoms, we use "consent for upload" when calculating delays and refer to it as simply "upload" throughout this document.
+
 
 # Scenarios and Events {#scenarios}
 
@@ -78,25 +83,25 @@ For an infected person the following sequence of event times occurs (but not nec
 
 Note that before observation these times are to be considered as random quantities and, hence, are denoted by an uppercase letter. Once observed, a lower case letter shall be used. 
 
-Furthermore, note that for SARS-CoV-2 it is likely that $T_I$ occurs before $T_S$, but it cannot be ruled out that the order is reversed. For asymptomatic cases $T_S$ will never occur, but $T_I$ might already have occurred or will occur in the future. For pre-symptomatic cases $T_S$ lies in the future, i.e. $T_S > t_0$, but $T_I$ might already have occurred or lie in the future. From our above description we would usually have $T_{\text{upload}}=t_0$. In a later section we will study the delays between the different event times. For this we will have to use the [convolution of random variables](#convolution) to get the distribution of their sum.
+Furthermore, note that for SARS-CoV-2 it is likely that $T_I$ occurs before $T_S$, but it cannot be ruled out that the order is reversed. For never-symptomatic cases $T_S$ will never occur, but $T_I$ might already have occurred or will occur in the future. For pre-symptomatic cases $T_S$ lies in the future, i.e. $T_S > t_0$, but $T_I$ might already have occurred or lie in the future. From our above description we would usually have $T_{\text{upload}}=t_0$. In a later section we will study the delays between the different event times. For this we will have to use the [convolution of random variables](#convolution) to get the distribution of their sum.
 
-To derive the transmission component $\lambda_A$ we will distinguish persons who will eventually develop symptoms and those which are completely asymptomatic. The former set will be denoted $\mathcal{Symp}$ and the later $\mathcal{Asymp}$. Throughout the text we will use the shorthand notation $\mathcal{Asymp}_A$ to denote the event that person *A* belongs to the set of completely asymptomatic. Likewise for $\mathcal{Symp}_A$. We reserve the notion of *asymptomatic* for those persons who never develop symptoms, whereas *pre-symptomatic* at a particular time $t$ are those who will eventually develop symptoms, but at a later point in time than $t$. If $T_S^A$ denotes the time of symptom onset in *A*, we will use the shorthand notation $\mathcal{Symp}_A(T^A_S > t)$ to denote the event that *A* belongs to the set of individuals who will eventually develop symptoms, but the onset of these symptoms has not yet occurred by time $t$, i.e.
+To derive the transmission component $\lambda_A$ we will distinguish persons who will eventually develop symptoms and those which are never-symptomatic. The former set will be denoted $\mathcal{Symp}$ and the later $\mathcal{N\!symp}$. Throughout the text we will use the shorthand notation $\mathcal{N\!symp}_A$ to denote the event that person *A* belongs to the set of never-symptomatic. Likewise for $\mathcal{Symp}_A$. We reserve the notion of *never-symptomatic* for those persons who never develop symptoms, whereas *pre-symptomatic* at a particular time $t$ are those who will eventually develop symptoms, but at a later point in time than $t$. If $T_S^A$ denotes the time of symptom onset in *A*, we will use the shorthand notation $\mathcal{Symp}_A(T^A_S > t)$ to denote the event that *A* belongs to the set of individuals who will eventually develop symptoms, but the onset of these symptoms has not yet occurred by time $t$, i.e.
 $$
 \mathcal{Symp}_A(T^A_S > t) = \{ \omega\in\mathcal{Symp}_A \;|\; \omega: T^A_S > t \}.
 $$
-Likewise we define the event $\mathcal{Symp}_A(T^A_S \leq t)$. Both asymptomatic and pre-symptomatic are characterized as being *non-symptomatic* at a given time of reference $t$. We will use the following shorthand to denote this event:
+Likewise we define the event $\mathcal{Symp}_A(T^A_S \leq t)$. Both never-symptomatic and pre-symptomatic are characterized as being *asymptomatic* at a given time of reference $t$. We will use the following shorthand to denote this event:
 
 $$
-\mathcal{N\!symp}_A(T^A_S > t) = \mathcal{Asymp}_A \cup \mathcal{Symp}_A(T^A_S > t),
+\mathcal{Asymp}_A(T^A_S > t) = \mathcal{N\!symp}_A \cup \mathcal{Symp}_A(T^A_S > t),
 $$
-which is just a formal way of saying that in order for *A* to be non-symptomatic at time t, *A* either belongs to the set of completely asymptomatic cases or *A* is pre-symptomatic at time $t$.
+which is just a formal way of saying that in order for *A* to be asymptomatic at time t, *A* either belongs to the set of never-symptomatic cases or *A* is pre-symptomatic at time $t$.
 Then we have (under the assumption that *A* is infected)
 
 $$
 \begin{aligned}
-1 &= P(\mathcal{Symp}_A) + P(\mathcal{Asymp}_A) \\
-&= P(\mathcal{Symp}_A(T^A_S \leq t) + P(\mathcal{Symp}_A (T^A_S > t)) + P(\mathcal{Asymp}_A) \\
-&= P(\mathcal{Symp}_A(T^A_S \leq t)) + P(\mathcal{N\!symp}_A (T^A_S > t))
+1 &= P(\mathcal{Symp}_A) + P(\mathcal{N\!symp}_A) \\
+&= P(\mathcal{Symp}_A(T^A_S \leq t) + P(\mathcal{Symp}_A (T^A_S > t)) + P(\mathcal{N\!symp}_A) \\
+&= P(\mathcal{Symp}_A(T^A_S \leq t)) + P(\mathcal{Asymp}_A (T^A_S > t))
 \end{aligned}
 $$
 
@@ -104,25 +109,26 @@ The four information scenarios about *A* are then:
 
 1. symptomatic and day of symptom onset $t^A_S \leq t_0$ known at time $t_0$, i.e. the event $\mathcal{Symp}_A(T^A_S = t^A_S)$,
 2. symptomatic but unknown day of symptom onset at time $t_0$, i.e. the event $\mathcal{Symp}_A(T^A_S \leq t_0)$,
-3. non-symptomatic at time $t_0$, i.e. the event $\mathcal{N\!symp}_A(T^A_S>t_0)$,
-4. no knowledge of symptom status at time $t_0$ (the *base case*), i.e. the event $\Omega = \mathcal{Symp}_A(T^A_S \leq t_0) \cup \mathcal{N\!symp}_A (T^A_S > t_0)$.
+3. asymptomatic at time $t_0$, i.e. the event $\mathcal{Asymp}_A(T^A_S>t_0)$,
+4. no knowledge of symptom status at time $t_0$ (the *base case*), i.e. the event $\Omega = \mathcal{Symp}_A(T^A_S \leq t_0) \cup \mathcal{Asymp}_A (T^A_S > t_0)$.
 
 Differentiation of these scenarios requires person *A* to provide additional (optional) information on potential symptom onset and respective date. The 2nd scenario occurs, if *A* accepts to reveal that COVID-19 relevant symptoms have been observed by the time of upload, but *A* does not want to reveal (or does not know) the day of symptom onset. If *A* despite a positive test result either has not yet developed or never will develop any symptoms, then we would be in scenario 3. If *A* does not provide any additional information, this would lead to scenario 4.
 
 
 ## Infectiousness Profile due to Viral Shedding {#viral-shedding}
 
-Infectiousness of COVID-19, i.e. how much infectious material is being shed, varies as a function of time since infection, the development of symptoms and (if available) the DSO, see for example @he_etal2020. Assuming the amount of virus shed by a symptomatic case *A* is described by the function $v_A(d)$, where $d$ is the days since DSO in *A*. We expect the function to be positive even for negative $d$ values, due to pre-symptomatic transmission. Note that the scale of $v_A(d)$ is in principle arbitrary for our purposes as we are interested in the amount of virus shedding compared to the potential maximum value which informs the eventual classification into the risk levels I to VIII. Note also that symptomatic cases with unknown date of onset and completely asymptomatic cases are not handled by the function $v_A(d)$. These will be addressed later in this section.
+Infectiousness of COVID-19, i.e. how much infectious material is being shed, varies as a function of time since infection, the development of symptoms and (if available) the DSO, see for example @he_etal2020. Assuming the amount of virus shed by a symptomatic case *A* is described by the function $v_A(d)$, where $d$ is the days since DSO in *A*. We expect the function to be positive even for negative $d$ values, due to pre-symptomatic transmission. Note that the scale of $v_A(d)$ is in principle arbitrary for our purposes as we are interested in the amount of virus shedding compared to the potential maximum value which informs the eventual classification into the risk levels I to VIII. Note also that symptomatic cases with unknown date of onset and never-symptomatic cases are not handled by the function $v_A(d)$. These will be addressed later in this section.
 
 The study by @he_etal2020 examines the temporal dynamics of viral shedding and infectiousness of symptomatic COVID-19 cases. They provide results informing on the transmission risk for contacts of symptomatic cases. 
 
-Based on 77 identified transmission pairs @he_etal2020 inferred the infector's infectiousness profile with respect to symptom onset by fitting a left-shifted gamma-distribution to the empirical frequency of observed transmissions occurring at $d$ days before or after symptom onset of the infector. The left-shifting of the gamma-distribution allows for potential pre-symptomatic transmission. The resulting infectious profile is shown in Fig. 1c (middle) in @he_etal2020, suggesting that infectiousness starts at 3 days prior to DSO and ends 8 days after DSO, with peak infectiousness at one day before DSO.
+Based on 77 identified transmission pairs @he_etal2020 inferred the infector's infectiousness profile with respect to symptom onset by fitting a left-shifted gamma-distribution to the empirical frequency of observed transmissions occurring at $d$ days before or after symptom onset of the infector. The left-shifting of the gamma-distribution allows for potential pre-symptomatic transmission. The resulting infectious profile is shown in Fig. 1c (middle) in @he_etal2020 and is subsequently
+corrected in @he_etal2020correction, suggesting that infectiousness starts as early as 5-6 days prior to DSO and ends 8 days after DSO, with peak infectiousness at one day before DSO.
 
-Thus, for the profile function $v_A(d)$ we implement a discretized version of the infectiousness profile as inferred by @he_etal2020. The discretized profile for each day $d$ computes the mean infectiousness within $[d,d+1)$, for instance the value $v_A(-2)$ refers to the mean infectiousness within the interval $[-2,-1)$ days, i.e. with respect to time of symptom onset. The profile $v_A(d)$ is normalized such that the maximum infectiousness by day equals one, which occurs at $d = - 1$. 
+Thus, for the profile function $v_A(d)$ we implement a discretized version of the infectiousness profile as inferred by the corrected version of @he_etal2020. The discretized profile for each day $d$ computes the mean infectiousness within $[d,d+1)$, for instance the value $v_A(-2)$ refers to the mean infectiousness within the interval $[-2,-1)$ days, i.e. with respect to time of symptom onset. The profile $v_A(d)$ is normalized such that the maximum infectiousness by day equals one, which occurs at $d = - 1$. 
 
 <!-- He et al. (2020) work -->
 ```{r script_from_He, eval=FALSE, cache=TRUE, echo=FALSE}
-# Run Script from He et al. (2020) - git clone https://github.com/ehylau/COVID-19
+# Run Script from He et al. (2020) - git clone https://github.com/ehylau/COVID-19 
 wd <- getwd()
 setwd("he_etal2020")
 source("Fig1c_RScript.R", local = FALSE)
@@ -136,9 +142,10 @@ setwd(wd)
 # from the "Fig1c_RScript.R" script referenced above and hardcoded here for ease 
 # of computation.
 inf.par <- c(2.11577895060007, 0.689858288192386, 2.30669123253302)
+inf.par <- c(20.516508, 1.592124, 12.272481)
 
 # Grid where to compute the values
-x_grid <- seq(-3, 13, by = 1)
+x_grid <- seq(-7, 14, by = 1)
 
 # Calculate CDF of the shifted gamma
 cdf <- pgamma(x_grid + inf.par[3], inf.par[1], inf.par[2])
@@ -151,12 +158,25 @@ names(pmf) <- x_grid[-length(x_grid)]
 (d_infprofile_check <- round(pmf, digits = 3))
 ```
 
+```{r, echo=FALSE}
+# Original values resulting from He et al. (2020)
+# d_infprofile <- c(
+#   "-3" = 0.015, "-2" = 0.185, "-1" = 0.237, "0" = 0.197, "1" = 0.139,
+#   "2" = 0.091, "3" = 0.057, "4" = 0.034, "5" = 0.02, "6" = 0.011,
+#   "7" = 0.006, "8" = 0.004, "9" = 0.002, "10" = 0.001, "11" = 0.001,
+#   "12" = 0
+# )
+# Corrected values from He et al. (2020) - https://github.com/ehylau/COVID-19
+# see below
+```
 ```{r infectiousness_profile, fig.cap = "Assumed infectiousness profile."}
+# Discretized values resulting from from He et al. (2020) correction 
 d_infprofile <- c(
-  "-3" = 0.015, "-2" = 0.185, "-1" = 0.237, "0" = 0.197, "1" = 0.139,
-  "2" = 0.091, "3" = 0.057, "4" = 0.034, "5" = 0.02, "6" = 0.011,
-  "7" = 0.006, "8" = 0.004, "9" = 0.002, "10" = 0.001, "11" = 0.001,
-  "12" = 0
+  "-7" = 0.002, "-6" = 0.009, "-5" = 0.025, "-4" = 0.054,
+  "-3" = 0.090, "-2" = 0.122, "-1" = 0.140, "0" = 0.140, "1" = 0.124,
+  "2" = 0.100, "3" = 0.073, "4" = 0.049, "5" = 0.031, "6" = 0.019,
+  "7" = 0.010, "8" = 0.006, "9" = 0.003, "10" = 0.001, "11" = 0.001,
+  "12" = 0, "13" = 0
 )
 d_infprofile <- d_infprofile / max(d_infprofile)
 
@@ -175,12 +195,12 @@ Still, a more realistic infectiousness profile could be informed by also account
 
 ## Operational Delays {#delays}
 
-The time period between sampling until test result, i.e. $T_{\text{result}} - T_{\text{sampling}}$, is given by
+The delay between sampling until test result, i.e. $T_{\text{result}} - T_{\text{sampling}}$, is given by
 ```{r d_samp2res}
 d_samp2res <- c("0" = 0.1, "1" = 0.7, "2" = 0.2)
 ```
 
-The time period between the test result and the upload, i.e. $T_{\text{upload}} - T_{\text{result}}$, is given by
+The delay between the test result and the upload, i.e. $T_{\text{upload}} - T_{\text{result}}$, is given by
 ```{r d_res2upload}
 d_res2upload <- c("0" = 0.7, "1" = 0.25, "2" = 0.05)
 ```
@@ -224,11 +244,12 @@ ggplot_pmf(d_symp2upload) + xlab("Duration Symptom Onset until Upload (Days)")
 
 Here, we cover the scenario in which people get tested independent of having developed any symptoms beforehand and in case of a positive test result, upload their diagnosis keys. This could, e.g., be the case for individuals which are tested as part of contact tracing, because they were identified as a contact at risk after having had contact with an infected person. For these cases the time from symptom onset to upload may be in fact negative, since symptoms might begin after receiving the test result and upload. Note that we here condition on DSO actually occurring, which is not the case for truly asymptomatic cases.
 
-To compute the delay distribution for this case we define the delay distribution from sampling to DSO for cases which were tested within their pre-symptomatic phase and will develop symptoms afterwards. Since a PCR-test result is most likely to be positive in a phase of considerable viral shedding, we assume that only tests within the pre-symptomatic phase will come out positive, which means that only tests from samples taken within the 3 days prior to DSO will be positive. Thus, as we have no further information when suspected cases get tested during their pre-symptomatic stage, we assume that it takes between 1 and 3 days from sampling to symptom onset, each with probability $1/3$. In other words, the sampling occurs 1 to 3 days _prior_ to DSO for pre-symptomatically tested. Thus the time from DSO to sampling is negative. We denote the distribution of this delay by `d_symp2samp_presymptomatic`.
+To compute the delay distribution for this case we define the delay distribution from sampling to DSO for cases which were tested within their pre-symptomatic phase and will develop symptoms afterwards. Since a PCR-test result is most likely to be positive in a phase of considerable viral shedding, we assume that only tests within the pre-symptomatic phase will come out positive, which means that only tests from samples taken within the 7 days prior to DSO will be positive. Thus, as we have no further information when suspected cases get tested during their pre-symptomatic stage, we assume that it takes between 1 and 7 days from sampling to symptom onset, each with probability $1/7$. In other words, the sampling occurs 1 to 7 days _prior_ to DSO for pre-symptomatically tested. Thus the time from DSO to sampling is negative. We denote the distribution of this delay by `d_symp2samp_presymptomatic`.
 
 ```{r d_symp2samp_presymptomatic}
 (d_symp2samp_presymptomatic <- convolute(
-  c("0" = 1 / 3, "1" = 1 / 3, "2" = 1 / 3), c("-3" = 1)))
+  c("0" = 1 / 7, "1" = 1 / 7, "2" = 1 / 7, 
+    "3" = 1 / 7, "4" = 1 / 7, "5" = 1 / 7, "6" = 1 / 7), c("-7" = 1)))
 ```
 
 By convoluting the (negative) time delay from symptom onset to sampling `d_symp2samp_presymptomatic` with the delay from sampling to upload `d_samp2upload` we obtain the overall time delay from upload to symptom onset, denoted by `d_upload2symp`. Note that this delay may be negative or positive, since some cases, although tested in a pre-symptomatic stage, might have already developed symptoms at the time of upload. 
@@ -248,17 +269,19 @@ stopifnot(isTRUE(all.equal(sum(d_upload2symp), 1)))
 Assume that we know that *A* got a positive test result, which is uploaded to the server on day $t_0$. All contacts that occurred $d = t_0 - t_C$ days ago will be assigned the same *transmission risk level* $\lambda_A(d)$, containing information on the infectiousness of a generic contact of *A* on that day. The infectiousness and therefore also the risk level $\lambda_A(d)$ might depend on further information provided by *A*, in particular whether *A* developed symptoms by the time of upload and in that case the day of symptom onset $T^A_S=t^A_S$, which would imply that $t^A_S \leq t_0$.
 
 The *transmission risk level* $\lambda_A(d)$ is derived in two steps: 
+
 1. First, we compute the _raw relative infectiousness_ (also referred to as _transmission risk_) $\lambda^{(raw)}_A(d)$ of *A* given the provided information, which serves as a continuous infectiousness value on the scale $[0,1]$. For this step we distinguish between the four possible scenarios of available information introduced in section [Scenarios and Events](#scenarios).
-2. In a second step, this raw value is translated into a *transmission risk level* $\lambda_A(d)$ which takes values from 1 to 8 and which will be further used within the *total risk score* calculation. This classification will be explained in section [Transmission Risk Levels](#trl).
+
+2. In a second step, this raw infectiousness is translated into a *transmission risk level* $\lambda_A(d)$, which is denoted by roman numerals from $\text{\Romannum{1}}$ to $\text{\Romannum{8}}$ and which will be further translated into a transmission risk value to be used within the *total risk score* calculation. This classification will be explained in section [Transmission Risk Levels](#trl).
 
 ### Case 1: Availability of $t^A_S$
 
-If the time of symptom onset is available, i.e. in the event $\mathcal{Symp}_A(T^A_S = t^A_S)$, then at time $t_0$, the onset of symptoms in the primary case *A* happened $t_0 - t^A_S \geq 0$ days ago. So the relative infectiousness of case *A* relative to $t_0$ is just $v_A(-d)$ shifted $t_0 - t^A_S$ days to the right, i.e $v_A(-d + (t_0 - t^A_S)) = v_A(t_C- t^A_S)$.
+If the date of symptom onset is available, i.e. in the event $\mathcal{Symp}_A(T^A_S = t^A_S)$, then at time $t_0$, the onset of symptoms in the primary case *A* happened $t_0 - t^A_S \geq 0$ days ago. So the relative infectiousness of case *A* relative to $t_0$ is just $v_A(-d)$ shifted $t_0 - t^A_S$ days to the right, i.e $v_A(-d + (t_0 - t^A_S)) = v_A(t_C- t^A_S)$.
 
-```{r d_infprofile_t0, fig.height=5, warning=FALSE, fig.cap = "Plot of the infectiousness profile, if symptom onsets  happened 1 (top) or 2 (bottom) days ago from upload."}
+```{r d_infprofile_t0, fig.height=5, warning=FALSE, fig.cap = "Plot of the infectiousness profile, if symptom onsets  happened 1 (a) or 2 (b) days before upload."}
 # Infectious profile relative to t0
-d_infprofile_t0 <- function(t0_minus_tS) {
-  res <- d_infprofile
+d_infprofile_t0 <- function(t0_minus_tS, infprofile = d_infprofile) {
+  res <- infprofile
   names(res) <- as.numeric(names(res)) - t0_minus_tS
   res
 }
@@ -273,33 +296,30 @@ plot_it <- function(t0_minus_tS, xlim) {
     ggtitle(substitute(t[0] - t[S]^A == a, list(a = t0_minus_tS))) +
     xlim(xlim)
 }
-gridExtra::grid.arrange(plot_it(1, xlim = c(-5, 10)), plot_it(2, xlim = c(-5, 10)))
+gridExtra::grid.arrange(plot_it(1, xlim = c(-10, 10)), plot_it(2, xlim = c(-10, 10)))
 ```
 
 
 Hence, for a given DSO $t_S^A$ we define the raw transmission risk 
 
 $$\lambda^{(raw)}_A(d, \mathcal{Symp}_A(T^A_S = t^A_S)) \>=\> v_a(-d+t_0-t_S^A),$$
-where $d = t_0 - t_C$ refers to the duration in days between the time of contact and the time of upload. Again, here we only provide the raw value $\lambda^{(raw)}_A$, i.e. the relative infectiousness on a $[0,1]$-scale. These raw infectiousness values as a function of DSO and time since contact are shown below.
+where $d = t_0 - t_C$ refers to the duration in days between the time of exposure and the time of upload. Again, here we only provide the raw value $\lambda^{(raw)}_A$, i.e. the relative infectiousness on a $[0,1]$-scale. These raw infectiousness values as a function of DSO and time since exposure are shown below.
 
 ```{r matrixdsoexposure}
-# Maximum number of days since exposure to display
-max_dse <- 13
-
-M_case1 <- matrix(
-  0,
-  nrow = 22,
-  ncol = max_dse + 1,
-  dimnames = list(days_since_symptoms = 0:21, days_since_contact = 0:max_dse)
-)
-for (i in 0:21) {
+# Maximum number of days since exposure to upload
+max_dse <- 14
+# Maximum number of days since onset of symptoms
+max_dso <- 21
+M_case1 <- matrix(0, nrow = max_dso + 1, ncol = max_dse + 1,
+  dimnames = list(days_since_symptoms = 0:max_dso, days_since_exposure = 0:max_dse))
+for (i in 0:max_dso) {
   inf_profile <- d_infprofile_t0(t0_minus_tS = i)
   days <- as.numeric(names(inf_profile))
-  days_since_contact <- days * (-1)
+  days_since_exposure <- days * (-1)
   # Only pick events in the past since you condition on the two having met
-  reasonable_days <- (days <= 0) & (days_since_contact <= max_dse)
-  days_since_contact <- days_since_contact[reasonable_days]
-  M_case1[i + 1, days_since_contact + 1] <- inf_profile[reasonable_days]
+  reasonable_days <- (days <= 0) & (days_since_exposure <= max_dse)
+  days_since_exposure <- days_since_exposure[reasonable_days]
+  M_case1[i + 1, days_since_exposure + 1] <- inf_profile[reasonable_days]
 }
 ```
 
@@ -318,7 +338,7 @@ df_M_case1 <- matrix_to_df(M_case1)
 plot_rel_infectiousness(
   df_M_case1,
   ylab_text = "Days since symptoms in infector",
-  breaks_y = 0:21
+  breaks_y = 0:max_dso
 )
 ```
 
@@ -329,15 +349,15 @@ Here we consider the case, in which we know that *A* is symptomatic at time of u
 $$
 \begin{aligned}
 \lambda_A^{(raw)}(d,\,\mathcal{Symp}_A(T^A_S \leq t_0)) &= \mathbb{E}_{T_S^A}\Big[ \lambda^{(raw)}_A(d, \mathcal{Symp}_A(T^A_S = t^A_S)) \>\Big|\> \mathcal{Symp}_A(T^A_S \leq t_0)\Big] \\
-&= \sum_{t_S^A = t_0-13}^{t_0} \lambda^{(raw)}_A(d, \mathcal{Symp}_A(T^A_S = t^A_S)) \> \cdot d_{\texttt{symp2upload}}(t_0-t_S^A) 
+&= \sum_{t_S^A = t_0-14}^{t_0} \lambda^{(raw)}_A(d, \mathcal{Symp}_A(T^A_S = t^A_S)) \> \cdot d_{\texttt{symp2upload}}(t_0-t_S^A) 
 \end{aligned}
 $$
 
 ```{r m_case2_and_plt, , fig.height=2, fig.cap="Raw transmission risk for Case 2: A is symptomatic with unknown DSO."}
 M_case2 <- numeric(max_dse + 1)
-for (days_since_contact in 0:max_dse) {
-  case1_val <- M_case1[as.numeric(names(d_symp2upload)) + 1, days_since_contact + 1]
-  M_case2[days_since_contact + 1] <- sum(case1_val * d_symp2upload)
+for (days_since_exposure in 0:max_dse) {
+  case1_val <- M_case1[as.numeric(names(d_symp2upload)) + 1, days_since_exposure + 1]
+  M_case2[days_since_exposure + 1] <- sum(case1_val * d_symp2upload)
 }
 
 # Convert result to matrix for better comparison
@@ -345,7 +365,7 @@ M_case2 <- matrix(
   M_case2,
   ncol = max_dse + 1,
   nrow = 1,
-  dimnames = list("no info about DSO at upload", days_since_contact = 0:max_dse)
+  dimnames = list("no info about DSO at upload", days_since_exposure = 0:max_dse)
 )
 
 # Convert to data.frame
@@ -359,27 +379,133 @@ Due to marginalization, the resulting raw transmission value (as a function of $
 
 Note that for intermediate scenarios in which some additional information, like the date of sampling, is provided by *A*, one can compute the raw transmission value similarly by marginalizing out the date of symptom onset with respect to the corresponding delay distribution. This again could yield a more informative value compared to relying on the upload date alone.
 
-### Case 3: Completely Asymptomatic or Pre-Symptomatic
+#### Addendum -- DSO only known by week
 
-For this case we consider the scenario in which *A* at the time of upload provides the information that there was no onset of symptoms so far, i.e. the event $\mathcal{N\!symp}_A(T_S^A > t_0)$. This case implies the two mutually exclusive situations:
+It might be, that a person does not remember the DSO precisely, but can only constrain the DSO to lie within a certain period of time, e.g. only the week it was in ("in the last 7 days", "1-2 weeks ago", "more than 2 weeks ago"). In this case, we can assume an uniformly distributed DSO within that period or with a slightly skewer (geometric) distribution (motivated by the [Forgetting Curve](https://en.wikipedia.org/wiki/Forgetting_curve)). In either case we we can argue similarly as before:
+
+$$
+\begin{aligned}
+\lambda_A^{(raw)}(d,\,\mathcal{Symp}_A(t_{\text{min}} \leq T^A_S \leq t_{\text{max}})) &= \mathbb{E}_{T_S^A}\Big[ \lambda^{(raw)}_A(d, \mathcal{Symp}_A(T^A_S = t^A_S)) \>\Big|\> \mathcal{Symp}_A(t_{\text{min}} \leq T^A_S \leq t_{\text{max}})\Big] \\
+&= \sum_{t_S^A = t_{\text{min}}}^{t_{\text{max}}} \lambda^{(raw)}_A(d, \mathcal{Symp}_A(T^A_S = t^A_S)) \> \cdot d_{\texttt{missingDSO}}(t_S^A).
+\end{aligned}
+$$
+
+where $[t_{\text{min}}, t_{\text{max}}]$ is the interval in which we know the DSO to be located in (e.g. the week) and $d_{\texttt{missingDSO}}(t_S^A)$ is the probability mass function representing the belief in where the true DSO value is located in the interval $\{t_{\text{min}}, \ldots, t_{\text{max}}\}$.
+
+```{r m_case2_mass_fun}
+normalize <- function(x) x/sum(x, na.rm = TRUE)
+# Discrete uniform over 1:n
+d_missing_dso_unif <- function(n) normalize(rep(1, n))
+# d_missing_dso_unif(10)
+# Geometric over the interval
+d_missing_dso_geom <- function(min, max, p=0.1) normalize(pgeom((min:max), prob = p))
+# d_missing_dso_geom(7, 13, 0.2)
+```
+
+The difference in the geometric and the uniform approach is marginal. In the current week the later days are slightly rated higher, since we can assume that more recent days are remembered more often correctly and thus given as a precise date, not as a period. For the previous and penultimate week the differences to the uniform case almost disappear:
+
+```{r m_missing_dso_dists, fig.height=2, fig.cap="The probability mass function representing the likelihood of the DSO.", include=TRUE, echo=FALSE}
+rem <- .1
+dist0 <- Reduce(
+  function(x, y, ...) merge(x, y, all = TRUE, ...),
+            list(
+              tibble(
+              i = 0:6,
+              y = d_missing_dso_unif(7),
+              v = "u"),
+            tibble(
+              i = 0:6,
+              y = d_missing_dso_geom(0,6,rem),
+              v = "0"),
+            tibble(
+              i = 0:6,
+              y = d_missing_dso_geom(7,13,rem),
+              v = "1"),
+            tibble(
+              i = 0:6,
+              y = d_missing_dso_geom(14,20,rem),
+              v = "2")))
+ggplot(dist0, aes(i,y)) +
+    geom_point(aes(colour = v), size = 2) +
+  geom_line(aes(colour = v), size = 1) +
+  labs(y = "Probability", x="Day", color="", title = "Probability Mass Function") +
+  scale_colour_brewer(palette = "PiYG",
+                      labels = c("in the last 7 days", "1-2 weeks ago", "more than 2 weeks ago", "uniform")) +
+  theme_minimal() + ylim(0.0, max(dist0$y))
+```
+
+With the geometric approach we get:
+
+```{r m_case2_and_plt_w}
+M_case2_minmax <- function(min, max, dist = d_missing_dso_unif(max-min+1)) {
+  M_case2_h <- numeric(max_dse + 1)
+  for (days_since_exposure in 0:max_dse) {
+    case1_val <- M_case1[min:max + 1, days_since_exposure + 1]
+    M_case2_h[days_since_exposure + 1] <- sum(case1_val * dist, na.rm = TRUE)
+  }
+  M_case2_h
+}
+
+# Convert result to matrix for better comparison
+M_case2_minmax_m <- function(min, max, dist = d_missing_dso_unif(max-min+1)) {
+  matrix(
+    M_case2_minmax(min, max, dist=dist),
+    ncol = max_dse + 1,
+    nrow = 1,
+    dimnames = list("no info about DSO at upload", days_since_exposure = 0:max_dse)
+  )
+}
+```
+
+```{r m_case2_and_plt_w_test, include=FALSE, echo=FALSE}
+# Convert to data.frame
+# df_M_case2_00d <- matrix_to_df(M_case2_minmax_m(0,0))
+# df_M_case2_01d <- matrix_to_df(M_case2_minmax_m(1,1))
+# df_M_case2_12d <- matrix_to_df(M_case2_minmax_m(12,12))
+
+# Show the scale
+# plot_rel_infectiousness(df_M_case2_00d)
+# plot_rel_infectiousness(df_M_case2_01d)
+# plot_rel_infectiousness(df_M_case2_12d)
+```
+
+```{r m_case2_and_plt_w0, fig.height=2, fig.cap="Raw transmission risk for Case 2: A is symptomatic with DSO only known to be in the current week (in the last 7 days)."}
+df_M_case2_0w <- matrix_to_df(M_case2_minmax_m(0, 6, d_missing_dso_geom(0, 6, 0.1)))
+plot_rel_infectiousness(df_M_case2_0w)
+```
+
+```{r m_case2_and_plt_w1, fig.height=2, fig.cap="Raw transmission risk for Case 2: A is symptomatic with DSO only known to be in the previous week (1-2 weeks ago)."}
+df_M_case2_1w <- matrix_to_df(M_case2_minmax_m(7, 13, dist=d_missing_dso_geom(7, 13, 0.1)))
+plot_rel_infectiousness(df_M_case2_1w)
+```
+
+```{r m_case2_and_plt_w2, fig.height=2, fig.cap="Raw transmission risk for Case 2: A is symptomatic with DSO only known to be in the penultimate week (more than 2 weeks ago)."}
+df_M_case2_2w <- matrix_to_df(M_case2_minmax_m(14, 20, dist=d_missing_dso_geom(14, 20, 0.1)))
+plot_rel_infectiousness(df_M_case2_2w)
+```
+
+
+### Case 3: Never-Symptomatic or Pre-Symptomatic
+
+For this case we consider the scenario in which *A* at the time of upload provides the information that there was no onset of symptoms so far, i.e. the event $\mathcal{Asymp}_A(T_S^A > t_0)$. This case implies the two mutually exclusive situations:
 
 i. $\mathcal{Symp}_A(T_S^A > t_0)$, i.e. *A* will develop symptoms at a later time point $T_S^A > t_0$ and is currently in a pre-symptomatic stage
 
-ii. $\mathcal{Asymp}_A$, i.e. *A* will not develop any symptoms at all 
+ii. $\mathcal{N\!symp}_A$, i.e. *A* will never develop any symptoms 
 
 At the time of upload we will not know which of these two situations applies. For the purpose of computing a transmission risk for case 3 we thus require the probabilities for each of the two scenarios (and for the pre-symptomatic scenario for each sub-scenario $T_S^A = t_0 +  n$, for $n \geq 1$) which will then be appropriately weighted together. Thus, let 
-$$w_n = P(\mathcal{Symp}_A(T_S^A = t_0 + n) \>|\> \mathcal{N\!symp}_A(T_S^A > t_0))$$ 
+$$w_n = P(\mathcal{Symp}_A(T_S^A = t_0 + n) \>|\> \mathcal{Asymp}_A(T_S^A > t_0))$$ 
 denote the probabilities for the different sub-cases of the pre-symptomatic scenario, i.e. $w_n$ is the conditional probability for the event that *A* develops symptoms $n$ days after the upload date, where $n \in \{1, \ldots, N\}$ with $N$ being some plausible maximum time delay between upload date and DSO. Analogously, we define 
-$$w_{\texttt{asymptomatic}} = P(\mathcal{Asymp}_A \>|\> \mathcal{N\!symp}_A(T_S^A > t_0))$$
-which denotes the probability for the completely asymptomatic scenario.
+$$w_{\texttt{neversymptomatic}} = P(\mathcal{N\!symp}_A \>|\> \mathcal{Asymp}_A(T_S^A > t_0))$$
+which denotes the probability for the never-symptomatic scenario.
 Thus, for the pre-symptomatic situation, i.e. $1 \leq n \leq N$, we obtain 
 
 $$
 \begin{aligned}
-w_n &= P\Big(\mathcal{Symp}_A(T_S^A = t_0 + n) \>\Big|\> \mathcal{Symp}_A(T_S^A  > t_0) \>\cup\> \mathcal{Asymp}_A\Big) \\
-&= \frac{P\Big(\mathcal{Symp}_A(T_S^A = t_0 + n) \>\cap\> \big(\mathcal{Symp}_A(T_S^A  > t_0) \>\cup\> \mathcal{Asymp}_A\big)\Big)}{P\Big(\mathcal{Symp}_A(T_S^A  > t_0) \>\cup\> \mathcal{Asymp}_A\Big)} \\
-&= \frac{P\Big( \mathcal{Symp}_A(T_S^A = t_0 + n)\Big)}{P\big(\mathcal{Symp}_A(T_S^A > t_0)\big) + P(\mathcal{Asymp}_A)} \\
-&= \frac{P\Big(\mathcal{Symp}_A(T_S^A = t_0+n) \>\Big|\> \mathcal{Symp}_A\Big) P(\mathcal{Symp}_A)}{P\Big(\mathcal{Symp}_A(T_S^A > t_0) \>\Big|\> \mathcal{Symp}_A\Big)P(\mathcal{Symp}_A) + P(\mathcal{Asymp}_A)}
+w_n &= P\Big(\mathcal{Symp}_A(T_S^A = t_0 + n) \>\Big|\> \mathcal{Symp}_A(T_S^A  > t_0) \>\cup\> \mathcal{N\!symp}_A\Big) \\
+&= \frac{P\Big(\mathcal{Symp}_A(T_S^A = t_0 + n) \>\cap\> \big(\mathcal{Symp}_A(T_S^A  > t_0) \>\cup\> \mathcal{N\!symp}_A\big)\Big)}{P\Big(\mathcal{Symp}_A(T_S^A  > t_0) \>\cup\> \mathcal{N\!symp}_A\Big)} \\
+&= \frac{P\Big( \mathcal{Symp}_A(T_S^A = t_0 + n)\Big)}{P\big(\mathcal{Symp}_A(T_S^A > t_0)\big) + P(\mathcal{N\!symp}_A)} \\
+&= \frac{P\Big(\mathcal{Symp}_A(T_S^A = t_0+n) \>\Big|\> \mathcal{Symp}_A\Big) P(\mathcal{Symp}_A)}{P\Big(\mathcal{Symp}_A(T_S^A > t_0) \>\Big|\> \mathcal{Symp}_A\Big)P(\mathcal{Symp}_A) + P(\mathcal{N\!symp}_A)}
 \end{aligned}
 $$
 ```{r p_symp, echo=FALSE}
@@ -403,18 +529,18 @@ data.frame(n = 1:3, w_n = w_n)
 Similarly, we obtain 
 $$
 \begin{aligned}
-w_{\texttt{asymptomatic}} 
-&= P\Big(\mathcal{Asymp}_A \>\Big|\> \mathcal{Symp}_A(T_S^A  > t_0) \>\cup\> \mathcal{Asymp}_A\Big) \\
-&=\frac{P(\mathcal{Asymp}_A)}{P\Big(\mathcal{Symp}_A(T_S^A > t_0) \>\Big|\> \mathcal{Symp}_A\Big)P(\mathcal{Symp}_A) + P(\mathcal{Asymp}_A)}\\
+w_{\texttt{neversymptomatic}} 
+&= P\Big(\mathcal{N\!symp}_A \>\Big|\> \mathcal{Symp}_A(T_S^A  > t_0) \>\cup\> \mathcal{N\!symp}_A\Big) \\
+&=\frac{P(\mathcal{N\!symp}_A)}{P\Big(\mathcal{Symp}_A(T_S^A > t_0) \>\Big|\> \mathcal{Symp}_A\Big)P(\mathcal{Symp}_A) + P(\mathcal{N\!symp}_A)}\\
 &= \frac{`r 1-p_symp`}{(`r paste(sprintf("%.4f",d_upload2symp[c("1","2","3")]), collapse=" + ")`) \cdot `r p_symp` + `r 1-p_symp`} =
 `r sprintf("%.3f",(1- p_symp)/( sum(d_upload2symp[c("1","2","3")])*p_symp + (1 - p_symp)))`
 \end{aligned}
 $$
 
 ```{r w_infty, echo=FALSE}
-w_asymptomatic <- (1 - p_symp) / (sum(d_upload2symp[c("1", "2", "3")]) * p_symp + (1 - p_symp))
+w_neversymptomatic <- (1 - p_symp) / (sum(d_upload2symp[c("1", "2", "3")]) * p_symp + (1 - p_symp))
 ### check sum equals 1
-stopifnot(abs(sum(w_n) + w_asymptomatic) - 1 < 1e-10)
+stopifnot(abs(sum(w_n) + w_neversymptomatic) - 1 < 1e-10)
 ```
 
 #### Computation of the Transmission Risk
@@ -423,16 +549,16 @@ Knowing the probabilities of the possible scenarios and sub-scenarios in the cas
 
 $$
 \begin{aligned}
-&\quad \lambda_A^{(raw)}(d, \mathcal{N\!symp}_A(T_S^A > t_0)) \\
-&= \mathbb{E}\Big[ \lambda^{(raw)}_A(d, \cdot) \>\Big|\> \mathcal{Symp}_A(T_S^A  > t_0) \>\cup\> \mathcal{Asymp}_A\Big] \\
-&= w_{\texttt{asymptomatic}} \cdot \lambda^{(raw)}_A(d, \mathcal{Asymp}_A)  + \sum_{n = 1}^{3} w_n \cdot \lambda^{(raw)}_A(d, \mathcal{Symp}_A(T_S^A = t_0 + n))
+&\quad \lambda_A^{(raw)}(d, \mathcal{Asymp}_A(T_S^A > t_0)) \\
+&= \mathbb{E}\Big[ \lambda^{(raw)}_A(d, \cdot) \>\Big|\> \mathcal{Symp}_A(T_S^A  > t_0) \>\cup\> \mathcal{N\!symp}_A\Big] \\
+&= w_{\texttt{neversymptomatic}} \cdot \lambda^{(raw)}_A(d, \mathcal{N\!symp}_A)  + \sum_{n = 1}^{3} w_n \cdot \lambda^{(raw)}_A(d, \mathcal{Symp}_A(T_S^A = t_0 + n))
 \end{aligned}
 $$
 ```{r factor_asymp_reduce_infectiousness, echo=FALSE, results="hide"}
 factor_asymp_reduce_infectiousness <- 0.4
 ```
 
-Thus, the first term shows that we require the transmission risk function for completely asymptomatic people. Here we assume, that completely asymptomatic cases have the same infectiousness profile (as a function around the date of upload) like symptomatic people, but with their infectiousness reduced by a factor of `r factor_asymp_reduce_infectiousness` [see @mizumoto_etal2020]. However, note that in this case we cannot rely on the computations from case 2 (symptomatic with unknown DSO), since here the DSO does not follow the distribution `d_symp2upload`, which applies for people who were known to be symptomatic at the time of upload. For this case we instead focus on people who were tested in an non-symptomatic stage, such that the DSO (for people who develop symptoms) is distributed according to `d_upload2symp` subject to the upload date $t_0$. Utilizing the transmission risk from case 1 with known DSO, this yields
+Thus, the first term shows that we require the transmission risk function for never-symptomatic people. Here we assume, that never-symptomatic cases have the same infectiousness profile (as a function around the date of upload) like symptomatic people, but with their infectiousness reduced by a factor of `r factor_asymp_reduce_infectiousness` [see @mizumoto_etal2020]. However, note that in this case we cannot rely on the computations from case 2 (symptomatic with unknown DSO), since here the DSO does not follow the distribution `d_symp2upload`, which applies for people who were known to be symptomatic at the time of upload. For this case we instead focus on people who were tested in an non-symptomatic stage, such that the DSO (for people who develop symptoms) is distributed according to `d_upload2symp` subject to the upload date $t_0$. Utilizing the transmission risk from case 1 with known DSO, this yields
 $$
 \begin{aligned}
 &\quad \lambda^{(raw)}_A(d, \mathcal{Asymp}_A) \\
@@ -443,18 +569,18 @@ $$
 
 In code:
 ```{r m_case_3, , fig.height=2, fig.cap="Raw transmission risk for Case 3: A is non-symptomatic at day of upload."}
-### add days_since_symptoms from -3 to -1 to M_case1
+### add days_since_symptoms from -7 to -1 to M_case1
 M_case1_extended <- rbind(
   matrix(0,
     ncol = ncol(M_case1),
-    nrow = 3,
-    dimnames = modifyList(dimnames(M_case1), list(days_since_symptoms = seq(-3, -1)))
+    nrow = 7,
+    dimnames = modifyList(dimnames(M_case1), list(days_since_symptoms = seq(-7, -1)))
   ),
   M_case1
 )
 
-# Go backwards from delay 0 to -3 and shift \lambda_A by one to the left
-for (rn in 3:1) {
+# Go backwards from delay 0 to -7 and shift \lambda_A by one to the left
+for (rn in 7:1) {
   M_case1_extended[rn, ] <- c(M_case1_extended[rn + 1, -1], 0)
 }
 
@@ -473,7 +599,7 @@ for (d in names(d_upload2symp)) {
 }
 
 ### combined case
-M_case3 <- M_case3_presymtomatic + w_asymptomatic * M_case3_nonsymptomatic
+M_case3 <- M_case3_presymtomatic + w_neversymptomatic * M_case3_nonsymptomatic
 
 # Convert to data.frame
 df_M_case3 <- matrix_to_df(M_case3)
@@ -491,14 +617,14 @@ The final case represents the scenario in which no further information is availa
 We decompose the case into the following possible mutually exclusive scenarios and apply corresponding probabilities for each subscenario:
 
 (i) $\mathcal{Symp}_A(T^A_S \leq T^A_{\text{sampling}})$, i.e. person *A* got tested because they developed COVID-19 related symptoms, 
-(ii) $\mathcal{N\!symp}_A(T^A_S > T^A_{\text{sampling}})$, i.e. person *A* got tested as a suspected case, e.g. because of a risk contact, and was non-symptomatic at the time of sampling. This can be decomposed into: 
+(ii) $\mathcal{Asymp}_A(T^A_S > T^A_{\text{sampling}})$, i.e. person *A* got tested as a suspected case, e.g. because of a risk contact, and was non-symptomatic at the time of sampling. This can be decomposed into: 
      (a) $\mathcal{Symp}_A(T^A_S > T^A_{\text{sampling}})$, i.e. person *A* develops symptoms after being tested, 
-     (b) $\mathcal{Asymp}_A \cap \mathcal{N\!symp}_A(T^A_S > T^A_{\text{sampling}})$, i.e. person *A* is a completely asymptomatic case and will thus never develop symptoms. 
+     (b) $\mathcal{N\!symp}_A \cap \mathcal{Asymp}_A(T^A_S > T^A_{\text{sampling}})$, i.e. person *A* is a never-symptomatic case and will thus never develop symptoms. 
 
 In summary we get the following disjoint decomposition:  
 $$
 \Omega = \mathcal{Symp}_A(T^A_S \leq T^A_{\text{sampling}}) \;\cup\; \mathcal{Symp}_A(T^A_S > T^A_{\text{sampling}})
-\;\cup\; \Big(\mathcal{Asymp}_A \cap \mathcal{N\!symp}_A(T^A_S > T^A_{\text{sampling}})\Big).
+\;\cup\; \Big(\mathcal{N\!symp}_A \cap \mathcal{Asymp}_A(T^A_S > T^A_{\text{sampling}})\Big).
 $$
   
 The transmission risk as a function of time difference $d$ between day of upload and day of contact for each of these scenarios can be derived based on results and considerations from the above cases 1 to 3. 
@@ -517,11 +643,11 @@ $$
 &= \sum_{t_S^A = t_0-3}^{t_0 + 3}  \lambda^{(raw)}_A(d, \mathcal{Symp}_A(T_S^A = t_S^A)) \cdot d_{\texttt{upload2symp}(t_S^A - t_0)} \\
 \end{aligned}
 $$
-For (ii.b) we follow the same arguments as in case 3 for completely asymptomatic cases, which effectively yields $\lambda_A^{(raw)}(d, \mathcal{Symp}_A(T^A_S > T^A_{\text{sampling}}))$ times a factor for the reduced relative infectiousness, i.e. 
+For (ii.b) we follow the same arguments as in case 3 for never-symptomatic cases, which effectively yields $\lambda_A^{(raw)}(d, \mathcal{Symp}_A(T^A_S > T^A_{\text{sampling}}))$ times a factor for the reduced relative infectiousness, i.e. 
 $$
 \begin{aligned}
-&\quad \lambda_A^{(raw)}(d, \mathcal{Asymp}_A \cap \mathcal{N\!symp}_A(T^A_S > T^A_{\text{sampling}})) \\
-&= \lambda^{(raw)}_A(d, \mathcal{Asymp}_A)  \\
+&\quad \lambda_A^{(raw)}(d, \mathcal{N\!symp}_A \cap \mathcal{Asymp}_A(T^A_S > T^A_{\text{sampling}})) \\
+&= \lambda^{(raw)}_A(d, \mathcal{N\!symp}_A)  \\
 &= `r factor_asymp_reduce_infectiousness` \cdot \lambda_A^{(raw)}(d, \mathcal{Symp}_A(T^A_S > T^A_{\text{sampling}}))
 \end{aligned}
 $$
@@ -536,7 +662,7 @@ $$
 &\quad \lambda_A^{(raw)}(d, \Omega) \\
 &= (1 - p_{\texttt{suspect}}) \cdot \lambda_A^{(raw)}(d, \mathcal{Symp}_A(T^A_S \leq T^A_{\text{sampling}})) \> + \\
 &\qquad p_{\texttt{suspect}} \cdot `r p_symp` \cdot \lambda_A^{(raw)}(d, \mathcal{Symp}_A(T^A_S > T^A_{\text{sampling}})) \> + \\
-&\qquad p_{\texttt{suspect}} \cdot (1 - `r p_symp`) \cdot \lambda_A^{(raw)}(d, \mathcal{Asymp}_A \cap \mathcal{N\!symp}_A(T^A_S > T^A_{\text{sampling}}))
+&\qquad p_{\texttt{suspect}} \cdot (1 - `r p_symp`) \cdot \lambda_A^{(raw)}(d, \mathcal{N\!symp}_A \cap \mathcal{Asymp}_A(T^A_S > T^A_{\text{sampling}}))
 \end{aligned}
 $$
 This leads to the following transmission risks.
@@ -552,7 +678,7 @@ M_case4 <- (1 - p_suspect) * M_case2 +
 M_case4 <- matrix(M_case4,
   ncol = max_dse + 1,
   nrow = 1,
-  dimnames = list("no information at upload", days_since_contact = 0:max_dse)
+  dimnames = list("no information at upload", days_since_exposure = 0:max_dse)
 )
 
 # Convert to data.frame
@@ -590,20 +716,38 @@ plot_risk_levels(
 
 ```{r plot_case2, echo=FALSE, message=FALSE, fig.height=1.3, fig.width=5, fig.cap="Transmission risk level for Case 2: A is symptomatic but with unknown DSO."}
 df_M_case2_discrete <- discretize_matrix(M_case2, max_value = max(M_case1))
-
 plot_risk_levels(df_M_case2_discrete)
 ```
 
 ```{r plot_case3, echo=FALSE, message=FALSE, fig.height=1.3, fig.width=5, fig.cap="Transmission risk level for Case 3: A is non-symptomatic at day of upload."}
 df_M_case3_discrete <- discretize_matrix(M_case3, max_value = max(M_case1))
-
 plot_risk_levels(df_M_case3_discrete)
 ```
 
 ```{r plot_case4, echo=FALSE, message=FALSE, fig.height=1.3, fig.width=5, fig.cap="Transmission risk level for Case 4: no information about A at upload."}
 df_M_case4_discrete <- discretize_matrix(M_case4, max_value = max(M_case1))
-
 plot_risk_levels(df_M_case4_discrete) 
+```
+
+#### Addendum -- DSO only known by week
+
+For the DSO only known by the week it was in, we get:
+```{r plot_case2_w0, echo=FALSE, message=FALSE, fig.height=1.3, fig.width=5, fig.cap="Transmission risk level for Case 2: A is symptomatic but with DSO only known to be in the current week (in the last 7 days)."}
+df_M_case2_discrete_0w <- discretize_matrix(M_case2_minmax_m(0, 6, d_missing_dso_geom(0, 6, 0.1)), 
+                                            max_value = max(M_case1))
+plot_risk_levels(df_M_case2_discrete_0w)
+```
+
+```{r plot_case2_w1, echo=FALSE, message=FALSE, fig.height=1.3, fig.width=5, fig.cap="Transmission risk level for Case 2: A is symptomatic but with DSO only known to be in the previous week (1-2 weeks ago)."}
+df_M_case2_discrete_1w <- discretize_matrix(M_case2_minmax_m(7, 13, d_missing_dso_geom(7, 13, 0.1)),
+                                            max_value = max(M_case1))
+plot_risk_levels(df_M_case2_discrete_1w)
+```
+
+```{r plot_case2_w2, echo=FALSE, message=FALSE, fig.height=1.3, fig.width=5, fig.cap="Transmission risk level for Case 2: A is symptomatic but with DSO only known to be in the penultimate week (more than 2 weeks ago)."}
+df_M_case2_discrete_2w <- discretize_matrix(M_case2_minmax_m(14, 20, d_missing_dso_geom(14, 20, 0.1)),
+                                            max_value = max(M_case1))
+plot_risk_levels(df_M_case2_discrete_2w)
 ```
 
 ### Transmission Risk Levels for the Base Case
@@ -640,7 +784,7 @@ Another important limitation is that throughout the document we assumed that *A*
 
 One important point of this document is, that a better transmission risk assessment would be possible, if information about day of symptom onset of the person uploading his or her *diagnosis keys* would be available. The specific gain, for example in terms of sensitivity and specificity, is currently not provided, but could be quantified using simulation.
 
-However, besides the epidemiological aspect two other aspects are important: Firstly, using additional information about *A* and mapping that to levels from I-VIII can be a privacy risk, because a potential attacker could reveal some information about *A* from level and time of upload. In the specific case, if provided, the DSO of *A* can probably be inferred in some situations. Secondly, the information about DSO will be self-reported. In our computations we assume DSO to be reported correctly, but misreports are likely to occur, which could also lead to serious bias in the *transmission risk level* A malicious user can also falsely report his or her DSO to cause false alarms. Hence, one has to carefully balance these two aspects, e.g., by evaluating different formats of DSO specification in the App. For a thoroughly discussion of potential risk of a proximity tracing app see [Privacy and Security Attacks on Digital Proximity Tracing Systems](https://github.com/DP-3T/documents/blob/master/Security%20analysis/Privacy%20and%20Security%20Attacks%20on%20Digital%20Proximity%20Tracing%20Systems.pdf).
+However, besides the epidemiological aspect two other aspects are important: Firstly, using additional information about *A* and mapping that to levels from I-VIII can be a privacy risk, because a potential attacker could reveal some information about *A* from level and time of upload. In the specific case, if provided, the DSO of *A* can probably be inferred in some situations. Secondly, the information about DSO will be self-reported. In our computations we assume DSO to be reported correctly, but misreports are likely to occur, which could also lead to serious bias in the *transmission risk level*. A malicious user can also falsely report his or her DSO to cause false alarms. Hence, one has to carefully balance these two aspects, e.g., by evaluating different formats of DSO specification in the App. For a thoroughly discussion of potential risk of a proximity tracing app see [Privacy and Security Attacks on Digital Proximity Tracing Systems](https://github.com/DP-3T/documents/blob/master/Security%20analysis/Privacy%20and%20Security%20Attacks%20on%20Digital%20Proximity%20Tracing%20Systems.pdf).
 
 The epidemiological motivated *transmission risk level* has value in contact tracing beyond the App. Close work together with local health authorities and those actually performing the contact tracing in the field is, however, necessary to make this added-value more specific.
 
@@ -749,6 +893,7 @@ plot_risk_levels <- function(data, title = "",
 plot_rel_infectiousness <- function(data, breaks_y = NULL, ylab_text = "") {
   ggplot(data, aes(x = y, y = x)) +
     geom_tile(aes(fill = M)) +
+    geom_text(aes(label = as.character(round(M,digits = 2))), size = 2.5) +
     xlab("Delay from Exposure to Consent for Upload") +
     ylab(ylab_text) +
     scale_fill_distiller(
@@ -789,6 +934,32 @@ discretize_matrix <- function(mat, max_value = max(mat, na.rm=TRUE)) {
     stringsAsFactors = TRUE
   )
 }
+```
+
+```{r plot_case2_wX, include=FALSE, echo=FALSE, message=FALSE, fig.height=1.3, fig.width=5, fig.cap="Transmission risk level for Case 2: A is symptomatic but with DSO only known to be in a certain period."}
+# Plot TRL table for all periods (2 til 18) 
+# (change max_dso to a higher value if you want the full range til 21)
+x <- c()
+i <- 0
+for(q in c(2:18))
+  for(d in unique(c(0:(21-q+1)))) {
+    df_M_case2_discrete_2X <- discretize_matrix(M_case2_minmax_m(d, d+q-1, 
+                                                                 d_missing_dso_geom(d, d+q-1, 0.1)),
+                                            max_value = max(M_case1)) %>% 
+      mutate(d=d, q=q, x = i, l=paste0(as.character(q),'-',as.character(d)))
+    x <- rbind(x, df_M_case2_discrete_2X)
+    i <- i+1
+  }
+
+plt_x <- plot_risk_levels(
+  x,
+  ylab_text = "Offset and minimal days since onset of symptoms in A"
+) + scale_y_continuous(breaks = c(1:length(unique(x$l))-1), labels = unique(x$l)) + 
+       theme(axis.text.x = element_text(angle = 90, vjust=0.5, hjust=1)) +
+  coord_flip()
+
+# ggsave("../img/Parameters_Offset_2-18.pdf", plot=plt_x, device = "pdf")
+# write.csv(x,"../img/Parameters_Offset_2-18.csv")
 ```
 
 # Literature
