@@ -117,12 +117,18 @@ The Corona-Warn-App Server needs to fulfill the following tasks:
   - Threshold values for [attenuation buckets](#attenuation-buckets)
   - Risk scores for defined values
   - Threshold values for risk categories and alerts
+  - Valid country codes for EFGS Visited Countries
 - On a regular schedule (e.g. hourly)
   - Assemble diagnosis keys into chunks for a given time period
   - Store chunks as static files (in protocol buffers, compatible with the format specified by Apple and Google)
   - Transfer files to a storage service as shown at the bottom of *Figure 6* which acts as a source for the Content Delivery Network (CDN)
+- Handle the integration with the [European Federation Gateway Service](https://github.com/eu-federation-gateway-service/efgs-federation-gateway) which consists of:
+  - Downloading keys which are shared from connected countries and making then available for use by the CWA Mobile applications
+  - Upload relevant keys for DE to the service to share with other connected countries
+  - Expose a callback API which can be used by the EFGS to notify CWA when new key batches are available for download
+  - Handle the translation of keys values for DSOS and TRL
 
-Those tasks are visualized in *Figure 7*. Each of swim lanes (vertical sections of the diagram) on the left side (Phone 1, Phone 2, Phone n) represent one device that has the Corona-Warn-App installed. The user of Phone 1 has taken a SARS-CoV-2 test (which comes back positive later). The users of Phone 2 and Phone n only use the functionality to trace potential exposure.
+Those tasks relevant for interaction with the CWA Mobile application are visualized in *Figure 7*. Each of swim lanes (vertical sections of the diagram) on the left side (Phone 1, Phone 2, Phone n) represent one device that has the Corona-Warn-App installed. The user of Phone 1 has taken a SARS-CoV-2 test (which comes back positive later). The users of Phone 2 and Phone n only use the functionality to trace potential exposure.
 The Corona-Warn-App Server represents the outside picture of the individual service working in the back end. For a better understanding, the database has been visualized separately.
 
 ![Figure 7: Interaction of the mobile application(s) with the back-end servers and CDN](images/solution_architecture/figure_7.svg "Figure 7: Interaction of the mobile application(s) with the back-end servers and CDN")
