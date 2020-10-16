@@ -14,7 +14,7 @@ We plan to never deprecate outdated API versions. That means that even on MAJOR 
 
 Backend components will always remain compatible due to ongoing the availability of old API versions.
 
-To ensure that all clients use the current "state of the art" information in order to apply the respective algorithms the cwa-server component can deprecate older Android and iOS app versions. The current minimum required app versions can be viewed in the [App Version Config](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/master-config/app-version-config.yaml).
+To ensure that all clients use the current "state of the art" information in order to apply the respective algorithms the cwa-server component can deprecate older Android and iOS app versions. The current minimum required app versions can be viewed in the [App Version Config](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/application.yaml#L93).
 The `app-version-config` is checked by the mobile clients on a regular basis. When the client detects that the required `min` version is higher than the current installed version, the user will be notified about the need to update the app. The app will not be useable until this update is performed.
 
 ## Changelogs
