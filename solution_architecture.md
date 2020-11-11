@@ -269,9 +269,24 @@ If the back end calls from the mobile applications cannot be spread as evenly as
 
 ## Cross-Border Interoperability
 
-A definite prerequisite for compatibility is that the identifiers of the mobile devices can be matched, i.e. the framework by Apple and Google is being used.
+A definite prerequisite for compatibility is that the identifiers of the mobile devices can be matched, i.e. the GAEN framework by Apple and Google is being used.
 
-Further details will be added as soon as they are available.
+Most European countries are developing similar contact tracing apps, these app may use the common frameworks by Google and Apple, enabling transmission and detection of GAEN format diagnosis keys between devices running different contact tracing applications. 
+Each country has its own seperate database of users, in order to coordinate exposure information between countries a common service is required.
+The European Federation Gateway Service (EFGS) handles sharing diagnosis keys between different countries backend servers.
+
+![Figure 15: High-level EFGS overview](images/solution_architecture/EFGS_overview.jpg "Figure 15: High-level EFGS overview")
+
+The Federation Gateway Service facilitates backend-to-backend integration, countries can onboard incrementally, while the national backends retain flexibility and control over data distribution to their users.
+For example if a German user is visiting France then all uploaded keys are of relivance to the French database, likewise if a French user is visiting Germany that users keys are of relivance to the German database.
+
+![Figure 16: Autonomous National Backend](images/solution_architecture/EFGS_Autonomous_Backend.jpg "Figure 16: Autonomous National Backend")
+
+In the example above user A from country A travels to country B and tests positive, only the relevant users in Country B will receive the alert.
+Devices only communicate with their countries backend, the EFGS is only sent keys by a countries backend.
+All countries provide all keys to the EFGS, the EFGS only transmits relevant keys to each countries backend, notifications and alerts are handled by each individual countries backend.
+The EFGS stores information of all currently infected citizens along with a list of countries they visited.
+In order for the EFGS to function correctly all users must specify their visited countries correctly (either manually or automatically). 
 
 ## LIMITATIONS
 
