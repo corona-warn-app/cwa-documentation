@@ -286,7 +286,7 @@ In the example above, user A from country A travels to country B and tests posit
 Devices only communicate with their country's backend. That country's backend is then responsible to send relevant keys to the EFGS.
 All connected countries provide keys to the EFGS. The EFGS then makes available relevant keys to each additional connected country's backend. Notifications and alerts are handled by each individual country's backend.
 The EFGS stores information of all currently infected citizens along with a list of countries they visited.
-In order for the EFGS to function correctly all users must specify their visited countries correctly (either manually or automatically). 
+In order for the EFGS to function correctly, all users must specify their visited countries correctly (either manually or automatically). 
 
 ## LIMITATIONS
 
