@@ -282,7 +282,7 @@ For example, if a German citizen visits France and then becomes infected, the ke
 
 ![Figure 16: Autonomous National Backend](images/solution_architecture/EFGS_Autonomous_Backend.jpg "Figure 16: Autonomous National Backend")
 
-In the example above, user A from country A travels to country B and tests positive, only the relevant users (those which came within proximity of the infected user A) in Country B will receive the alert.
+In the example above, user A from country A travels to country B and afterwards tests positive. Only the relevant users (those which came within proximity of the infected user A) in Country B will receive the alert.
 Devices only communicate with their country's backend. That country's backend is then responsible to send relevant keys to the EFGS.
 All connected countries provide keys to the EFGS. The EFGS then makes available relevant keys to each additional connected country's backend. Notifications and alerts are handled by each individual country's backend.
 The EFGS stores information of all currently infected citizens along with a list of countries they visited.
