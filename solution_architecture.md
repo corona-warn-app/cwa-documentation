@@ -278,7 +278,7 @@ The [European Federation Gateway Service (EFGS)](https://github.com/eu-federatio
 ![Figure 15: High-level EFGS overview](images/solution_architecture/EFGS_overview.jpg "Figure 15: High-level EFGS overview")
 
 The Federation Gateway Service facilitates backend-to-backend integration. Countries can onboard incrementally, while the national backends retain flexibility and control over data distribution to their users.
-For example, if a German citizen visits France and then becomes infected, the keys of the German citizen are then relevant for the citizens of France. In this case the German citizen keys would be shared with the EFGS to enable the French backend to obtain the keys. Similarly, if a French user is visiting Germany that user's keys are of relevance to the German database.
+For example, if a German citizen visits France and then becomes infected, the keys of the German citizen are then relevant for the citizens of France. In this case the German citizen keys would be shared with the EFGS to enable the French backend to obtain the keys. Similarly, if a French user is visiting Germany, that user's keys are of relevance to the German database.
 
 ![Figure 16: Autonomous National Backend](images/solution_architecture/EFGS_Autonomous_Backend.jpg "Figure 16: Autonomous National Backend")
 
