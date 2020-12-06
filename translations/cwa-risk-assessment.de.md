@@ -153,7 +153,7 @@ Wie im [Abschnitt "*Risk Score Calculation*"](https://github.com/corona-warn-app
 Diese Konfiguration kann sich über die Zeit auf Basis neuer Forschungsergebnisse und Erkentnisse ändern.
 Die jeweils aktuell gültigen Parameterwerte können im [*CWA-Server-Repository*](https://github.com/corona-warn-app/cwa-server) eingesehen werden:
 
-- [Konfiguration von Begegnungen](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/master-config/exposure-config.yaml)
-- [Konfiguration von Dämpfung & Dauer](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/master-config/attenuation-duration.yaml)
-- [App-Konfiguration, inkl. des minimalen Risikowerts](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/master-config/app-config.yaml)
-- [Risikowertklassifizierung](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/master-config/risk-score-classification.yaml)
+- [Konfiguration von Begegnungen](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/main-config/exposure-config.yaml)
+- [Konfiguration von Dämpfung & Dauer](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/main-config/attenuation-duration.yaml)
+- [App-Konfiguration, inkl. des minimalen Risikowerts](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/main-config/app-config.yaml)
+- [Risikowertklassifizierung](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/main-config/risk-score-classification.yaml)
