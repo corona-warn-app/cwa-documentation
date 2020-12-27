@@ -61,7 +61,7 @@ Die technischen Dokumente sind für ein technisches Publikum bestimmt und reprä
 
 - [Prüfsteine für die Beurteilung von "Contact Tracing"-Apps](pruefsteine.de.md)
 - [Wie ermittelt die Corona-Warn-App ein erhöhtes Risiko?](cwa-risk-assessment.de.md)
-- [Corona-Warn-App Datenschutz-Folgeabschätzung/DSFA (PDF)](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung.pdf), [DSFA Anlage 1](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage1.pdf), [DSFA Anlage 2](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage2.pdf), [DSFA Anlage 3](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage3.pdf), [DSFA Anlage 4](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage4.pdf), [DSFA Anlage 5](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage5.pdf)
+- [Corona-Warn-App Datenschutz-Folgeabschätzung/DSFA (PDF)](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung.pdf), [DSFA Anlage 1a](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage1a.pdf), [DSFA Anlage 1b](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage1b.pdf), [DSFA Anlage 2](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage2.pdf), [DSFA Anlage 3](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage3.pdf), [DSFA Anlage 4](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage4.pdf), [DSFA Anlage 5](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage5.pdf)
 
 ## Lizenzierung
 
