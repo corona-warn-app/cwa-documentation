@@ -90,18 +90,27 @@ For an easier understanding of the used acronyms and special terms in our docume
 | Repository          | Description                                                           |
 | ------------------- | --------------------------------------------------------------------- |
 | [cwa-documentation] | Project overview, general documentation, and white papers.            |
-| [cwa-wishlist]      | Community feature requests.                                           |
 | [cwa-app-ios]       | Native iOS app using the Apple/Google exposure notification API.      |
 | [cwa-app-android]   | Native Android app using the Apple/Google exposure notification API.  |
+| [cwa-wishlist]      | Community feature requests.                                           |
+| [cwa-website]       | The official website for the Corona-Warn-App                          |
 | [cwa-server]        | Backend implementation for the Apple/Google exposure notification API.|
-| [cwa-verification-server] | Backend implementation of the verification process. |
+| [cwa-verification-server] | Backend implementation of the verification process.             |
+| [cwa-verification-portal] | The portal to interact with the verification server             |
+| [cwa-verification-iam]    | The identy and access management to interact with the verification server |
+| [cwa-testresult-server]   | Receives the test results from connected laboratories           |
 
-[cwa-verification-server]: https://github.com/corona-warn-app/cwa-verification-server
+
 [cwa-documentation]: https://github.com/corona-warn-app/cwa-documentation
-[cwa-wishlist]: https://github.com/corona-warn-app/cwa-wishlist
 [cwa-app-ios]: https://github.com/corona-warn-app/cwa-app-ios
 [cwa-app-android]: https://github.com/corona-warn-app/cwa-app-android
+[cwa-wishlist]: https://github.com/corona-warn-app/cwa-wishlist
+[cwa-website]: https://github.com/corona-warn-app/cwa-website
 [cwa-server]: https://github.com/corona-warn-app/cwa-server
+[cwa-verification-server]: https://github.com/corona-warn-app/cwa-verification-server
+[cwa-verification-portal]: https://github.com/corona-warn-app/cwa-verification-portal
+[cwa-verification-iam]: https://github.com/corona-warn-app/cwa-verification-iam
+[cwa-testresult-server]: https://github.com/corona-warn-app/cwa-testresult-server
 
 ## Licensing
 
