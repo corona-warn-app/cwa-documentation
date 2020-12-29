@@ -33,7 +33,7 @@ The German government has comissioned SAP and Deutsche Telekom to develop the Co
 
 ## Credits
 
-We'd like to thank all the partners who have been involved in this enormous project from the beginning. The project would not be where it is today without all the exploration and great work that had already been done around the [PEPP-PT](https://www.pepp-pt.org/) approach by partners on a European and national level. We will build on top of some of these components and appreciate how everyone is dedicated to making this new approach successful. Moreover, we would like to thank GitHub for their great support.
+We'd like to thank all the partners who have been involved in this enormous project from the beginning. The project would not be where it is today without all the exploration and great work that had already been done around the [PEPP-PT](https://github.com/pepp-pt/pepp-pt-documentation) approach by partners on a European and national level. We will build on top of some of these components and appreciate how everyone is dedicated to making this new approach successful. Moreover, we would like to thank GitHub for their great support.
 
 ## Data Privacy
 
