@@ -31,7 +31,7 @@ Die deutsche Regierung hat SAP und die Deutsche Telekom beauftragt, die Corona-W
 
 ## Danksagungen
 
-Wir möchten allen danken, die an diesem wichtigen Projekt gleich von Beginn an beteiligt waren. Wir wären nicht da, wo wir heute sind, wenn wir durch viele Beiträge auf europäischer und nationaler Ebene nicht bereits so große Fortschritte mit [PEPP-PT](https://www.pepp-pt.org/) erzielt hätten. Wir setzen auf einigen dieser Komponenten auf und sind sehr dankbar dafür, mit wie viel Einsatz sich alle Beteiligten für den Erfolg dieses neuen Ansatzes einsetzen. Darüber hinaus bedanken wir uns bei GitHub für die großartige Unterstützung.
+Wir möchten allen danken, die an diesem wichtigen Projekt gleich von Beginn an beteiligt waren. Wir wären nicht da, wo wir heute sind, wenn wir durch viele Beiträge auf europäischer und nationaler Ebene nicht bereits so große Fortschritte mit [PEPP-PT](https://github.com/pepp-pt/pepp-pt-documentation) erzielt hätten. Wir setzen auf einigen dieser Komponenten auf und sind sehr dankbar dafür, mit wie viel Einsatz sich alle Beteiligten für den Erfolg dieses neuen Ansatzes einsetzen. Darüber hinaus bedanken wir uns bei GitHub für die großartige Unterstützung.
 
 ## Datenschutz
 
