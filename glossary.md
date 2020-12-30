@@ -23,7 +23,7 @@ This overview provides a description for all acronyms and special terms which ar
 | GUID | Acronym for "[Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)". |
 | IfSG | The [German Prevention and Control Act of infectious diseases among humans](https://www.gesetze-im-internet.de/ifsg/index.html), acronym for "Infektionsschutzgesetz", long term: "Gesetz zur Verhütung und Bekämpfung von Infektionskrankheiten beim Menschen". |
 | OTC | Acronym for "[Open Telekom Cloud](https://open-telekom-cloud.com/)"
-| PEPP-PT | [Pan-European Privacy-Preserving Proximity Tracing](https://www.pepp-pt.org/), formerly endorsed approach to a COVID-19 exposure notification app for Germany. |
+| PEPP-PT | [Pan-European Privacy-Preserving Proximity Tracing](https://github.com/pepp-pt/pepp-pt-documentation), formerly endorsed approach to a COVID-19 exposure notification app for Germany. |
 | QR Code | Acronym for [Quick Response Code](https://en.wikipedia.org/wiki/QR_code), a two-dimensional/matrix barcode used in the Corona-Warn-App, handed out by the test center after a test was conducted. See our [solution architecture document](solution_architecture.md) for details. |
 | Registration Token | Used to a) link the mobile phone with the data from the QR Code and b) generate a TAN which is needed to finally perform the upload of the diagnosis keys to the Corona-Warn-App-Server. See our [solution architecture document](solution_architecture.md) for details. |
 | REST | Acronym for "[Representational State Transfer](https://en.wikipedia.org/wiki/Representational_state_transfer)". |
