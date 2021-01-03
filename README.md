@@ -100,7 +100,6 @@ For an easier understanding of the used acronyms and special terms in our docume
 | [cwa-verification-iam]    | The identity and access management to interact with the verification server. |
 | [cwa-testresult-server]   | Receives the test results from connected laboratories.          |
 
-
 [cwa-documentation]: https://github.com/corona-warn-app/cwa-documentation
 [cwa-app-ios]: https://github.com/corona-warn-app/cwa-app-ios
 [cwa-app-android]: https://github.com/corona-warn-app/cwa-app-android
