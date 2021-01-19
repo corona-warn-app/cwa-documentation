@@ -3,7 +3,7 @@
 ---
 **Nachträgliche Verbesserungen der Risikoberechnung**
 
-Verbesserungen der Riskoberechnung sind mit App-Versionen [V1.5 (Symptomerfassung)](https://www.coronawarn.app/de/blog/2020-10-19-version-1-5/) bzw. [V1.9 (Exposure Notification Framework v2)](https://www.coronawarn.app/de/blog/2020-12-16-corona-warn-app-version-1-9/) nach der Veröffentlichtung dieses Dokuments eingeführt worden. Im FAQ-Abschnitt [Risiko-Ermittlung](https://www.coronawarn.app/de/faq/#risk_assessment) werden diesbezügliche Fragen beantwortet.
+Verbesserungen der Riskoberechnung sind mit App-Versionen [V1.5 (Symptomerfassung)](https://www.coronawarn.app/de/blog/2020-10-19-version-1-5/) bzw. [V1.9 (Exposure Notification Framework v2)](https://www.coronawarn.app/de/blog/2020-12-16-corona-warn-app-version-1-9/) nach der Veröffentlichung dieses Dokuments eingeführt worden. Im FAQ-Abschnitt [Risiko-Ermittlung](https://www.coronawarn.app/de/faq/#risk_assessment) werden diesbezügliche Fragen beantwortet.
 
 ---
 
