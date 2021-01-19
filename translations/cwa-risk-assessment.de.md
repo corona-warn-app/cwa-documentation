@@ -1,5 +1,12 @@
 # Wie ermittelt die Corona-Warn-App ein erhöhtes Risiko?
 
+---
+**Nachträgliche Verbesserungen der Risikoberechnung**
+
+Verbesserungen der Risikoberechnung sind mit den App-Versionen [V1.5 (Symptomerfassung)](https://www.coronawarn.app/de/blog/2020-10-19-version-1-5/) bzw. [V1.9 (Exposure Notification Framework v2)](https://www.coronawarn.app/de/blog/2020-12-16-corona-warn-app-version-1-9/) nach der Veröffentlichung dieses Dokuments eingeführt worden. Im FAQ-Abschnitt [Risiko-Ermittlung](https://www.coronawarn.app/de/faq/#risk_assessment) werden diesbezügliche Fragen beantwortet.
+
+---
+
 ## Voraussetzungen
 
 Personen, die die Corona-Warn-App (CWA) nutzen und positiv auf das Coronavirus SARS-CoV-2 getestet wurden, können ihrer CWA erlauben, die vom Betriebssystem ihres Smartphones erzeugten zufälligen Geräteschlüssel (*Temporary Exposure Keys*) der vergangenen Tage als sogenannte Positivkennungen (*Diagnosis Keys*) auf den Corona-Warn-App-Server hochzuladen und dort zu veröffentlichen.
