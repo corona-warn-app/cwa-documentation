@@ -1,8 +1,11 @@
 # How does the Corona-Warn-App identify an increased risk?
 
-##### Later calculation improvements
+---
+**Later calculation improvements**
 
 Improvements to the risk assessment calculations were made in app versions [V1.5 (Symptom Recording)](https://www.coronawarn.app/en/blog/2020-10-19-version-1-5/) and [V1.9 (Exposure Notification Framework v2)](https://www.coronawarn.app/en/blog/2020-12-16-corona-warn-app-version-1-9/) after this document was published. The FAQ section [Risk Assessment](https://www.coronawarn.app/en/faq/#risk_assessment) answers related questions.
+
+---
 
 ## Prerequisites
 
