@@ -26,6 +26,7 @@ We assume a close association of a mobile phone and its user and, thus, equate t
    1. [Bandwidth estimations](#bandwidth-estimations)
 5. [CROSS-BORDER INTEROPERABILITY](#cross-border-interoperability)
 6. [LIMITATIONS](#limitations)
+7. [PRIVACY-PRESERVING DATA DONATION](#privacy-preserving-data-donation)
 
 ## INTRODUCTION
 
@@ -303,3 +304,31 @@ Even though the system can support individuals in finding out whether they have 
 In *Figure 14*, this is visualized, while focusing on the captured Rolling Proximity Identifiers by only a single device. We are assuming that devices broadcast their own RPI every 250ms and use listening windows with a length of two seconds, five minutes apart. There are five other active devices – each representing a different kind of possible exposure. In the example, devices 3 and 4 go completely unnoticed, while a close proximity with the user of device 2 cannot be detected. In contrast to that very brief, but close connection with the user of device 5 (e.g. only brushing the other person in the supermarket) is noticed and logged accordingly. The duration and interval of scanning needs to be balanced by Apple and Google against battery life, as more frequent scanning consumes more energy.
 
 It must be noted that some of the encounters described above are corner cases. While especially the cases with a very short proximity time cannot be detected due to technical limitations, the framework will be able to detect longer exposures. As only exposures of longer duration within a certain proximity range are considered relevant for the intended purpose of this app, most of them will be covered.
+
+## PRIVACY-PRESERVING DATA DONATION
+
+The concept of Privacy-preserving Data Donation (PPDD) addresses the need to gain insight into the effecitveness of the Corona-Warn-App. 
+
+It consists of two components:
+
+- **Event-driven User Surveys** (EDUS) - allowing users to participate in a survey if they have received a warning about a high-risk encounter. 
+  
+  Among others, the survey contains questions regarding the user's behavior in the days preceding the warning and about next steps the user might take, such as seeing a doctor, taking a test, etc.
+
+- **Privacy-preserving Analytics** (PPA) - allowing users to share metrics of the risk calculation, test result delivery, and key submission behavior.
+
+  For example, this includes the current risk level and date of the most recent encounter or whether a test has been registered, how long it took until the result was made available.
+
+Both EDUS and PPA are separate and optional features that require users to actively opt-in. No data is collected without prior consent and any pending data is discarded once a consent is withdrawn.
+
+A dedicated **CWA Data Donation Server** processes the requests relating to Privacy-preserving Data Donation. Access to the APIs is restricted to the Corona-Warn-App by a concept called **Privacy-preseving Access Control** (PPAC). It requires clients to provide an authenticity proof of the device and of the Corona-Warn-App. The access is denied if the authenticity proof is not valid.
+
+The authenticity proof is OS-specific and uses native capabilities:
+
+- iOS clients leverage the Device Identification API to authorize an API Token for the current month; the use of the API Token is rate-limited
+
+- Android clients leverage the SafetyNet Attestation API to provide an integrity verdict about the device and the client
+
+The following diagram shows the individual components and their interaction:
+
+![Corona-Warn-App Components](images/solution_architecture/device_attestation.svg "Privacy-preserving Data Donation")
