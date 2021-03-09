@@ -307,12 +307,12 @@ It must be noted that some of the encounters described above are corner cases. W
 
 ## PRIVACY-PRESERVING DATA DONATION
 
-The concept of Privacy-preserving Data Donation (PPDD) addresses the need to gain insight into the effecitveness of the Corona-Warn-App. 
+The concept of Privacy-preserving Data Donation (PPDD) addresses the need to gain insight into the effectiveness of the Corona-Warn-App.
 
 It consists of two components:
 
-- **Event-driven User Surveys** (EDUS) - allowing users to participate in a survey if they have received a warning about a high-risk encounter. 
-  
+- **Event-driven User Surveys** (EDUS) - allowing users to participate in a survey if they have received a warning about a high-risk encounter.
+
   Among others, the survey contains questions regarding the user's behavior in the days preceding the warning and about next steps the user might take, such as seeing a doctor, taking a test, etc.
 
 - **Privacy-preserving Analytics** (PPA) - allowing users to share metrics of the risk calculation, test result delivery, and key submission behavior.
@@ -321,7 +321,7 @@ It consists of two components:
 
 Both EDUS and PPA are separate and optional features that require users to actively opt-in. No data is collected without prior consent and any pending data is discarded once a consent is withdrawn.
 
-A dedicated **CWA Data Donation Server** processes the requests relating to Privacy-preserving Data Donation. Access to the APIs is restricted to the Corona-Warn-App by a concept called **Privacy-preseving Access Control** (PPAC). It requires clients to provide an authenticity proof of the device and of the Corona-Warn-App. The access is denied if the authenticity proof is not valid.
+A dedicated **CWA Data Donation Server** processes the requests relating to Privacy-preserving Data Donation. Access to the APIs is restricted to the Corona-Warn-App by a concept called **Privacy-preserving Access Control** (PPAC). It requires clients to provide an authenticity proof of the device and of the Corona-Warn-App. The access is denied if the authenticity proof is not valid.
 
 The authenticity proof is OS-specific and uses native capabilities:
 
