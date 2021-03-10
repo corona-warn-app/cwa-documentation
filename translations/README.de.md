@@ -73,7 +73,10 @@ Eine Kopie der Lizenz erhalten Sie unter https://www.apache.org/licenses/LICENSE
 
 Sofern nicht durch anwendbares Recht gefordert oder schriftlich vereinbart, wird jede unter der Lizenz bereitgestellte Software „OHNE MÄNGELGEWÄHR“ UND OHNE AUSDRÜCKLICHE ODER STILLSCHWEIGENDE GARANTIE JEGLICHER ART bereitgestellt. Die genauen Angaben zu Genehmigungen und Einschränkungen unter der Lizenz finden Sie in der [LIZENZ](../LICENSE).
 
+<!-- The website of the Bundesregierung has implemented additional security which causes a 503 error (service unavailable) when any link on their site is tested automatically. -->
+<!-- markdown-link-check-disable -->
 Das "Corona-Warn-App"-Logo ist eine registrierte Wort-/Bildmarke des Presse- und Informationsamts der Bundesregierung. Weitere Informationen finden Sie unter [bundesregierung.de](https://www.bundesregierung.de/breg-de/bundesregierung/bundespresseamt).
+<!-- markdown-link-check-enable -->
 
 ## Informationen zur Teilnahme
 
