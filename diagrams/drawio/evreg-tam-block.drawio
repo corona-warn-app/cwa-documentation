@@ -1,0 +1,241 @@
+<mxfile host="65bd71144e" modified="2021-03-15T15:07:44.022Z" agent="5.0 (Macintosh; Intel Mac OS X 11_2_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.2 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" etag="8CnW0Otjv8OAn7Zv3dlT" scale="1" border="10" version="14.2.4" type="embed">
+    <diagram id="y4RHKREWKgkQFSqtG2Zm" name="Page-1">
+        <mxGraphModel dx="1286" dy="877" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="#FFFFFF" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="80" value="CWA Server&#10;&#10;&#10;&#10;&#10;&#10;" style="shape=agent;offsetSize=8;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=2;" parent="1" vertex="1">
+                    <mxGeometry x="435" y="490" width="405" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="CWA Client (host perspective)" style="shape=agent;offsetSize=8;strokeWidth=2;align=left;spacing=2;verticalAlign=top;spacingTop=0;spacingLeft=2;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="160" width="460" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="    Host" style="shape=actor;horizontalLabelPosition=right;align=left;labelPosition=right;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="254" y="30" width="25" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="TraceLocation&lt;br&gt;{ GUID, Description, Date }" style="rounded=1;whiteSpace=wrap;html=1;arcSize=60;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="370" width="190" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="CWA Client  (attendee perspective)" style="shape=agent;offsetSize=8;strokeWidth=2;spacingTop=0;align=left;verticalAlign=top;spacing=2;spacingLeft=2;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="160" width="740" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="7" target="66" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="710" y="370"/>
+                            <mxPoint x="710" y="370"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="&amp;nbsp;Check-In&lt;br&gt;{ TraceLocation, Start, End }" style="rounded=1;whiteSpace=wrap;html=1;arcSize=60;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="380" width="440" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="   Attendee" style="shape=actor;horizontalLabelPosition=right;align=left;labelPosition=right;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="877.5" y="30" width="25" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Create TraceLocation" style="shape=useedge;vertical=true;endArrow=none;useSignPosition=left;useSignDirection=south;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dx=3;dy=50;" parent="1" source="56" target="4" edge="1">
+                    <mxGeometry x="0.5716" y="-1" height="160" relative="1" as="geometry">
+                        <mxPoint x="320" y="320" as="sourcePoint"/>
+                        <mxPoint x="320" y="160" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="Check in to &#10;TraceLocation" style="shape=useedge;vertical=true;endArrow=none;useSignPosition=left;useSignDirection=south;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dx=4;dy=50;" parent="1" source="48" target="8" edge="1">
+                    <mxGeometry x="0.501" y="1" height="160" relative="1" as="geometry">
+                        <mxPoint x="450" y="320" as="sourcePoint"/>
+                        <mxPoint x="450" y="160" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="CWA Event Registration" style="shape=agent;offsetSize=8;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=2;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="490" width="380" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="14" target="52" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1085" y="490"/>
+                            <mxPoint x="1316" y="490"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="CDN" style="shape=agent;offsetSize=8;strokeWidth=2;spacingLeft=2;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="930" y="630" width="310" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="TraceTimeIntervalWarning&lt;br&gt;{ GUID, Start, End, TRL }" style="rounded=1;whiteSpace=wrap;html=1;arcSize=60;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="945" y="720" width="275" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="16" target="40" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="TraceTimeIntervalWarning&lt;br&gt;{ GUID, Start, End, TRL }" style="rounded=1;whiteSpace=wrap;html=1;arcSize=60;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="720" width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="TL GUID &lt;br&gt;Hash" style="rounded=1;whiteSpace=wrap;html=1;arcSize=60;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="720" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Upload check-in" style="shape=useedge;vertical=true;edgeStyle=elbowEdgeStyle;elbow=vertical;endArrow=none;useSignPosition=up;useSignDirection=east;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="66" target="38" edge="1">
+                    <mxGeometry x="-0.3671" y="20" width="70" height="160" relative="1" as="geometry">
+                        <mxPoint x="280" y="400" as="sourcePoint"/>
+                        <mxPoint x="460" y="410" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="560" y="300"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" parent="1" source="26" target="45" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="TraceTimeIntervalWarning&lt;br&gt;{ GUID, Start, End, TRL }" style="rounded=1;whiteSpace=wrap;html=1;arcSize=60;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="1120" y="380" width="190" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="TraceLocation Creation Handler" style="shape=agent;offsetSize=8;strokeWidth=2;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="520" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="TraceLocation&#10;GUID Generator" style="shape=agent;offsetSize=8;strokeWidth=2;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="620" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="TraceLocation&#10;Signing" style="shape=agent;offsetSize=8;strokeWidth=2;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="620" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="shape=useedge;vertical=true;endArrow=none;useSignPosition=left;useSignDirection=south;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="29" target="28" edge="1">
+                    <mxGeometry height="160" relative="1" as="geometry">
+                        <mxPoint x="480" y="640" as="sourcePoint"/>
+                        <mxPoint x="480" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="35" value="" style="shape=useedge;vertical=true;endArrow=none;useSignPosition=left;useSignDirection=south;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="31" target="28" edge="1">
+                    <mxGeometry height="160" relative="1" as="geometry">
+                        <mxPoint x="480" y="640" as="sourcePoint"/>
+                        <mxPoint x="480" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="38" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="615" y="610"/>
+                            <mxPoint x="615" y="610"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="38" value="Submission Handler" style="shape=agent;offsetSize=8;strokeWidth=2;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="520" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="40" target="15" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="CDN Publisher" style="shape=agent;offsetSize=8;strokeWidth=2;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="710" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="7" target="45" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="Matching &#10;Algorithm" style="shape=agent;offsetSize=8;strokeWidth=2;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1030" y="190" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.523;entryY=0.017;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="48" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="QR Code &#10;Scanner" style="shape=agent;offsetSize=8;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="780" y="190" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="" style="shape=useedge;vertical=true;endArrow=none;useSignPosition=left;useSignDirection=south;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="60" target="48" edge="1">
+                    <mxGeometry height="160" relative="1" as="geometry">
+                        <mxPoint x="870" y="540" as="sourcePoint"/>
+                        <mxPoint x="870" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.627;entryY=0.017;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="52" target="26" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="Downloader" style="shape=agent;offsetSize=8;strokeWidth=2;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1200" y="190" width="155" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="Event Maintenance" style="shape=agent;offsetSize=8;strokeWidth=2;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="190" width="420" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="" style="shape=updateedge;endArrow=none;vertical=true;exitX=0.798;exitY=0.994;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" parent="1" source="56" target="5" edge="1">
+                    <mxGeometry width="30" height="80" relative="1" as="geometry">
+                        <mxPoint x="315" y="430" as="sourcePoint"/>
+                        <mxPoint x="315" y="510" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="59" value="" style="shape=updateedge;endArrow=none;vertical=true;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="29" target="18" edge="1">
+                    <mxGeometry width="30" height="80" relative="1" as="geometry">
+                        <mxPoint x="225" y="730" as="sourcePoint"/>
+                        <mxPoint x="225" y="810" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="60" value="Signature&#10;Validator" style="shape=agent;offsetSize=8;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="780" y="290" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="Submission" style="shape=agent;offsetSize=8;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="190" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="Signature&#10;Validator" style="shape=agent;offsetSize=8;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="620" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="" style="shape=useedge;vertical=true;endArrow=none;useSignPosition=left;useSignDirection=south;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="84" target="38" edge="1">
+                    <mxGeometry height="160" relative="1" as="geometry">
+                        <mxPoint x="800" y="620" as="sourcePoint"/>
+                        <mxPoint x="800" y="460" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="91" value="QR Code &amp;&#10;Poster&#10;Generator" style="shape=agent;offsetSize=8;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="300" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="Create TraceLocation&#10;{ Description, Date, etc. }" style="shape=useedge;vertical=true;endArrow=none;useSignPosition=left;useSignDirection=south;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" parent="1" source="28" target="56" edge="1">
+                    <mxGeometry x="0.2384" y="22" height="160" relative="1" as="geometry">
+                        <mxPoint x="235" y="520" as="sourcePoint"/>
+                        <mxPoint x="270" y="250" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="93" value="" style="shape=useedge;vertical=true;endArrow=none;useSignPosition=left;useSignDirection=south;entryX=0.1;entryY=1.014;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="91" target="56" edge="1">
+                    <mxGeometry height="160" relative="1" as="geometry">
+                        <mxPoint x="470" y="540" as="sourcePoint"/>
+                        <mxPoint x="470" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="94" value="" style="shape=useedge;vertical=true;edgeStyle=elbowEdgeStyle;elbow=vertical;endArrow=none;useSignPosition=up;useSignDirection=east;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;dx=350;dy=80;" parent="1" source="91" target="14" edge="1">
+                    <mxGeometry width="70" height="160" relative="1" as="geometry">
+                        <mxPoint x="320" y="665" as="sourcePoint"/>
+                        <mxPoint x="390" y="505" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="480" y="460"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="95" value="Poster Template" style="rounded=1;whiteSpace=wrap;html=1;arcSize=60;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="947.5" y="660" width="275" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="96" target="95" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="Template&#10;Publisher" style="shape=agent;offsetSize=8;strokeWidth=2;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="630" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="98" value="   Attendee" style="shape=actor;horizontalLabelPosition=right;align=left;labelPosition=right;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="697.5" y="30" width="25" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="Warn others" style="shape=useedge;vertical=true;endArrow=none;useSignPosition=left;useSignDirection=south;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dx=0;dy=50;" edge="1" parent="1" source="66" target="98">
+                    <mxGeometry x="0.4499" y="5" height="160" relative="1" as="geometry">
+                        <mxPoint x="1010" y="470" as="sourcePoint"/>
+                        <mxPoint x="1010" y="310" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="101" value="   Attendee" style="shape=actor;horizontalLabelPosition=right;align=left;labelPosition=right;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="1075" y="30" width="25" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="Trigger notification" style="shape=useedge;vertical=true;endArrow=none;useSignPosition=left;useSignDirection=south;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="101" target="45">
+                    <mxGeometry x="-0.4563" y="-2" height="160" relative="1" as="geometry">
+                        <mxPoint x="1300" y="260" as="sourcePoint"/>
+                        <mxPoint x="1300" y="100" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
