@@ -79,12 +79,28 @@ The base32 encoding allows to leverage the input mode _alphanumeric_ when genera
 
 ### Interoperability with Other Contact Tracing Apps
 
-Other contact tracing apps that leverage QR code for Presence Tracing can integrate with CWA by including the necessary attributes in their QR code.
+Other contact tracing apps that leverage QR code for Presence Tracing can integrate with CWA by creating QR codes according to the followig pattern:
 
-These attributes are:
-- SignedTraceLocation - a byte representation of the Protocol Buffer message `SignedTraceLocation`. Note that the data must still be signed by the CWA server. This information may be encoded as `base32` (recommended) or `base64`.
-- Version - an integer to allow versioning
+```
+<URL>/<VENDOR_DATA>/CWA1/<ENCODED_SIGNED_TRACE_LOCATION>
+```
 
-A regular expression must be provided to allow matching and validating supported QR codes and extracting the necessary attributes.
+| Parameter | Description |
+|---|---|
+| `<URL>` | The URL associated with the respective contact tracing apps, with or without a partial path. |
+| `<VENDOR_DATA>` | Any vendor-specific data such as venue ids. This data may be passed to the vendor-specific app upon interaction by the user if a deeper integratio is required. |
+| `<ENCODED_SIGNED_TRACE_LOCATION>` | A representation of the Protocol Buffer message SignedTraceLocation encoded in either base32 or base64 (see recommendations below). |
 
-Any contact tracing apps that integrate with CWA must ensure that they do not process any information from the CWA part of the QR code.
+To optimize the readability and reduce density of the QR code, CWA recomends to generate QR codes with input mode [_alphanumeric_](https://en.wikipedia.org/wiki/QR_code#Storage) and to encode byte sequences (such as Protocol Buffer messages) with base32.
+
+**Note:** Any contact tracing apps that integrate with CWA must ensure that they do not process any information from the CWA part of the QR code.
+
+Examples:
+
+```shell
+# upper-case for alphanumeric input mode + base32 encoding
+HTTPS://PRESENCE-TRACING.APP/386D0384-8AAA-41B6-93C2-D3399894D0EE/CWA1/BIPEY33...
+
+# base64 encoding
+https://check-in.pt.app/386d0384-8aaa-41b6-93c2-d3399894d0ee/CWA1/CiRmY2E...
+```
