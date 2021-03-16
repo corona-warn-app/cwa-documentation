@@ -97,10 +97,12 @@ To optimize the readability and reduce density of the QR code, CWA recomends to 
 
 Examples:
 
-```shell
+```
 # upper-case for alphanumeric input mode + base32 encoding
 HTTPS://PRESENCE-TRACING.APP/386D0384-8AAA-41B6-93C2-D3399894D0EE/CWA1/BIPEY33...
+|-----------<URL>-----------|------------<VENDOR_DATA>-----------|    |-<ENCODED_SIGNED_TRACE_LOCATION>-...|
 
 # base64 encoding
 https://check-in.pt.app/386d0384-8aaa-41b6-93c2-d3399894d0ee/CWA1/CiRmY2E...
+|---------<URL>--------|------------<VENDOR_DATA>-----------|    |-<ENCODED_SIGNED_TRACE_LOCATION>-...|
 ```
