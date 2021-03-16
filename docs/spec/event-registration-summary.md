@@ -10,6 +10,48 @@ When an attendee tests positive for SARS-CoV-2, they can upload their check-ins 
 
 ![TAM Diagram for Event Registration](./../../diagrams/png/evreg-tam-block.png)
 
+## Threats
+
+Several security and privacy threats have been identified for the proposed solution. This includes common security threats such as distributed denial of service attacks or code injection, which also exist for other CWA components and are mitigated accordingly. It also includes threats specific to Presence Tracing, such as profiling venues and users or issuing false warnings for specific venues. These threats are described below along with the corresponding mitigation.
+
+### Profiling of Venues
+
+The proposed solution publishes warnings on CDN. A warning consists of the GUID of a venue and a time interval. An adversary can collect these warnings and aggregate them to compile a list of venues with the most warnings (colloquially referred to as _most infectious venues_) or list of venues with their most recent warning.
+
+This information is easy to collect, as warnings are publicly accessible and do not even required to make modifications to the CWA client.
+
+The value of this information increases significantly once an adversary can link the GUID of a venue with the data included in the QR code such as the name or the address of the venue, or with metadata from other services, such as coordinates of the venue.
+
+An adversary can collect this information for a single venue by scanning the QR code and extracting and storing the data outside of CWA. Collecting this information at scale requires coordinated effort by many individuals.
+
+Note that CWA itself does not store this data on the server or anywhere else and cannot do profiling of venues.
+
+To mitigate the risk, CWA encourages owners to regularly generate new QR codes for their venues. The more frequent QR codes are updated, the more difficult it is to keep a central database with venue data up-to-date.
+
+However, we acknowledge that the proposed solution does not prevent this attack with technical means.
+
+### Profiling of Users
+
+The proposed solution publishes warnings on CDN in packages on an hourly basis. A package includes multiple warnings. A warning consists of the GUID of a venue and a time interval. All the warnings that were created from the check-ins of a single user are included in one package. A package can include warnings of multiple users. 
+
+An adversary can analyze the check-ins of a single package and try to build a profile of the users whose check-ins are included. This reveals limited information if the GUIDs of the venues cannot be linked to an actual venue (cf. [Profiling of Venues]), but can reveal significant information about the user the more GUIDs of venues can be identified.
+
+To mitigate the risk, CWA generates fake check-ins for each submission. These fake check-ins are generated upon submission of genuine check-ins so that even CWA cannot distinguish them.
+
+However, we acknowledge that this does not prevent the attack if there is a central database of all venue GUIDs and venue metadata.
+
+### Targeting Specific Venues
+
+The proposed solution turns check-ins of the user into warnings and cannot verify if the user has actually visited the respective venue of a check-in.
+
+An adversary can target specific venues by obtaining the respective QR code and pretending a check-in. If the adversary also obtains the authorization to submit the check-ins to the CWA Server, false warnings would be issued for these venues.
+
+The difficulty of this attack is dominated by the difficulty of obtaining authorization to submit check-ins. This is currently only possible with a confirmed positive test for SARS-CoV-2 or by obtaining a Tele TAN from the hotline. While a confirmed positive test is difficult obtain without putting oneself at risk, a valid Tele TAN can be obtained for example by Social Engineering.
+
+To mitigate the risk, CWA only allows a certain number of check-ins per day. This prevents to scale such an attack by a single adversary across a multitude of venues.
+
+However, we acknowledge that this does not prevent to execute this attack for a small number of venues.
+
 ## QR Code Structure
 
 The QR code of a venue contains all required attributes for Presence Tracing, so that no server communication is necessary when an attendee checks in to a venue
@@ -79,7 +121,7 @@ The base32 encoding allows to leverage the input mode _alphanumeric_ when genera
 
 ### Interoperability with Other Contact Tracing Apps
 
-Other contact tracing apps that leverage QR code for Presence Tracing can integrate with CWA by creating QR codes according to the followig pattern:
+Other contact tracing apps that leverage QR code for Presence Tracing can integrate with CWA by creating QR codes according to the following pattern:
 
 ```
 <URL>/<VENDOR_DATA>/CWA1/<ENCODED_SIGNED_TRACE_LOCATION>
@@ -88,10 +130,10 @@ Other contact tracing apps that leverage QR code for Presence Tracing can integr
 | Parameter | Description |
 |---|---|
 | `<URL>` | The URL associated with the respective contact tracing apps, with or without a partial path. |
-| `<VENDOR_DATA>` | Any vendor-specific data such as venue ids. This data may be passed to the vendor-specific app upon interaction by the user if a deeper integratio is required. |
-| `<ENCODED_SIGNED_TRACE_LOCATION>` | A representation of the Protocol Buffer message SignedTraceLocation encoded in either base32 or base64 (see recommendations below). |
+| `<VENDOR_DATA>` | Any vendor-specific data such as venue ids. This data may be passed to the vendor-specific app upon interaction by the user if a deeper integration is required. |
+| `<ENCODED_SIGNED_TRACE_LOCATION>` | A representation of the Protocol Buffer message SignedTraceLocation encoded in either base32 or base64 (see recommendations below). Note that the signature must have been created by the CWA Server. |
 
-To optimize the readability and reduce density of the QR code, CWA recomends to generate QR codes with input mode [_alphanumeric_](https://en.wikipedia.org/wiki/QR_code#Storage) and to encode byte sequences (such as Protocol Buffer messages) with base32.
+To optimize the readability and reduce density of the QR code, CWA recommends to generate QR codes with input mode [_alphanumeric_](https://en.wikipedia.org/wiki/QR_code#Storage) and to encode byte sequences (such as Protocol Buffer messages) with base32.
 
 **Note:** Any contact tracing apps that integrate with CWA must ensure that they do not process any information from the CWA part of the QR code.
 
