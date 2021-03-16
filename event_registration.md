@@ -1,4 +1,4 @@
-# Event Registration - Summary
+# Event Registration DRAFT - Summary
 
 Presence Tracing - in CWA also referred to as _Event Registration_ - aims at notifying people of a potential SARS-CoV-2 exposure if they have been to the same venue at a similar time as a positively tested individual. It addresses the potential of airborne transmission in spaces with poor ventilation despite maintaining physical distance. As such, it complements BLE-based proximity tracing with the Exposure Notification Framework.
 
@@ -10,7 +10,7 @@ When an attendee tests positive for SARS-CoV-2, they can upload their check-ins 
 
 ![TAM Diagram for Event Registration](./images/evreg-tam-block.png)
 
-## Threats
+## Threats WiP
 
 Several security and privacy threats have been identified for the proposed solution. This includes common security threats such as distributed denial of service attacks or code injection, which also exist for other CWA components and are mitigated accordingly. It also includes threats specific to Presence Tracing, such as profiling venues and users or issuing false warnings for specific venues. These threats are described below along with the corresponding mitigation.
 
@@ -52,7 +52,7 @@ To mitigate the risk, CWA only allows a certain number of check-ins per day. Thi
 
 However, we acknowledge that this does not prevent to execute this attack for a small number of venues.
 
-## QR Code Structure
+## QR Code Structure DRAFT
 
 The QR code of a venue contains all required attributes for Presence Tracing, so that no server communication is necessary when an attendee checks in to a venue
 
@@ -119,7 +119,7 @@ HTTPS://E.CORONAWARN.APP/C1/BIPEY33...
 The base32 encoding allows to leverage the input mode _alphanumeric_ when generating the QR code and produces a QR code with a lower density compared to base64 encoding.
 
 
-### Interoperability with Other Contact Tracing Apps
+### Interoperability with Other Contact Tracing Apps DRAFT
 
 Other contact tracing apps that leverage QR code for Presence Tracing can integrate with CWA by creating QR codes according to the following pattern:
 
