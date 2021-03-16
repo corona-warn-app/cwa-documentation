@@ -8,7 +8,7 @@ In summary, the proposed solution allows a _host_ to create a venue through CWA.
 
 When an attendee tests positive for SARS-CoV-2, they can upload their check-ins along with their Diagnosis Keys to the CWA Server. The CWA Server publishes the relevant check-ins on CDN as _warnings_. Clients regularly download these warnings and match them against the local check-ins on the mobile device. If there is a match and the time an attendee spent at a venue overlaps with a warning for a sufficiently long time, the attendee receives a warning in CWA similar to how warnings are issued for BLE-based exposures.
 
-![TAM Diagram for Event Registration](./../../diagrams/png/evreg-tam-block.png)
+![TAM Diagram for Event Registration](./images/evreg-tam-block.png)
 
 ## Threats
 
