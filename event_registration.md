@@ -4,7 +4,7 @@ Presence Tracing - in CWA also referred to as _Event Registration_ - aims at not
 
 CWA proposes a fully-automated decentral solution for Presence Tracing which works independent of local health authorities and host of the event. It integrates into the existing verification processes of CWA to issue warnings. The solution prioritizes the speed of issuing warnings over their accuracy. A higher degree of accuracy would require manual assessment by local health authorities and the respective resources to do so and is currently not on scope.
 
-In summary, the proposed solution allows a _host_ to create a venue through CWA. All necessary signed data about the venue is encoded in a QR code which can be presented on a mobile device or printed out, for example to be posted at the entrance of the venue. An _attendee_ can check in to the venue by scanning the QR code. Check-ins are stored locally on the mobile device and deleted automatically after two weeks. 
+In summary, the proposed solution allows a _host_ to create a venue through CWA. All necessary signed data about the venue is encoded in a QR code which can be presented on a mobile device or printed out, for example to be posted at the entrance of the venue. An _attendee_ can check in to the venue by scanning the QR code. Check-ins are stored locally on the mobile device and deleted automatically after two weeks.
 
 When an attendee tests positive for SARS-CoV-2, they can upload their check-ins along with their Diagnosis Keys to the CWA Server. The CWA Server publishes the relevant check-ins on CDN as _warnings_. Clients regularly download these warnings and match them against the local check-ins on the mobile device. If there is a match and the time an attendee spent at a venue overlaps with a warning for a sufficiently long time, the attendee receives a warning in CWA similar to how warnings are issued for BLE-based exposures.
 
@@ -32,7 +32,7 @@ However, we acknowledge that the proposed solution does not prevent this attack 
 
 ### Profiling of Users
 
-The proposed solution publishes warnings on CDN in packages on an hourly basis. A package includes multiple warnings. A warning consists of the GUID of a venue and a time interval. All the warnings that were created from the check-ins of a single user are included in one package. A package can include warnings of multiple users. 
+The proposed solution publishes warnings on CDN in packages on an hourly basis. A package includes multiple warnings. A warning consists of the GUID of a venue and a time interval. All the warnings that were created from the check-ins of a single user are included in one package. A package can include warnings of multiple users.
 
 An adversary can analyze the check-ins of a single package and try to build a profile of the users whose check-ins are included. This reveals limited information if the GUIDs of the venues cannot be linked to an actual venue (cf. [Profiling of Venues]), but can reveal significant information about the user the more GUIDs of venues can be identified.
 
@@ -118,12 +118,11 @@ HTTPS://E.CORONAWARN.APP/C1/BIPEY33...
 
 The base32 encoding allows to leverage the input mode _alphanumeric_ when generating the QR code and produces a QR code with a lower density compared to base64 encoding.
 
-
 ### Interoperability with Other Contact Tracing Apps DRAFT
 
 Other contact tracing apps that leverage QR code for Presence Tracing can integrate with CWA by creating QR codes according to the following pattern:
 
-```
+```text
 <URL>/<VENDOR_DATA>/CWA1/<ENCODED_SIGNED_TRACE_LOCATION>
 ```
 
@@ -139,7 +138,7 @@ To optimize the readability and reduce density of the QR code, CWA recommends to
 
 Examples:
 
-```
+```text
 # upper-case for alphanumeric input mode + base32 encoding
 HTTPS://PRESENCE-TRACING.APP/386D0384-8AAA-41B6-93C2-D3399894D0EE/CWA1/BIPEY33...
 |-----------<URL>-----------|------------<VENDOR_DATA>-----------|    |-<ENCODED_SIGNED_TRACE_LOCATION>-...|
