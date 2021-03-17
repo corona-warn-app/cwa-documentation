@@ -1,6 +1,6 @@
 # Event Registration - Summary
 
-Presence Tracing - in CWA also referred to as _Event Registration_ - aims at notifying people of a potential SARS-CoV-2 infection if they have been to the same venue at a similar time than a positively tested individual. It addresses the potential of airborne transmission in spaces with poor ventilation despite maintaining physical distance. As such, it complements BLE-based proximity tracing with the Exposure Notification Framework.
+Presence Tracing - in CWA also referred to as _Event Registration_ - aims at notifying people of a potential SARS-CoV-2 exposure if they have been to the same venue at a similar time as a positively tested individual. It addresses the potential of airborne transmission in spaces with poor ventilation despite maintaining physical distance. As such, it complements BLE-based proximity tracing with the Exposure Notification Framework.
 
 CWA proposes a fully-automated decentral solution for Presence Tracing which works independent of local health authorities and host of the event. It integrates into the existing verification processes of CWA to issue warnings. The solution prioritizes the speed of issuing warnings over their accuracy. A higher degree of accuracy would require manual assessment by local health authorities and the respective resources to do so and is currently not on scope.
 
@@ -16,7 +16,7 @@ Several security and privacy threats have been identified for the proposed solut
 
 ### Profiling of Venues
 
-The proposed solution publishes warnings on CDN. A warning consists of the GUID of a venue and a time interval. An adversary can collect these warnings and aggregate them to compile a list of venues with the most warnings (colloquially referred to as _most infectious venues_) or list of venues with their most recent warning.
+The proposed solution publishes warnings on CDN. A warning consists of the GUID of a venue and a time interval. An adversary can collect these warnings and aggregate them to compile a list of venues with the most warnings (colloquially referred to as _most infectious venues_) or a list of venues with their most recent warning.
 
 This information is easy to collect, as warnings are publicly accessible and do not even required to make modifications to the CWA client.
 
