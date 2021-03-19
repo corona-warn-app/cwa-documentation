@@ -14,7 +14,7 @@ Accessibility of the application was one of our top priorities when designing an
 
 ## Screens
 
-Here you can find screenshots of some of the features that the Corona-Warn-App offers in the current release: [Take a Look](https://www.coronawarn.app/en/screenshots/). The correspoinding German screenshot can be found here: [Machen Sie sich selbst ein Bild](https://www.coronawarn.app/de/screenshots/).
+Here you can find screenshots of some of the features that the Corona-Warn-App offers in the current release: [Take a Look](https://www.coronawarn.app/en/screenshots/). The corresponding German screenshots can be found here: [Machen Sie sich selbst ein Bild](https://www.coronawarn.app/de/screenshots/).
 
 The screenshots shown in the following are outdated.
 
