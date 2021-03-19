@@ -109,7 +109,7 @@ message SignedTraceLocation {
 
 A SignedTraceLocation is base32-encoded and included in a URL. The URL is the content of the QR code and structures as follows:
 
-```shell
+```text
 HTTPS://E.CORONAWARN.APP/C1/<SIGNED_TRACE_LOCATION_BASE32>
 
 # example:
@@ -123,27 +123,32 @@ The base32 encoding allows to leverage the input mode _alphanumeric_ when genera
 Other contact tracing apps that leverage QR code for Presence Tracing can integrate with CWA by creating QR codes according to the following pattern:
 
 ```text
-<URL>/<VENDOR_DATA>/CWA1/<ENCODED_SIGNED_TRACE_LOCATION>
+<URL>/<VENDOR_DATA>#[VENDOR_ADDITIONAL_DATA]/CWA1/<ENCODED_SIGNED_TRACE_LOCATION>
 ```
 
 | Parameter | Description |
 |---|---|
 | `<URL>` | The URL associated with the respective contact tracing apps, with or without a partial path. |
 | `<VENDOR_DATA>` | Any vendor-specific data such as venue ids. This data may be passed to the vendor-specific app upon interaction by the user if a deeper integration is required. |
-| `<ENCODED_SIGNED_TRACE_LOCATION>` | A representation of the Protocol Buffer message SignedTraceLocation encoded in either base32 or base64 (see recommendations below). Note that the signature must have been created by the CWA Server. |
-
-To optimize the readability and reduce density of the QR code, CWA recommends to generate QR codes with input mode [_alphanumeric_](https://en.wikipedia.org/wiki/QR_code#Storage) and to encode byte sequences (such as Protocol Buffer messages) with base32.
+| `[VENDOR_ADDITIONAL_DATA]` | Additional vendor-specific data (optional). |
+| `<ENCODED_SIGNED_TRACE_LOCATION>` | A representation of the Protocol Buffer message SignedTraceLocation encoded in base64. Note that the signature must have been created by the CWA Server. |
 
 **Note:** Any contact tracing apps that integrate with CWA must ensure that they do not process any information from the CWA part of the QR code.
 
 Examples:
 
 ```text
-# upper-case for alphanumeric input mode + base32 encoding
-HTTPS://PRESENCE-TRACING.APP/386D0384-8AAA-41B6-93C2-D3399894D0EE/CWA1/BIPEY33...
-|-----------<URL>-----------|------------<VENDOR_DATA>-----------|    |-<ENCODED_SIGNED_TRACE_LOCATION>-...|
+# without optional data
+https://presence-tracing.app/386d0384-8aaa-41b6-93c2-d3399894d0ee#/CWA1/CiRmY2E...
+  URL:                           https://presence-tracing.app
+  VENDOR_DATA:                   386d0384-8aaa-41b6-93c2-d3399894d0ee
+  VENDOR_ADDITIONAL_DATA:        ∅
+  ENCODED_SIGNED_TRACE_LOCATION: CiRmY2E...
 
-# base64 encoding
-https://check-in.pt.app/386d0384-8aaa-41b6-93c2-d3399894d0ee/CWA1/CiRmY2E...
-|---------<URL>--------|------------<VENDOR_DATA>-----------|    |-<ENCODED_SIGNED_TRACE_LOCATION>-...|
+# with optional data
+https://check-in.pt.app/386d0384-8aaa-41b6-93c2-d3399894d0ee#42/CWA1/CiRmY2E...
+  URL:                           https://check-in.pt.app
+  VENDOR_DATA:                   386d0384-8aaa-41b6-93c2-d3399894d0ee
+  VENDOR_ADDITIONAL_DATA:        42
+  ENCODED_SIGNED_TRACE_LOCATION: CiRmY2E...
 ```
