@@ -1,4 +1,4 @@
-## Outdated screenshots
+# Outdated screenshots
 
 Please note that the screenshots in this folder and it's subfolders are outdated.
 
