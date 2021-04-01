@@ -129,7 +129,6 @@ CLEA FR:
 https://tac.gouv.fr?v=1#Y2xlYQ==
 ```
 
-
 ### QR Code Compatibility with Other Contract Tracing Apps in Germany DRAFT
 
 Other contact tracing apps in Germany that leverage QR code for Presence Tracing can integrate with CWA by creating QR codes according to the following pattern:
