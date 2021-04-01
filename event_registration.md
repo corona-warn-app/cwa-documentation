@@ -18,7 +18,7 @@ Several security and privacy threats have been identified for the proposed solut
 
 The proposed solution publishes warnings on CDN. A warning consists of the hashed ID of a venue and a time interval. An adversary can collect these warnings and aggregate them to compile a list of venues with the most warnings (colloquially referred to as _most infectious venues_) or a list of venues with their most recent warning.
 
-This information is easy to collect, as warnings are publicly accessible and do not even required to make modifications to the CWA client.
+This information is easy to collect, as warnings are publicly accessible and do not even require to make modifications to the CWA client.
 
 The value of this information increases significantly once an adversary can link the ID of a venue with the data included in the QR code such as the name or the address of the venue, or with metadata from other services, such as coordinates of the venue.
 
