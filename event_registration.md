@@ -46,7 +46,7 @@ The proposed solution turns check-ins of the user into warnings and cannot verif
 
 An adversary can target specific venues by obtaining the respective QR code and pretending a check-in. If the adversary also obtains the authorization to submit the check-ins to the CWA Server, false warnings would be issued for these venues.
 
-The difficulty of this attack is dominated by the difficulty of obtaining authorization to submit check-ins. This is currently only possible with a confirmed positive test for SARS-CoV-2 or by obtaining a Tele TAN from the hotline. While a confirmed positive test is difficult obtain without putting oneself at risk, a valid Tele TAN can be obtained for example by Social Engineering.
+The difficulty of this attack is dominated by the difficulty of obtaining authorization to submit check-ins. This is currently only possible with a confirmed positive test for SARS-CoV-2 or by obtaining a TeleTAN from the hotline. While a confirmed positive test is difficult obtain without putting oneself at risk, a valid TeleTAN can be obtained for example by Social Engineering.
 
 To mitigate the risk, CWA only allows a certain number of check-ins per day. This prevents to scale such an attack by a single adversary across a multitude of venues.
 
