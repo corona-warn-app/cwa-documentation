@@ -2,9 +2,9 @@
 
 Presence Tracing - in CWA also referred to as _Event Registration_ - aims at notifying people of a potential SARS-CoV-2 exposure if they have been to the same venue at a similar time as a positively tested individual. It addresses the potential of airborne transmission in spaces with poor ventilation despite maintaining physical distance. As such, it complements BLE-based proximity tracing with the Exposure Notification Framework.
 
-CWA proposes a fully-automated decentral solution for Presence Tracing which works independent of local health authorities and host of the event. It integrates into the existing verification processes of CWA to issue warnings. The solution prioritizes the speed of issuing warnings over their accuracy. A higher degree of accuracy would require manual assessment by local health authorities and the respective resources to do so and is currently not on scope.
+CWA proposes a fully-automated decentral solution for Presence Tracing which works independent of local health authorities and the collaboration of the host of a venue. It integrates into the existing verification processes of CWA to issue warnings. The solution prioritizes the speed of issuing warnings over their accuracy. A higher degree of accuracy would require manual assessment by local health authorities and the respective resources to do so and is currently not in scope. The solution also protects the privacy of both venues and users, as details about a venue such as description or address are not shared with the CWA infrastructure.
 
-In summary, the proposed solution allows a _host_ to create a venue through CWA. All necessary signed data about the venue is encoded in a QR code which can be presented on a mobile device or printed out, for example to be posted at the entrance of the venue. An _attendee_ can check in to the venue by scanning the QR code. Check-ins are stored locally on the mobile device and deleted automatically after two weeks.
+In summary, the proposed solution allows a _host_ to create a venue through CWA. All necessary data about the venue is encoded in a QR code which can be presented on a mobile device or printed out, for example to be posted at the entrance of the venue. An _attendee_ can check in to the venue by scanning the QR code. Check-ins are stored locally on the mobile device and deleted automatically after two weeks.
 
 When an attendee tests positive for SARS-CoV-2, they can upload their check-ins along with their Diagnosis Keys to the CWA Server. The CWA Server publishes the relevant check-ins on CDN as _warnings_. Clients regularly download these warnings and match them against the local check-ins on the mobile device. If there is a match and the time an attendee spent at a venue overlaps with a warning for a sufficiently long time, the attendee receives a warning in CWA similar to how warnings are issued for BLE-based exposures.
 
@@ -16,11 +16,11 @@ Several security and privacy threats have been identified for the proposed solut
 
 ### Profiling of Venues
 
-The proposed solution publishes warnings on CDN. A warning consists of the GUID of a venue and a time interval. An adversary can collect these warnings and aggregate them to compile a list of venues with the most warnings (colloquially referred to as _most infectious venues_) or a list of venues with their most recent warning.
+The proposed solution publishes warnings on CDN. A warning consists of the hashed ID of a venue and a time interval. An adversary can collect these warnings and aggregate them to compile a list of venues with the most warnings (colloquially referred to as _most infectious venues_) or a list of venues with their most recent warning.
 
 This information is easy to collect, as warnings are publicly accessible and do not even required to make modifications to the CWA client.
 
-The value of this information increases significantly once an adversary can link the GUID of a venue with the data included in the QR code such as the name or the address of the venue, or with metadata from other services, such as coordinates of the venue.
+The value of this information increases significantly once an adversary can link the ID of a venue with the data included in the QR code such as the name or the address of the venue, or with metadata from other services, such as coordinates of the venue.
 
 An adversary can collect this information for a single venue by scanning the QR code and extracting and storing the data outside of CWA. Collecting this information at scale requires coordinated effort by many individuals.
 
@@ -32,13 +32,13 @@ However, we acknowledge that the proposed solution does not prevent this attack 
 
 ### Profiling of Users
 
-The proposed solution publishes warnings on CDN in packages on an hourly basis. A package includes multiple warnings. A warning consists of the GUID of a venue and a time interval. All the warnings that were created from the check-ins of a single user are included in one package. A package can include warnings of multiple users.
+The proposed solution publishes warnings on CDN in packages on an hourly basis. A package includes multiple warnings. A warning consists of the hashed ID of a venue and a time interval. All warnings that were created from the check-ins of a single user are included in one package. A package can include warnings of multiple users.
 
-An adversary can analyze the check-ins of a single package and try to build a profile of the users whose check-ins are included. This reveals limited information if the GUIDs of the venues cannot be linked to an actual venue (cf. [Profiling of Venues]), but can reveal significant information about the user the more GUIDs of venues can be identified.
+An adversary can analyze the check-ins of a single package and try to build a profile of the users whose check-ins are included. This reveals limited information if the IDs of the venues cannot be linked to an actual venue (cf. [Profiling of Venues](#profiling-of-venues)), but can reveal significant information about the user the more venue IDs can be identified.
 
 To mitigate the risk, CWA generates fake check-ins for each submission. These fake check-ins are generated upon submission of genuine check-ins so that even CWA cannot distinguish them.
 
-However, we acknowledge that this does not prevent the attack if there is a central database of all venue GUIDs and venue metadata.
+However, we acknowledge that this does not prevent the attack if there is a central database of all venue IDs and venue metadata.
 
 ### Targeting Specific Venues
 
