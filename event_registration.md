@@ -64,7 +64,7 @@ message QRCodePayload {
   TraceLocation locationData = 2;
   CrowdNotifierData crowdNotifierData = 3;
   // byte sequence of CWALocationData
-  bytes vendorData = 4;
+  bytes countryData = 4;
 }
 
 message TraceLocation {
@@ -82,8 +82,9 @@ message TraceLocation {
 
 message CrowdNotifierData {
   uint32 version = 1;
-  bytes publicKey = 2;
-  bytes cryptographicSeed = 3;
+  uint32 type = 2;
+  bytes publicKey = 3;
+  bytes cryptographicSeed = 4;
 }
 
 enum TraceLocationType {
@@ -117,10 +118,15 @@ The ID of a venue is derived as the SHA-256 hash of the concatenated byte repres
 A `QRCodePayload` is base32-encoded and included in a URL. The URL is the content of the QR code and structures as follows:
 
 ```text
-HTTPS://E.CORONAWARN.APP/C1/<ENCODED_PAYLOAD>
+https://e.coronawarn.app?v=1#<base64-url_encoded>
 
 # example:
-HTTPS://E.CORONAWARN.APP/C1/BIPEY33...
+CWA Germany:
+https://e.coronawarn.app?v=1#Y3dh...
+NotifyMe CH:
+https://qr.notify-me.ch?v=2#bm90aWZ5bWU=
+CLEA FR:
+https://tac.gouv.fr?v=1#Y2xlYQ==
 ```
 
 The base32 encoding allows to leverage the input mode _alphanumeric_ when generating the QR code and produces a QR code with a lower density compared to base64 encoding.
