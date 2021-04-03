@@ -82,9 +82,9 @@ message TraceLocation {
 
 message CrowdNotifierData {
   uint32 version = 1;
-  uint32 type = 2;
-  bytes publicKey = 3;
-  bytes cryptographicSeed = 4;
+  bytes publicKey = 2;
+  bytes cryptographicSeed = 3;
+  uint32 type = 4; // exact semantic tbd
 }
 
 enum TraceLocationType {
