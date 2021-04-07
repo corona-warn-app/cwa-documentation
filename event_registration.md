@@ -54,7 +54,7 @@ However, we acknowledge that this does not prevent to execute this attack for a 
 
 ## QR Code Structure DRAFT
 
-The QR code of a venue contains all required attributes for Presence Tracing, so that no server communication is necessary when an attendee checks in to a venue
+The QR code of a venue contains all required attributes for Presence Tracing, so that no server communication is necessary when an attendee checks in to a venue.
 
 The data structure is described by the Protocol Buffer message `QRCodePayload`:
 
@@ -113,25 +113,25 @@ message CWALocationData {
 }
 ```
 
-The ID of a venue is derived as the SHA-256 hash of the concatenated byte representation of the string `CWA-GUID` and the byte representation of the Protocol Buffer message `QRCodePayload`. The `cryptographicSeed` adds sufficient entropy so that any modifications to the QR result in a unique ID.
+The ID of a venue is derived as the SHA-256 hash of the concatenated byte representation of the string `CWA-GUID` and the byte representation of the Protocol Buffer message `QRCodePayload`. The `cryptographicSeed` adds sufficient entropy so that any modifications to the QR code result in a unique ID.
 
-A `QRCodePayload` is base64-encoded and included in a URL. The URL is the content of the QR code and structures as follows:
+A `QRCodePayload` is base64url-encoded and included in a URL. The URL is the content of the QR code and has the following structure:
 
 ```text
-https://e.coronawarn.app?v=1#<base64_encoded>
+https://e.coronawarn.app?v=1#<base64url_encoded>
 
 # example:
 CWA Germany:
 https://e.coronawarn.app?v=1#Y3dh...
 NotifyMe CH:
-https://qr.notify-me.ch?v=2#bm90aWZ5bWU=
+https://qr.notify-me.ch?v=2#bm90aWZ5bWU
 CLEA FR:
-https://tac.gouv.fr?v=1#Y2xlYQ==
+https://tac.gouv.fr?v=1#Y2xlYQ
 ```
 
 ### QR Code Compatibility with Other Contract Tracing Apps in Germany DRAFT
 
-Other contact tracing apps in Germany that leverage QR code for Presence Tracing can integrate with CWA by creating QR codes according to the following pattern:
+Other contact tracing apps in Germany that leverage QR codes for Presence Tracing can integrate with CWA by creating QR codes according to the following pattern:
 
 ```text
 <URL>/<VENDOR_DATA>#[VENDOR_ADDITIONAL_DATA]/CWA1/<ENCODED_PAYLOAD>
@@ -142,7 +142,7 @@ Other contact tracing apps in Germany that leverage QR code for Presence Tracing
 | `<URL>` | The URL associated with the respective contact tracing apps, with or without a partial path. |
 | `<VENDOR_DATA>` | Any vendor-specific data such as the venue id in the vendor's system. This data may be passed to the vendor-specific app upon interaction by the user if a deeper integration is required. |
 | `[VENDOR_ADDITIONAL_DATA]` | Additional vendor-specific data (optional). |
-| `<ENCODED_PAYLOAD>` | A representation of the Protocol Buffer message `QRCodePayload` encoded in base64. Note that the signature must have been created by the CWA Server. |
+| `<ENCODED_PAYLOAD>` | A representation of the Protocol Buffer message `QRCodePayload` encoded in base64url. |
 
 **Note:** Any contact tracing apps that integrate with CWA must ensure that they do not process any information from the CWA part of the QR code.
 
