@@ -128,7 +128,28 @@ https://qr.notify-me.ch?v=2#bm90aWZ5bWU
 CLEA FR:
 https://tac.gouv.fr?v=1#Y2xlYQ
 ```
+```
+#Example:
+https://e.coronawarn.app?v=1#CAESEwgBEgdGcmlzZXVyGgZCZXJsaW4adggBEmCDAszMTXne1DAA5_YxmhRdd_NZN2VKl9L32Jl9-ZybE4b2eNIrhFOKYU4XAOHq3RPLDxdHTW6ANiO24rCOO4rj06HzcVZy3pel58-L1KSPG-_PneL2BoyZQRz3qlu2hoAaEATXwzyyIshzBHREtsdmc6kiBggBEAUYeA
 
+version: 1
+locationData:
+  version: 1
+  description: Friseur
+  address: Berlin
+crowdNotifierData:
+  version: 1
+  publicKey: gwLMzE153tQwAOf2MZoUXXfzWTdlSpfS99iZffmcmxOG9njSK4RTimFOFwDh6t0Tyw8XR01ugDYjtuKwjjuK49Oh83FWct6XpefPi9Skjxvvz53i9gaMmUEc96pbtoaA
+  cryptographicSeed: RANDOM16Byte as base64
+vendorData: CAEQBRh4
+
+
+Vendor Data Example:
+  version: 1
+  type: 5
+  defaultCheckInLengthInMinutes: 120
+
+```
 ### QR Code Compatibility with Other Contract Tracing Apps in Germany
 
 Other contact tracing apps in Germany that leverage QR codes for Presence Tracing can integrate with CWA by creating QR codes according to the following pattern:
