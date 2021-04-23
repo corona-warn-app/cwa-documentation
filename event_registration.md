@@ -26,7 +26,7 @@ An adversary can collect this information for a single venue by scanning the QR 
 
 Note that CWA itself does not store this data on the server or anywhere else and cannot do profiling of venues.
 
-To mitigate the risk, CWA encourages owners to regularly generate new QR codes for their venues. The more frequent QR codes are updated, the more difficult it is to keep a central database with venue data up-to-date. A new QR code should only generate when no visitor is on the event or location. Because visitor can warn only eachother with the same QR code.
+To mitigate the risk, CWA encourages owners to regularly generate new QR codes for their venues. The more frequent QR codes are updated, the more difficult it is to keep a central database with venue data up-to-date. A new QR code should only be generated when no visitor is at the event or location, because visitors can only warn each other with the same QR code.
 
 However, we acknowledge that the proposed solution does not prevent this attack with technical means.
 
