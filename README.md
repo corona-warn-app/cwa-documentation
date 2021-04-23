@@ -105,6 +105,7 @@ For an easier understanding of the used acronyms and special terms in our docume
 | [cwa-quick-test-frontend] | waiting for description                                                           |
 | [cwa-quick-test-backend]  | waiting for description                                                           |
 | [cwa-event-landingpage]   | Landing page for CWA which is opened if the user does not have the app installed. |
+| [cwa-event-qr-code]       | Utility to generate QR codes for Event Registration                               |
 
 [cwa-documentation]: https://github.com/corona-warn-app/cwa-documentation
 [cwa-app-ios]: https://github.com/corona-warn-app/cwa-app-ios
@@ -121,6 +122,7 @@ For an easier understanding of the used acronyms and special terms in our docume
 [cwa-quick-test-frontend]: https://github.com/corona-warn-app/cwa-quick-test-frontend
 [cwa-quick-test-backend]: https://github.com/corona-warn-app/cwa-quick-test-backend
 [cwa-event-landingpage]: https://github.com/corona-warn-app/cwa-event-landingpage
+[cwa-event-qr-code]: https://github.com/corona-warn-app/cwa-event-qr-code
 
 ## Licensing
 
