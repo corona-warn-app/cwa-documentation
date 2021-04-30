@@ -169,7 +169,7 @@ Other contact tracing apps in Germany that leverage QR codes for Presence Tracin
 | `[VENDOR_ADDITIONAL_DATA]` | Additional vendor-specific data (optional). |
 | `<ENCODED_PAYLOAD>` | A representation of the Protocol Buffer message `QRCodePayload` encoded in base64url. |
 
-**Note:** Any contact tracing apps that integrate with CWA must ensure that they do not process any information from the CWA part of the QR code.
+**Note:** Any contact tracing apps that integrate with CWA must ensure that they do not process any information from the CWA part of the QR code. All apps/hostnames needs to be explicit whitelisted by the CWA to accept other QR-Codes
 
 Examples:
 
