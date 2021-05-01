@@ -130,7 +130,7 @@ https://tac.gouv.fr?v=1#Y2xlYQ
 
 ```
 
-```bash
+```text
 
 #Example:
 https://e.coronawarn.app?v=1#CAESEwgBEgdGcmlzZXVyGgZCZXJsaW4adggBEmCDAszMTXne1DAA5_YxmhRdd_NZN2VKl9L32Jl9-ZybE4b2eNIrhFOKYU4XAOHq3RPLDxdHTW6ANiO24rCOO4rj06HzcVZy3pel58-L1KSPG-_PneL2BoyZQRz3qlu2hoAaEATXwzyyIshzBHREtsdmc6kiBggBEAUYeA
