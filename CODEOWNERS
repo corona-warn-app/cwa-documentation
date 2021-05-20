@@ -5,15 +5,15 @@
 # For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.
 
 # These are the default owners for the whole content of this repository. The default owners are automatically added as reviewers when you open a pull request, unless different owners are specified in the file.
-* @SebastianWolf-SAP @tkowark
+* @corona-warn-app/cwa-moderators
 
 # Solution architecture document and its translations
-solution_architecture*.md @tklingbeil @SebastianWolf-SAP @tkowark
-/images/solution_architecture/ @tklingbeil @SebastianWolf-SAP @tkowark
+solution_architecture*.md @tklingbeil @corona-warn-app/cwa-moderators
+/images/solution_architecture/ @tklingbeil @corona-warn-app/cwa-moderators
 
 # Epidemiological Motivation of the Transmission Risk Level
 transmission_risk* @kirchnergo @hoehleatsu @weidemannf @dirkschumacher @benzlerj
 
 # How does the Corona-Warn-App identify an increased risk?
-cwa-risk* @benzlerj @hoehleatsu @kirchnergo @SebastianWolf-SAP
-translations/cwa-risk* @benzlerj @hoehleatsu @kirchnergo @SebastianWolf-SAP
+cwa-risk* @benzlerj @hoehleatsu @kirchnergo @corona-warn-app/cwa-moderators
+translations/cwa-risk* @benzlerj @hoehleatsu @kirchnergo @corona-warn-app/cwa-moderators
