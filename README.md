@@ -102,11 +102,9 @@ For an easier understanding of the used acronyms and special terms in our docume
 | [cwa-verification-iam]     | The identity and access management to interact with the verification server.      |
 | [cwa-testresult-server]    | Receives the test results from connected laboratories.                            |
 | [cwa-log-upload]           | Counterpart of the log upload in the app.                                         |
-| [cwa-quick-test-frontend]  | waiting for description                                                           |
-| [cwa-quick-test-backend]   | waiting for description                                                           |
 | [cwa-event-landingpage]    | Landing page for CWA which is opened if the user does not have the app installed. |
 | [cwa-event-qr-code]        | Utility to generate QR codes for Event Registration.                              |
-| [cwa-quicktest-onboarding] | Informations about onboarding procedure for partners of the Corona-Warn-App.      |
+| [cwa-quicktest-onboarding] | Documentation for integration of rapid test partners.                             |
 
 [cwa-documentation]: https://github.com/corona-warn-app/cwa-documentation
 [cwa-app-ios]: https://github.com/corona-warn-app/cwa-app-ios
