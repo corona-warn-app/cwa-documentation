@@ -107,12 +107,13 @@ For an easier understanding of the used acronyms and special terms in our docume
 | [cwa-quick-test-backend]   | Backend implementation of the rapid antigen test portal and API for participating partners. |
 | [cwa-event-landingpage]    | Landing page for CWA which opens if the user does not have the app installed.               |
 | [cwa-event-qr-code]        | Utility to generate QR codes for Event Registration.                                        |
+| [cwa-hotline]              | Contains all issues reg. the hotlines of the CWA                                            |
 
 [cwa-documentation]: https://github.com/corona-warn-app/cwa-documentation
 [cwa-app-ios]: https://github.com/corona-warn-app/cwa-app-ios
 [cwa-app-android]: https://github.com/corona-warn-app/cwa-app-android
-[cwa-wishlist]: https://github.com/corona-warn-app/cwa-wishlist
 [cwa-website]: https://github.com/corona-warn-app/cwa-website
+[cwa-wishlist]: https://github.com/corona-warn-app/cwa-wishlist
 [cwa-server]: https://github.com/corona-warn-app/cwa-server
 [cwa-ppa-server]: https://github.com/corona-warn-app/cwa-ppa-server
 [cwa-verification-server]: https://github.com/corona-warn-app/cwa-verification-server
@@ -120,11 +121,12 @@ For an easier understanding of the used acronyms and special terms in our docume
 [cwa-verification-iam]: https://github.com/corona-warn-app/cwa-verification-iam
 [cwa-testresult-server]: https://github.com/corona-warn-app/cwa-testresult-server
 [cwa-log-upload]: https://github.com/corona-warn-app/cwa-log-upload
+[cwa-quicktest-onboarding]: https://github.com/corona-warn-app/cwa-quicktest-onboarding
 [cwa-quick-test-frontend]: https://github.com/corona-warn-app/cwa-quick-test-frontend
 [cwa-quick-test-backend]: https://github.com/corona-warn-app/cwa-quick-test-backend
 [cwa-event-landingpage]: https://github.com/corona-warn-app/cwa-event-landingpage
 [cwa-event-qr-code]: https://github.com/corona-warn-app/cwa-event-qr-code
-[cwa-quicktest-onboarding]: https://github.com/corona-warn-app/cwa-quicktest-onboarding
+[cwa-hotline]: https://github.com/corona-warn-app/cwa-hotline
 
 ## Licensing
 
