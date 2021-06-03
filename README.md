@@ -88,25 +88,25 @@ For an easier understanding of the used acronyms and special terms in our docume
 
 ## Repositories
 
-| Repository                 | Description                                                                       |
-| -------------------------- | --------------------------------------------------------------------------------- |
-| [cwa-documentation]        | Project overview, general documentation, and white papers.                        |
-| [cwa-app-ios]              | Native iOS app using the Apple/Google exposure notification API.                  |
-| [cwa-app-android]          | Native Android app using the Apple/Google exposure notification API.              |
-| [cwa-wishlist]             | Community feature requests.                                                       |
-| [cwa-website]              | The official website for the Corona-Warn-App.                                     |
-| [cwa-server]               | Backend implementation for the Apple/Google exposure notification API.            |
-| [cwa-ppa-server]           | Backend implementation for the privacy-preserving analytics server.               |
-| [cwa-verification-server]  | Backend implementation of the verification process.                               |
-| [cwa-verification-portal]  | The portal to interact with the verification server.                              |
-| [cwa-verification-iam]     | The identity and access management to interact with the verification server.      |
-| [cwa-testresult-server]    | Receives the test results from connected laboratories.                            |
-| [cwa-log-upload]           | Counterpart of the log upload in the app.                                         |
-| [cwa-quick-test-frontend]  | waiting for description                                                           |
-| [cwa-quick-test-backend]   | waiting for description                                                           |
-| [cwa-event-landingpage]    | Landing page for CWA which is opened if the user does not have the app installed. |
-| [cwa-event-qr-code]        | Utility to generate QR codes for Event Registration.                              |
-| [cwa-quicktest-onboarding] | Documentation for integration of rapid test partners.                             |
+| Repository                 | Description                                                                                 |
+| -------------------------- | ------------------------------------------------------------------------------------------- |
+| [cwa-documentation]        | Project overview, general documentation, and white papers.                                  |
+| [cwa-app-ios]              | Native iOS app using the Apple/Google exposure notification API.                            |
+| [cwa-app-android]          | Native Android app using the Apple/Google exposure notification API.                        |
+| [cwa-wishlist]             | Community feature requests.                                                                 |
+| [cwa-website]              | The official website for the Corona-Warn-App.                                               |
+| [cwa-server]               | Backend implementation for the Apple/Google exposure notification API.                      |
+| [cwa-ppa-server]           | Backend implementation for the privacy-preserving analytics server.                         |
+| [cwa-verification-server]  | Backend implementation of the verification process.                                         |
+| [cwa-verification-portal]  | The portal to interact with the verification server.                                        |
+| [cwa-verification-iam]     | The identity and access management to interact with the verification server.                |
+| [cwa-testresult-server]    | Receives the test results from connected laboratories.                                      |
+| [cwa-log-upload]           | Counterpart of the log upload in the app.                                                   |
+| [cwa-quick-test-frontend]  | Frontend implementation of the rapid antigen test portal for participating partners.        |
+| [cwa-quick-test-backend]   | Backend implementation of the rapid antigen test portal and API for participating partners. |
+| [cwa-event-landingpage]    | Landing page for CWA which is opened if the user does not have the app installed.           |
+| [cwa-event-qr-code]        | Utility to generate QR codes for Event Registration.                                        |
+| [cwa-quicktest-onboarding] | Documentation for integration of rapid test partners.                                       |
 
 [cwa-documentation]: https://github.com/corona-warn-app/cwa-documentation
 [cwa-app-ios]: https://github.com/corona-warn-app/cwa-app-ios
