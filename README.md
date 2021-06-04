@@ -88,29 +88,32 @@ For an easier understanding of the used acronyms and special terms in our docume
 
 ## Repositories
 
-| Repository                 | Description                                                                       |
-| -------------------------- | --------------------------------------------------------------------------------- |
-| [cwa-documentation]        | Project overview, general documentation, and white papers.                        |
-| [cwa-app-ios]              | Native iOS app using the Apple/Google exposure notification API.                  |
-| [cwa-app-android]          | Native Android app using the Apple/Google exposure notification API.              |
-| [cwa-wishlist]             | Community feature requests.                                                       |
-| [cwa-website]              | The official website for the Corona-Warn-App.                                     |
-| [cwa-server]               | Backend implementation for the Apple/Google exposure notification API.            |
-| [cwa-ppa-server]           | Backend implementation for the privacy-preserving analytics server.               |
-| [cwa-verification-server]  | Backend implementation of the verification process.                               |
-| [cwa-verification-portal]  | The portal to interact with the verification server.                              |
-| [cwa-verification-iam]     | The identity and access management to interact with the verification server.      |
-| [cwa-testresult-server]    | Receives the test results from connected laboratories.                            |
-| [cwa-log-upload]           | Counterpart of the log upload in the app.                                         |
-| [cwa-event-landingpage]    | Landing page for CWA which is opened if the user does not have the app installed. |
-| [cwa-event-qr-code]        | Utility to generate QR codes for Event Registration.                              |
-| [cwa-quicktest-onboarding] | Documentation for integration of rapid test partners.                             |
+| Repository                 | Description                                                                                 |
+| -------------------------- | ------------------------------------------------------------------------------------------- |
+| [cwa-documentation]        | Project overview, general documentation, and white papers.                                  |
+| [cwa-app-ios]              | Native iOS app using the Apple/Google exposure notification API.                            |
+| [cwa-app-android]          | Native Android app using the Apple/Google exposure notification API.                        |
+| [cwa-website]              | The official website for the Corona-Warn-App.                                               |
+| [cwa-wishlist]             | Community feature requests.                                                                 |
+| [cwa-server]               | Backend implementation for the Apple/Google exposure notification API.                      |
+| [cwa-ppa-server]           | Backend implementation for the privacy-preserving analytics server.                         |
+| [cwa-verification-server]  | Backend implementation of the verification process.                                         |
+| [cwa-verification-portal]  | The portal to interact with the verification server.                                        |
+| [cwa-verification-iam]     | The identity and access management to interact with the verification server.                |
+| [cwa-testresult-server]    | Receives PCR test results from connected laboratories.                                      |
+| [cwa-log-upload]           | Counterpart of the log upload in the app.                                                   |
+| [cwa-quicktest-onboarding] | Documentation about onboarding procedure for rapid antigen test partners.                   |
+| [cwa-quick-test-frontend]  | Frontend implementation of the rapid antigen test portal for participating partners.        |
+| [cwa-quick-test-backend]   | Backend implementation of the rapid antigen test portal and API for participating partners. |
+| [cwa-event-landingpage]    | Landing page for CWA which opens if the user does not have the app installed.               |
+| [cwa-event-qr-code]        | Utility to generate QR codes for Event Registration.                                        |
+| [cwa-hotline]              | Contains all issues reg. the hotlines of the CWA                                            |
 
 [cwa-documentation]: https://github.com/corona-warn-app/cwa-documentation
 [cwa-app-ios]: https://github.com/corona-warn-app/cwa-app-ios
 [cwa-app-android]: https://github.com/corona-warn-app/cwa-app-android
-[cwa-wishlist]: https://github.com/corona-warn-app/cwa-wishlist
 [cwa-website]: https://github.com/corona-warn-app/cwa-website
+[cwa-wishlist]: https://github.com/corona-warn-app/cwa-wishlist
 [cwa-server]: https://github.com/corona-warn-app/cwa-server
 [cwa-ppa-server]: https://github.com/corona-warn-app/cwa-ppa-server
 [cwa-verification-server]: https://github.com/corona-warn-app/cwa-verification-server
@@ -118,11 +121,12 @@ For an easier understanding of the used acronyms and special terms in our docume
 [cwa-verification-iam]: https://github.com/corona-warn-app/cwa-verification-iam
 [cwa-testresult-server]: https://github.com/corona-warn-app/cwa-testresult-server
 [cwa-log-upload]: https://github.com/corona-warn-app/cwa-log-upload
+[cwa-quicktest-onboarding]: https://github.com/corona-warn-app/cwa-quicktest-onboarding
 [cwa-quick-test-frontend]: https://github.com/corona-warn-app/cwa-quick-test-frontend
 [cwa-quick-test-backend]: https://github.com/corona-warn-app/cwa-quick-test-backend
 [cwa-event-landingpage]: https://github.com/corona-warn-app/cwa-event-landingpage
 [cwa-event-qr-code]: https://github.com/corona-warn-app/cwa-event-qr-code
-[cwa-quicktest-onboarding]: https://github.com/corona-warn-app/cwa-quicktest-onboarding
+[cwa-hotline]: https://github.com/corona-warn-app/cwa-hotline
 
 ## Licensing
 
