@@ -110,7 +110,7 @@ The process flow shown assumes that users schedule an appointment on the provide
 The backend is then able to calculate a CWA Test ID (step 4) by applying a hash algorithm. Depending on the choice of the users, personal data may or may not be used to calculate the hash.
 The backend may then return a confirmation, which is then used to provide a QR-Code and/or link. With this QR-Code/link users can add the Rapid Antigen Test to their Corona-Warn-Apps.
 The CWA Test ID can then be validated locally (not as a means of security, but to make sure it is a valid code) using the exact same hashing algorithm as used on the backend (step 7).
-The test is then registered on the CWA infrastructure (step 8-11). The testing process itself, including the transmission to the providers backend (steps 12-20) takes place independently from the CWA infrastructure. 
+The test is then registered on the CWA infrastructure (step 8-11). The testing process itself, including the transmission to the providers backend (steps 12-20) takes place independently from the CWA infrastructure.
 The test result is linked to the CWA Test ID and transmitted to the CWA infrastructure (step 21-22).
 
 ### Upload Schedule for Diagnosis Keys
