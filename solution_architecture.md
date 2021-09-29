@@ -106,17 +106,17 @@ As the infrastructure for Rapid Antigen Tests is more distributed in comparison 
 
 The overview contains two processes, one is part of the CWA scope, while the other belongs to a third party (the test provider).
 
-The process flow shown assumes that users schedule an appointment on the provider's infrastructure (step 1-2), which is assigned an internal ID specific to the provider (step 3). 
-The backend is then able to calculate a CWA Test ID (step 4) by applying a hash algorithm. Depending on the choice of the users, personal data may or may not be used to calculate the hash. 
-The backend may then return a confirmation, which is then used to provide a QR-Code and/or link. With this QR-Code/link users can add the Rapid Antigen Test to their Corona-Warn-Apps. 
-The CWA Test ID can then be validated locally (not as a means of security, but to make sure it is a valid code) using the exact same hashing algorithm as used on the backend (step 7). 
+The process flow shown assumes that users schedule an appointment on the provider's infrastructure (step 1-2), which is assigned an internal ID specific to the provider (step 3).
+The backend is then able to calculate a CWA Test ID (step 4) by applying a hash algorithm. Depending on the choice of the users, personal data may or may not be used to calculate the hash.
+The backend may then return a confirmation, which is then used to provide a QR-Code and/or link. With this QR-Code/link users can add the Rapid Antigen Test to their Corona-Warn-Apps.
+The CWA Test ID can then be validated locally (not as a means of security, but to make sure it is a valid code) using the exact same hashing algorithm as used on the backend (step 7).
 The test is then registered on the CWA infrastructure (step 8-11). The testing process itself, including the transmission to the providers backend (steps 12-20) takes place independently from the CWA infrastructure. 
-The test result is linked to the CWA Test ID and transmitted to the CWA infrastructure (step 21-22). 
+The test result is linked to the CWA Test ID and transmitted to the CWA infrastructure (step 21-22).
 
 ### Upload Schedule for Diagnosis Keys
 
 A set of up to 15 Temporary Exposure Keys (TEK; called Diagnosis Keys when linked to a positive test) needs to be uploaded after the positive test result becomes available. The consent might have either been given when registering the test or after receiving the positive test result.
-In order to prevent that the TEK of the current day can be used to generate new RPIs after the submission, it is uploaded with a shorter validity (only until the point of submission) in comparison to the other Diagnosis Keys. To make sure that malicious third parties cannot use it to generate valid RPIs linked to a positive test, uploaded keys are not published immediately, but only after a defined safety period. 
+In order to prevent that the TEK of the current day can be used to generate new RPIs after the submission, it is uploaded with a shorter validity (only until the point of submission) in comparison to the other Diagnosis Keys. To make sure that malicious third parties cannot use it to generate valid RPIs linked to a positive test, uploaded keys are not published immediately, but only after a defined safety period.
 
 ![Figure 6: Upload schedule for Temporary Exposure Keys (Diagnosis Keys)](images/solution_architecture/upload_schedule.svg "Figure 6: Upload schedule for Temporary Exposure Keys (Diagnosis Keys)")
 
@@ -210,7 +210,7 @@ The app itself does not have access to the collected exposures, i.e. the Rolling
 
 ![Figure 10: Key flow from the sending perspective (as described in the specification by Apple/Google)](images/solution_architecture/figure_10.svg "Figure 10: Key flow from the sending perspective (as described in the specification by Apple/Google)")
 
-The encapsulation especially applies to the part where matches are calculated, as the framework only accepts the diagnosis keys as input, matches them to (internally stored) RPIs and returns a list of exposure events without a link to the corresponding Rolling Proximity Identifiers (see *Figure 11*). With the use of the corresponding Associated Encrypted Metadata Key, the Associated Encrypted Metadata (AEM) of the captured RPI can be decrypted. This metadata contains the transmission power (which is used to calculate the attenuation). The Exposure Notification Framework assembles exposures into 30-minute-windows per other device and 24-hour epoch. Those windows contain additional details for individual scan instances, which will be explained later. 
+The encapsulation especially applies to the part where matches are calculated, as the framework only accepts the diagnosis keys as input, matches them to (internally stored) RPIs and returns a list of exposure events without a link to the corresponding Rolling Proximity Identifiers (see *Figure 11*). With the use of the corresponding Associated Encrypted Metadata Key, the Associated Encrypted Metadata (AEM) of the captured RPI can be decrypted. This metadata contains the transmission power (which is used to calculate the attenuation). The Exposure Notification Framework assembles exposures into 30-minute-windows per other device and 24-hour epoch. Those windows contain additional details for individual scan instances, which will be explained later.
 
 ![Figure 11: Key flow from the receiving perspective (as described in the specification by Apple/Google)](images/solution_architecture/figure_11.svg "Figure 11: Key flow from the receiving perspective (as described in the specification by Apple/Google)")
 
@@ -242,7 +242,6 @@ Currently, the application forms four attenuation ranges (sometimes also called 
 The information listed above is not visible to the user, but is used internally to calculate a risk score, which again is mapped to one specific app-defined risk level. This easy-to-understand risk level is displayed to the user. Further information regarding the individual exposure events (such as the matched Rolling Proximity Identifier, the Temporary Exposure Key or the exact time) remains within the secure storage of the framework and cannot be retrieved by the application.
 
 ![Figure 13: Risk calculation](images/solution_architecture/trl_mapping.svg "Figure 13: Risk calculation")
-
 
 The Exposure Notification framework allows to attach as "days since onset of symptoms" parameter to the diagnosis key while uploading them to the server. As this parameter strongly influences the infectiousness during an encounter, it is also used in the risk calculation. However, the ENF only allows a translation from the DSOS to either "no risk" (0), "low risk" (1) or "high risk" (2). To allow a more fine grained interpretation of the exposure windows, the additional parameter "report type" (four possible values) is used to derive an internal "Transmission Risk Level" with eight possible values. Of those eight values, two are dropped by the ENF automatically, as the report type "recursive" might be dropped in current implementations. It is important to understand, that the field "report type" does not correspond to the actual report type, but is only technically used as a 2 bit field. The mapping is also shown in Figure 13.
 
