@@ -224,7 +224,7 @@ Each exposure window contains the following information:
 
 - **infectiousness** and **report type** parameters, defined by the sending app
 - **day of the exposure**
-- **multiple scan instances**, i.e. occurences, where the other device has been actively identified during the scanning process
+- **multiple scan instances**, i.e. occurrences, where the other device has been actively identified during the scanning process
 
 ### Attenuation Buckets
 
