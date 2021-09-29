@@ -15,7 +15,7 @@ We assume a close association of a mobile phone and its user and, thus, equate t
 1. [INTRODUCTION](#introduction)
    1. [Retrieval of lab results and verification process](#pcr-tests-retrieval-of-lab-results-and-verification-process)
    2. [Rapid Antigen Tests: Result Retrieval](#rapid-antigen-tests-result-retrieval)
-   2. [Upload schedule for Diagnosis Keys](#upload-schedule-for-diagnosis-keys)
+   3. [Upload schedule for Diagnosis Keys](#upload-schedule-for-diagnosis-keys)
 2. [BACKEND](#backend)
    1. [Data format](#data-format)
    2. [Data URL](#data-url)
@@ -38,7 +38,7 @@ To reduce the spread of [COVID-19](https://www.ecdc.europa.eu/en/covid-19-pandem
 The Corona-Warn-App (see [scoping document](https://github.com/corona-warn-app/cwa-documentation/blob/master/scoping_document.md )), shown centrally in *Figure 1*, enables individuals to trace their personal exposure risk via their mobile phones. The Corona-Warn-App uses a new framework provided by Apple and Google called [Exposure Notification Framework](https://www.apple.com/covid19/contacttracing). The framework employs [Bluetooth Low Energy (BLE)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy) mechanics. BLE lets the individual mobile phones act as beacons meaning that they constantly broadcast a temporary identifier called Rolling Proximity Identifier (RPI) that is remembered and, at the same time, lets the mobile phone scan for identifiers of other mobile phones. This is shown on the right side of *Figure 1*.
 Identifiers are ID numbers sent out by the mobile phones. To ensure privacy and to prevent the tracking of movement patterns of the app user, those broadcasted identifiers are only temporary and change constantly. New identifiers are derived from a Temporary Exposure Key (TEK) that is substituted at midnight (UTC) every day through means of cryptography. For a more detailed explanation, see *Figure 10*. Once a TEK is linked to a positive test result, it remains technically the same, but is then called a Diagnosis Key.
 
-The collected identifiers from other users as well as the own keys, which can later be used to derive the identifiers, are stored locally on the phone in the secure storage of the framework provided by Apple and Google. The application cannot access this secure storage directly, but only through the interfaces the Exposure Notification Framework provides. To prevent misuse, some of these interfaces are subjected to [rate limiting](https://developer.apple.com/documentation/exposurenotification/enmanager/3586331-detectexposures). If app users are tested positive for SARS-CoV-2, they can update their status in the app by providing a verification of their test and select an option to send their recent keys from up to 14 days back. On the Corona-Warn-App back-end server, all keys of individuals that have tested positive are aggregated and are then made available to all mobile phones that have the app installed. Additionally, the configuration parameters for the framework are available for download, so that adjustments to the risk score calculation can be made, see the *Risk Scores* section.
+The collected identifiers from other users as well as the device's own keys, which can later be used to derive the identifiers, are stored locally on the phone in the secure storage of the framework provided by Apple and Google. The application cannot access this secure storage directly, but only through the interfaces the Exposure Notification Framework provides. To prevent misuse, some of these interfaces are subjected to [rate limiting](https://developer.apple.com/documentation/exposurenotification/enmanager/3586331-detectexposures). If app users are tested positive for SARS-CoV-2, they can update their status in the app by providing a verification of their test and select an option to send their recent keys from up to 14 days back. On the Corona-Warn-App back-end server, all keys of individuals that have tested positive are aggregated and are then made available to all mobile phones that have the app installed. Additionally, the configuration parameters for the framework are available for download, so that adjustments to the risk score calculation can be made, see the *Risk Scores* section.
 Once the keys and the exposure detection configuration have been downloaded, the data is handed over to the Exposure Notification Framework, which analyzes whether one of the identifiers collected by the mobile phone matches those of a individual that has tested positive. Additionally, the metadata that has been broadcasted together with the identifiers such as the transmit power can now be decrypted and used. Based on the collected data, the Exposure Notification Framework provided by Apple and Google groups exposures into 30 minute "exposure windows", which in turn can be used to determine the individual risk. Exposures are defined as an aggregation of all encounters with another individual on a single calendar day (UTC timezone). For privacy reasons, it is neither possible to track encounters with other individuals across multiple days, nor to link individual exposure windows to each other.
 
 It is important to note that the persons that have been exposed to a positive tested individual are **not informed by a central instance**, but the risk of an exposure is calculated locally on their phones. The information about the exposure remains on the user’s mobile phone and is not shared.
@@ -100,13 +100,13 @@ If a user did not receive a teleTAN from the health authority and/or has lost th
 
 While the PCR tests described before require a laboratory to receive the test results, Rapid Antigen Tests (RAT) can be evaluated shortly after taking the sample, at the Point of Care (PoC). Also the results for those Rapid Antigen Tests shall be transmitted to the Corona-Warn-App installed on the users' phones, so they can subsequently be used to warn others.
 
-As the infrastructure for Rapid Antigen Tests is more distributes in comparison to PCR tests (i.e. locally and with regards to the operators: mobile test locations at venues, workplaces, etc., ), also the infrastructure for transmitting the test results needs to operate in a distributed way.
+As the infrastructure for Rapid Antigen Tests is more distributed in comparison to PCR tests (i.e. locally and with regards to the operators: mobile test locations at venues, workplaces, etc., ), also the infrastructure for transmitting the test results needs to operate in a distributed way.
 
 ![Figure 5: End-to-end overview for Rapid Antigen Tests](images/solution_architecture/rat_process.svg "Figure 5: End-to-end overview for Rapid Antigen Tests")
 
 The overview contains two processes, one is part of the CWA scope, while the other belongs to a third party (the test provider).
 
-The shown process flow assumes that users schedule an appointment on the provider's infrastrucure (step 1-2), which is assigned an internal ID specific to the provider (step 3). 
+The process flow shown assumes that users schedule an appointment on the provider's infrastructure (step 1-2), which is assigned an internal ID specific to the provider (step 3). 
 The backend is then able to calculate a CWA Test ID (step 4) by applying a hash algorithm. Depending on the choice of the users, personal data may or may not be used to calculate the hash. 
 The backend may then return a confirmation, which is then used to provide a QR-Code and/or link. With this QR-Code/link users can add the Rapid Antigen Test to their Corona-Warn-Apps. 
 The CWA Test ID can then be validated locally (not as a means of security, but to make sure it is a valid code) using the exact same hashing algorithm as used on the backend (step 7). 
@@ -164,9 +164,9 @@ Further information can be found in the dedicated architecture documents for the
 
 ### Data Format
 
-The current base unit for data chunks will be one hour. Data will be encoded in the protocol buffer format as specified by Apple and Google (see *Figure 8*). In case a data chunk does not hold any or too few diagnosis keys, the chunk generation will be skipped and the keys will be made available as soon as the threshold has been passed.
+The current base unit for data chunks is one hour. Data is encoded in the protocol buffer format as specified by Apple and Google (see *Figure 8*). In case a data chunk does not hold any or too few diagnosis keys, the chunk generation will be skipped and the keys are made available as soon as the threshold has been passed.
 
-The makes the following information available through a RESTful interface:
+The server makes the following information available through a RESTful interface:
 
 - Available items through index endpoints
 - Newly-added Diagnosis Keys (Temporary Exposure Keys) for the time frame
@@ -202,7 +202,7 @@ For Apple devices an OS version of at least 12.5 (for older devices) or 13.7 is 
 
 ![Figure 9: iOS Releases and ENF Support](images/solution_architecture/ios_releases.svg "Figure 9: iOS Releases and ENF Support")
 
-For Android devices, the features is integrated into the [Google Play Services](https://9to5google.com/2020/04/13/android-contact-tracing-google-play-services/), which means that only this specific application needs to be updated for it to work. Devices starting with Android 6.0 (API version 23) and integrated BLE chips will be [supported](https://developers.google.com/android/exposure-notifications/exposure-notifications-api#architecture).
+For Android devices, the features are integrated into the [Google Play Services](https://developers.google.com/android/exposure-notifications/exposure-notifications-api#architecture), which means that only this specific application needs to be updated for it to work. Devices starting with Android 6.0 (API version 23) and integrated BLE chips are be [supported](https://developers.google.com/android/exposure-notifications/exposure-notifications-api#architecture).
 
 ![Figure 10: Architecture overview of the mobile application (focused on API usage/BLE communication)](images/solution_architecture/figure_9.svg "Figure 9: Architecture overview of the mobile application (focused on API usage/BLE communication)")
 
@@ -216,7 +216,7 @@ The encapsulation especially applies to the part where matches are calculated, a
 
 [Information provided from the framework API to the app per exposure](https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ExposureNotification-FrameworkDocumentationv1.2.pdf):
 
-All exposure events are collected by the ENF internally and are split up into "Exposure Windows", which represent all instances where one other specific device (without known identity) has been detected within a 30 minute window. If an encounter lasted for more then 30 minutes, multiple exposure windows are derived. Those cannot be related to each other neither can it be determined in which order (and possible overlap), exposures windows have occured. This means that if for example five exposure windows are presented to the app by the ENF, it cannot be determined whether those have been five different devices or a single other device with 2,5 hours of contact. Same applies to the timely arrangement, i.e. all windows could have happend in parallel, with partial overlap or after one another.
+All exposure events are collected by the ENF internally and are split up into "Exposure Windows", which represent all instances where one other specific device (without known identity) has been detected within a 30 minute window. If an encounter lasted for more then 30 minutes, multiple exposure windows are derived. Those cannot be related to each other neither can it be determined in which order (and possible overlap), exposures windows have occurred. This means that if for example five exposure windows are presented to the app by the ENF, it cannot be determined whether those have been five different devices or a single other device with 2.5 hours of contact. Same applies to the timely arrangement, i.e. all windows could have happened in parallel, with partial overlap or after one another.
 
 ![Figure 12: Exposure Windows](images/solution_architecture/exposure_windows.svg "Figure 11: Exposure Windows")
 
@@ -275,7 +275,7 @@ Further details can be found in the dedicated architecture documents for the mob
 
 ## RUNTIME ENVIRONMENT (HOSTING)
 
-The back end will be made available through the [Open Telekom Cloud (OTC)](https://open-telekom-cloud.com/).
+The back end is made available through the [Open Telekom Cloud (OTC)](https://open-telekom-cloud.com/).
 
 For the operation of the back end, several bandwidth estimations need to be taken. As a high adoption rate of the app is an important requirement, we are considering up to 60 million active users.
 
@@ -310,11 +310,11 @@ In order for the EFGS to function correctly, all users must specify their visite
 
 Even though the system can support individuals in finding out whether they have been in proximity with a person that has been tested positive later on, the system also has limits (shown in *Figure 14*) that need to be considered. One of those limitations is that while the device constantly broadcasts its own Rolling Proximity Identifiers, it only listens for others in defined time slots. Those [listening windows are currently up to five minutes](https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ExposureNotification-BluetoothSpecificationv1.2.pdf) apart and are defined as being only very short. In our considerations we expect the windows to have a length of two to four seconds. For the attenuation, the two buckets provided by the framework are being considered. A lower attenuation means that the other device is closer; we assume that an attenuation <58 dB translates to a distance below two meters. A higher attenuation might either mean that the other device is farther away (i.e. a distance of more than two meters) or that there is something between the devices blocking the signal. This could be objects such as a wall, but also humans or animals.
 
-![Figure 14: Limitations of the Bluetooth Low Energy approach](images/solution_architecture/figure_14.svg "Figure 14: Limitations of the Bluetooth Low Energy approach")
+![Figure 15: Limitations of the Bluetooth Low Energy approach](images/solution_architecture/figure_14.svg "Figure 15: Limitations of the Bluetooth Low Energy approach")
 
 In *Figure 14*, this is visualized, while focusing on the captured Rolling Proximity Identifiers by only a single device. We are assuming that devices broadcast their own RPI every 250ms and use listening windows with a length of two seconds, five minutes apart. There are five other active devices – each representing a different kind of possible exposure. In the example, devices 3 and 4 go completely unnoticed, while a close proximity with the user of device 2 cannot be detected. In contrast to that very brief, but close connection with the user of device 5 (e.g. only brushing the other person in the supermarket) is noticed and logged accordingly. The duration and interval of scanning needs to be balanced by Apple and Google against battery life, as more frequent scanning consumes more energy.
 
-It must be noted that some of the encounters described above are corner cases. While especially the cases with a very short proximity time cannot be detected due to technical limitations, the framework will be able to detect longer exposures. As only exposures of longer duration within a certain proximity range are considered relevant for the intended purpose of this app, most of them will be covered.
+It must be noted that some of the encounters described above are corner cases. While especially the cases with a very short proximity time cannot be detected due to technical limitations, the framework is able to detect longer exposures. As only exposures of longer duration within a certain proximity range are considered relevant for the intended purpose of this app, most of them are covered.
 
 ## PRIVACY-PRESERVING DATA DONATION
 
