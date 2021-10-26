@@ -10,7 +10,7 @@ This overview provides a description for all acronyms and special terms which ar
 | APNs | Acronym for "[Apple Push Notification service](https://en.wikipedia.org/wiki/Apple_Push_Notification_service)", a platform notification service created by Apple Inc. |
 | BGG | The [German Equality of Persons with Disabilities Act](https://www.gesetze-im-internet.de/bgg/), acronym for "Behindertengleichstellungsgesetz", long term: "Gesetz zur Gleichstellung von Menschen mit Behinderungen". |
 | BLE, BTLE | [Bluetooth Low Energy](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy) is a wireless personal area network technology. It is used in the Corona-Warn-App. |
-| BMG | German [Federal Ministry of Health](https://www.bundesgesundheitsministerium.de/en/en.html), acronym for "Bundesministerium für Gesundheit". |
+| BMG | German [Federal Ministry of Health](https://www.bundesgesundheitsministerium.de/en/), acronym for "Bundesministerium für Gesundheit". |
 | CDN | Acronym for [Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network). |
 | COVID-19 | [Coronavirus disease 2019](https://en.wikipedia.org/wiki/Coronavirus_disease_2019) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). |
 | CTR | Acronym for "[Counter (Mode)](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CTR)", a mode of operation in cryptography, also used in the [Exposure Notification Framework](https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ExposureNotification-CryptographySpecificationv1.2.pdf) |
