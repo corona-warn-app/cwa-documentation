@@ -202,7 +202,7 @@ For Apple devices an OS version of at least 12.5 (for older devices) or 13.7 is 
 
 ![Figure 9: iOS Releases and ENF Support](images/solution_architecture/ios_releases.svg "Figure 9: iOS Releases and ENF Support")
 
-For Android devices, the features are integrated into the [Google Play Services](https://developers.google.com/android/exposure-notifications/exposure-notifications-api#architecture), which means that only this specific application needs to be updated for it to work. Devices starting with Android 6.0 (API version 23) and integrated BLE chips are be [supported](https://developers.google.com/android/exposure-notifications/exposure-notifications-api#architecture).
+For Android devices, the features are integrated into the [Google Play Services](https://developers.google.com/android/exposure-notifications/exposure-notifications-api#architecture), which means that only this specific application needs to be updated for it to work. Devices starting with Android 6.0 (API version 23) and integrated BLE chips are [supported](https://developers.google.com/android/exposure-notifications/exposure-notifications-api#architecture).
 
 ![Figure 10: Architecture overview of the mobile application (focused on API usage/BLE communication)](images/solution_architecture/figure_9.svg "Figure 9: Architecture overview of the mobile application (focused on API usage/BLE communication)")
 
