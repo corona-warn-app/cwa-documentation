@@ -311,7 +311,7 @@ Even though the system can support individuals in finding out whether they have 
 
 | ![Figure 17: Limitations of the Bluetooth Low Energy approach](images/solution_architecture/limitations.svg "Figure 17: Limitations of the Bluetooth Low Energy approach") |
 |:--:|
-| <b>Figure 17: Limitations of the Bluetooth Low Energy approach</b>|
+| **Figure 17: Limitations of the Bluetooth Low Energy approach** |
 
 In *Figure 17*, this is visualized, while focusing on the captured Rolling Proximity Identifiers by only a single device. We are assuming that devices broadcast their own RPI every 250ms and use listening windows with a length of four seconds, three minutes apart. There are five other active devices – each representing a different kind of possible exposure. In the example, devices 3 and 4 go completely unnoticed, while a close proximity with the user of device 2 cannot be detected. In contrast to that very brief, but close connection with the user of device 5 (e.g. only brushing the other person in the supermarket) is noticed and logged accordingly. The duration and interval of scanning needs to be balanced by Apple and Google against battery life, as more frequent scanning consumes more energy.
 
