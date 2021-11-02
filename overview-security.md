@@ -457,7 +457,7 @@ The following chapters contain a brief introduction to each capability.
 - Guarantee collaboration and support by partners in case of security incident (e.g. to update or recover a system in the specified time).
 - Ensure controlled, monitored and minimized access for partners.
 - Ensure compliance with internal/external requirements (e.g. security checks).
-- Cooperate with selected/certified suppliers (blacklist/whitelist).
+- Cooperate with selected/certified suppliers (avoid/prefer list).
 
 ### Secure Development
 
