@@ -35,7 +35,7 @@ To reduce the spread of [COVID-19](https://www.ecdc.europa.eu/en/covid-19-pandem
 
 | ![Figure 1: High-level architecture overview](images/solution_architecture/high_level_architecture.svg "Figure 1: High-level architecture overview") |
 |:--:|
-| <b>Figure 1: High-level architecture overview</b>|
+| **Figure 1: High-level architecture overview**|
 
 The Corona-Warn-App (see [scoping document](https://github.com/corona-warn-app/cwa-documentation/blob/master/scoping_document.md )), shown centrally in *Figure 1*, enables individuals to trace their personal exposure risk via their mobile phones. The Corona-Warn-App uses a new framework provided by Apple and Google called [Exposure Notification Framework](https://www.apple.com/covid19/contacttracing). The framework employs [Bluetooth Low Energy (BLE)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy) mechanics. BLE lets the individual mobile phones act as beacons meaning that they constantly broadcast a temporary identifier called Rolling Proximity Identifier (RPI) that is remembered and, at the same time, lets the mobile phone scan for identifiers of other mobile phones. This is shown on the right side of *Figure 1*.
 Identifiers are ID numbers sent out by the mobile phones. To ensure privacy and to prevent the tracking of movement patterns of the app user, those broadcasted identifiers are only temporary and change constantly. New identifiers are derived from a Temporary Exposure Key (TEK) that is substituted at midnight (UTC) every day through means of cryptography. For a more detailed explanation, see *Figure 10*. Once a TEK is linked to a positive test result, it remains technically the same, but is then called a Diagnosis Key.
@@ -63,7 +63,7 @@ There are two ways for receiving this verification:
 
 | ![Figure 2: Interaction flow for verification process](images/solution_architecture/interaction_flow_verification.svg "Figure 2: Interaction flow for verification process") |
 |:--:|
-| <b>Figure 2: Interaction flow for verification process</b>|
+| **Figure 2: Interaction flow for verification process**|
 
 *Figure 2* and *Figure 3* illustrate the verification process. *Figure 2* shows the interaction flow of the user and *Figure 3* the flow and storage of data. Additions to the preexisting 'conventional' process through the introduction of the Corona-Warn-App and the integrated test result retrieval are marked blue in *Figure 2*.
 
@@ -88,7 +88,7 @@ The TAN is used as authorization in the HTTP header of the POST request for uplo
 
 | ![Figure 3: Data flow for the verification process](images/solution_architecture/data_flow_verification.svg "Figure 3: Data flow for the verification process") |
 |:--:|
-| <b>Figure 3: Data flow for the verification process</b>|
+| **Figure 3: Data flow for the verification process**|
 
 Note regarding *Figure 3* and *Figure 4*: The white boxes with rounded corners represent data storage. The HTTP method POST is used instead of GET for added security, so data (e.g. the registration token) can be transferred in the body.
 
@@ -96,7 +96,7 @@ As mentioned before, users might have decided against retrieving test results el
 
 | ![Figure 4: Verification process for teleTAN received via phone](images/solution_architecture/verification_teletan.svg "Figure 4: Verification process for teleTAN received via phone") |
 |:--:|
-| <b>Figure 4: Verification process for teleTAN received via phone</b>|
+| **Figure 4: Verification process for teleTAN received via phone**|
 
 The retrieval of the registration token ensures a coupling between a specific mobile phone and a GUID/teleTAN, preventing others (even when they have the QR code) to retrieve test results and/or to generate a TAN for uploading diagnosis keys. Upon the first connection with the Verification Server, a registration token is generated on the server and sent back to the client. In the information they receive, the patients should be asked to scan the QR code as soon as possible, as all further communication between client and server only uses the registration token which can only be created once.
 If a user deletes and reinstalls the app, the stored registration token is lost, making it impossible to retrieve the test results. In this case the fallback with the health authority workflow (through a hotline) needs to be used.
@@ -112,7 +112,7 @@ As the infrastructure for Rapid Antigen Tests is more distributed in comparison 
 
 | ![Figure 5: End-to-end overview for Rapid Antigen Tests](images/solution_architecture/rat_process.svg "Figure 5: End-to-end overview for Rapid Antigen Tests") |
 |:--:|
-| <b>Figure 5: End-to-end overview for Rapid Antigen Tests</b>|
+| **Figure 5: End-to-end overview for Rapid Antigen Tests**|
 
 The overview contains two processes, one is part of the CWA scope, while the other belongs to a third party (the test provider).
 
@@ -130,7 +130,7 @@ In order to prevent that the TEK of the current day can be used to generate new 
 
 | ![Figure 6: Upload schedule for Temporary Exposure Keys (Diagnosis Keys)](images/solution_architecture/upload_schedule.svg "Figure 6: Upload schedule for Temporary Exposure Keys (Diagnosis Keys)") |
 |:--:|
-| <b>Figure 6: Upload schedule for Temporary Exposure Keys (Diagnosis Keys)</b>|
+| **Figure 6: Upload schedule for Temporary Exposure Keys (Diagnosis Keys)**|
 
 As users are not required to confirm negative test results, the functionality of uploading Diagnosis Keys on subsequent days remains theoretical. Each of those uploads could take place earliest at the end of each subsequent day (see (2) in *Figure 6*). It would require explicit consent of the user for each day and could take place up to the time when the person is not considered contagious anymore (but not any longer, as this would lead to false positives).
 
@@ -138,7 +138,7 @@ As users are not required to confirm negative test results, the functionality of
 
 | ![Figure 7: Actors in the system, including external parties (blue components to be open-sourced)](images/solution_architecture/actors_in_the_system.svg "Figure 7: Actors in the system, including external parties (blue components to be open-sourced)") |
 |:--:|
-| <b>Figure 7: Actors in the system, including external parties (blue components to be open-sourced)</b>|
+| **Figure 7: Actors in the system, including external parties (blue components to be open-sourced)**|
 
 The Corona-Warn-App Server needs to fulfill the following tasks:
 
@@ -166,7 +166,7 @@ The Corona-Warn-App Server represents the outside picture of the individual serv
 
 | ![Figure 8: Interaction of the mobile application(s) with the back-end servers and CDN](images/solution_architecture/interaction_mobile_application.svg "Figure 8: Interaction of the mobile application(s) with the back-end servers and CDN") |
 |:--:|
-| <b>Figure 8: Interaction of the mobile application(s) with the back-end servers and CDN</b>|
+| **Figure 8: Interaction of the mobile application(s) with the back-end servers and CDN**|
 
 Note that even if a user has not been tested positive, the app randomly submits requests to the Corona-Warn-App Server (represented in *Figure 8* by Phone 2) which on the server side can easily be ignored, but from an outside perspective exactly looks as if a user has uploaded positive test results. This helps to preserve the privacy of users who are actually submitting their diagnosis keys due to positive test results. Without dummy requests, a malicious third party monitoring the traffic could easily find out that users uploading something to the server have been infected. With our approach, no pattern can be detected and, thus, no assumption can be taken.
 
@@ -198,7 +198,7 @@ In order to ensure the authenticity of the files, they need to be signed (accord
 
 | ![Figure 9: Data format (protocol buffer) specified by Apple/Google](images/solution_architecture/protocol_buffer.svg "Figure 9: Data format (protocol buffer) specified by Apple/Google") |
 |:--:|
-| <b>Figure 9: Data format (protocol buffer) specified by Apple/Google</b>|
+| **Figure 9: Data format (protocol buffer) specified by Apple/Google**|
 
 ### Data URL
 
@@ -220,25 +220,25 @@ For Apple devices an OS version of at least 12.5 (for older devices) or 13.7 is 
 
 | ![Figure 10: iOS Releases and ENF Support](images/solution_architecture/ios_releases.svg "Figure 10: iOS Releases and ENF Support") |
 |:--:|
-| <b>Figure 10: iOS Releases and ENF Support</b>|
+| **Figure 10: iOS Releases and ENF Support**|
 
 For Android devices, the features are integrated into the [Google Play Services](https://developers.google.com/android/exposure-notifications/exposure-notifications-api#architecture), which means that only this specific application needs to be updated for it to work. Devices starting with Android 6.0 (API version 23) and integrated BLE chips are [supported](https://developers.google.com/android/exposure-notifications/exposure-notifications-api#architecture).
 
 | ![Figure 11: Architecture overview of the mobile application (focused on API usage/BLE communication)](images/solution_architecture/architecture_overview.svg "Figure 11: Architecture overview of the mobile application (focused on API usage/BLE communication)") |
 |:--:|
-| <b>Figure 11: Architecture overview of the mobile application (focused on API usage/BLE communication)</b>|
+| **Figure 11: Architecture overview of the mobile application (focused on API usage/BLE communication)**|
 
 The app itself does not have access to the collected exposures, i.e. the Rolling Proximity Identifiers, and neither is it informed if a new one has been collected by the framework. As depicted in the *Figure 10* and *Figure 11*, the Exposure Notification encapsulates handling of the keys, including all cryptographic operations on them. The only output of the black box upon an infection is a collection of temporary exposure keys as shown in *Figure 10*. Those are subsequently called diagnosis keys.
 
 | ![Figure 12: Key flow from the sending perspective (as described in the specification by Apple/Google)](images/solution_architecture/key_flow_sending.svg "Figure 12: Key flow from the sending perspective (as described in the specification by Apple/Google)") |
 |:--:|
-| <b>Figure 12: Key flow from the sending perspective (as described in the specification by Apple/Google)</b>|
+| **Figure 12: Key flow from the sending perspective (as described in the specification by Apple/Google)**|
 
 The encapsulation especially applies to the part where matches are calculated, as the framework only accepts the diagnosis keys as input, matches them to (internally stored) RPIs and returns a list of exposure events without a link to the corresponding Rolling Proximity Identifiers (see *Figure 12*). With the use of the corresponding Associated Encrypted Metadata Key, the Associated Encrypted Metadata (AEM) of the captured RPI can be decrypted. This metadata contains the transmission power (which is used to calculate the attenuation). The Exposure Notification Framework assembles exposures into 30-minute-windows per other device and 24-hour epoch. Those windows contain additional details for individual scan instances, which will be explained later.
 
 | ![Figure 13: Key flow from the receiving perspective (as described in the specification by Apple/Google)](images/solution_architecture/key_flow_receiving.svg "Figure 13: Key flow from the receiving perspective (as described in the specification by Apple/Google)") |
 |:--:|
-| <b>Figure 13: Key flow from the receiving perspective (as described in the specification by Apple/Google)</b>|
+| **Figure 13: Key flow from the receiving perspective (as described in the specification by Apple/Google)**|
 
 [Information provided from the framework API to the app per exposure](https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ExposureNotification-FrameworkDocumentationv1.2.pdf):
 
@@ -246,7 +246,7 @@ All exposure events are collected by the ENF internally and are split up into "E
 
 | ![Figure 14: Exposure Windows](images/solution_architecture/exposure_windows.svg "Figure 14: Exposure Windows") |
 |:--:|
-| <b>Figure 14: Exposure Windows</b>|
+| **Figure 14: Exposure Windows**|
 
 Each exposure window contains the following information:
 
@@ -271,13 +271,13 @@ The information listed above is not visible to the user, but is used internally 
 
 | ![Figure 15: Value mapping during the risk calculation](images/solution_architecture/trl_mapping.svg "Figure 15: Value mapping during the risk calculation") |
 |:--:|
-| <b>Figure 15: Value mapping during the risk calculation</b>|
+| **Figure 15: Value mapping during the risk calculation**|
 
 The Exposure Notification framework allows to attach as "days since onset of symptoms" parameter to the diagnosis key while uploading them to the server. As this parameter strongly influences the infectiousness during an encounter, it is also used in the risk calculation. However, the ENF only allows a translation from the DSOS to either "no risk" (0), "low risk" (1) or "high risk" (2). To allow a more fine grained interpretation of the exposure windows, the additional parameter "report type" (four possible values) is used to derive an internal "Transmission Risk Level" with eight possible values. Of those eight values, two are dropped by the ENF automatically, as the report type "recursive" might be dropped in current implementations. It is important to understand, that the field "report type" does not correspond to the actual report type, but is only technically used as a 2 bit field. The mapping is also shown in Figure 15.
 
 | ![Figure 16: Risk calculation](images/solution_architecture/risk_calculation.svg "Figure 16: Risk calculation") |
 |:--:|
-| <b>Figure 16: Risk calculation</b>|
+| **Figure 16: Risk calculation**|
 
 *Figure 16* displays how the total risk score is being calculated. The application is provided with a set of parameters, which are marked in blue within the figure.
 Those parameters are regularly downloaded from the CWA Server, which means they can be modified without requiring a new version of the application (see [`exposure-config.yaml`](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/main-config/exposure-config.yaml) for details).
@@ -326,14 +326,14 @@ The [European Federation Gateway Service (EFGS)](https://github.com/eu-federatio
 
 | ![Figure 17: High-level EFGS overview](images/solution_architecture/EFGS_overview.jpg "Figure 17: High-level EFGS overview") |
 |:--:|
-| <b>Figure 17: High-level EFGS overview</b>|
+| **Figure 17: High-level EFGS overview**|
 
 The Federation Gateway Service facilitates backend-to-backend integration. Countries can onboard incrementally, while the national backends retain flexibility and control over data distribution to their users.
 For example, if a German citizen visits Italy and then becomes infected, the keys of the German citizen are then relevant for the citizens of Italy. In this case the German citizen keys would be shared with the EFGS to enable the French backend to obtain the keys. Similarly, if a French user is visiting Germany, that user's keys are of relevance to the German database.
 
 | ![Figure 18: Autonomous National Backend](images/solution_architecture/EFGS_Autonomous_Backend.jpg "Figure 18: Autonomous National Backend") |
 |:--:|
-| <b>Figure 18: Autonomous National Backend</b>|
+| **Figure 18: Autonomous National Backend**|
 
 In the example above, user A from country A travels to country B and afterwards tests positive. Only the relevant users (those which came within proximity of the infected user A) in Country B will receive the alert.
 Devices only communicate with their country's backend. That country's backend is then responsible to send relevant keys to the EFGS.
@@ -347,7 +347,7 @@ Even though the system can support individuals in finding out whether they have 
 
 | ![Figure 19: Limitations of the Bluetooth Low Energy approach](images/solution_architecture/limitations.svg "Figure 19: Limitations of the Bluetooth Low Energy approach") |
 |:--:|
-| <b>Figure 19: Limitations of the Bluetooth Low Energy approach</b>|
+|**Figure 19: Limitations of the Bluetooth Low Energy approach**|
 
 In *Figure 19*, this is visualized, while focusing on the captured Rolling Proximity Identifiers by only a single device. We are assuming that devices broadcast their own RPI every 250ms and use listening windows with a length of four seconds, three minutes apart. There are five other active devices – each representing a different kind of possible exposure. In the example, devices 3 and 4 go completely unnoticed, while a close proximity with the user of device 2 cannot be detected. In contrast to that very brief, but close connection with the user of device 5 (e.g. only brushing the other person in the supermarket) is noticed and logged accordingly. The duration and interval of scanning needs to be balanced by Apple and Google against battery life, as more frequent scanning consumes more energy.
 
@@ -381,5 +381,5 @@ The following diagram shows the individual components and their interaction:
 
 | ![Figure 20: Privacy-preserving Data Donation](images/solution_architecture/device_attestation.svg "Figure 20: Privacy-preserving Data Donation") |
 |:--:|
-| <b>Figure 20: Privacy-preserving Data Donation</b>|
+| **Figure 20: Privacy-preserving Data Donation**|
 
