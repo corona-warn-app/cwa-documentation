@@ -382,4 +382,3 @@ The following diagram shows the individual components and their interaction:
 | ![Figure 20: Privacy-preserving Data Donation](images/solution_architecture/device_attestation.svg "Figure 20: Privacy-preserving Data Donation") |
 |:--:|
 | **Figure 20: Privacy-preserving Data Donation**|
-
