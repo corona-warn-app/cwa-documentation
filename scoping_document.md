@@ -92,7 +92,7 @@ interactions between people that occur successively. In each phase, persons are
 assigned motivations or requirements that meet their expectations of the app and
 guide them intuitively through the process.
 
-![Figure 1: User Journey](user_journey.png "User Journey")
+![Figure 1: User Journey](./images/user_journey.png "User Journey")
 
 #### *Idea* phase
 
