@@ -63,7 +63,8 @@ message QRCodePayload {
   uint32 version = 1;
   TraceLocation locationData = 2;
   CrowdNotifierData crowdNotifierData = 3;
-  CWALocationData vendorData = 4;
+  // byte sequence of CWALocationData
+  bytes vendorData = 4;
 }
 
 message TraceLocation {
