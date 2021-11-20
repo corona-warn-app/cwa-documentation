@@ -64,7 +64,7 @@ message QRCodePayload {
   TraceLocation locationData = 2;
   CrowdNotifierData crowdNotifierData = 3;
   // byte sequence of CWALocationData
-  bytes countryData = 4;
+  bytes vendorData = 4;
 }
 
 message TraceLocation {
