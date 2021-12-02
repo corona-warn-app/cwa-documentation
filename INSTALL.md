@@ -27,9 +27,7 @@ Supported languages are:
 
 ## Prerequisites
 
-To run all the linters please install for your OS:
-
-* [npm](https://github.com/nodesource/distributions)
+This repository is aligned to the Node.js 14 Maintenance LTS version of [Node.js](https://nodejs.org/en/) (which includes npm). Install the v14 (`lts/fremium`) version of Node.js which is available from [Node.js - Previous Releases](https://nodejs.org/en/download/releases/) page.
 
 ## Installation
 
@@ -58,7 +56,7 @@ Every individual check can be run like so:
 npm runscript my-individual-check
 ```
 
-See the package.json file for help.
+See the [package.json](https://github.com/corona-warn-app/cwa-documentation/blob/master/package.json) file for the currently available scripts.
 
 #### Markdown linter
 
