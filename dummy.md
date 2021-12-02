@@ -1,1 +1,3 @@
-dummy unused text for test purposes
+# Test file
+
+Dummy unused text for test purposes.
