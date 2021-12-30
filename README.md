@@ -90,7 +90,7 @@ For an easier understanding of the used acronyms and special terms in our docume
 
 | Repository                 | Description                                                                                 |
 | -------------------------- | ------------------------------------------------------------------------------------------- |
-| [cwa-documentation]        | Project overview, general documentation, and white papers.                                  |
+| [cwa-documentation]        | Project overview, general documentation and white papers.                                   |
 | [cwa-app-ios]              | Native iOS app using the Apple/Google exposure notification API.                            |
 | [cwa-app-android]          | Native Android app using the Apple/Google exposure notification API.                        |
 | [cwa-website]              | The official website for the Corona-Warn-App.                                               |
@@ -105,9 +105,10 @@ For an easier understanding of the used acronyms and special terms in our docume
 | [cwa-quicktest-onboarding] | Documentation about onboarding procedure for rapid antigen test partners.                   |
 | [cwa-quick-test-frontend]  | Frontend implementation of the rapid antigen test portal for participating partners.        |
 | [cwa-quick-test-backend]   | Backend implementation of the rapid antigen test portal and API for participating partners. |
-| [cwa-event-landingpage]    | Landing page for CWA which opens if the user does not have the app installed.               |
-| [cwa-event-qr-code]        | Utility to generate QR codes for Event Registration.                                        |
-| [cwa-hotline]              | Contains all issues reg. the hotlines of the CWA                                            |
+| [cwa-event-landingpage]    | Landing page for CWA which opens if the user does not have the app installed.               |
+| [cwa-event-qr-code]        | Utility to generate QR codes for Event Registration.                                        |
+| [cwa-map-public-frontend]  | Public frontend of map.schnelltestportal.de.                                                |
+| [cwa-hotline]              | Contains all issues reg. the hotlines of the CWA.                                           |
 
 [cwa-documentation]: https://github.com/corona-warn-app/cwa-documentation
 [cwa-app-ios]: https://github.com/corona-warn-app/cwa-app-ios
@@ -126,6 +127,7 @@ For an easier understanding of the used acronyms and special terms in our docume
 [cwa-quick-test-backend]: https://github.com/corona-warn-app/cwa-quick-test-backend
 [cwa-event-landingpage]: https://github.com/corona-warn-app/cwa-event-landingpage
 [cwa-event-qr-code]: https://github.com/corona-warn-app/cwa-event-qr-code
+[cwa-map-public-frontend]: https://github.com/corona-warn-app/cwa-map-public-frontend
 [cwa-hotline]: https://github.com/corona-warn-app/cwa-hotline
 
 ## Licensing
