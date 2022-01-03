@@ -13,7 +13,7 @@
     <a href="#our-documentation">Our Documentation</a> •
     <a href="#licensing">Licensing</a> •
     <a href="#how-to-contribute">How to Contribute</a> •
-    <a href="https://www.coronawarn.app/en/">Web Site</a>
+    <a href="https://www.coronawarn.app/en/">Website</a>
 </p>
 <hr />
 
