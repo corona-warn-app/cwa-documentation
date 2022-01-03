@@ -21,8 +21,9 @@ We assume a close association of a mobile phone and its user and, thus, equate t
    2. [Data URL](#data-url)
    3. [Data retention](#data-retention)
 3. [MOBILE APPLICATIONS](#mobile-applications)
-   1. [Risk Score](#risk-score)
-   2. [Data transfer and data processing](#data-transfer-and-data-processing)
+   1. [Attenuation Buckets](#attenuation-buckets)
+   2. [Risk Calculation](#risk-calculation)
+   3. [Data transfer and data processing](#data-transfer-and-data-processing)
 4. [RUNTIME ENVIRONMENT (HOSTING)](#runtime-environment-hosting)
    1. [Bandwidth estimations](#bandwidth-estimations)
 5. [CROSS-BORDER INTEROPERABILITY](#cross-border-interoperability)
@@ -134,7 +135,7 @@ In order to prevent that the TEK of the current day can be used to generate new 
 
 As users are not required to confirm negative test results, the functionality of uploading Diagnosis Keys on subsequent days remains theoretical. Each of those uploads could take place earliest at the end of each subsequent day (see (2) in *Figure 6*). It would require explicit consent of the user for each day and could take place up to the time when the person is not considered contagious anymore (but not any longer, as this would lead to false positives).
 
-## Backend
+## BACKEND
 
 | ![Figure 7: Actors in the system, including external parties (blue components to be open-sourced)](images/solution_architecture/actors_in_the_system.svg "Figure 7: Actors in the system, including external parties (blue components to be open-sourced)") |
 |:--:|
@@ -316,7 +317,7 @@ While each set of 14 diagnosis keys only has the small size of 392 bytes, all ne
 
 If the back end calls from the mobile applications cannot be spread as evenly as we expect, we might experience peaks. To achieve an even spread (and to be able to handle a peak), we will employ a Content Delivery Network (CDN) by T-Systems to make the individual aggregated files available. According to an evaluation with T-Systems, the estimated throughput and request number can be handled by their infrastructure.
 
-## Cross-Border Interoperability
+## CROSS-BORDER INTEROPERABILITY
 
 A definite prerequisite for compatibility is that the identifiers of the mobile devices can be matched, i.e. the GAEN framework by Apple and Google is being used.
 
