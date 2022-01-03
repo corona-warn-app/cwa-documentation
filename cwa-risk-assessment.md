@@ -155,7 +155,7 @@ Betty's updated risk notification now shows 2 risk encounters, the most recent o
 
 ## Current Configuration
 
-As documented in the [risk score calculation section](https://github.com/corona-warn-app/cwa-documentation/blob/master/solution_architecture.md#risk-score-calculation) of the solution architecture document, the actual parameters for the calculation are provided by a set of parameters which are hosted on cwa-server.
+As documented in the [Risk Calculation](solution_architecture.md#risk-calculation) section of the solution architecture document, the actual parameters for the calculation are provided by a set of parameters which are hosted on cwa-server.
 This configuration might change over time according to the new research results and insights. The respective current set of configuration values can be looked up in the [cwa-server repository](https://github.com/corona-warn-app/cwa-server):
 
 - [Exposure Configuration](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/main-config/exposure-config.yaml)

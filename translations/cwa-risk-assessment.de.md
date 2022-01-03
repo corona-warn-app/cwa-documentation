@@ -156,7 +156,7 @@ Bettys aktualisierte Risikobenachrichtigung zeigt jetzt 2 Risikobegegnungen an, 
 
 ## Aktuelle Konfiguration
 
-Wie im [Abschnitt "*Risk Score Calculation*"](https://github.com/corona-warn-app/cwa-documentation/blob/master/solution_architecture.md#risk-score-calculation) des *Solution-Architecture*-Dokuments beschrieben, werden die jeweiligen Parameter für die Berechnung aus von einer Menge an Parametern bestimmt, die vom CWA-Server zur Verfügung gestellt werden.
+Wie im [Abschnitt "*Risk Calculation*"](../solution_architecture.md#risk-calculation) des *Solution-Architecture*-Dokuments beschrieben, werden die jeweiligen Parameter für die Berechnung aus von einer Menge an Parametern bestimmt, die vom CWA-Server zur Verfügung gestellt werden.
 Diese Konfiguration kann sich über die Zeit auf Basis neuer Forschungsergebnisse und Erkentnisse ändern.
 Die jeweils aktuell gültigen Parameterwerte können im [*CWA-Server-Repository*](https://github.com/corona-warn-app/cwa-server) eingesehen werden:
 
