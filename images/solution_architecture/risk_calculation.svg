@@ -1,3 +1,1068 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="42 23 1721 1494" width="1721pt" height="1494pt" xmlns:dc="http://purl.org/dc/elements/1.1/"><metadata> Produced by OmniGraffle 6.6.2 <dc:date>2021-09-25 09:36:45 +0000</dc:date></metadata><defs><font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 8 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="975.0061" descent="-216.99524" font-weight="bold"><font-face-src><font-face-name name="HelveticaNeue-Bold"/></font-face-src></font-face><font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.99585" descent="-212.99744" font-weight="500"><font-face-src><font-face-name name="HelveticaNeue"/></font-face-src></font-face><font-face font-family="Helvetica Neue" font-size="23" panose-1="2 0 8 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="975.0061" descent="-216.99524" font-weight="bold"><font-face-src><font-face-name name="HelveticaNeue-Bold"/></font-face-src></font-face><marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="black"><g><path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/></g></marker><marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker_2" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="#a5a5a5"><g><path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/></g></marker><marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker_3" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="#b1001c"><g><path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/></g></marker><marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker_4" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="#235e00"><g><path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/></g></marker><font-face font-family="Helvetica Neue" font-size="12" panose-1="2 0 8 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="975.0061" descent="-216.99524" font-weight="bold"><font-face-src><font-face-name name="HelveticaNeue-Bold"/></font-face-src></font-face><font-face font-family="Helvetica Neue" font-size="12" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.99585" descent="-212.99744" font-weight="500"><font-face-src><font-face-name name="HelveticaNeue"/></font-face-src></font-face><font-face font-family="Helvetica" font-size="16" units-per-em="1000" underline-position="-75.683594" underline-thickness="49.316406" slope="0" x-height="532.22656" cap-height="719.72656" ascent="770.01953" descent="-229.98047" font-weight="bold"><font-face-src><font-face-name name="Helvetica-Bold"/></font-face-src></font-face><font-face font-family="Helvetica" font-size="16" units-per-em="1000" underline-position="-75.683594" underline-thickness="49.316406" slope="0" x-height="522.94922" cap-height="717.28516" ascent="770.01953" descent="-229.98047" font-weight="500"><font-face-src><font-face-name name="Helvetica"/></font-face-src></font-face></defs><g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1"><title>2021-08-23 Risk Calculation V2 ohne Vorfilter 3</title><rect fill="white" width="1780.3465" height="1534.3465"/><g><title>Ebene 1</title><rect x="53.858267" y="34.015748" width="221.10236" height="1267.0866" fill="white"/><rect x="53.858267" y="34.015748" width="221.10236" height="1267.0866" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(58.858267 39.015748)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" x="0" y="16" textLength="40.896">Confi</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" x="40.896" y="16" textLength="63.696">guration</tspan></text><rect x="73.700787" y="490.3937" width="184.25197" height="93.543307" fill="white"/><rect x="73.700787" y="490.3937" width="184.25197" height="93.543307" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(78.700787 495.3937)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="0" y="15" textLength="96.624">TRL Mapping</tspan></text><rect x="950.67924" y="422.3622" width="149.45275" height="527.2441" fill="white"/><rect x="950.67924" y="422.3622" width="149.45275" height="527.2441" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(955.67924 427.3622)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="5.4143772" y="15" textLength="9.184">T</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="13.126377" y="15" textLength="120.912">ransmission Risk</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="20.686377" y="33.447998" textLength="102.528">Level (TRL) to </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="29.278377" y="51.895996" textLength="9.776">V</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="38.174377" y="51.895996" textLength="58.368">alue (TR</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="96.25438" y="51.895996" textLength="13.92">V)</tspan></text><rect x="968.73974" y="490.3937" width="45.35433" height="45.35433" fill="white"/><rect x="968.73974" y="490.3937" width="45.35433" height="45.35433" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(973.73974 499.23728)" fill="#a5a5a5"><tspan font-family="Helvetica Neue" font-size="23" font-weight="bold" fill="#a5a5a5" x="14.284665" y="22" textLength="6.785">I</tspan></text><rect x="968.73974" y="547.0866" width="45.35433" height="45.35433" fill="white"/><rect x="968.73974" y="547.0866" width="45.35433" height="45.35433" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(973.73974 555.9302)" fill="#a5a5a5"><tspan font-family="Helvetica Neue" font-size="23" font-weight="bold" fill="#a5a5a5" x="10.892165" y="22" textLength="13.57">II</tspan></text><rect x="968.73974" y="603.77952" width="45.35433" height="45.35433" fill="white"/><rect x="968.73974" y="603.77952" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(973.73974 612.6231)" fill="black"><tspan font-family="Helvetica Neue" font-size="23" font-weight="bold" x="7.499665" y="22" textLength="20.355">III</tspan></text><rect x="968.73974" y="660.47244" width="45.35433" height="45.35433" fill="white"/><rect x="968.73974" y="660.47244" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(973.73974 669.31602)" fill="black"><tspan font-family="Helvetica Neue" font-size="23" font-weight="bold" fill="black" x="7.0396652" y="22" textLength="21.275">IV</tspan></text><rect x="968.73974" y="717.16535" width="45.35433" height="45.35433" fill="white"/><rect x="968.73974" y="717.16535" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(973.73974 726.00894)" fill="black"><tspan font-family="Helvetica Neue" font-size="23" font-weight="bold" x="10.432165" y="22" textLength="14.49">V</tspan></text><rect x="968.73974" y="773.85826" width="45.35433" height="45.35433" fill="white"/><rect x="968.73974" y="773.85826" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(973.73974 782.70185)" fill="black"><tspan font-family="Helvetica Neue" font-size="23" font-weight="bold" x="7.0396652" y="22" textLength="21.275">VI</tspan></text><rect x="968.73974" y="830.5512" width="45.35433" height="45.35433" fill="white"/><rect x="968.73974" y="830.5512" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(973.73974 839.39476)" fill="black"><tspan font-family="Helvetica Neue" font-size="23" font-weight="bold" fill="black" x="3.6471652" y="22" textLength="28.06">VII</tspan></text><rect x="968.73974" y="887.2441" width="45.35433" height="45.35433" fill="white"/><rect x="968.73974" y="887.2441" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(973.73974 896.0877)" fill="black"><tspan font-family="Helvetica Neue" font-size="23" font-weight="bold" x=".25466522" y="22" textLength="34.845">VIII</tspan></text><line x1="668.97637" y1="286.29921" x2="668.97637" y2="559.86378" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line x1="1381.2559" y1="314.64567" x2="400.4685" y2="314.64567" stroke="#003776" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" stroke-dasharray="4,4"/><text transform="translate(1349.81495 257.33547)" fill="#003776"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="0" y="15" textLength="58.96">Exposur</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="58.672" y="15" textLength="50.656">e Notifi</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="109.328" y="15" textLength="128.592">cation Framework</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="0" y="33.447998" textLength="44.144">(Contr</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="43.856" y="33.447998" textLength="58.08">olled thr</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="101.648" y="33.447998" textLength="126.832">ough Parameters)</tspan></text><text transform="translate(1352.24015 334.58702)" fill="#003776"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="0" y="15" textLength="73.2">App Logic</tspan></text><rect x="417.47638" y="161.5748" width="722.05118" height="56.692913" fill="white"/><rect x="417.47638" y="161.5748" width="722.05118" height="56.692913" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(422.47638 171.47326)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="37.193588" y="15" textLength="157.344">Details of the Exposur</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="194.24959" y="15" textLength="85.616">e Window fr</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="279.57759" y="15" textLength="216.32">om the Google/Apple Exposur</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="495.6096" y="15" textLength="50.656">e Notifi</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="546.2656" y="15" textLength="128.592">cation Framework</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="261.20159" y="33.447998" textLength="19.84">(Pr</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="280.75359" y="33.447998" textLength="170.096">ocessed within the app)</tspan></text><rect x="1038.8224" y="547.0866" width="45.35433" height="45.35433" fill="white"/><rect x="1038.8224" y="547.0866" width="45.35433" height="45.35433" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1043.8224 555.9302)" fill="#074080" fill-opacity=".5"><tspan font-family="Helvetica Neue" font-size="23" font-weight="bold" fill="#074080" fill-opacity=".5" x="1.6921652" y="22" textLength="31.97">0.0</tspan></text><rect x="1038.8224" y="603.77952" width="45.35433" height="45.35433" fill="white"/><rect x="1038.8224" y="603.77952" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1043.8224 612.6231)" fill="#003776"><tspan font-family="Helvetica Neue" font-size="23" font-weight="bold" fill="#003776" x="1.6921652" y="22" textLength="31.97">0.6</tspan></text><rect x="1038.8224" y="660.47244" width="45.35433" height="45.35433" fill="white"/><rect x="1038.8224" y="660.47244" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1043.8224 669.31602)" fill="#003776"><tspan font-family="Helvetica Neue" font-size="23" font-weight="bold" fill="#003776" x="1.6921652" y="22" textLength="31.97">0.8</tspan></text><rect x="1038.8224" y="717.16535" width="45.35433" height="45.35433" fill="white"/><rect x="1038.8224" y="717.16535" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1043.8224 726.00894)" fill="#003776"><tspan font-family="Helvetica Neue" font-size="23" font-weight="bold" fill="#003776" x="1.6921652" y="22" textLength="31.97">1.0</tspan></text><rect x="1038.8224" y="773.85826" width="45.35433" height="45.35433" fill="white"/><rect x="1038.8224" y="773.85826" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1043.8224 782.70185)" fill="#003776"><tspan font-family="Helvetica Neue" font-size="23" font-weight="bold" fill="#003776" x="1.6921652" y="22" textLength="31.97">1.2</tspan></text><rect x="1038.8224" y="830.5512" width="45.35433" height="45.35433" fill="white"/><rect x="1038.8224" y="830.5512" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1043.8224 839.39476)" fill="#003776"><tspan font-family="Helvetica Neue" font-size="23" font-weight="bold" fill="#003776" x="1.6921652" y="22" textLength="31.97">1.4</tspan></text><rect x="1038.8224" y="887.2441" width="45.35433" height="45.35433" fill="white"/><rect x="1038.8224" y="887.2441" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1043.8224 896.0877)" fill="#003776"><tspan font-family="Helvetica Neue" font-size="23" font-weight="bold" fill="#003776" x="1.6921652" y="22" textLength="31.97">1.6</tspan></text><line x1="1014.0941" y1="569.76378" x2="1026.87124" y2="569.76378" marker-end="url(#FilledArrow_Marker_2)" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line x1="1014.0941" y1="625.9567" x2="1026.87124" y2="625.9567" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line x1="1014.0941" y1="682.1496" x2="1026.87124" y2="682.1496" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line x1="1014.0941" y1="738.3425" x2="1026.87124" y2="738.3425" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line x1="1014.0941" y1="794.53543" x2="1026.87124" y2="794.53543" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line x1="1014.0941" y1="850.72834" x2="1026.87124" y2="850.72834" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line x1="1014.0941" y1="906.92125" x2="1026.87124" y2="906.92125" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><rect x="1038.8224" y="490.3937" width="45.35433" height="45.35433" fill="white"/><rect x="1038.8224" y="490.3937" width="45.35433" height="45.35433" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1043.8224 499.23728)" fill="#074080" fill-opacity=".5"><tspan font-family="Helvetica Neue" font-size="23" font-weight="bold" fill="#074080" fill-opacity=".5" x="1.6921652" y="22" textLength="31.97">0.0</tspan></text><line x1="1014.0941" y1="515.9055" x2="1026.87124" y2="515.9055" marker-end="url(#FilledArrow_Marker_2)" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><rect x="910.7047" y="240.94488" width="104.88189" height="45.35433" fill="white"/><rect x="910.7047" y="240.94488" width="104.88189" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(915.7047 254.39805)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="4.1769446" y="15" textLength="62.224">Report T</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="64.624945" y="15" textLength="26.08">ype</tspan></text><rect x="1026.9252" y="240.94488" width="113.385826" height="45.35433" fill="white"/><rect x="1026.9252" y="240.94488" width="113.385826" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1031.9252 254.39805)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x=".132913055" y="15" textLength="103.12">Infectiousness</tspan></text><rect x="946.77165" y="334.48819" width="155.90551" height="45.35433" fill="white"/><rect x="946.77165" y="334.48819" width="155.90551" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(951.77165 338.71735)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="14.7207555" y="15" textLength="93.92">TRL (Level) fr</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="108.352755" y="15" textLength="27.28">om </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="28.192755" y="33.447998" textLength="89.52">components</tspan></text><line x1="981.57086" y1="286.29921" x2="981.57086" y2="327.42283" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line x1="1063.7756" y1="286.29921" x2="1063.7756" y2="327.42283" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line x1="964.563" y1="218.26772" x2="964.563" y2="231.04488" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line x1="1085.45275" y1="218.26772" x2="1085.45275" y2="231.04488" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><rect x="417.47638" y="240.94488" width="476.22047" height="45.35433" fill="white"/><rect x="417.47638" y="240.94488" width="476.22047" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(422.47638 253.88999)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="99.774235" y="16" textLength="15.696">Pr</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="115.182235" y="16" textLength="46.816">ocess </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" x="161.998235" y="16" textLength="17.44">all</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="179.43823" y="16" textLength="187.008"> contained scan Instances</tspan></text><line x1="672.5945" y1="218.26772" x2="672.5945" y2="231.04488" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><rect x="977.2437" y="983.62204" width="104.88189" height="102.047243" fill="white"/><rect x="977.2437" y="983.62204" width="104.88189" height="102.047243" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(982.2437 1006.97367)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="13.8169446" y="15" textLength="14.816">W</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="27.720945" y="15" textLength="53.344">eighted</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="13.8089446" y="33.447998" textLength="58.96">Exposur</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="72.480945" y="33.447998" textLength="8.592">e</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="29.952945" y="51.895996" textLength="34.976">Time</tspan></text><text transform="translate(1026.66445 954.04747)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" x=".204" y="16" textLength="8.592">x</tspan></text><text transform="translate(1026.16445 1089.2837)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" x=".2" y="16" textLength="9.6">=</tspan></text><text transform="translate(1437.5503 1159.83926)" fill="#b1001c"><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#b1001c" x="50.728" y="16" textLength="32.544">&gt;= 9</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#b1001c" x=".192" y="35.464111" textLength="133.616">Encounter(s) with</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#b1001c" x="33.088" y="54.928223" textLength="67.824">High risk</tspan></text><text transform="translate(1434.7156 1236.3747)" fill="#235e00"><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#235e00" x="23.848" y="16" textLength="86.304">&gt;= 5 &amp;&amp; &lt; 9</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#235e00" x=".192" y="35.464111" textLength="133.616">Encounter(s) with</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#235e00" x="37.248" y="54.928223" textLength="59.504">low risk</tspan></text><path d="M 1368.4248 1255.748 L 1388.9764 1189.748 L 1421.34015 1189.748" marker-end="url(#FilledArrow_Marker_3)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line x1="1368.4248" y1="1255.748" x2="1421.34015" y2="1255.748" marker-end="url(#FilledArrow_Marker_4)" stroke="#235e00" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><rect x="500.28652" y="569.76378" width="323.01788" height="312.63386" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(505.28652 574.76378)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="32.14894" y="16" textLength="39.424">Time </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" x="71.57294" y="16" textLength="5.632">t</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="77.20494" y="16" textLength="183.216"> at minimum* attenuation </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" x="260.42094" y="16" textLength="20.448">att</tspan></text><rect x="509.92885" y="615.1181" width="303.73323" height="50.831424" fill="white"/><rect x="509.92885" y="615.1181" width="303.73323" height="50.831424" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(514.92885 630.80176)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="80.266616" y="16" textLength="32.304">t(att </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" x="112.570616" y="16" textLength="14.048">&lt; </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="126.618616" y="16" textLength="22.24">63 </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="148.85862" y="16" textLength="20.448">dB</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="169.30662" y="16" textLength="4.736">)</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="174.04262" y="16" textLength="17.184"> x </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="191.22662" y="16" textLength="22.24">0.8</tspan></text><rect x="509.92885" y="683.9865" width="303.73323" height="50.831424" fill="white"/><rect x="509.92885" y="683.9865" width="303.73323" height="50.831424" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(514.92885 699.67014)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="21.306616" y="16" textLength="55.952">t(att &gt;= </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="77.258616" y="16" textLength="17.792">63</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="95.050616" y="16" textLength="4.448"> </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="99.498616" y="16" textLength="20.448">dB</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="119.946616" y="16" textLength="66.224"> &amp;&amp; att &lt; </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="186.17062" y="16" textLength="17.792">73</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="203.96262" y="16" textLength="4.448"> </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="208.41062" y="16" textLength="29.04">dB) </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="237.45062" y="16" textLength="12.736">x </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="250.18662" y="16" textLength="22.24">1.0</tspan></text><text transform="translate(660.845 664.768)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="4.1111604" y="15" textLength="9.6">+</tspan></text><text transform="translate(680.48576 887.44963)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="41.948726" y="15" textLength="70.224">(seconds/</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="46.676726" y="33.447998" textLength="60.768">minutes)</tspan></text><line x1="1082.83464" y1="1170.70865" x2="1181.93464" y2="1170.70865" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line x1="1022.598" y1="379.84252" x2="1022.598" y2="415.29685" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(60.548993 1439.6343)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="0" y="15" textLength="135.136">* changes possible</tspan></text><rect x="975.79133" y="1119.685" width="104.88189" height="102.047243" fill="white"/><rect x="975.79133" y="1119.685" width="104.88189" height="102.047243" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(978.83464 1133.26075)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="5.828" y="16" textLength="87.344">Normalised</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="14.236" y="35.464111" textLength="61.632">exposur</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="75.58" y="35.464111" textLength="9.184">e</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="18.556" y="54.928223" textLength="61.888">time (t  )</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x=".34" y="74.392334" textLength="98.32">(per window)</tspan></text><text transform="translate(1045.9844 1181.7039)" fill="black"><tspan font-family="Helvetica Neue" font-size="12" font-weight="bold" fill="black" x=".442" y="12" textLength="7.116">n</tspan></text><rect x="73.700787" y="595.2756" width="184.25197" height="445.03937" fill="white"/><rect x="73.700787" y="595.2756" width="184.25197" height="445.03937" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(78.700787 600.2756)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="0" y="15" textLength="157.088">Attenuation „buckets“</tspan></text><rect x="85.399325" y="637.79527" width="160.85489" height="51.023622" fill="white"/><rect x="85.399325" y="637.79527" width="160.85489" height="51.023622" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(90.399325 644.35103)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="12.603446" y="15" textLength="78.224">„Close“ thr</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="90.539446" y="15" textLength="47.712">eshold</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="53.787446" y="34.447998" textLength="17.792">63</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" x="71.579446" y="34.447998" textLength="25.488"> dB</tspan></text><rect x="85.399325" y="751.1811" width="160.85489" height="51.023622" fill="white"/><rect x="85.399325" y="751.1811" width="160.85489" height="51.023622" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(90.399325 757.73685)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="3.987446" y="15" textLength="95.456">„Medium“ thr</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="99.155446" y="15" textLength="47.712">eshold</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="53.787446" y="34.447998" textLength="17.792">73</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" x="71.579446" y="34.447998" textLength="25.488"> dB</tspan></text><rect x="85.399325" y="688.8189" width="160.85489" height="51.023622" fill="white"/><rect x="85.399325" y="688.8189" width="160.85489" height="51.023622" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(90.399325 695.37465)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="22.251446" y="15" textLength="106.352">„Close“ weight</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="64.307446" y="34.447998" textLength="22.24">0.8</tspan></text><rect x="85.399325" y="802.2047" width="160.85489" height="51.023622" fill="white"/><rect x="85.399325" y="802.2047" width="160.85489" height="51.023622" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(90.399325 808.7605)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="13.635446" y="15" textLength="123.584">„Medium“ weight</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="64.307446" y="34.447998" textLength="22.24">1.0</tspan></text><rect x="73.700787" y="1057.3228" width="184.25197" height="235.27559" fill="white"/><rect x="73.700787" y="1057.3228" width="184.25197" height="235.27559" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(78.700787 1062.3228)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="0" y="15" textLength="117.632">Overall Risk Defi</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="117.632" y="15" textLength="39.12">nition</tspan></text><rect x="87.874015" y="1145.19684" width="155.90551" height="76.535433" fill="white"/><rect x="87.874015" y="1145.19684" width="155.90551" height="76.535433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(92.874015 1145.55245)" fill="#003776"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="19.776755" y="15" textLength="17.472">Gr</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="36.960755" y="15" textLength="93.616">een (low risk </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="9.6967555" y="33.447998" textLength="126.512">with encounter(s))</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="25.352755" y="52.895996" textLength="99.648">&gt;= 5 &amp;&amp; &lt; 13 </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="42.448755" y="72.360107" textLength="61.008">minutes</tspan></text><rect x="87.874015" y="1230.2362" width="155.90551" height="51.023622" fill="white"/><rect x="87.874015" y="1230.2362" width="155.90551" height="51.023622" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(92.874015 1236.792)" fill="#003776"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="21.984755" y="15" textLength="101.936">Red (high risk)</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="19.504755" y="34.447998" textLength="41.44">&gt;= 13</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" x="60.944755" y="34.447998" textLength="65.456"> minutes</tspan></text><line x1="257.95275" y1="615.1181" x2="490.38652" y2="615.1181" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke-dasharray="4,4"/><line x1="257.95275" y1="1256.92125" x2="1352.072" y2="1256.92125" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke-dasharray="4,4"/><rect x="420.31102" y="70.86614" width="722.05118" height="56.692913" fill="white"/><rect x="420.31102" y="70.86614" width="722.05118" height="56.692913" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(425.31102 89.9886)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="181.36959" y="15" textLength="58.96">Exposur</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="240.04159" y="15" textLength="50.656">e Notifi</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="290.69759" y="15" textLength="239.984">cation Framework (Apple/Google)</tspan></text><line x1="802.2047" y1="127.559054" x2="802.2047" y2="151.6748" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><rect x="73.700787" y="70.86614" width="184.25197" height="229.6063" fill="white"/><rect x="73.700787" y="70.86614" width="184.25197" height="229.6063" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(78.700787 75.86614)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="0" y="15" textLength="72.88">ENF Confi</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="72.88" y="15" textLength="58.672">guration</tspan></text><rect x="87.874015" y="100.504335" width="155.90551" height="52.961228" fill="white"/><rect x="87.874015" y="100.504335" width="155.90551" height="52.961228" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(92.874015 108.53695)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="41.536755" y="15" textLength="67.28">DSOS to </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="21.392755" y="33.447998" textLength="103.12">Infectiousness</tspan></text><rect x="87.874015" y="168.17701" width="155.90551" height="52.961228" fill="white"/><rect x="87.874015" y="168.17701" width="155.90551" height="52.961228" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(92.874015 176.20963)" fill="#a5a5a5"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#a5a5a5" x="12.0567555" y="15" textLength="126.24">Infectiousness to </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#a5a5a5" x="49.256755" y="33.447998" textLength="47.392">weight</tspan></text><rect x="87.874015" y="235.8497" width="155.90551" height="52.961228" fill="white"/><rect x="87.874015" y="235.8497" width="155.90551" height="52.961228" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(92.874015 243.88231)" fill="#a5a5a5"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#a5a5a5" x="21.536755" y="15" textLength="107.28">Report type to </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#a5a5a5" x="49.256755" y="33.447998" textLength="47.392">weight</tspan></text><line x1="257.95275" y1="102.047243" x2="410.41102" y2="102.047243" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke-dasharray="4,4"/><rect x="1173.5433" y="102.047243" width="155.90551" height="102.047243" fill="white"/><rect x="1173.5433" y="102.047243" width="155.90551" height="102.047243" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1178.5433 162.69849)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="1.8327555" y="15" textLength="142.24">„Positivbegegnung“</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="39.912755" y="33.447998" textLength="57.776">exposur</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="97.400755" y="33.447998" textLength="8.592">e</tspan></text><circle cx="1223.2419" cy="115.09943" r="8.087663" fill="white"/><circle cx="1223.2419" cy="115.09943" r="8.087663" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1223.24164" y1="124.187084" x2="1223.24124" y2="139.13778" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1209.76224" y1="126.55678" x2="1236.72124" y2="126.55678" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1223.24124" y1="139.13778" x2="1213.35624" y2="153.51578" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1223.24124" y1="139.13778" x2="1233.35124" y2="153.51578" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="1280.12715" cy="125.925245" r="8.087663" fill="white"/><circle cx="1280.12715" cy="125.925245" r="8.087663" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1280.1269" y1="135.0129" x2="1280.1265" y2="149.963595" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1266.6475" y1="137.382595" x2="1293.6065" y2="137.382595" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1280.1265" y1="149.963595" x2="1270.2415" y2="164.3416" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1280.1265" y1="149.963595" x2="1290.2365" y2="164.3416" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1240.3823" y1="128.03982" x2="1254.6643" y2="119.113585" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line x1="1243.217" y1="130.87447" x2="1253.1595" y2="130.87447" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line x1="1240.3823" y1="133.709115" x2="1254.6643" y2="142.63535" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><rect x="1229.04375" y="119.53589" width="19.84252" height="19.84252" id="path"/><clipPath id="clip_path"><use xl:href="#path"/></clipPath><g clip-path="url(#clip_path)"><image xl:href="image2.pdf" width="1371" height="1371" transform="translate(1229.04375 119.53589) scale(.014473027)"/></g><rect x="1593.0709" y="1128.189" width="158.74016" height="178.58268" fill="white"/><rect x="1593.0709" y="1128.189" width="158.74016" height="178.58268" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1598.0709 1192.03166)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="3.5380783" y="15" textLength="146.112">„Begegnung(en) mit </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#235e00" x="20.434078" y="33.447998" textLength="70.832">niedrigem</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="91.26608" y="33.447998" textLength="41.488"> oder </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#b1001c" x="12.874078" y="51.895996" textLength="68.176">erhöhtem</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="81.05008" y="51.895996" textLength="48"> Risiko</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="129.05008" y="51.895996" textLength="6.816">“</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#235e00" x="16.154078" y="88.343994" textLength="30.208">Low</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="46.362078" y="88.343994" textLength="23.408"> or </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#b1001c" x="69.77008" y="88.343994" textLength="33.184">High</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="102.95408" y="88.343994" textLength="34.08"> risk </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="33.186078" y="106.79199" textLength="57.776">exposur</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="90.67408" y="106.79199" textLength="24.88">e(s)</tspan></text><circle cx="1642.7694" cy="1141.24116" r="8.087663" fill="white"/><circle cx="1642.7694" cy="1141.24116" r="8.087663" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1642.7692" y1="1150.3288" x2="1642.7688" y2="1165.2795" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1629.2898" y1="1152.6985" x2="1656.2488" y2="1152.6985" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1642.7688" y1="1165.2795" x2="1632.8838" y2="1179.6575" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1642.7688" y1="1165.2795" x2="1652.8788" y2="1179.6575" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="1699.6547" cy="1152.067" r="8.087663" fill="white"/><circle cx="1699.6547" cy="1152.067" r="8.087663" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1699.6545" y1="1161.1546" x2="1699.6541" y2="1176.1053" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1686.1751" y1="1163.5243" x2="1713.1341" y2="1163.5243" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1699.6541" y1="1176.1053" x2="1689.7691" y2="1190.4833" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1699.6541" y1="1176.1053" x2="1709.7641" y2="1190.4833" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1659.9099" y1="1154.18155" x2="1674.1919" y2="1145.2553" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line x1="1662.7445" y1="1157.0162" x2="1672.6871" y2="1157.0162" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line x1="1659.9099" y1="1159.85084" x2="1674.1919" y2="1168.7771" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><rect x="1648.5713" y="1145.6776" width="19.84252" height="19.84252" id="path_2"/><clipPath id="clip_path_2"><use xl:href="#path_2"/></clipPath><g clip-path="url(#clip_path_2)"><image xl:href="image2.pdf" width="1371" height="1371" transform="translate(1648.5713 1145.6776) scale(.014473027)"/></g><rect x="1593.0709" y="1360.6299" width="158.74016" height="144.56693" fill="white"/><rect x="1593.0709" y="1360.6299" width="158.74016" height="144.56693" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1598.0709 1427.35285)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="24.146078" y="15" textLength="100.448">„Nicht-Risiko-</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="16.882078" y="33.447998" textLength="114.976">Begegnung(en)“</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x=".44207828" y="69.895996" textLength="123.264">Non-risk exposur</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="123.41808" y="69.895996" textLength="24.88">e(s)</tspan></text><circle cx="1642.7694" cy="1373.6821" r="8.087663" fill="white"/><circle cx="1642.7694" cy="1373.6821" r="8.087663" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1642.7692" y1="1382.76975" x2="1642.7688" y2="1397.72045" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1629.2898" y1="1385.13945" x2="1656.2488" y2="1385.13945" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1642.7688" y1="1397.72045" x2="1632.8838" y2="1412.09845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1642.7688" y1="1397.72045" x2="1652.8788" y2="1412.09845" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="1699.6547" cy="1384.5079" r="8.087663" fill="white"/><circle cx="1699.6547" cy="1384.5079" r="8.087663" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1699.6545" y1="1393.5956" x2="1699.6541" y2="1408.5463" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1686.1751" y1="1395.9653" x2="1713.1341" y2="1395.9653" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1699.6541" y1="1408.5463" x2="1689.7691" y2="1422.9243" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1699.6541" y1="1408.5463" x2="1709.7641" y2="1422.9243" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><line x1="1659.9099" y1="1386.6225" x2="1674.1919" y2="1377.69625" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line x1="1662.7445" y1="1389.4571" x2="1672.6871" y2="1389.4571" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><line x1="1659.9099" y1="1392.2918" x2="1674.1919" y2="1401.218" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><rect x="1648.5713" y="1378.11856" width="19.84252" height="19.84252" id="path_3"/><clipPath id="clip_path_3"><use xl:href="#path_3"/></clipPath><g clip-path="url(#clip_path_3)"><image xl:href="image2.pdf" width="1371" height="1371" transform="translate(1648.5713 1378.11856) scale(.014473027)"/></g><rect x="73.700787" y="317.48031" width="184.25197" height="164.40945" fill="white"/><rect x="73.700787" y="317.48031" width="184.25197" height="164.40945" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(78.700787 322.48031)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="0" y="15" textLength="101.056">TRL Encoding</tspan></text><rect x="87.874015" y="347.1185" width="155.90551" height="52.961228" fill="white"/><rect x="87.874015" y="347.1185" width="155.90551" height="52.961228" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(92.874015 355.15112)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="20.352755" y="15" textLength="62.224">Report T</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="80.800755" y="15" textLength="44.752">ype to</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="15.448755" y="33.447998" textLength="115.008">TRL component</tspan></text><rect x="87.874015" y="414.79119" width="155.90551" height="52.961228" fill="white"/><rect x="87.874015" y="414.79119" width="155.90551" height="52.961228" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(92.874015 422.8238)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="12.0567555" y="15" textLength="126.24">Infectiousness to </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="15.448755" y="33.447998" textLength="115.008">TRL component</tspan></text><path d="M 257.95275 356.52266 L 663.47637 356.52266 C 663.47637 351.02266 674.47637 351.02266 674.47637 356.52266 L 936.87165 356.52266" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke-dasharray="4,4"/><text transform="translate(58.858267 1480.9728)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="0" y="15" textLength="232.448">Last updated: 23.08.2021, 10:30</tspan></text><path d="M 668.97637 882.39763 L 668.97637 1040.31495 L 967.3437 1040.31495" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><rect x="1195.40116" y="1099.8425" width="104.88189" height="102.047243" fill="white"/><rect x="1195.40116" y="1099.8425" width="104.88189" height="102.047243" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1198.44446 1113.4182)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="5.828" y="16" textLength="87.344">Normalised</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="14.236" y="35.464111" textLength="61.632">exposur</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="75.58" y="35.464111" textLength="9.184">e</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="18.556" y="54.928223" textLength="61.888">time (t  )</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x=".34" y="74.392334" textLength="98.32">(per window)</tspan></text><text transform="translate(1265.5942 1161.8614)" fill="black"><tspan font-family="Helvetica Neue" font-size="12" font-weight="bold" fill="black" x=".442" y="12" textLength="7.116">n</tspan></text><rect x="1203.9051" y="1108.34645" width="104.88189" height="102.047243" fill="white"/><rect x="1203.9051" y="1108.34645" width="104.88189" height="102.047243" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1206.9484 1121.92216)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="5.828" y="16" textLength="87.344">Normalised</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="14.236" y="35.464111" textLength="61.632">exposur</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="75.58" y="35.464111" textLength="9.184">e</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="18.556" y="54.928223" textLength="61.888">time (t  )</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x=".34" y="74.392334" textLength="98.32">(per window)</tspan></text><text transform="translate(1274.09815 1170.3653)" fill="black"><tspan font-family="Helvetica Neue" font-size="12" font-weight="bold" fill="black" x=".442" y="12" textLength="7.116">n</tspan></text><rect x="1212.409" y="1116.8504" width="104.88189" height="102.047243" fill="white"/><rect x="1212.409" y="1116.8504" width="104.88189" height="102.047243" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1215.45234 1130.4261)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="5.828" y="16" textLength="87.344">Normalised</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="14.236" y="35.464111" textLength="61.632">exposur</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="75.58" y="35.464111" textLength="9.184">e</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="18.556" y="54.928223" textLength="61.888">time (t  )</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x=".34" y="74.392334" textLength="98.32">(per window)</tspan></text><text transform="translate(1282.6021 1178.86926)" fill="black"><tspan font-family="Helvetica Neue" font-size="12" font-weight="bold" fill="black" x=".442" y="12" textLength="7.116">n</tspan></text><rect x="1220.913" y="1125.3543" width="104.88189" height="102.047243" fill="white"/><rect x="1220.913" y="1125.3543" width="104.88189" height="102.047243" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1223.9563 1138.93004)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="5.828" y="16" textLength="87.344">Normalised</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="14.236" y="35.464111" textLength="61.632">exposur</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="75.58" y="35.464111" textLength="9.184">e</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="18.556" y="54.928223" textLength="61.888">time (t  )</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x=".34" y="74.392334" textLength="98.32">(per window)</tspan></text><text transform="translate(1291.106 1187.3732)" fill="black"><tspan font-family="Helvetica Neue" font-size="12" font-weight="bold" fill="black" x=".442" y="12" textLength="7.116">n</tspan></text><rect x="1229.4169" y="1133.85826" width="104.88189" height="102.047243" fill="white"/><rect x="1229.4169" y="1133.85826" width="104.88189" height="102.047243" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1232.4602 1147.434)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="5.828" y="16" textLength="87.344">Normalised</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="14.236" y="35.464111" textLength="61.632">exposur</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="75.58" y="35.464111" textLength="9.184">e</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="18.556" y="54.928223" textLength="61.888">time (t  )</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x=".34" y="74.392334" textLength="98.32">(per window)</tspan></text><text transform="translate(1299.60996 1195.8771)" fill="black"><tspan font-family="Helvetica Neue" font-size="12" font-weight="bold" fill="black" x=".442" y="12" textLength="7.116">n</tspan></text><rect x="1237.92084" y="1142.3622" width="104.88189" height="102.047243" fill="white"/><rect x="1237.92084" y="1142.3622" width="104.88189" height="102.047243" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1240.96415 1155.9379)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="5.828" y="16" textLength="87.344">Normalised</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="14.236" y="35.464111" textLength="61.632">exposur</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="75.58" y="35.464111" textLength="9.184">e</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="18.556" y="54.928223" textLength="61.888">time (t  )</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x=".34" y="74.392334" textLength="98.32">(per window)</tspan></text><text transform="translate(1308.1139 1204.3811)" fill="black"><tspan font-family="Helvetica Neue" font-size="12" font-weight="bold" fill="black" x=".442" y="12" textLength="7.116">n</tspan></text><rect x="85.75928" y="864.5669" width="160.85489" height="51.023622" fill="white"/><rect x="85.75928" y="864.5669" width="160.85489" height="51.023622" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(90.75928 871.1227)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="21.491446" y="15" textLength="60.448">„Far“ thr</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="81.651446" y="15" textLength="47.712">eshold</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="53.787446" y="34.447998" textLength="17.792">79</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" x="71.579446" y="34.447998" textLength="25.488"> dB</tspan></text><rect x="85.75928" y="915.59055" width="160.85489" height="51.023622" fill="white"/><rect x="85.75928" y="915.59055" width="160.85489" height="51.023622" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(90.75928 922.1463)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="31.139446" y="15" textLength="88.576">„Far“ weight</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="64.307446" y="34.447998" textLength="22.24">0.1</tspan></text><rect x="85.75928" y="980.7874" width="160.85489" height="51.023622" fill="white"/><rect x="85.75928" y="980.7874" width="160.85489" height="51.023622" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(90.75928 987.34315)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="15.731446" y="15" textLength="16.592">„V</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="31.443446" y="15" textLength="103.68">ery far“ weight</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="64.307446" y="34.447998" textLength="22.24">0.0</tspan></text><rect x="510.23622" y="752.00393" width="303.73323" height="50.831424" fill="white"/><rect x="510.23622" y="752.00393" width="303.73323" height="50.831424" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(515.23622 767.6876)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="21.306616" y="16" textLength="55.952">t(att &gt;= </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="77.258616" y="16" textLength="17.792">73</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="95.050616" y="16" textLength="4.448"> </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="99.498616" y="16" textLength="20.448">dB</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="119.946616" y="16" textLength="66.224"> &amp;&amp; att &lt; </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="186.17062" y="16" textLength="17.792">79</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="203.96262" y="16" textLength="4.448"> </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="208.41062" y="16" textLength="29.04">dB) </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="237.45062" y="16" textLength="12.736">x </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="250.18662" y="16" textLength="22.24">0.1</tspan></text><rect x="510.23622" y="820.03543" width="303.73323" height="50.831424" fill="white"/><rect x="510.23622" y="820.03543" width="303.73323" height="50.831424" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(515.23622 835.7191)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="75.762616" y="16" textLength="55.952">t(att &gt;= </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="131.714616" y="16" textLength="17.792">79</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="149.50662" y="16" textLength="4.448"> </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="153.95462" y="16" textLength="29.04">dB) </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="182.99462" y="16" textLength="12.736">x </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="195.73062" y="16" textLength="22.24">0.0</tspan></text><text transform="translate(660.845 733.63224)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="4.1111604" y="15" textLength="9.6">+</tspan></text><text transform="translate(660.845 801.0679)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="4.1111604" y="15" textLength="9.6">+</tspan></text><rect x="87.874015" y="1085.6693" width="155.90551" height="51.023622" fill="white"/><rect x="87.874015" y="1085.6693" width="155.90551" height="51.023622" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(92.874015 1092.22504)" fill="#003776"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="17.704755" y="15" textLength="17.472">Gr</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#003776" x="34.888755" y="15" textLength="93.312">een (low risk)</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#003776" x="28.752755" y="34.447998" textLength="27.392">&lt; 5 </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="56.144755" y="34.447998" textLength="61.008">minutes</tspan></text><path d="M 1368.4248 1256.92125 L 1391.811 1417.3228 L 1421.34015 1417.3228" marker-end="url(#FilledArrow_Marker_4)" stroke="#235e00" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1467.5114 1396.8469)" fill="#235e00"><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#235e00" x="21.028" y="16" textLength="22.944">&lt; 5</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#235e00" x=".068" y="35.464111" textLength="64.864">Low risk</tspan></text><rect x="87.874015" y="522.47184" width="155.90551" height="52.961228" fill="white"/><rect x="87.874015" y="522.47184" width="155.90551" height="52.961228" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(92.874015 530.50446)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="41.384755" y="15" textLength="63.136">Mapping</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="32.056755" y="33.447998" textLength="72.304">TRL to TR</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="104.072755" y="33.447998" textLength="9.776">V</tspan></text><path d="M 257.95275 530.07874 L 663.47637 530.07874 C 663.47637 524.57874 674.47637 524.57874 674.47637 530.07874 L 942.2718 530.07874" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke-dasharray="4,4"/><text transform="translate(1351.4567 1067.517)" fill="#292829"><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#292829" x="48.338954" y="15" textLength="13.904">Σ(</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="62.242954" y="15" textLength="18.08">t  )</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="13.386954" y="33.447998" textLength="106.336">of all windows </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x=".33095436" y="51.895996" textLength="107.552">(i.e. all exposur</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="107.594954" y="51.895996" textLength="20.736">es)</tspan></text><text transform="translate(1419.8674 1075.4225)" fill="#292829"><tspan font-family="Helvetica Neue" font-size="12" font-weight="500" fill="#292829" x="0" y="11" textLength="6.672">n</tspan></text><text transform="translate(1419.7987 1075.5935)" fill="black"><tspan font-family="Helvetica Neue" font-size="12" font-weight="500" fill="black" x=".164" y="11" textLength="6.672">n</tspan></text><rect x="1310.9484" y="657.6378" width="422.3622" height="320.31496" fill="white"/><rect x="1310.9484" y="657.6378" width="422.3622" height="320.31496" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1321.6177 670.24015)" fill="#b1001c"><tspan font-family="Helvetica" font-size="16" font-weight="bold" fill="#b1001c" x="0" y="15" textLength="54.226562">Result:</tspan><tspan font-family="Helvetica" font-size="16" font-weight="500" fill="#b1001c" x="0" y="34" textLength="374.39844">Multiple windows with a low exposure time each can </tspan><tspan font-family="Helvetica" font-size="16" font-weight="500" fill="#b1001c" x="0" y="53" textLength="84.515625">add up to a </tspan><tspan font-family="Helvetica" font-size="16" font-weight="bold" fill="#b1001c" x="84.515625" y="53" textLength="71.125">high risk.</tspan></text><rect x="1356.3027" y="782.3622" width="121.88976" height="45.35433" fill="white"/><rect x="1356.3027" y="782.3622" width="121.88976" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/><text transform="translate(1361.3027 795.3073)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="12.0968815" y="16" textLength="87.696">3.3 minutes</tspan></text><rect x="1591.5783" y="824.8819" width="104.88189" height="102.047243" fill="#f26077"/><rect x="1591.5783" y="824.8819" width="104.88189" height="102.047243" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/><text transform="translate(1596.5783 856.4414)" fill="white"><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="white" x="20.760945" y="16" textLength="53.36">Status:</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="white" x="10.8649446" y="35.464111" textLength="73.152">High Risk</tspan></text><line x1="1503.7043" y1="884.40944" x2="1556.1665" y2="884.40944" marker-end="url(#FilledArrow_Marker_3)" stroke="#b1001c" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(1502.5626 862.1656)" fill="#b1001c"><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#b1001c" x=".32" y="16" textLength="34.368">Σ(t  )</tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#b1001c" x="34.688" y="16" textLength="4.448"> </tspan><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="#b1001c" x="39.136" y="16" textLength="32.544">&gt;= 9</tspan></text><text transform="translate(1519.3619 870.1251)" fill="#b1001c"><tspan font-family="Helvetica Neue" font-size="12" font-weight="bold" fill="#b1001c" x=".442" y="12" textLength="7.116">n</tspan></text><rect x="1356.3027" y="847.55905" width="121.88976" height="45.35433" fill="white"/><rect x="1356.3027" y="847.55905" width="121.88976" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/><text transform="translate(1361.3027 860.50416)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="12.0968815" y="16" textLength="87.696">5.1 minutes</tspan></text><rect x="1356.3027" y="912.7559" width="121.88976" height="45.35433" fill="white"/><rect x="1356.3027" y="912.7559" width="121.88976" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/><text transform="translate(1361.3027 925.701)" fill="black"><tspan font-family="Helvetica Neue" font-size="16" font-weight="bold" fill="black" x="12.0968815" y="16" textLength="87.696">7.8 minutes</tspan></text><text transform="translate(1321.6177 753.34645)" fill="black"><tspan font-family="Helvetica" font-size="16" font-weight="bold" fill="black" x="0" y="15" textLength="71.140625">Example:</tspan></text></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="39.18504 19.34252 1727.2992 1500.5276" width="1727.2992" height="1500.5276">
+  <defs>
+    <font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 8 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="975.0061" descent="-216.99524" font-weight="700">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue-Bold"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Helvetica Neue" font-size="23" panose-1="2 0 8 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="975.0061" descent="-216.99524" font-weight="700">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue-Bold"/>
+      </font-face-src>
+    </font-face>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="black">
+      <g>
+        <path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker_2" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="#b4b4b4">
+      <g>
+        <path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker_3" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="#c11a24">
+      <g>
+        <path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker_4" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="#2b6f00">
+      <g>
+        <path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <font-face font-family="Helvetica Neue" font-size="12" panose-1="2 0 8 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="975.0061" descent="-216.99524" font-weight="700">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue-Bold"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Helvetica Neue" font-size="12" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Helvetica" font-size="16" units-per-em="1000" underline-position="-75.68359" underline-thickness="49.316406" slope="0" x-height="532.22656" cap-height="719.7266" ascent="770.0195" descent="-229.98047" font-weight="700">
+      <font-face-src>
+        <font-face-name name="Helvetica-Bold"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Helvetica" font-size="16" units-per-em="1000" underline-position="-75.68359" underline-thickness="49.316406" slope="0" x-height="522.9492" cap-height="717.28516" ascent="770.0195" descent="-229.98047" font-weight="400">
+      <font-face-src>
+        <font-face-name name="Helvetica"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.18.2\n2022-01-25 17:12:27 +0000</metadata>
+  <g id="2022-01-25_Risk_Calculation_V2_ohne_Vorfilter_4" stroke="none" stroke-dasharray="none" fill="none" fill-opacity="1" stroke-opacity="1">
+    <title>2022-01-25 Risk Calculation V2 ohne Vorfilter 4</title>
+    <rect fill="white" x="39.18504" y="19.34252" width="1727.2992" height="1500.5276"/>
+    <g id="2022-01-25_Risk_Calculation_V2_ohne_Vorfilter_4_Ebene_1">
+      <title>Ebene 1</title>
+      <g id="Graphic_661">
+        <rect x="53.85827" y="34.015748" width="221.10236" height="1267.0866" fill="white"/>
+        <rect x="53.85827" y="34.015748" width="221.10236" height="1267.0866" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(58.85827 39.01575)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="0" y="16">Configuration</tspan>
+        </text>
+      </g>
+      <g id="Graphic_951">
+        <rect x="73.70079" y="490.3937" width="184.25197" height="93.54331" fill="white"/>
+        <rect x="73.70079" y="490.3937" width="184.25197" height="93.54331" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(78.70079 495.3937)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="0" y="15">TRL Mapping</tspan>
+        </text>
+      </g>
+      <g id="Graphic_3">
+        <rect x="950.6792" y="422.3622" width="149.45275" height="527.2441" fill="white"/>
+        <rect x="950.6792" y="422.3622" width="149.45275" height="527.2441" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(955.6792 427.3622)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="5.4143794" y="15">Transmission Risk</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="20.68638" y="33.448">Level (TRL) to </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="29.27838" y="51.895996">Value (TRV)</tspan>
+        </text>
+      </g>
+      <g id="Graphic_4">
+        <rect x="968.7397" y="490.3937" width="45.35433" height="45.35433" fill="white"/>
+        <rect x="968.7397" y="490.3937" width="45.35433" height="45.35433" stroke="#b4b4b4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(973.7397 499.2373)" fill="#b4b4b4">
+          <tspan font-family="Helvetica Neue" font-size="23" font-weight="700" fill="#b4b4b4" x="14.284666" y="22">I</tspan>
+        </text>
+      </g>
+      <g id="Graphic_5">
+        <rect x="968.7397" y="547.0866" width="45.35433" height="45.35433" fill="white"/>
+        <rect x="968.7397" y="547.0866" width="45.35433" height="45.35433" stroke="#b4b4b4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(973.7397 555.9302)" fill="#b4b4b4">
+          <tspan font-family="Helvetica Neue" font-size="23" font-weight="700" fill="#b4b4b4" x="10.892166" y="22">II</tspan>
+        </text>
+      </g>
+      <g id="Graphic_6">
+        <rect x="968.7397" y="603.7795" width="45.35433" height="45.35433" fill="white"/>
+        <rect x="968.7397" y="603.7795" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(973.7397 612.6231)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="23" font-weight="700" fill="black" x="7.499666" y="22">III</tspan>
+        </text>
+      </g>
+      <g id="Graphic_7">
+        <rect x="968.7397" y="660.4724" width="45.35433" height="45.35433" fill="white"/>
+        <rect x="968.7397" y="660.4724" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(973.7397 669.316)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="23" font-weight="700" fill="black" x="7.039666" y="22">IV</tspan>
+        </text>
+      </g>
+      <g id="Graphic_8">
+        <rect x="968.7397" y="717.16535" width="45.35433" height="45.35433" fill="white"/>
+        <rect x="968.7397" y="717.16535" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(973.7397 726.0089)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="23" font-weight="700" fill="black" x="10.432166" y="22">V</tspan>
+        </text>
+      </g>
+      <g id="Graphic_9">
+        <rect x="968.7397" y="773.8583" width="45.35433" height="45.35433" fill="white"/>
+        <rect x="968.7397" y="773.8583" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(973.7397 782.70185)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="23" font-weight="700" fill="black" x="7.039666" y="22">VI</tspan>
+        </text>
+      </g>
+      <g id="Graphic_10">
+        <rect x="968.7397" y="830.5512" width="45.35433" height="45.35433" fill="white"/>
+        <rect x="968.7397" y="830.5512" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(973.7397 839.3948)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="23" font-weight="700" fill="black" x="3.647166" y="22">VII</tspan>
+        </text>
+      </g>
+      <g id="Graphic_11">
+        <rect x="968.7397" y="887.2441" width="45.35433" height="45.35433" fill="white"/>
+        <rect x="968.7397" y="887.2441" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(973.7397 896.0877)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="23" font-weight="700" fill="black" x=".254666" y="22">VIII</tspan>
+        </text>
+      </g>
+      <g id="Line_84">
+        <line x1="668.9764" y1="286.2992" x2="668.9764" y2="559.8638" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_115">
+        <line x1="1381.2559" y1="314.64567" x2="400.4685" y2="314.64567" stroke="#004a89" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="20.0,20.0" stroke-width="5"/>
+      </g>
+      <g id="Graphic_116">
+        <text transform="translate(1349.815 257.28346)" fill="#004a89">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#004a89" x="0" y="15">Exposure Notification Framework</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#004a89" x="0" y="33.448">(Controlled through Parameters)</tspan>
+        </text>
+      </g>
+      <g id="Graphic_117">
+        <text transform="translate(1352.2402 333.81102)" fill="#004a89">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#004a89" x="0" y="15">App Logic</tspan>
+        </text>
+      </g>
+      <g id="Graphic_162">
+        <rect x="417.4764" y="161.5748" width="722.0512" height="56.69291" fill="white"/>
+        <rect x="417.4764" y="161.5748" width="722.0512" height="56.69291" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(422.4764 171.47326)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="37.193574" y="15">Details of the Exposure Window from the Google/Apple Exposure Notification Framework</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="261.20157" y="33.448">(Processed within the app)</tspan>
+        </text>
+      </g>
+      <g id="Graphic_163">
+        <rect x="1038.8224" y="547.0866" width="45.35433" height="45.35433" fill="white"/>
+        <rect x="1038.8224" y="547.0866" width="45.35433" height="45.35433" stroke="#b4b4b4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1043.8224 555.9302)" fill="#005493" fill-opacity=".5">
+          <tspan font-family="Helvetica Neue" font-size="23" font-weight="700" fill="#005493" fill-opacity=".5" x="1.692166" y="22">0.0</tspan>
+        </text>
+      </g>
+      <g id="Graphic_164">
+        <rect x="1038.8224" y="603.7795" width="45.35433" height="45.35433" fill="white"/>
+        <rect x="1038.8224" y="603.7795" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1043.8224 612.6231)" fill="#004a89">
+          <tspan font-family="Helvetica Neue" font-size="23" font-weight="700" fill="#004a89" x="1.692166" y="22">0.6</tspan>
+        </text>
+      </g>
+      <g id="Graphic_165">
+        <rect x="1038.8224" y="660.4724" width="45.35433" height="45.35433" fill="white"/>
+        <rect x="1038.8224" y="660.4724" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1043.8224 669.316)" fill="#004a89">
+          <tspan font-family="Helvetica Neue" font-size="23" font-weight="700" fill="#004a89" x="1.692166" y="22">0.8</tspan>
+        </text>
+      </g>
+      <g id="Graphic_166">
+        <rect x="1038.8224" y="717.16535" width="45.35433" height="45.35433" fill="white"/>
+        <rect x="1038.8224" y="717.16535" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1043.8224 726.0089)" fill="#004a89">
+          <tspan font-family="Helvetica Neue" font-size="23" font-weight="700" fill="#004a89" x="1.692166" y="22">1.0</tspan>
+        </text>
+      </g>
+      <g id="Graphic_167">
+        <rect x="1038.8224" y="773.8583" width="45.35433" height="45.35433" fill="white"/>
+        <rect x="1038.8224" y="773.8583" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1043.8224 782.70185)" fill="#004a89">
+          <tspan font-family="Helvetica Neue" font-size="23" font-weight="700" fill="#004a89" x="1.692166" y="22">1.2</tspan>
+        </text>
+      </g>
+      <g id="Graphic_168">
+        <rect x="1038.8224" y="830.5512" width="45.35433" height="45.35433" fill="white"/>
+        <rect x="1038.8224" y="830.5512" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1043.8224 839.3948)" fill="#004a89">
+          <tspan font-family="Helvetica Neue" font-size="23" font-weight="700" fill="#004a89" x="1.692166" y="22">1.4</tspan>
+        </text>
+      </g>
+      <g id="Graphic_169">
+        <rect x="1038.8224" y="887.2441" width="45.35433" height="45.35433" fill="white"/>
+        <rect x="1038.8224" y="887.2441" width="45.35433" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1043.8224 896.0877)" fill="#004a89">
+          <tspan font-family="Helvetica Neue" font-size="23" font-weight="700" fill="#004a89" x="1.692166" y="22">1.6</tspan>
+        </text>
+      </g>
+      <g id="Line_171">
+        <line x1="1014.0941" y1="569.7638" x2="1026.8712" y2="569.7638" marker-end="url(#FilledArrow_Marker_2)" stroke="#b4b4b4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_172">
+        <line x1="1014.0941" y1="625.9567" x2="1026.8712" y2="625.9567" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_173">
+        <line x1="1014.0941" y1="682.1496" x2="1026.8712" y2="682.1496" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_174">
+        <line x1="1014.0941" y1="738.3425" x2="1026.8712" y2="738.3425" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_175">
+        <line x1="1014.0941" y1="794.5354" x2="1026.8712" y2="794.5354" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_176">
+        <line x1="1014.0941" y1="850.7283" x2="1026.8712" y2="850.7283" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_177">
+        <line x1="1014.0941" y1="906.9213" x2="1026.8712" y2="906.9213" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_184">
+        <rect x="1038.8224" y="490.3937" width="45.35433" height="45.35433" fill="white"/>
+        <rect x="1038.8224" y="490.3937" width="45.35433" height="45.35433" stroke="#b4b4b4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1043.8224 499.2373)" fill="#005493" fill-opacity=".5">
+          <tspan font-family="Helvetica Neue" font-size="23" font-weight="700" fill="#005493" fill-opacity=".5" x="1.692166" y="22">0.0</tspan>
+        </text>
+      </g>
+      <g id="Line_186">
+        <line x1="1014.0941" y1="515.9055" x2="1026.8712" y2="515.9055" marker-end="url(#FilledArrow_Marker_2)" stroke="#b4b4b4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_242">
+        <rect x="910.7047" y="240.94488" width="104.88189" height="45.35433" fill="white"/>
+        <rect x="910.7047" y="240.94488" width="104.88189" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(915.7047 254.39805)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="4.1769447" y="15">Report Type</tspan>
+        </text>
+      </g>
+      <g id="Graphic_243">
+        <rect x="1026.9252" y="240.94488" width="113.38583" height="45.35433" fill="white"/>
+        <rect x="1026.9252" y="240.94488" width="113.38583" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1031.9252 254.39805)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".13291306" y="15">Infectiousness</tspan>
+        </text>
+      </g>
+      <g id="Graphic_244">
+        <rect x="946.7716" y="334.4882" width="155.90551" height="45.35433" fill="white"/>
+        <rect x="946.7716" y="334.4882" width="155.90551" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(951.7716 338.71735)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="14.720759" y="15">TRL (Level) from </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#004a89" x="28.19276" y="33.448">components</tspan>
+        </text>
+      </g>
+      <g id="Line_245">
+        <line x1="981.5709" y1="286.2992" x2="981.5709" y2="327.42283" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_246">
+        <line x1="1063.7756" y1="286.2992" x2="1063.7756" y2="327.42283" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_247">
+        <line x1="964.563" y1="218.26772" x2="964.563" y2="231.04488" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_248">
+        <line x1="1085.4528" y1="218.26772" x2="1085.4528" y2="231.04488" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_251">
+        <rect x="417.4764" y="240.94488" width="476.22047" height="45.35433" fill="white"/>
+        <rect x="417.4764" y="240.94488" width="476.22047" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(422.4764 253.89)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="99.77423" y="16">Process </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" y="16">all</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="16"> contained scan Instances</tspan>
+        </text>
+      </g>
+      <g id="Line_252">
+        <line x1="672.5945" y1="218.26772" x2="672.5945" y2="231.04488" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_257">
+        <rect x="977.2437" y="983.622" width="104.88189" height="102.04724" fill="white"/>
+        <rect x="977.2437" y="983.622" width="104.88189" height="102.04724" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(982.2437 1006.9737)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="13.816945" y="15">Weighted</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="13.808945" y="33.448">Exposure</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="29.952945" y="51.895996">Time</tspan>
+        </text>
+      </g>
+      <g id="Graphic_259">
+        <text transform="translate(1026.8684 953.7795)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="2762235e-19" y="16">x</tspan>
+        </text>
+      </g>
+      <g id="Graphic_260">
+        <text transform="translate(1026.3644 1089.0157)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="0" y="16">=</tspan>
+        </text>
+      </g>
+      <g id="Graphic_263">
+        <text transform="translate(1437.7423 1159.5354)" fill="#c11a24">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#c11a24" x="50.536" y="16">&gt;= 9</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#c11a24" x="8952838e-19" y="35.46411">Encounter(s) with</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#c11a24" x="32.896" y="54.92822">High risk</tspan>
+        </text>
+      </g>
+      <g id="Graphic_264">
+        <text transform="translate(1434.9076 1236.0709)" fill="#2b6f00">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#2b6f00" x="23.656" y="16">&gt;= 5 &amp;&amp; &lt; 9</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#2b6f00" x="8952838e-19" y="35.46411">Encounter(s) with</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#2b6f00" x="37.056" y="54.92822">low risk</tspan>
+        </text>
+      </g>
+      <g id="Line_265">
+        <path d="M 1368.4248 1255.748 L 1388.9764 1189.748 L 1421.3402 1189.748" marker-end="url(#FilledArrow_Marker_3)" stroke="#c11a24" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_266">
+        <line x1="1368.4248" y1="1255.748" x2="1421.3402" y2="1255.748" marker-end="url(#FilledArrow_Marker_4)" stroke="#2b6f00" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_313">
+        <rect x="500.2865" y="569.7638" width="323.0179" height="312.63386" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(505.2865 574.7638)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="32.14894" y="16">Time </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" y="16">t</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="16"> at minimum* attenuation </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" y="16">att</tspan>
+        </text>
+      </g>
+      <g id="Graphic_312">
+        <rect x="509.92885" y="615.1181" width="303.73323" height="50.831424" fill="white"/>
+        <rect x="509.92885" y="615.1181" width="303.73323" height="50.831424" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(514.92885 630.8018)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="80.26662" y="16">t(att </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" y="16">&lt; </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" y="16">63 </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="16">dB</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" y="16">)</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="16"> x </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" y="16">0.8</tspan>
+        </text>
+      </g>
+      <g id="Graphic_311">
+        <rect x="509.92885" y="683.9865" width="303.73323" height="50.831424" fill="white"/>
+        <rect x="509.92885" y="683.9865" width="303.73323" height="50.831424" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(514.92885 699.67014)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="21.306623" y="16">t(att &gt;= </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" y="16">63</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#004a89" y="16"> </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="16">dB</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="16"> &amp;&amp; att &lt; </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" y="16">73</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#004a89" y="16"> </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="16">dB) </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="16">x </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" y="16">1.0</tspan>
+        </text>
+      </g>
+      <g id="Graphic_310">
+        <text transform="translate(660.845 664.768)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="4.1111605" y="15">+</tspan>
+        </text>
+      </g>
+      <g id="Graphic_309">
+        <text transform="translate(680.4858 887.3976)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="41.94872" y="15">(seconds/</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="46.67672" y="33.448">minutes)</tspan>
+        </text>
+      </g>
+      <g id="Line_302">
+        <line x1="1082.8346" y1="1170.7087" x2="1181.9346" y2="1170.7087" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_535">
+        <line x1="1022.598" y1="379.8425" x2="1022.598" y2="415.29685" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_684">
+        <text transform="translate(60.54899 1438.8583)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="0" y="15">* changes possible</tspan>
+        </text>
+      </g>
+      <g id="Group_886">
+        <g id="Graphic_889">
+          <rect x="975.7913" y="1119.685" width="104.88189" height="102.04724" fill="white"/>
+          <rect x="975.7913" y="1119.685" width="104.88189" height="102.04724" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_888">
+          <text transform="translate(979.1746 1133.189)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="5.488" y="16">Normalised</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="13.896" y="35.46411">exposure</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="18.216" y="54.92822">time (t  )</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="0" y="74.39233">(per window)</tspan>
+          </text>
+        </g>
+        <g id="Graphic_887">
+          <text transform="translate(1046.4264 1181.378)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="black" x="9019452e-19" y="12">n</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Graphic_673">
+        <rect x="73.70079" y="595.2756" width="184.25197" height="445.03937" fill="white"/>
+        <rect x="73.70079" y="595.2756" width="184.25197" height="445.03937" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(78.70079 600.2756)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="0" y="15">Attenuation „buckets“</tspan>
+        </text>
+      </g>
+      <g id="Graphic_672">
+        <rect x="85.39932" y="637.7953" width="160.8549" height="51.02362" fill="white"/>
+        <rect x="85.39932" y="637.7953" width="160.8549" height="51.02362" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(90.39932 644.351)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="12.603444" y="15">„Close“ threshold</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" x="53.787444" y="34.448">63</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" y="34.448"> dB</tspan>
+        </text>
+      </g>
+      <g id="Graphic_671">
+        <rect x="85.39932" y="751.1811" width="160.8549" height="51.02362" fill="white"/>
+        <rect x="85.39932" y="751.1811" width="160.8549" height="51.02362" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(90.39932 757.73685)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="3.9874445" y="15">„Medium“ threshold</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" x="53.787444" y="34.448">73</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" y="34.448"> dB</tspan>
+        </text>
+      </g>
+      <g id="Graphic_670">
+        <rect x="85.39932" y="688.8189" width="160.8549" height="51.02362" fill="white"/>
+        <rect x="85.39932" y="688.8189" width="160.8549" height="51.02362" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(90.39932 695.37465)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="22.251444" y="15">„Close“ weight</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" x="64.307444" y="34.448">0.8</tspan>
+        </text>
+      </g>
+      <g id="Graphic_669">
+        <rect x="85.39932" y="802.2047" width="160.8549" height="51.02362" fill="white"/>
+        <rect x="85.39932" y="802.2047" width="160.8549" height="51.02362" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(90.39932 808.7605)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="13.635444" y="15">„Medium“ weight</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" x="64.307444" y="34.448">1.0</tspan>
+        </text>
+      </g>
+      <g id="Graphic_657">
+        <rect x="73.70079" y="1057.3228" width="184.25197" height="235.2756" fill="white"/>
+        <rect x="73.70079" y="1057.3228" width="184.25197" height="235.2756" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(78.70079 1062.3228)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="0" y="15">Overall Risk Definition</tspan>
+        </text>
+      </g>
+      <g id="Graphic_658">
+        <rect x="87.87402" y="1145.1968" width="155.90551" height="76.53543" fill="white"/>
+        <rect x="87.87402" y="1145.1968" width="155.90551" height="76.53543" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(92.87402 1145.5525)" fill="#004a89">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#004a89" x="19.776759" y="15">Green (low risk </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#004a89" x="9.696759" y="33.448">with encounter(s))</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" x="29.80076" y="52.895996">&gt;= 5 &amp;&amp; &lt; 9 </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="42.44876" y="72.36011">minutes</tspan>
+        </text>
+      </g>
+      <g id="Graphic_659">
+        <rect x="87.87402" y="1230.2362" width="155.90551" height="51.02362" fill="white"/>
+        <rect x="87.87402" y="1230.2362" width="155.90551" height="51.02362" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(92.87402 1236.792)" fill="#004a89">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#004a89" x="21.98476" y="15">Red (high risk)</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" x="23.95276" y="34.448">&gt;= 9</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" y="34.448"> minutes</tspan>
+        </text>
+      </g>
+      <g id="Line_680">
+        <line x1="257.95275" y1="615.1181" x2="490.3865" y2="615.1181" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+      </g>
+      <g id="Line_682">
+        <line x1="257.95275" y1="1256.9213" x2="1352.072" y2="1256.9213" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+      </g>
+      <g id="Graphic_686">
+        <rect x="420.311" y="70.86614" width="722.0512" height="56.69291" fill="white"/>
+        <rect x="420.311" y="70.86614" width="722.0512" height="56.69291" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(425.311 89.9886)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="181.36957" y="15">Exposure Notification Framework (Apple/Google)</tspan>
+        </text>
+      </g>
+      <g id="Line_687">
+        <line x1="802.2047" y1="127.55905" x2="802.2047" y2="151.6748" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Group_688">
+        <g id="Graphic_692">
+          <rect x="73.70079" y="70.86614" width="184.25197" height="229.6063" fill="white"/>
+          <rect x="73.70079" y="70.86614" width="184.25197" height="229.6063" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(78.70079 75.86614)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="0" y="15">ENF Configuration</tspan>
+          </text>
+        </g>
+        <g id="Graphic_691">
+          <rect x="87.87402" y="100.50434" width="155.90551" height="52.96123" fill="white"/>
+          <rect x="87.87402" y="100.50434" width="155.90551" height="52.96123" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(92.87402 108.53695)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="41.53676" y="15">DSOS to </tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="21.39276" y="33.448">Infectiousness</tspan>
+          </text>
+        </g>
+        <g id="Graphic_690">
+          <rect x="87.87402" y="168.17701" width="155.90551" height="52.96123" fill="white"/>
+          <rect x="87.87402" y="168.17701" width="155.90551" height="52.96123" stroke="#b4b4b4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(92.87402 176.20963)" fill="#b4b4b4">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#b4b4b4" x="12.056759" y="15">Infectiousness to </tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#b4b4b4" x="49.25676" y="33.448">weight</tspan>
+          </text>
+        </g>
+        <g id="Graphic_689">
+          <rect x="87.87402" y="235.8497" width="155.90551" height="52.96123" fill="white"/>
+          <rect x="87.87402" y="235.8497" width="155.90551" height="52.96123" stroke="#b4b4b4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(92.87402 243.8823)" fill="#b4b4b4">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#b4b4b4" x="21.53676" y="15">Report type to </tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#b4b4b4" x="49.25676" y="33.448">weight</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Line_693">
+        <line x1="257.95275" y1="102.04724" x2="410.411" y2="102.04724" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+      </g>
+      <g id="Group_1005">
+        <g id="Graphic_1024">
+          <rect x="1173.5433" y="102.04724" width="155.90551" height="102.04724" fill="white"/>
+          <rect x="1173.5433" y="102.04724" width="155.90551" height="102.04724" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(1178.5433 162.1985)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="1.8327588" y="15">„Positivbegegnung“</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="39.91276" y="33.448">exposure</tspan>
+          </text>
+        </g>
+        <g id="Group_1017">
+          <g id="Graphic_1023"/>
+          <g id="Graphic_1022">
+            <circle cx="1223.2419" cy="115.09943" r="8.08766292327128" fill="white"/>
+            <circle cx="1223.2419" cy="115.09943" r="8.08766292327128" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_1021">
+            <line x1="1223.2416" y1="124.18708" x2="1223.2412" y2="139.13778" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_1020">
+            <line x1="1209.7622" y1="126.55678" x2="1236.7212" y2="126.55678" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_1019">
+            <line x1="1223.2412" y1="139.13778" x2="1213.3562" y2="153.51578" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_1018">
+            <line x1="1223.2412" y1="139.13778" x2="1233.3512" y2="153.51578" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+        </g>
+        <g id="Group_1010">
+          <g id="Graphic_1016"/>
+          <g id="Graphic_1015">
+            <circle cx="1280.1272" cy="125.92525" r="8.08766292327128" fill="white"/>
+            <circle cx="1280.1272" cy="125.92525" r="8.08766292327128" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_1014">
+            <line x1="1280.1269" y1="135.0129" x2="1280.1265" y2="149.9636" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_1013">
+            <line x1="1266.6475" y1="137.3826" x2="1293.6065" y2="137.3826" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_1012">
+            <line x1="1280.1265" y1="149.9636" x2="1270.2415" y2="164.3416" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_1011">
+            <line x1="1280.1265" y1="149.9636" x2="1290.2365" y2="164.3416" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+        </g>
+        <g id="Line_1009">
+          <line x1="1240.3823" y1="128.03982" x2="1254.6643" y2="119.11358" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Line_1008">
+          <line x1="1243.217" y1="130.87447" x2="1253.1595" y2="130.87447" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Line_1007">
+          <line x1="1240.3823" y1="133.70911" x2="1254.6643" y2="142.63535" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_1006">
+          <rect x="1229.0438" y="119.53589" width="19.84252" height="19.84252" id="path"/>
+          <clipPath id="clip_path">
+            <use xl:href="#path"/>
+          </clipPath>
+          <g clip-path="url(#clip_path)">
+            <image xl:href="image2.pdf" width="1371" height="1371" transform="translate(1229.0438 119.53589) scale(.014473027)"/>
+          </g>
+        </g>
+      </g>
+      <g id="Group_979">
+        <g id="Graphic_998">
+          <rect x="1593.0709" y="1128.189" width="158.74016" height="178.58268" fill="white"/>
+          <rect x="1593.0709" y="1128.189" width="158.74016" height="178.58268" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(1598.0709 1191.5317)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="3.538079" y="15">„Begegnung(en) mit </tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#2b6f00" x="20.43408" y="33.448">niedrigem</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="33.448"> oder </tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#c11a24" x="12.874079" y="51.895996">erhöhtem</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="51.895996"> Risiko“</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#2b6f00" x="16.15408" y="88.34399">Low</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="88.34399"> or </tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#c11a24" y="88.34399">High</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="88.34399"> risk </tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="33.18608" y="106.79199">exposure(s)</tspan>
+          </text>
+        </g>
+        <g id="Group_991">
+          <g id="Graphic_997"/>
+          <g id="Graphic_996">
+            <circle cx="1642.7694" cy="1141.2412" r="8.08766292327145" fill="white"/>
+            <circle cx="1642.7694" cy="1141.2412" r="8.08766292327145" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_995">
+            <line x1="1642.7692" y1="1150.3288" x2="1642.7688" y2="1165.2795" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_994">
+            <line x1="1629.2898" y1="1152.6985" x2="1656.2488" y2="1152.6985" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_993">
+            <line x1="1642.7688" y1="1165.2795" x2="1632.8838" y2="1179.6575" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_992">
+            <line x1="1642.7688" y1="1165.2795" x2="1652.8788" y2="1179.6575" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+        </g>
+        <g id="Group_984">
+          <g id="Graphic_990"/>
+          <g id="Graphic_989">
+            <circle cx="1699.6547" cy="1152.067" r="8.08766292327121" fill="white"/>
+            <circle cx="1699.6547" cy="1152.067" r="8.08766292327121" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_988">
+            <line x1="1699.6545" y1="1161.1546" x2="1699.654" y2="1176.1053" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_987">
+            <line x1="1686.175" y1="1163.5243" x2="1713.134" y2="1163.5243" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_986">
+            <line x1="1699.654" y1="1176.1053" x2="1689.769" y2="1190.4833" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_985">
+            <line x1="1699.654" y1="1176.1053" x2="1709.764" y2="1190.4833" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+        </g>
+        <g id="Line_983">
+          <line x1="1659.9099" y1="1154.1815" x2="1674.1919" y2="1145.2553" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Line_982">
+          <line x1="1662.7445" y1="1157.0162" x2="1672.687" y2="1157.0162" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Line_981">
+          <line x1="1659.9099" y1="1159.8508" x2="1674.1919" y2="1168.7771" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_980">
+          <rect x="1648.5713" y="1145.6776" width="19.84252" height="19.84252" id="path_2"/>
+          <clipPath id="clip_path_2">
+            <use xl:href="#path_2"/>
+          </clipPath>
+          <g clip-path="url(#clip_path_2)">
+            <image xl:href="image2.pdf" width="1371" height="1371" transform="translate(1648.5713 1145.6776) scale(.014473027)"/>
+          </g>
+        </g>
+      </g>
+      <g id="Group_959">
+        <g id="Graphic_978">
+          <rect x="1593.0709" y="1360.6299" width="158.74016" height="144.56693" fill="white"/>
+          <rect x="1593.0709" y="1360.6299" width="158.74016" height="144.56693" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(1598.0709 1426.8528)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="24.14608" y="15">„Nicht-Risiko-</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="16.88208" y="33.448">Begegnung(en)“</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".44207904" y="69.896">Non-risk exposure(s)</tspan>
+          </text>
+        </g>
+        <g id="Group_971">
+          <g id="Graphic_977"/>
+          <g id="Graphic_976">
+            <circle cx="1642.7694" cy="1373.6821" r="8.08766292327124" fill="white"/>
+            <circle cx="1642.7694" cy="1373.6821" r="8.08766292327124" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_975">
+            <line x1="1642.7692" y1="1382.7698" x2="1642.7688" y2="1397.7204" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_974">
+            <line x1="1629.2898" y1="1385.1394" x2="1656.2488" y2="1385.1394" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_973">
+            <line x1="1642.7688" y1="1397.7204" x2="1632.8838" y2="1412.0984" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_972">
+            <line x1="1642.7688" y1="1397.7204" x2="1652.8788" y2="1412.0984" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+        </g>
+        <g id="Group_964">
+          <g id="Graphic_970"/>
+          <g id="Graphic_969">
+            <circle cx="1699.6547" cy="1384.5079" r="8.08766292327124" fill="white"/>
+            <circle cx="1699.6547" cy="1384.5079" r="8.08766292327124" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_968">
+            <line x1="1699.6545" y1="1393.5956" x2="1699.654" y2="1408.5463" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_967">
+            <line x1="1686.175" y1="1395.9653" x2="1713.134" y2="1395.9653" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_966">
+            <line x1="1699.654" y1="1408.5463" x2="1689.769" y2="1422.9243" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Line_965">
+            <line x1="1699.654" y1="1408.5463" x2="1709.764" y2="1422.9243" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+        </g>
+        <g id="Line_963">
+          <line x1="1659.9099" y1="1386.6225" x2="1674.1919" y2="1377.6963" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Line_962">
+          <line x1="1662.7445" y1="1389.4571" x2="1672.687" y2="1389.4571" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Line_961">
+          <line x1="1659.9099" y1="1392.2918" x2="1674.1919" y2="1401.218" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_960">
+          <rect x="1648.5713" y="1378.1186" width="19.84252" height="19.84252" id="path_3"/>
+          <clipPath id="clip_path_3">
+            <use xl:href="#path_3"/>
+          </clipPath>
+          <g clip-path="url(#clip_path_3)">
+            <image xl:href="image2.pdf" width="1371" height="1371" transform="translate(1648.5713 1378.1186) scale(.014473027)"/>
+          </g>
+        </g>
+      </g>
+      <g id="Graphic_856">
+        <rect x="73.70079" y="317.4803" width="184.25197" height="164.40945" fill="white"/>
+        <rect x="73.70079" y="317.4803" width="184.25197" height="164.40945" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(78.70079 322.4803)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="0" y="15">TRL Encoding</tspan>
+        </text>
+      </g>
+      <g id="Graphic_855">
+        <rect x="87.87402" y="347.1185" width="155.90551" height="52.96123" fill="white"/>
+        <rect x="87.87402" y="347.1185" width="155.90551" height="52.96123" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(92.87402 355.15112)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="20.35276" y="15">Report Type to</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="15.448759" y="33.448">TRL component</tspan>
+        </text>
+      </g>
+      <g id="Graphic_854">
+        <rect x="87.87402" y="414.7912" width="155.90551" height="52.96123" fill="white"/>
+        <rect x="87.87402" y="414.7912" width="155.90551" height="52.96123" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(92.87402 422.8238)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="12.056759" y="15">Infectiousness to </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="15.448759" y="33.448">TRL component</tspan>
+        </text>
+      </g>
+      <g id="Line_857">
+        <path d="M 257.95275 356.52266 L 663.4764 356.52266 C 663.4764 351.02266 674.4764 351.02266 674.4764 356.52266 L 936.8716 356.52266" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+      </g>
+      <g id="Graphic_317">
+        <text transform="translate(58.85827 1480.1968)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="0" y="15">Last updated: 25.01.2022, 18:00</tspan>
+        </text>
+      </g>
+      <g id="Line_258">
+        <path d="M 668.9764 882.3976 L 668.9764 1040.315 L 967.3437 1040.315" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Group_890">
+        <g id="Graphic_893">
+          <rect x="1195.4012" y="1099.8425" width="104.88189" height="102.04724" fill="white"/>
+          <rect x="1195.4012" y="1099.8425" width="104.88189" height="102.04724" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_892">
+          <text transform="translate(1198.7845 1113.3465)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="5.488" y="16">Normalised</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="13.896" y="35.46411">exposure</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="18.216" y="54.92822">time (t  )</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="0" y="74.39233">(per window)</tspan>
+          </text>
+        </g>
+        <g id="Graphic_891">
+          <text transform="translate(1266.0362 1161.5354)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="black" x="9019452e-19" y="12">n</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_894">
+        <g id="Graphic_897">
+          <rect x="1203.9051" y="1108.3465" width="104.88189" height="102.04724" fill="white"/>
+          <rect x="1203.9051" y="1108.3465" width="104.88189" height="102.04724" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_896">
+          <text transform="translate(1207.2884 1121.8504)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="5.488" y="16">Normalised</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="13.896" y="35.46411">exposure</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="18.216" y="54.92822">time (t  )</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="0" y="74.39233">(per window)</tspan>
+          </text>
+        </g>
+        <g id="Graphic_895">
+          <text transform="translate(1274.5401 1170.0394)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="black" x="9019452e-19" y="12">n</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_898">
+        <g id="Graphic_901">
+          <rect x="1212.409" y="1116.8504" width="104.88189" height="102.04724" fill="white"/>
+          <rect x="1212.409" y="1116.8504" width="104.88189" height="102.04724" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_900">
+          <text transform="translate(1215.7923 1130.3543)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="5.488" y="16">Normalised</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="13.896" y="35.46411">exposure</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="18.216" y="54.92822">time (t  )</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="0" y="74.39233">(per window)</tspan>
+          </text>
+        </g>
+        <g id="Graphic_899">
+          <text transform="translate(1283.0441 1178.5433)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="black" x="9019452e-19" y="12">n</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_902">
+        <g id="Graphic_905">
+          <rect x="1220.913" y="1125.3543" width="104.88189" height="102.04724" fill="white"/>
+          <rect x="1220.913" y="1125.3543" width="104.88189" height="102.04724" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_904">
+          <text transform="translate(1224.2963 1138.8583)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="5.488" y="16">Normalised</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="13.896" y="35.46411">exposure</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="18.216" y="54.92822">time (t  )</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="0" y="74.39233">(per window)</tspan>
+          </text>
+        </g>
+        <g id="Graphic_903">
+          <text transform="translate(1291.548 1187.0472)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="black" x="9019452e-19" y="12">n</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_906">
+        <g id="Graphic_909">
+          <rect x="1229.4169" y="1133.8583" width="104.88189" height="102.04724" fill="white"/>
+          <rect x="1229.4169" y="1133.8583" width="104.88189" height="102.04724" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_908">
+          <text transform="translate(1232.8002 1147.3622)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="5.488" y="16">Normalised</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="13.896" y="35.46411">exposure</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="18.216" y="54.92822">time (t  )</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="0" y="74.39233">(per window)</tspan>
+          </text>
+        </g>
+        <g id="Graphic_907">
+          <text transform="translate(1300.052 1195.5512)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="black" x="9019452e-19" y="12">n</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_910">
+        <g id="Graphic_913">
+          <rect x="1237.9208" y="1142.3622" width="104.88189" height="102.04724" fill="white"/>
+          <rect x="1237.9208" y="1142.3622" width="104.88189" height="102.04724" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_912">
+          <text transform="translate(1241.3041 1155.8661)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="5.488" y="16">Normalised</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="13.896" y="35.46411">exposure</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="18.216" y="54.92822">time (t  )</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="0" y="74.39233">(per window)</tspan>
+          </text>
+        </g>
+        <g id="Graphic_911">
+          <text transform="translate(1308.5559 1204.0551)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="black" x="9019452e-19" y="12">n</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Graphic_914">
+        <rect x="85.75928" y="864.5669" width="160.8549" height="51.02362" fill="white"/>
+        <rect x="85.75928" y="864.5669" width="160.8549" height="51.02362" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(90.75928 871.1227)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="21.491444" y="15">„Far“ threshold</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" x="53.787444" y="34.448">79</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" y="34.448"> dB</tspan>
+        </text>
+      </g>
+      <g id="Graphic_916">
+        <rect x="85.75928" y="915.5905" width="160.8549" height="51.02362" fill="white"/>
+        <rect x="85.75928" y="915.5905" width="160.8549" height="51.02362" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(90.75928 922.1463)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="31.139444" y="15">„Far“ weight</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" x="64.307444" y="34.448">0.1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_917">
+        <rect x="85.75928" y="980.7874" width="160.8549" height="51.02362" fill="white"/>
+        <rect x="85.75928" y="980.7874" width="160.8549" height="51.02362" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(90.75928 987.3432)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="15.731444" y="15">„Very far“ weight</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" x="64.307444" y="34.448">0.0</tspan>
+        </text>
+      </g>
+      <g id="Graphic_918">
+        <rect x="510.2362" y="752.0039" width="303.73323" height="50.831424" fill="white"/>
+        <rect x="510.2362" y="752.0039" width="303.73323" height="50.831424" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(515.2362 767.6876)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="21.306623" y="16">t(att &gt;= </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" y="16">73</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#004a89" y="16"> </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="16">dB</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="16"> &amp;&amp; att &lt; </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" y="16">79</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#004a89" y="16"> </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="16">dB) </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="16">x </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" y="16">0.1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_919">
+        <rect x="510.2362" y="820.0354" width="303.73323" height="50.831424" fill="white"/>
+        <rect x="510.2362" y="820.0354" width="303.73323" height="50.831424" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(515.2362 835.7191)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="75.76262" y="16">t(att &gt;= </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" y="16">79</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#004a89" y="16"> </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="16">dB) </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="16">x </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" y="16">0.0</tspan>
+        </text>
+      </g>
+      <g id="Graphic_920">
+        <text transform="translate(660.845 733.6322)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="4.1111605" y="15">+</tspan>
+        </text>
+      </g>
+      <g id="Graphic_921">
+        <text transform="translate(660.845 801.0679)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="4.1111605" y="15">+</tspan>
+        </text>
+      </g>
+      <g id="Graphic_945">
+        <rect x="87.87402" y="1085.6693" width="155.90551" height="51.02362" fill="white"/>
+        <rect x="87.87402" y="1085.6693" width="155.90551" height="51.02362" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(92.87402 1092.225)" fill="#004a89">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#004a89" x="17.704759" y="15">Green (low risk)</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#004a89" x="28.75276" y="34.448">&lt; 5 </tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" y="34.448">minutes</tspan>
+        </text>
+      </g>
+      <g id="Line_946">
+        <path d="M 1368.4248 1256.9213 L 1391.811 1417.3228 L 1421.3402 1417.3228" marker-end="url(#FilledArrow_Marker_4)" stroke="#2b6f00" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_947">
+        <text transform="translate(1467.5794 1396.811)" fill="#2b6f00">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#2b6f00" x="20.96" y="16">&lt; 5</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#2b6f00" x="6963319e-19" y="35.46411">Low risk</tspan>
+        </text>
+      </g>
+      <g id="Graphic_949">
+        <rect x="87.87402" y="522.47184" width="155.90551" height="52.96123" fill="white"/>
+        <rect x="87.87402" y="522.47184" width="155.90551" height="52.96123" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(92.87402 530.50446)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="41.38476" y="15">Mapping</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="32.05676" y="33.448">TRL to TRV</tspan>
+        </text>
+      </g>
+      <g id="Line_950">
+        <path d="M 257.95275 530.07874 L 663.4764 530.07874 C 663.4764 524.57874 674.4764 524.57874 674.4764 530.07874 L 942.2718 530.07874" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+      </g>
+      <g id="Group_1000">
+        <g id="Group_1002">
+          <g id="Graphic_1004">
+            <text transform="translate(1351.4567 1067.189)" fill="#373637">
+              <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#373637" x="48.338956" y="15">Σ(</tspan>
+              <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" y="15">t  )</tspan>
+              <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="13.386956" y="33.448">of all windows </tspan>
+              <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x=".3309555" y="51.895996">(i.e. all exposures)</tspan>
+            </text>
+          </g>
+          <g id="Graphic_1003">
+            <text transform="translate(1414.8674 1075.0905)" fill="#373637">
+              <tspan font-family="Helvetica Neue" font-size="12" font-weight="400" fill="#373637" x="1.4747195" y="11">n</tspan>
+            </text>
+          </g>
+        </g>
+        <g id="Graphic_1001">
+          <text transform="translate(1419.9627 1075.2615)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="12" font-weight="400" fill="black" x="0" y="11">n</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_1026">
+        <g id="Graphic_1036">
+          <rect x="1310.9484" y="657.6378" width="422.3622" height="320.31496" fill="white"/>
+          <rect x="1310.9484" y="657.6378" width="422.3622" height="320.31496" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_1035">
+          <text transform="translate(1321.6177 670.24015)" fill="#c11a24">
+            <tspan font-family="Helvetica" font-size="16" font-weight="700" fill="#c11a24" x="0" y="15">Result:</tspan>
+            <tspan font-family="Helvetica" font-size="16" font-weight="400" fill="#c11a24" x="0" y="34">Multiple windows with a low exposure time each can </tspan>
+            <tspan font-family="Helvetica" font-size="16" font-weight="400" fill="#c11a24" x="0" y="53">add up to a </tspan>
+            <tspan font-family="Helvetica" font-size="16" font-weight="700" fill="#c11a24" y="53">high risk.</tspan>
+          </text>
+        </g>
+        <g id="Graphic_1034">
+          <rect x="1356.3027" y="782.3622" width="121.88976" height="45.35433" fill="white"/>
+          <rect x="1356.3027" y="782.3622" width="121.88976" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+          <text transform="translate(1361.3027 795.3073)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="12.096881" y="16">3.3 minutes</tspan>
+          </text>
+        </g>
+        <g id="Graphic_1033">
+          <rect x="1591.5783" y="824.8819" width="104.88189" height="102.04724" fill="#f7788a"/>
+          <rect x="1591.5783" y="824.8819" width="104.88189" height="102.04724" stroke="#c11a24" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+          <text transform="translate(1596.5783 856.4414)" fill="white">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="white" x="20.760945" y="16">Status:</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="white" x="10.864945" y="35.46411">High Risk</tspan>
+          </text>
+        </g>
+        <g id="Line_1032">
+          <line x1="1503.7043" y1="884.4094" x2="1556.1665" y2="884.4094" marker-end="url(#FilledArrow_Marker_3)" stroke="#c11a24" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_1031">
+          <text transform="translate(1502.8826 861.8976)" fill="#c11a24">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#c11a24" x="29842795e-20" y="16">Σ(t  )</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#c11a24" y="16"> </tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="#c11a24" y="16">&gt;= 9</tspan>
+          </text>
+        </g>
+        <g id="Graphic_1030">
+          <text transform="translate(1519.804 869.7992)" fill="#c11a24">
+            <tspan font-family="Helvetica Neue" font-size="12" font-weight="700" fill="#c11a24" x="9019452e-19" y="12">n</tspan>
+          </text>
+        </g>
+        <g id="Graphic_1029">
+          <rect x="1356.3027" y="847.559" width="121.88976" height="45.35433" fill="white"/>
+          <rect x="1356.3027" y="847.559" width="121.88976" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+          <text transform="translate(1361.3027 860.5042)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="12.096881" y="16">5.1 minutes</tspan>
+          </text>
+        </g>
+        <g id="Graphic_1028">
+          <rect x="1356.3027" y="912.7559" width="121.88976" height="45.35433" fill="white"/>
+          <rect x="1356.3027" y="912.7559" width="121.88976" height="45.35433" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+          <text transform="translate(1361.3027 925.701)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" font-weight="700" fill="black" x="12.096881" y="16">7.8 minutes</tspan>
+          </text>
+        </g>
+        <g id="Graphic_1027">
+          <text transform="translate(1321.6177 753.34645)" fill="black">
+            <tspan font-family="Helvetica" font-size="16" font-weight="700" fill="black" x="0" y="15">Example:</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
