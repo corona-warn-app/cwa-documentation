@@ -8,8 +8,8 @@
 * @corona-warn-app/cwa-moderators
 
 # Solution architecture document and its translations
-solution_architecture*.md @tklingbeil @corona-warn-app/cwa-moderators
-/images/solution_architecture/ @tklingbeil @corona-warn-app/cwa-moderators
+solution_architecture*.md @tklingbeil @mlenkeit @thomasaugsten @corona-warn-app/cwa-moderators
+/images/solution_architecture/ @tklingbeil @mlenkeit @thomasaugsten @corona-warn-app/cwa-moderators
 
 # Epidemiological Motivation of the Transmission Risk Level
 transmission_risk* @kirchnergo @hoehleatsu @weidemannf @dirkschumacher @benzlerj
