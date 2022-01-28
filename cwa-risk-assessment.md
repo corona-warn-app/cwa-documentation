@@ -1,6 +1,6 @@
 # How does the Corona-Warn-App identify an increased risk?
 
-An up-to-date description of how the risk assessment and risk calculation in the Corona-Warn-App works is available in the [Solution Architecture > Mobile Application](/solution_architecture.md#mobile-applications).
+An up-to-date description of how the risk assessment and risk calculation in the Corona-Warn-App works is available in the [Solution Architecture > Mobile Application](./solution_architecture.md#mobile-applications).
 
 Please note that this document is _not_ up-to-date anymore. It reflects the original risk assessment for Corona-Warn-App Release < 1.8 (approximately December 2020) and is kept here for documentation purposes only.
 
