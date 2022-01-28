@@ -4,17 +4,13 @@ An up-to-date description of how the risk assessment and risk calculation in the
 
 Please note that this document is _not_ up-to-date anymore. It reflects the original risk assessment for Corona-Warn-App Release < 1.8 (approximately December 2020) and is kept here for documentation purposes only.
 
-
 <br /><br /><br /><br />
 
-
-# DEPRECATION NOTICE
+## DEPRECATION NOTICE
 
 **The below content is not up-to-date anymore!**
 
 <br /><br /><br /><br />
-
-
 
 ---
 **Later calculation improvements**
