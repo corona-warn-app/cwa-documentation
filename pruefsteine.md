@@ -4,7 +4,7 @@ The Chaos Computer Club (CCC) proposed minimum privacy [requirements](https://ww
 
 The CCC is a well-reputed European hacker collective dealing with ["technical and societal issues, such as surveillance, privacy, freedom of information, hacktivism, data security, and many other interesting things around technology and hacking issues."](https://www.ccc.de/en)
 
-This document describes the compliance of the [current architecture](https://github.com/corona-warn-app/cwa-documentation/blob/master/solution_architecture.md) of the Corona-Warn-App with the *technical* criteria as outlined in the CCC's contact tracing requirements. For *political* and *epidemiological* criteria, we refer to the German Ministry of Health or the Robert-Koch-Institute, respectively.
+This document describes the compliance of the [current architecture](solution_architecture.md) of the Corona-Warn-App with the *technical* criteria as outlined in the CCC's contact tracing requirements. For *political* and *epidemiological* criteria, we refer to the German Ministry of Health or the Robert-Koch-Institute, respectively.
 
 We are confident that the concept of the Corona-Warn-App is compliant with the CCC's technical requirements. We invite all members of the public to assess the ongoing implementation and discuss any issues or concerns [directly in the development repositories](https://github.com/corona-warn-app) in an open and transparent manner.
 

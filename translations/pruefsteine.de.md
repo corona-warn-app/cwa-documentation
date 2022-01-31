@@ -4,7 +4,7 @@ Der Chaos Computer Club (CCC) hat einige [Minimalanforderungen](https://www.ccc.
 
 Der CCC ist eine renommierte europäische Hackervereinigung, die sich mit dem [Spannungsfeld technischer und sozialer Entwicklungen](https://www.ccc.de) befasst: „Die Aktivitäten des Clubs reichen von technischer Forschung und Erkundung am Rande des Technologieuniversums über Kampagnen, Veranstaltungen, Politikberatung, Pressemitteilungen und Publikationen bis zum Betrieb von Anonymisierungsdiensten und Kommunikationsmitteln.“
 
-Dieses Dokument beschreibt, inwieweit die [aktuelle Architektur](https://github.com/corona-warn-app/cwa-documentation/blob/master/solution_architecture.md) die *technischen* Anforderungen erfüllt. In Bezug auf die *politischen* und *epidemiologischen* Anforderungen verweisen wir an das deutsche Bundesministerium für Gesundheit bzw. das Robert Koch-Institut.
+Dieses Dokument beschreibt, inwieweit die [aktuelle Architektur](../solution_architecture.md) die *technischen* Anforderungen erfüllt. In Bezug auf die *politischen* und *epidemiologischen* Anforderungen verweisen wir an das deutsche Bundesministerium für Gesundheit bzw. das Robert Koch-Institut.
 
 Wir sind davon überzeugt, dass das Konzept der Corona-Warn-App die technischen Anforderungen des CCC erfüllt. Es sind alle dazu eingeladen, die laufende Implementierung der App zu prüfen und jegliche Probleme, Bedenken oder sonstige Themen offen und transparent [direkt in den Entwicklungs-Repositories](https://github.com/corona-warn-app) zu diskutieren.
 
