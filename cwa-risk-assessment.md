@@ -4,7 +4,7 @@ Please note that this document is _not_ up-to-date anymore. It reflects the orig
 
 <br /><br />
 
-## DEPRECATION NOTICE
+## IMPORTANT! - DEPRECATION NOTICE
 
 **The content of this document is not up-to-date and is no longer maintained.**
 
