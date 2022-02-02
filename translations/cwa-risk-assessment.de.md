@@ -1,6 +1,6 @@
 # Wie ermittelt die Corona-Warn-App ein erhöhtes Risiko?
 
-Dieses Dokument ist **nicht mehr aktuell**. Es beschreibt die ursprüngliche Risikoberechnung in der Corona-Warn-App vor Version 1.5 (in Oktober 2020 freigegeben) und wird hier aus Dokumentationsgründen noch beibehalten. Eine aktuelle Beschreibung der Risikoanalyse und -berechnung in der Corona-Warn-App befindet sich im Dokumentenabschnitt [Solution Architecture > Mobile Application](../solution_architecture.md#mobile-applications) (auf Englisch).
+Dieses Dokument ist **nicht mehr aktuell**. Es beschreibt die ursprüngliche Risikoberechnung in der Corona-Warn-App vor Version 1.5 (im Oktober 2020 veröffentlicht) und wird hier aus Dokumentationsgründen noch beibehalten. Eine aktuelle Beschreibung der Risikoanalyse und -berechnung in der Corona-Warn-App befindet sich im Dokumentenabschnitt [Solution Architecture > Mobile Application](../solution_architecture.md#mobile-applications) (auf Englisch).
 
 <br /><br />
 
