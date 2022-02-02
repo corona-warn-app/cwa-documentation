@@ -2,9 +2,13 @@
 
 Please note that this document is _not_ up-to-date anymore. It reflects the original risk assessment for the Corona-Warn-App before version 1.5 (released in October 2020) and is kept here for historical reference only. An up-to-date description of risk assessment and risk calculation in the Corona-Warn-App is available in the [Solution Architecture > Mobile Application](./solution_architecture.md#mobile-applications) document section.
 
-DEPRECATION NOTICE |
---- |
+<br /><br />
+
+## DEPRECATION NOTICE
+
 **The content of this document is not up-to-date and is no longer maintained.**
+
+<br /><br />
 
 ---
 
