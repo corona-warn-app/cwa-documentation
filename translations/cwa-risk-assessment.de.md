@@ -1,9 +1,10 @@
 # Wie ermittelt die Corona-Warn-App ein erhöhtes Risiko?
 
----
-**Nachträgliche Verbesserungen der Risikoberechnung**
+Dieses Dokument ist **nicht mehr aktuell**. Es beschreibt die ursprüngliche Risikoberechnung in der Corona-Warn-App vor Version 1.5 (in Oktober 2020 freigegeben) und wird hier aus Dokumentationsgründen noch beibehalten. Eine aktuelle Beschreibung der Risikoanalyse und -berechnung in der Corona-Warn-App befindet sich im Dokumentenabschnitt [Solution Architecture > Mobile Application](../solution_architecture.md#mobile-applications) (auf Englisch).
 
-Verbesserungen der Risikoberechnung sind mit den App-Versionen [V1.5 (Symptomerfassung)](https://www.coronawarn.app/de/blog/2020-10-19-version-1-5/) bzw. [V1.9 (Exposure Notification Framework v2)](https://www.coronawarn.app/de/blog/2020-12-16-corona-warn-app-version-1-9/) nach der Veröffentlichung dieses Dokuments eingeführt worden. Im FAQ-Abschnitt [Risiko-Ermittlung](https://www.coronawarn.app/de/faq/#risk_assessment) werden diesbezügliche Fragen beantwortet.
+WICHTIG! - DOKUMENT ZURÜCKGEZOGEN |
+--- |
+**Der Inhalt dieses Dokuments entspricht nicht mehr dem aktuellen Stand und wird nicht weiter gepflegt.**
 
 ---
 
@@ -157,7 +158,7 @@ Bettys aktualisierte Risikobenachrichtigung zeigt jetzt 2 Risikobegegnungen an, 
 ## Aktuelle Konfiguration
 
 Wie im [Abschnitt "*Risk Calculation*"](../solution_architecture.md#risk-calculation) des *Solution-Architecture*-Dokuments beschrieben, werden die jeweiligen Parameter für die Berechnung aus von einer Menge an Parametern bestimmt, die vom CWA-Server zur Verfügung gestellt werden.
-Diese Konfiguration kann sich über die Zeit auf Basis neuer Forschungsergebnisse und Erkentnisse ändern.
+Diese Konfiguration kann sich über die Zeit auf Basis neuer Forschungsergebnisse und Erkenntnisse ändern.
 Die jeweils aktuell gültigen Parameterwerte können im [*CWA-Server-Repository*](https://github.com/corona-warn-app/cwa-server) eingesehen werden:
 
 - [Konfiguration von Begegnungen](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/main-config/exposure-config.yaml)

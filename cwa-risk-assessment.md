@@ -1,21 +1,10 @@
 # How does the Corona-Warn-App identify an increased risk?
 
-An up-to-date description of how the risk assessment and risk calculation in the Corona-Warn-App works is available in the [Solution Architecture > Mobile Application](./solution_architecture.md#mobile-applications).
+Please note that this document is _not_ up-to-date anymore. It reflects the original risk assessment for the Corona-Warn-App before version 1.5 (released in October 2020) and is kept here for historical reference only. An up-to-date description of risk assessment and risk calculation in the Corona-Warn-App is available in the [Solution Architecture > Mobile Application](./solution_architecture.md#mobile-applications) document section.
 
-Please note that this document is _not_ up-to-date anymore. It reflects the original risk assessment for Corona-Warn-App Release < 1.8 (approximately December 2020) and is kept here for documentation purposes only.
-
-<br /><br /><br /><br />
-
-## DEPRECATION NOTICE
-
-**The below content is not up-to-date anymore!**
-
-<br /><br /><br /><br />
-
----
-**Later calculation improvements**
-
-Improvements to the risk assessment calculations were made in app versions [V1.5 (Symptom Recording)](https://www.coronawarn.app/en/blog/2020-10-19-version-1-5/) and [V1.9 (Exposure Notification Framework v2)](https://www.coronawarn.app/en/blog/2020-12-16-corona-warn-app-version-1-9/) after this document was published. The FAQ section [Risk Assessment](https://www.coronawarn.app/en/faq/#risk_assessment) answers related questions.
+DEPRECATION NOTICE |
+--- |
+**The content of this document is not up-to-date and is no longer maintained.**
 
 ---
 
