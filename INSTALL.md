@@ -27,7 +27,7 @@ Supported languages are:
 
 ## Prerequisites
 
-This repository is aligned to the Node.js 14 Maintenance LTS version of [Node.js](https://nodejs.org/en/) (which includes npm). Install the v14 (`lts/fremium`) version of Node.js which is available from [Node.js - Previous Releases](https://nodejs.org/en/download/releases/) page.
+Install the Node.js 16 Active LTS version of [Node.js](https://nodejs.org/en/) (which includes npm).
 
 ## Installation
 
