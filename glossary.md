@@ -48,5 +48,8 @@ This overview provides a description for all acronyms and special terms which ar
 
 To access the glossaries, scroll down the page to the Glossary / Glossar section:
 
+<!-- markdown-link-check-disable -->
+<!-- avoids HTTP 503 error due to security measures of https://www.bundesregierung.de -->
 - [English FAQs](https://www.bundesregierung.de/corona-warn-app-faq-englisch)
 - [German FAQs](https://www.bundesregierung.de/corona-warn-app-faq)
+<!-- markdown-link-check-enable -->
