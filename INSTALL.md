@@ -56,7 +56,7 @@ Every individual check can be run like so:
 npm runscript my-individual-check
 ```
 
-See the [package.json](https://github.com/corona-warn-app/cwa-documentation/blob/master/package.json) file for the currently available scripts.
+See the [package.json](package.json) file for the currently available scripts.
 
 #### Markdown linter
 
