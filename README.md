@@ -98,6 +98,7 @@ For an easier understanding of the used acronyms and special terms in our docume
 | [cwa-event-landingpage]    | Landing page for CWA which opens if the user does not have the app installed.                 |
 | [cwa-event-qr-code]        | Utility to generate QR codes for Event Registration.                                          |
 | [cwa-hotline]              | Contains all issues reg. the hotlines of the CWA.                                             |
+| [cwa-icao-transliteration] | The ICAO transliteration algorithm of the CWA.                                                |
 | [cwa-kotlin-jfn]           | JsonFunctions Engine - DCC Logic.                                                             |
 | [cwa-log-upload]           | Counterpart of the log upload in the app.                                                     |
 | [cwa-map-backend]          | Backend of map.schnelltestportal.de.                                                          |
@@ -123,6 +124,7 @@ For an easier understanding of the used acronyms and special terms in our docume
 [cwa-event-landingpage]: https://github.com/corona-warn-app/cwa-event-landingpage
 [cwa-event-qr-code]: https://github.com/corona-warn-app/cwa-event-qr-code
 [cwa-hotline]: https://github.com/corona-warn-app/cwa-hotline
+[cwa-icao-transliteration]: https://github.com/corona-warn-app/cwa-icao-transliteration
 [cwa-kotlin-jfn]: https://github.com/corona-warn-app/cwa-kotlin-jfn
 [cwa-log-upload]: https://github.com/corona-warn-app/cwa-log-upload
 [cwa-map-backend]: https://github.com/corona-warn-app/cwa-map-backend
