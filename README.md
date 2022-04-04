@@ -107,6 +107,7 @@ For an easier understanding of the used acronyms and special terms in our docume
 | [cwa-quick-test-backend]   | Backend implementation of the rapid antigen test portal and API for participating partners.   |
 | [cwa-quick-test-frontend]  | Frontend implementation of the rapid antigen test portal for participating partners.          |
 | [cwa-quicktest-onboarding] | Documentation about onboarding procedure for rapid antigen test partners.                     |
+| [cwa-registrierung]        | Registration portal for the rapid antigen test portal                                         |
 | [cwa-server]               | Backend implementation for the Apple/Google exposure notification API.                        |
 | [cwa-testresult-server]    | Receives PCR test results from connected laboratories.                                        |
 | [cwa-verification-iam]     | The identity and access management to interact with the verification server.                  |
@@ -133,6 +134,7 @@ For an easier understanding of the used acronyms and special terms in our docume
 [cwa-quick-test-backend]: https://github.com/corona-warn-app/cwa-quick-test-backend
 [cwa-quick-test-frontend]: https://github.com/corona-warn-app/cwa-quick-test-frontend
 [cwa-quicktest-onboarding]: https://github.com/corona-warn-app/cwa-quicktest-onboarding
+[cwa-registrierung]: https://github.com/corona-warn-app/cwa-registrierung
 [cwa-server]: https://github.com/corona-warn-app/cwa-server
 [cwa-testresult-server]: https://github.com/corona-warn-app/cwa-testresult-server
 [cwa-verification-iam]: https://github.com/corona-warn-app/cwa-verification-iam
