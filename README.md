@@ -101,6 +101,7 @@ For an easier understanding of the used acronyms and special terms in our docume
 | [cwa-icao-transliteration]   | The ICAO transliteration algorithm of the CWA.                                                |
 | [cwa-kotlin-jfn]             | JsonFunctions Engine - DCC Logic.                                                             |
 | [cwa-log-upload]             | Counterpart of the log upload in the app.                                                     |
+| [cwa-parent]                 | Repository containing Maven files for parent project and dependency building blocks.          |
 | [cwa-map-backend]            | Backend of map.schnelltestportal.de.                                                          |
 | [cwa-map-operators-frontend] | Frontend for test center operators to manage their test centers in a simple way.              |
 | [cwa-map-public-frontend]    | Public frontend of map.schnelltestportal.de.                                                  |
@@ -129,6 +130,7 @@ For an easier understanding of the used acronyms and special terms in our docume
 [cwa-icao-transliteration]: https://github.com/corona-warn-app/cwa-icao-transliteration
 [cwa-kotlin-jfn]: https://github.com/corona-warn-app/cwa-kotlin-jfn
 [cwa-log-upload]: https://github.com/corona-warn-app/cwa-log-upload
+[cwa-parent]: https://github.com/corona-warn-app/cwa-parent
 [cwa-map-backend]: https://github.com/corona-warn-app/cwa-map-backend
 [cwa-map-operators-frontend]: https://github.com/corona-warn-app/cwa-map-operators-frontend
 [cwa-map-public-frontend]: https://github.com/corona-warn-app/cwa-map-public-frontend
