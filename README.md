@@ -98,7 +98,7 @@ For an easier understanding of the used acronyms and special terms in our docume
 | [cwa-event-landingpage]      | Landing page for CWA which opens if the user does not have the app installed.                 |
 | [cwa-event-qr-code]          | Utility to generate QR codes for Event Registration.                                          |
 | [cwa-hotline]                | Contains all issues reg. the hotlines of the CWA.                                             |
-| [cwa-icao-transliteration]   | The ICAO transliteration algorithm of the CWA.                                                |
+| [cwa-icao-transliteration]   | A simple transliteration of non-latin letters into latin for the CWA.                         |
 | [cwa-kotlin-jfn]             | JsonFunctions Engine - DCC Logic.                                                             |
 | [cwa-log-upload]             | Counterpart of the log upload in the app.                                                     |
 | [cwa-parent]                 | Repository containing Maven files for parent project and dependency building blocks.          |
