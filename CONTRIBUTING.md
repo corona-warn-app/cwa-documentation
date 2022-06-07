@@ -30,7 +30,7 @@ Should you wish to work on an issue, please claim it first by commenting on the 
 
 If you have questions about one of the issues, please comment on them, and one of the maintainers will clarify.
 
-We kindly ask you to follow the [Pull Request Checklist](#Pull-Request-Checklist) to ensure reviews can happen accordingly.
+We kindly ask you to follow the [Pull Request Checklist](#pull-request-checklist) to ensure reviews can happen accordingly.
 
 ## Contributing Code
 
