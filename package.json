@@ -1,24 +1,20 @@
 {
   "name": "docs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Corona-Warn-App: Documentation repository",
   "main": "README.md",
   "dependencies": {
     "alex": "^8.2.0",
     "markdown-link-check": "^3.8.1",
-    "markdown-spellcheck": "^1.3.1",
     "markdownlint": "^0.20.4",
     "markdownlint-cli": "^0.23.2",
     "npm-run-all": "^4.1.5"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "run-s markdownlint checklinks format-spelling",
-    "spellcheck": "mdspell '**/*.md' --en-us -t -n -a --report '!**/node_modules/**/*.md' '!**/.github/**/*.md' '!**/translations/**/*.md'",
+    "test": "run-s markdownlint checklinks",
     "markdownlint": "markdownlint '**/*.md' --ignore node_modules",
     "checklinks": "find . -not -path \"*node_modules*\" -not -path \"*.github*\" -name \"*.md\" | xargs -n 1 markdown-link-check",
-    "detect-inconsiderate-language": "alex",
-    "format-spelling": "sort < .spelling | sort | uniq | tee .spelling.tmp > /dev/null && mv .spelling.tmp .spelling"
+    "detect-inconsiderate-language": "alex"
   },
   "repository": {
     "type": "git",
