@@ -93,7 +93,7 @@ For an easier understanding of the used acronyms and special terms in our docume
 | [cwa-app-android]            | Native Android app using the Apple/Google exposure notification API.                          |
 | [cwa-app-ccl]                | Common Covid Logic (CCL) for Android and iOS.                                                 |
 | [cwa-app-ios]                | Native iOS app using the Apple/Google exposure notification API.                              |
-| [cwa-dcc-server]             | Backend implementation of the process to issue EU Digital Covid Certificate CovidCertificate. |
+| [cwa-dcc-server]             | Backend implementation of the process to issue EU Digital Covid Certificate.                  |
 | [cwa-documentation]          | Project overview, general documentation and white papers.                                     |
 | [cwa-event-landingpage]      | Landing page for CWA which opens if the user does not have the app installed.                 |
 | [cwa-event-qr-code]          | Utility to generate QR codes for Event Registration.                                          |
