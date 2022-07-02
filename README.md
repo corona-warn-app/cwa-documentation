@@ -88,36 +88,36 @@ For an easier understanding of the used acronyms and special terms in our docume
 
 ## Repositories
 
-| Repository                   | Description                                                                                   |
-| ---------------------------- | --------------------------------------------------------------------------------------------- |
-| [cwa-app-android]            | Native Android app using the Apple/Google exposure notification API.                          |
-| [cwa-app-ccl]                | Common Covid Logic (CCL) for Android and iOS.                                                 |
-| [cwa-app-ios]                | Native iOS app using the Apple/Google exposure notification API.                              |
-| [cwa-dcc-server]             | Backend implementation of the process to issue EU Digital Covid Certificate.                  |
-| [cwa-documentation]          | Project overview, general documentation and white papers.                                     |
-| [cwa-event-landingpage]      | Landing page for CWA which opens if the user does not have the app installed.                 |
-| [cwa-event-qr-code]          | Utility to generate QR codes for Event Registration.                                          |
-| [cwa-hotline]                | Contains all issues reg. the hotlines of the CWA.                                             |
-| [cwa-icao-transliteration]   | A simple transliteration of non-latin letters into latin for the CWA.                         |
-| [cwa-kotlin-jfn]             | JsonFunctions Engine - DCC Logic.                                                             |
-| [cwa-log-upload]             | Counterpart of the log upload in the app.                                                     |
-| [cwa-parent]                 | Repository containing Maven files for parent project and dependency building blocks.          |
-| [cwa-map-backend]            | Backend of map.schnelltestportal.de.                                                          |
-| [cwa-map-operators-frontend] | Frontend for test center operators to manage their test centers in a simple way.              |
-| [cwa-map-public-frontend]    | Public frontend of map.schnelltestportal.de.                                                  |
-| [cwa-ppa-server]             | Backend implementation for the privacy-preserving analytics server.                           |
-| [cwa-quick-test-backend]     | Backend implementation of the rapid antigen test portal and API for participating partners.   |
-| [cwa-quick-test-frontend]    | Frontend implementation of the rapid antigen test portal for participating partners.          |
-| [cwa-quicktest-onboarding]   | Documentation about onboarding procedure for rapid antigen test partners.                     |
-| [cwa-registrierung]          | Registration portal for the rapid antigen test portal                                         |
-| [cwa-server]                 | Backend implementation for the Apple/Google exposure notification API.                        |
-| [cwa-testresult-server]      | Receives PCR test results from connected laboratories.                                        |
-| [cwa-verification-iam]       | The identity and access management to interact with the verification server.                  |
-| [cwa-verification-portal]    | The portal to interact with the verification server.                                          |
-| [cwa-verification-server]    | Backend implementation of the verification process.                                           |
-| [cwa-website]                | The official website for the Corona-Warn-App.                                                 |
-| [cwa-wishlist]               | Community feature requests.                                                                   |
-| [dcc-rule-translation]       | Translations of Booster Notification Rules.                                                   |
+| Repository                   | Description                                                                                 |
+| ---------------------------- | ------------------------------------------------------------------------------------------- |
+| [cwa-app-android]            | Native Android app using the Apple/Google exposure notification API.                        |
+| [cwa-app-ccl]                | Common Covid Logic (CCL) for Android and iOS.                                               |
+| [cwa-app-ios]                | Native iOS app using the Apple/Google exposure notification API.                            |
+| [cwa-dcc-server]             | Backend implementation of the process to issue EU Digital Covid Certificate.                |
+| [cwa-documentation]          | Project overview, general documentation and white papers.                                   |
+| [cwa-event-landingpage]      | Landing page for CWA which opens if the user does not have the app installed.               |
+| [cwa-event-qr-code]          | Utility to generate QR codes for Event Registration.                                        |
+| [cwa-hotline]                | Contains all issues reg. the hotlines of the CWA.                                           |
+| [cwa-icao-transliteration]   | A simple transliteration of non-latin letters into latin for the CWA.                       |
+| [cwa-kotlin-jfn]             | JsonFunctions Engine - DCC Logic.                                                           |
+| [cwa-log-upload]             | Counterpart of the log upload in the app.                                                   |
+| [cwa-parent]                 | Repository containing Maven files for parent project and dependency building blocks.        |
+| [cwa-map-backend]            | Backend of map.schnelltestportal.de.                                                        |
+| [cwa-map-operators-frontend] | Frontend for test center operators to manage their test centers in a simple way.            |
+| [cwa-map-public-frontend]    | Public frontend of map.schnelltestportal.de.                                                |
+| [cwa-ppa-server]             | Backend implementation for the privacy-preserving analytics server.                         |
+| [cwa-quick-test-backend]     | Backend implementation of the rapid antigen test portal and API for participating partners. |
+| [cwa-quick-test-frontend]    | Frontend implementation of the rapid antigen test portal for participating partners.        |
+| [cwa-quicktest-onboarding]   | Documentation about onboarding procedure for rapid antigen test partners.                   |
+| [cwa-registrierung]          | Registration portal for the rapid antigen test portal                                       |
+| [cwa-server]                 | Backend implementation for the Apple/Google exposure notification API.                      |
+| [cwa-testresult-server]      | Receives PCR test results from connected laboratories.                                      |
+| [cwa-verification-iam]       | The identity and access management to interact with the verification server.                |
+| [cwa-verification-portal]    | The portal to interact with the verification server.                                        |
+| [cwa-verification-server]    | Backend implementation of the verification process.                                         |
+| [cwa-website]                | The official website for the Corona-Warn-App.                                               |
+| [cwa-wishlist]               | Community feature requests.                                                                 |
+| [dcc-rule-translation]       | Translations of Booster Notification Rules.                                                 |
 
 [cwa-app-android]: https://github.com/corona-warn-app/cwa-app-android
 [cwa-app-ccl]: https://github.com/corona-warn-app/cwa-app-ccl
