@@ -1,5 +1,5 @@
 <p align="center">
- <a href="https://www.coronawarn.app/en/"><img src="https://raw.githubusercontent.com/corona-warn-app/cwa-documentation/master/images/CWA_title.png" width="400"></a>
+ <a href="https://www.coronawarn.app/en/"><img src="https://raw.githubusercontent.com/corona-warn-app/cwa-documentation/main/images/CWA_title.png" width="400"></a>
 </p>
 
 <hr />
@@ -71,11 +71,11 @@ The technical documents are intended for a technical audience and represent the 
 - [Corona-Warn-App Mobile Client (iOS) Architecture](https://github.com/corona-warn-app/cwa-app-ios/blob/main/docs/architecture-overview.md)
 - [Criteria for the Evaluation of Contact Tracing Apps](pruefsteine.md)
 - [Corona-Warn-App Security Overview](overview-security.md)
-- [Corona-Warn-App Backend Infrastructure Architecture Overview](https://github.com/corona-warn-app/cwa-documentation/blob/master/backend-infrastructure-architecture.pdf)
+- [Corona-Warn-App Backend Infrastructure Architecture Overview](backend-infrastructure-architecture.pdf)
 - [How does the Corona-Warn-App identify an increased risk?](solution_architecture.md#mobile-applications)
-- [Epidemiological Motivation of the Transmission Risk Level (PDF)](https://github.com/corona-warn-app/cwa-documentation/blob/master/transmission_risk.pdf), [(Rmd file)](https://github.com/corona-warn-app/cwa-documentation/blob/master/transmission_risk.Rmd), [(bib references)](https://github.com/corona-warn-app/cwa-documentation/blob/master/transmission_risk_references.bib)
+- [Epidemiological Motivation of the Transmission Risk Level (PDF)](transmission_risk.pdf), [(Rmd file)](transmission_risk.Rmd), [(bib references)](transmission_risk_references.bib)
 - [Corona-Warn-App Data Privacy Impact Assessment/DPIA (PDF, German)](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung.pdf), [DPIA Annex 1a](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage1a.pdf), [DPIA Annex 1b](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage1b.pdf), [DPIA Annex 1c](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage1c.pdf), [DPIA Annex 2](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage2.pdf), [DPIA Annex 3](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage3.pdf), [DPIA Annex 4](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage4.pdf), [DPIA Annex 5](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage5.pdf), [DPIA Annex 6](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage6.pdf), [DPIA Annex 7](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage7.pdf) and [DPIA Annex 8](https://www.coronawarn.app/assets/documents/cwa-datenschutz-folgenabschaetzung-anlage8.pdf)
-- [Exposure Notification API Testing](https://github.com/corona-warn-app/cwa-documentation/blob/master/2020_06_24_Corona_API_measurements.pdf)
+- [Exposure Notification API Testing](2020_06_24_Corona_API_measurements.pdf)
 - [Event Registration](event_registration.md)
 
 To be published:
@@ -88,47 +88,65 @@ For an easier understanding of the used acronyms and special terms in our docume
 
 ## Repositories
 
-| Repository                 | Description                                                                                 |
-| -------------------------- | ------------------------------------------------------------------------------------------- |
-| [cwa-documentation]        | Project overview, general documentation and white papers.                                   |
-| [cwa-app-ios]              | Native iOS app using the Apple/Google exposure notification API.                            |
-| [cwa-app-android]          | Native Android app using the Apple/Google exposure notification API.                        |
-| [cwa-website]              | The official website for the Corona-Warn-App.                                               |
-| [cwa-wishlist]             | Community feature requests.                                                                 |
-| [cwa-server]               | Backend implementation for the Apple/Google exposure notification API.                      |
-| [cwa-ppa-server]           | Backend implementation for the privacy-preserving analytics server.                         |
-| [cwa-verification-server]  | Backend implementation of the verification process.                                         |
-| [cwa-verification-portal]  | The portal to interact with the verification server.                                        |
-| [cwa-verification-iam]     | The identity and access management to interact with the verification server.                |
-| [cwa-testresult-server]    | Receives PCR test results from connected laboratories.                                      |
-| [cwa-log-upload]           | Counterpart of the log upload in the app.                                                   |
-| [cwa-quicktest-onboarding] | Documentation about onboarding procedure for rapid antigen test partners.                   |
-| [cwa-quick-test-frontend]  | Frontend implementation of the rapid antigen test portal for participating partners.        |
-| [cwa-quick-test-backend]   | Backend implementation of the rapid antigen test portal and API for participating partners. |
-| [cwa-event-landingpage]    | Landing page for CWA which opens if the user does not have the app installed.               |
-| [cwa-event-qr-code]        | Utility to generate QR codes for Event Registration.                                        |
-| [cwa-map-public-frontend]  | Public frontend of map.schnelltestportal.de.                                                |
-| [cwa-hotline]              | Contains all issues reg. the hotlines of the CWA.                                           |
+| Repository                   | Description                                                                                 |
+| ---------------------------- | ------------------------------------------------------------------------------------------- |
+| [cwa-app-android]            | Native Android app using the Apple/Google exposure notification API.                        |
+| [cwa-app-ccl]                | Common Covid Logic (CCL) for Android and iOS.                                               |
+| [cwa-app-ios]                | Native iOS app using the Apple/Google exposure notification API.                            |
+| [cwa-dcc-server]             | Backend implementation of the process to issue EU Digital Covid Certificate.                |
+| [cwa-documentation]          | Project overview, general documentation and white papers.                                   |
+| [cwa-event-landingpage]      | Landing page for CWA which opens if the user does not have the app installed.               |
+| [cwa-event-qr-code]          | Utility to generate QR codes for Event Registration.                                        |
+| [cwa-hotline]                | Contains all issues reg. the hotlines of the CWA.                                           |
+| [cwa-icao-transliteration]   | A simple transliteration of non-latin letters into latin for the CWA.                       |
+| [cwa-kotlin-jfn]             | JsonFunctions Engine - DCC Logic.                                                           |
+| [cwa-log-upload]             | Counterpart of the log upload in the app.                                                   |
+| [cwa-parent]                 | Repository containing Maven files for parent project and dependency building blocks.        |
+| [cwa-map-backend]            | Backend of map.schnelltestportal.de.                                                        |
+| [cwa-map-operators-frontend] | Frontend for test center operators to manage their test centers in a simple way.            |
+| [cwa-map-public-frontend]    | Public frontend of map.schnelltestportal.de.                                                |
+| [cwa-ppa-server]             | Backend implementation for the privacy-preserving analytics server.                         |
+| [cwa-quick-test-backend]     | Backend implementation of the rapid antigen test portal and API for participating partners. |
+| [cwa-quick-test-frontend]    | Frontend implementation of the rapid antigen test portal for participating partners.        |
+| [cwa-quicktest-onboarding]   | Documentation about onboarding procedure for rapid antigen test partners.                   |
+| [cwa-registrierung]          | Registration portal for the rapid antigen test portal                                       |
+| [cwa-server]                 | Backend implementation for the Apple/Google exposure notification API.                      |
+| [cwa-testresult-server]      | Receives PCR test results from connected laboratories.                                      |
+| [cwa-verification-iam]       | The identity and access management to interact with the verification server.                |
+| [cwa-verification-portal]    | The portal to interact with the verification server.                                        |
+| [cwa-verification-server]    | Backend implementation of the verification process.                                         |
+| [cwa-website]                | The official website for the Corona-Warn-App.                                               |
+| [cwa-wishlist]               | Community feature requests.                                                                 |
+| [dcc-rule-translation]       | Translations of Booster Notification Rules.                                                 |
 
-[cwa-documentation]: https://github.com/corona-warn-app/cwa-documentation
-[cwa-app-ios]: https://github.com/corona-warn-app/cwa-app-ios
 [cwa-app-android]: https://github.com/corona-warn-app/cwa-app-android
-[cwa-website]: https://github.com/corona-warn-app/cwa-website
-[cwa-wishlist]: https://github.com/corona-warn-app/cwa-wishlist
-[cwa-server]: https://github.com/corona-warn-app/cwa-server
-[cwa-ppa-server]: https://github.com/corona-warn-app/cwa-ppa-server
-[cwa-verification-server]: https://github.com/corona-warn-app/cwa-verification-server
-[cwa-verification-portal]: https://github.com/corona-warn-app/cwa-verification-portal
-[cwa-verification-iam]: https://github.com/corona-warn-app/cwa-verification-iam
-[cwa-testresult-server]: https://github.com/corona-warn-app/cwa-testresult-server
-[cwa-log-upload]: https://github.com/corona-warn-app/cwa-log-upload
-[cwa-quicktest-onboarding]: https://github.com/corona-warn-app/cwa-quicktest-onboarding
-[cwa-quick-test-frontend]: https://github.com/corona-warn-app/cwa-quick-test-frontend
-[cwa-quick-test-backend]: https://github.com/corona-warn-app/cwa-quick-test-backend
+[cwa-app-ccl]: https://github.com/corona-warn-app/cwa-app-ccl
+[cwa-app-ios]: https://github.com/corona-warn-app/cwa-app-ios
+[cwa-dcc-server]: https://github.com/corona-warn-app/cwa-dcc-server
+[cwa-documentation]: https://github.com/corona-warn-app/cwa-documentation
 [cwa-event-landingpage]: https://github.com/corona-warn-app/cwa-event-landingpage
 [cwa-event-qr-code]: https://github.com/corona-warn-app/cwa-event-qr-code
-[cwa-map-public-frontend]: https://github.com/corona-warn-app/cwa-map-public-frontend
 [cwa-hotline]: https://github.com/corona-warn-app/cwa-hotline
+[cwa-icao-transliteration]: https://github.com/corona-warn-app/cwa-icao-transliteration
+[cwa-kotlin-jfn]: https://github.com/corona-warn-app/cwa-kotlin-jfn
+[cwa-log-upload]: https://github.com/corona-warn-app/cwa-log-upload
+[cwa-parent]: https://github.com/corona-warn-app/cwa-parent
+[cwa-map-backend]: https://github.com/corona-warn-app/cwa-map-backend
+[cwa-map-operators-frontend]: https://github.com/corona-warn-app/cwa-map-operators-frontend
+[cwa-map-public-frontend]: https://github.com/corona-warn-app/cwa-map-public-frontend
+[cwa-ppa-server]: https://github.com/corona-warn-app/cwa-ppa-server
+[cwa-quick-test-backend]: https://github.com/corona-warn-app/cwa-quick-test-backend
+[cwa-quick-test-frontend]: https://github.com/corona-warn-app/cwa-quick-test-frontend
+[cwa-quicktest-onboarding]: https://github.com/corona-warn-app/cwa-quicktest-onboarding
+[cwa-registrierung]: https://github.com/corona-warn-app/cwa-registrierung
+[cwa-server]: https://github.com/corona-warn-app/cwa-server
+[cwa-testresult-server]: https://github.com/corona-warn-app/cwa-testresult-server
+[cwa-verification-iam]: https://github.com/corona-warn-app/cwa-verification-iam
+[cwa-verification-portal]: https://github.com/corona-warn-app/cwa-verification-portal
+[cwa-verification-server]: https://github.com/corona-warn-app/cwa-verification-server
+[cwa-website]: https://github.com/corona-warn-app/cwa-website
+[cwa-wishlist]: https://github.com/corona-warn-app/cwa-wishlist
+[dcc-rule-translation]: https://github.com/corona-warn-app/dcc-rule-translation
 
 ## Licensing
 

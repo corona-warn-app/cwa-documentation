@@ -14,10 +14,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup Node.js environment (v14)
+      - name: Setup Node.js environment (v16)
         uses: actions/setup-node@v2
         with:
-          node-version: 'lts/fermium'        
+          node-version: 'lts/gallium'        
 
       - name: Install npm dependencies
         if: always()
@@ -33,11 +33,6 @@ jobs:
         if: always()
         run: |
           npm run-script checklinks
-
-      #- name: Spellchecking english
-      #  if: always()
-      #  run: |
-      #    npm run-script spellcheck
 
       #- name: Detect inconsiderate language
       #  if: always()
