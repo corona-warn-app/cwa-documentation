@@ -21,9 +21,12 @@ We assume a close association of a mobile phone and its user and, thus, equate t
    2. [Data URL](#data-url)
    3. [Data retention](#data-retention)
 3. [MOBILE APPLICATIONS](#mobile-applications)
-   1. [Attenuation Buckets](#attenuation-buckets)
-   2. [Risk Calculation](#risk-calculation)
-   3. [Data transfer and data processing](#data-transfer-and-data-processing)
+   1. [Supported Devices](#supported-devices)
+   2. [ENF Usage](#enf-usage)
+   3. [Attenuation Buckets](#attenuation-buckets)
+   4. [Risk Calculation](#risk-calculation)
+   5. [Days Since Onset of Symptoms](#days-since-onset-of-symptoms)
+   6. [Data transfer and data processing](#data-transfer-and-data-processing)
 4. [RUNTIME ENVIRONMENT (HOSTING)](#runtime-environment-hosting)
    1. [Bandwidth estimations](#bandwidth-estimations)
 5. [CROSS-BORDER INTEROPERABILITY](#cross-border-interoperability)
@@ -215,7 +218,9 @@ The data on all involved servers is only retained as long as required. Diagnosis
 
 ## MOBILE APPLICATIONS
 
-The functional scope of the mobile applications (apps) is defined in the corresponding [scoping document](scoping_document.md). The apps are developed natively for Apple’s iOS and Google’s Android operating systems. They make use of the respective interfaces for the exposure notification, i.e. broadcasting and scanning for Bluetooth advertisement packages, see *Figure 8*.
+The functional scope of the mobile applications (apps) is defined in the corresponding [scoping document](scoping_document.md). The apps are developed natively for Apple’s iOS and Google’s Android operating systems. They make use of the Exposure Notification Framework (ENF), e.g. for broadcasting and scanning for Bluetooth advertisement packages.
+
+### Supported Devices
 
 For Apple devices an OS version of at least 12.5 (for older devices) or 13.7 is required for the system to work, as the framework is integrated into the operating system (see Figure 10).
 
@@ -225,23 +230,23 @@ For Apple devices an OS version of at least 12.5 (for older devices) or 13.7 is 
 
 For Android devices, the features are integrated into the [Google Play Services](https://developers.google.com/android/exposure-notifications/exposure-notifications-api#architecture), which means that only this specific application needs to be updated for it to work. Devices starting with Android 6.0 (API version 23) and integrated BLE chips are [supported](https://developers.google.com/android/exposure-notifications/exposure-notifications-api#architecture).
 
+### ENF Usage
+
+The Exposure Notification Framework (ENF) encapsulates handling of the keys, including all cryptographic operations on them, and broadcasting and scanning for Bluetooth advertisement packages for the app (see *Figure 11* and *Figure 12*). The app itself does not have access to the collected exposures, i.e. the Rolling Proximity Identifiers, and neither is it informed if a new one has been collected by the framework. The only output of the ENF upon an infection is a collection of temporary exposure keys as shown in *Figure 11*. Those are subsequently called diagnosis keys.
+
 | ![Figure 11: Architecture overview of the mobile application (focused on API usage/BLE communication)](images/solution_architecture/architecture_overview.svg "Figure 11: Architecture overview of the mobile application (focused on API usage/BLE communication)") |
 |:--:|
 | **Figure 11: Architecture overview of the mobile application (focused on API usage/BLE communication)**|
-
-The app itself does not have access to the collected exposures, i.e. the Rolling Proximity Identifiers, and neither is it informed if a new one has been collected by the framework. As depicted in the *Figure 10* and *Figure 11*, the Exposure Notification encapsulates handling of the keys, including all cryptographic operations on them. The only output of the black box upon an infection is a collection of temporary exposure keys as shown in *Figure 10*. Those are subsequently called diagnosis keys.
 
 | ![Figure 12: Key flow from the sending perspective (as described in the specification by Apple/Google)](images/solution_architecture/key_flow_sending.svg "Figure 12: Key flow from the sending perspective (as described in the specification by Apple/Google)") |
 |:--:|
 | **Figure 12: Key flow from the sending perspective (as described in the specification by Apple/Google)**|
 
-The encapsulation especially applies to the part where matches are calculated, as the framework only accepts the diagnosis keys as input, matches them to (internally stored) RPIs and returns a list of exposure events without a link to the corresponding Rolling Proximity Identifiers (see *Figure 12*). With the use of the corresponding Associated Encrypted Metadata Key, the Associated Encrypted Metadata (AEM) of the captured RPI can be decrypted. This metadata contains the transmission power (which is used to calculate the attenuation). The Exposure Notification Framework assembles exposures into 30-minute-windows per other device and 24-hour epoch. Those windows contain additional details for individual scan instances, which will be explained later.
+The encapsulation especially applies to the part where matches are calculated, as the framework only accepts the diagnosis keys as input, matches them to (internally stored) RPIs and returns a list of exposure events without a link to the corresponding Rolling Proximity Identifiers (see *Figure 13*). With the use of the corresponding Associated Encrypted Metadata Key, the Associated Encrypted Metadata (AEM) of the captured RPI can be decrypted. This metadata contains the transmission power (which is used to calculate the attenuation).
 
 | ![Figure 13: Key flow from the receiving perspective (as described in the specification by Apple/Google)](images/solution_architecture/key_flow_receiving.svg "Figure 13: Key flow from the receiving perspective (as described in the specification by Apple/Google)") |
 |:--:|
 | **Figure 13: Key flow from the receiving perspective (as described in the specification by Apple/Google)**|
-
-[Information provided from the framework API to the app per exposure](https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ExposureNotification-FrameworkDocumentationv1.2.pdf):
 
 All exposure events are collected by the ENF internally and are split up into "Exposure Windows", which represent all instances where one other specific device (without known identity) has been detected within a 30 minute window. If an encounter lasted for more then 30 minutes, multiple exposure windows are derived. Those cannot be related to each other neither can it be determined in which order (and possible overlap), exposures windows have occurred. This means that if for example five exposure windows are presented to the app by the ENF, it cannot be determined whether those have been five different devices or a single other device with 2.5 hours of contact. Same applies to the timely arrangement, i.e. all windows could have happened in parallel, with partial overlap or after one another.
 
@@ -251,9 +256,9 @@ All exposure events are collected by the ENF internally and are split up into "E
 
 Each exposure window contains the following information:
 
-- **infectiousness** and **report type** parameters, defined by the sending app
-- **day of the exposure**
-- **multiple scan instances**, i.e. occurrences, where the other device has been actively identified during the scanning process
+- **infectiousness** and **report type** - these parameters are attached to the respective diagnosis key by the sending app.
+- **day of the exposure** - this parameter is determined by ENF based on when the respective RPI was received. Note that even though precise timestamp information exists in ENF, only the day itself is exposed (i.e. YYYY-MM-DD).
+- **multiple scan instances** - this parameter represents occurrences where the other device has been actively identified during the scanning process. A scan instance consists of "seconds since last scan", i.e. for how long the other device was identified, and attenuation information as a measure of distance between the devices.
 
 ### Attenuation Buckets
 
@@ -268,24 +273,102 @@ Currently, the application forms four attenuation ranges (sometimes also called 
 
 ### Risk Calculation
 
-The information listed above is not visible to the user, but is used internally to calculate a risk score, which again is mapped to one specific app-defined risk level. This easy-to-understand risk level is displayed to the user. Further information regarding the individual exposure events (such as the matched Rolling Proximity Identifier, the Temporary Exposure Key or the exact time) remains within the secure storage of the framework and cannot be retrieved by the application.
+The Exposure Windows form the foundation of the risk calculation in the app. The result is an easy-to-understand risk level that is displayed to the user: low risk (i.e. _green_) or high risk _red_. The details of the risk calculation, e.g. exposure windows or intermediate results, are not visible to the user. Further information regarding the individual exposure events (such as the matched Rolling Proximity Identifier, the Temporary Exposure Key or the exact time) remains within the secure storage of the framework and cannot be retrieved by the application.
 
-| ![Figure 15: Value mapping during the risk calculation](images/solution_architecture/trl_mapping.svg "Figure 15: Value mapping during the risk calculation") |
+Within the risk calculation, the app can distinguish eight different "transmission risk levels" (TRL) of an exposure window. The TRL is a measure for the infectiousness of user of the sending app on a given day. While an exposure window already has a dedicated "infectiousness" parameter, the ENF effectively only allows two different values for it ("standard" and "high"); it cannot be used to represent eight values. The "report type" parameter has four different values and is irrelevant for the app in its original meaning (i.e. all exposures in the app are based on a "confirmed test" result). Therefore, the app uses the two possible values of the "infectiousness" parameter and the four possible values for the "report type" parameter to encode eight different TRLs. The mapping is described in _Figure 15_.
+
+| ![Figure 15: Deriving the transmission risk level](images/solution_architecture/trl_mapping.svg "Figure 15: Deriving the transmission risk level") |
 |:--:|
-| **Figure 15: Value mapping during the risk calculation**|
+| **Figure 15: Deriving the transmission risk level**|
 
-The Exposure Notification framework allows to attach as "days since onset of symptoms" parameter to the diagnosis key while uploading them to the server. As this parameter strongly influences the infectiousness during an encounter, it is also used in the risk calculation. However, the ENF only allows a translation from the DSOS to either "no risk" (0), "low risk" (1) or "high risk" (2). To allow a more fine grained interpretation of the exposure windows, the additional parameter "report type" (four possible values) is used to derive an internal "Transmission Risk Level" with eight possible values. Of those eight values, two are dropped by the ENF automatically, as the report type "recursive" might be dropped in current implementations. It is important to understand, that the field "report type" does not correspond to the actual report type, but is only technically used as a 2 bit field. The mapping is also shown in Figure 15.
+Note that _Figure 15_ shows that the "infectiousness" parameter itself is derived from "days since onset of symptoms" (DSOS). The DSOS is a relative measure and determined by the sending app for each diagnosis key based on the date to which a diagnosis key refers to and the date onset of symptoms (see also [Days Since Onset of Symptoms](#days-since-onset-of-symptoms)).
+
+*Figure 16* displays how the total risk score is calculated from the exposure windows. The application is provided with a set of parameters, which are marked in blue within the figure.
+Those parameters are regularly downloaded from the CWA Server, which means they can be modified without requiring a new version of the application (see [`risk-calculation-parameters-1.15.yaml`](https://github.com/corona-warn-app/cwa-server/blob/main/services/distribution/src/main/resources/main-config/v2/risk-calculation-parameters-1.15.yaml) for details).
+
+In a first step, each exposure window is processed individually. The duration of each scan instance (i.e. "seconds since last scan") is weighted according to its attenuation. When those weighted durations are summed up, they are multiplied with the "transmission risk value" (which in turn is derived from the TRL described above). The result is a normalized exposure time on a specific day (e.g. "10 normalized exposure minutes on May 3 in a 30-minute window"). This information is used by the app to determine if an individual encounter (i.e. exposure window) by itself is a low or high risk exposure.
+
+In a second step, the normalized exposure times are summed up by day (e.g. "20 normalized exposure minutes on May 3"). This information is used by the app to determine if the sum of all encounters on a given day is a low or high risk exposure.
 
 | ![Figure 16: Risk calculation](images/solution_architecture/risk_calculation.svg "Figure 16: Risk calculation") |
 |:--:|
 | **Figure 16: Risk calculation**|
 
-*Figure 16* displays how the total risk score is being calculated. The application is provided with a set of parameters, which are marked in blue within the figure.
-Those parameters are regularly downloaded from the CWA Server, which means they can be modified without requiring a new version of the application (see [`exposure-config.yaml`](https://github.com/corona-warn-app/cwa-server/blob/master/services/distribution/src/main/resources/main-config/exposure-config.yaml) for details).
-
-As mentioned before, the individual scan instances from the exposure windows are weighted according to the weight attached to the individual bucket. When those individual instances are summed up, they can be multiplied with a transmission risk value (which in turn is derived from the TRL described before). The result is one normalized exposure time per day. If those times are summed up, the overall risk can be determined, as shown in *Figure 16*.
-
 Note that the transmission risk level plays a special role in the above calculations: It can be defined by the app and be associated with each individual diagnosis key (i.e. specific for each day of an infected person) that is being sent to the server. It contains a value from 1 to 8, which can be used to represent a calculated risk defined by the health authority. As an example it could contain an estimate of the infectiousness of the potential infector at the time of contact and, hence, the likelihood of transmitting the disease. The specific values are defined as part of the [app](https://github.com/corona-warn-app/cwa-app-android/blob/master/Corona-Warn-App/src/main/java/de/rki/coronawarnapp/util/ProtoFormatConverterExtensions.kt) - a motivation of the parameter choices is found in the document [Epidemiological Motivation of the Transmission Risk Level](transmission_risk.pdf).
+
+### Days Since Onset of Symptoms
+
+The "days since onset of symptoms" (DSOS) is a relative numeric measure that indicates the infectiousness of a diagnosis key. The reference point is the date of onset of symptoms that a user can provide when uploading diagnosis keys.
+
+It is optional to provide information about the symptom onset and there different levels of granularity. This results in five different patterns for determining the DSOS of a diagnosis key and numeric values between -14 and 4000.
+
+The different patterns are:
+
+1. **No information** - the user declines to provide information about symptom onset
+
+    <details>
+    <summary>Figure 17: Determine DSOS for 'No information'</summary>
+
+    | ![Figure 17: Determine DSOS for 'No information'](images/solution_architecture/dsos-no-information.png "Figure 17: Determine DSOS for 'No information'") |
+    |:--:|
+    | **Figure 17: Determine DSOS for 'No information'**|
+
+    </details>
+
+2. **No symptoms** - the user indicates that he/she has symptoms
+
+    <details>
+    <summary>Figure 18: Determine DSOS for 'No symptoms'</summary>
+
+    | ![Figure 18: Determine DSOS for 'No symptoms'](images/solution_architecture/dsos-no-symptoms.png "Figure 18: Determine DSOS for 'No symptoms'") |
+    |:--:|
+    | **Figure 18: Determine DSOS for 'No symptoms'**|
+
+    </details>
+
+3. **No date information** - the user indicates that he/she has symptoms but declines to provide any date information
+
+    <details>
+    <summary>Figure 19: Determine DSOS for 'No date information'</summary>
+
+    | ![Figure 19: Determine DSOS for 'No date information'](images/solution_architecture/dsos-date-unknown.png "Figure 19: Determine DSOS for 'No date information'") |
+    |:--:|
+    | **Figure 19: Determine DSOS for 'No date information'**|
+
+    </details>
+
+4. **Date range** - the user indicates that he/she has symptoms and provides a date range (e.g. "within the last week", "1 to 2 weeks ago", "more than 2 weeks ago")
+
+    <details>
+    <summary>Figure 20: Determine DSOS for 'Date range'</summary>
+
+    | ![Figure 20: Determine DSOS for 'Date range'](images/solution_architecture/dsos-date-range.png "Figure 20: Determine DSOS for 'Date range'") |
+    |:--:|
+    | **Figure 20: Determine DSOS for 'Date range'**|
+
+    </details>
+
+5. **Specific date** - the user indicates that he/she has symptoms and provides a specific date
+
+    <details>
+    <summary>Figure 21: Determine DSOS for 'Specific date'</summary>
+
+    | ![Figure 21: Determine DSOS for 'Specific date'](images/solution_architecture/dsos-specific-date-known.png "Figure 21: Determine DSOS for 'Specific date'") |
+    |:--:|
+    | **Figure 21: Determine DSOS for 'Specific date'**|
+
+    </details>
+
+The DSOS value range -14 to 4000 encodes these different patterns for distribution of diagnosis keys via EFGS (see [CROSS-BORDER INTEROPERABILITY](#cross-border-interoperability)).
+
+When diagnosis keys are distributed for download by the app, a DSOS value is first mapped to a "transmission risk level" (see figures above) which is then encoded in the two parameters "days since onset of symptoms" and "report type" (see [Risk Calculation](#risk-calculation)).
+
+Examples:
+
+| DSOS during upload | DSOS pattern | Derived TRL | DSOS during distribution | Report Type during distribution |
+|--:|---|--:|--:|---|
+| -1 | Specific date | VIII | 2 | Confirmed Test (1) |
+| 1993 | No date information | III | 1 | Self Report (2) |
 
 ### Data Transfer and Data Processing
 
@@ -325,16 +408,16 @@ A definite prerequisite for compatibility is that the identifiers of the mobile 
 Each country has its own separate database, which contains the keys from infected individuals. In order to coordinate exposure information between countries, a common service is required to enable interoperability.
 The [European Federation Gateway Service (EFGS)](https://github.com/eu-federation-gateway-service/efgs-federation-gateway) enables interoperability of diagnosis keys between the connected country backend servers.
 
-| ![Figure 17: High-level EFGS overview](images/solution_architecture/EFGS_overview.jpg "Figure 17: High-level EFGS overview") |
+| ![Figure 22: High-level EFGS overview](images/solution_architecture/EFGS_overview.jpg "Figure 22: High-level EFGS overview") |
 |:--:|
-| **Figure 17: High-level EFGS overview**|
+| **Figure 22: High-level EFGS overview**|
 
 The Federation Gateway Service facilitates backend-to-backend integration. Countries can onboard incrementally, while the national backends retain flexibility and control over data distribution to their users.
 For example, if a German citizen visits Italy and then becomes infected, the keys of the German citizen are then relevant for the citizens of Italy. In this case the German citizen keys would be shared with the EFGS to enable the French backend to obtain the keys. Similarly, if a French user is visiting Germany, that user's keys are of relevance to the German database.
 
-| ![Figure 18: Autonomous National Backend](images/solution_architecture/EFGS_Autonomous_Backend.jpg "Figure 18: Autonomous National Backend") |
+| ![Figure 23: Autonomous National Backend](images/solution_architecture/EFGS_Autonomous_Backend.jpg "Figure 23: Autonomous National Backend") |
 |:--:|
-| **Figure 18: Autonomous National Backend**|
+| **Figure 23: Autonomous National Backend**|
 
 In the example above, user A from country A travels to country B and afterwards tests positive. Only the relevant users (those which came within proximity of the infected user A) in Country B will receive the alert.
 Devices only communicate with their country's backend. That country's backend is then responsible to send relevant keys to the EFGS.
@@ -346,11 +429,11 @@ In order for the EFGS to function correctly, all users must specify their visite
 
 Even though the system can support individuals in finding out whether they have been in proximity with a person that has been tested positive later on, the system also has limits (shown in *Figure 19*) that need to be considered. One of those limitations is that while the device constantly broadcasts its own Rolling Proximity Identifiers, it only listens for others in defined time slots. Those listening windows are three minutes apart and are defined as being only very short. In our considerations we expect the windows to have a length of four seconds. A lower attenuation means that the other device is closer, while a higher attenuation might either mean that the other device is farther away (e.g. a distance of more than two meters) or that there is something between the devices blocking the signal. This could be objects such as a wall, but also humans or animals.
 
-| ![Figure 19: Limitations of the Bluetooth Low Energy approach](images/solution_architecture/limitations.svg "Figure 19: Limitations of the Bluetooth Low Energy approach") |
+| ![Figure 24: Limitations of the Bluetooth Low Energy approach](images/solution_architecture/limitations.svg "Figure 24: Limitations of the Bluetooth Low Energy approach") |
 |:--:|
-|**Figure 19: Limitations of the Bluetooth Low Energy approach**|
+|**Figure 24: Limitations of the Bluetooth Low Energy approach**|
 
-In *Figure 19*, this is visualized, while focusing on the captured Rolling Proximity Identifiers by only a single device. We are assuming that devices broadcast their own RPI every 250ms and use listening windows with a length of four seconds, three minutes apart. There are five other active devices – each representing a different kind of possible exposure. In the example, devices 3 and 4 go completely unnoticed, while a close proximity with the user of device 2 cannot be detected. In contrast to that very brief, but close connection with the user of device 5 (e.g. only brushing the other person in the supermarket) is noticed and logged accordingly. The duration and interval of scanning needs to be balanced by Apple and Google against battery life, as more frequent scanning consumes more energy.
+In *Figure 24*, this is visualized, while focusing on the captured Rolling Proximity Identifiers by only a single device. We are assuming that devices broadcast their own RPI every 250ms and use listening windows with a length of four seconds, three minutes apart. There are five other active devices – each representing a different kind of possible exposure. In the example, devices 3 and 4 go completely unnoticed, while a close proximity with the user of device 2 cannot be detected. In contrast to that very brief, but close connection with the user of device 5 (e.g. only brushing the other person in the supermarket) is noticed and logged accordingly. The duration and interval of scanning needs to be balanced by Apple and Google against battery life, as more frequent scanning consumes more energy.
 
 It must be noted that some of the encounters described above are corner cases. While especially the cases with a very short proximity time cannot be detected due to technical limitations, the framework is able to detect longer exposures. As only exposures of longer duration within a certain proximity range are considered relevant for the intended purpose of this app, most of them are covered.
 
@@ -380,6 +463,6 @@ The authenticity proof is OS-specific and uses native capabilities:
 
 The following diagram shows the individual components and their interaction:
 
-| ![Figure 20: Privacy-preserving Data Donation](images/solution_architecture/device_attestation.svg "Figure 20: Privacy-preserving Data Donation") |
+| ![Figure 25: Privacy-preserving Data Donation](images/solution_architecture/device_attestation.svg "Figure 25: Privacy-preserving Data Donation") |
 |:--:|
-| **Figure 20: Privacy-preserving Data Donation**|
+| **Figure 25: Privacy-preserving Data Donation**|
