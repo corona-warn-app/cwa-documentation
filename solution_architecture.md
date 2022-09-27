@@ -23,10 +23,9 @@ We assume a close association of a mobile phone and its user and, thus, equate t
 3. [MOBILE APPLICATIONS](#mobile-applications)
    1. [Supported Devices](#supported-devices)
    2. [ENF Usage](#enf-usage)
-   3. [Attenuation Buckets](#attenuation-buckets)
-   4. [Risk Calculation](#risk-calculation)
-   5. [Days Since Onset of Symptoms](#days-since-onset-of-symptoms)
-   6. [Data transfer and data processing](#data-transfer-and-data-processing)
+   3. [Risk Calculation](#risk-calculation)
+   4. [Days Since Onset of Symptoms](#days-since-onset-of-symptoms)
+   5. [Data transfer and data processing](#data-transfer-and-data-processing)
 4. [RUNTIME ENVIRONMENT (HOSTING)](#runtime-environment-hosting)
    1. [Bandwidth estimations](#bandwidth-estimations)
 5. [CROSS-BORDER INTEROPERABILITY](#cross-border-interoperability)
@@ -150,7 +149,7 @@ The Corona-Warn-App Server needs to fulfill the following tasks:
   - Verify association with a positive test through the Verification Server and the associated workflow as explained in the “Retrieval of Lab Results and Verification Process” section and shown in the center of the left side of *Figure 7*.
   - Accept uploaded diagnosis keys and store them (optional) together with the corresponding information (days since onset of symptoms/transmission risk level) into the database. Note that the transport of connection metadata (e.g. IP) of the incoming connections for the upload of diagnosis keys is removed in a dedicated actor, labeled “Transport Metadata Removal” in *Figure 7*.
 - Provide [configuration parameters](#data-format) to the mobile applications
-  - Threshold values for [attenuation buckets](#attenuation-buckets)
+  - Threshold values for attenuation-based weighting
   - Encoding and mapping of the Transmission Risk Level
   - Threshold values for risk categories and alerts
   - Weight mappings for the ENF (not used, but need to be present)
@@ -192,7 +191,7 @@ The server makes the following information available through a RESTful interface
 - Newly-added Diagnosis Keys (Temporary Exposure Keys) for the time frame
 - Configuration parameters
   - Parameters for configuring the risk Apple/Google Exposure Notification Framework
-  - [Attenuation bucket](#attenuation-buckets) thresholds
+  - Threshold values for attenuation-based weighting
   - Risk score threshold to issue a warning
   - Risk score ranges for individual risk levels
 
@@ -259,17 +258,6 @@ Each exposure window contains the following information:
 - **infectiousness** and **report type** - these parameters are attached to the respective diagnosis key by the sending app.
 - **day of the exposure** - this parameter is determined by ENF based on when the respective RPI was received. Note that even though precise timestamp information exists in ENF, only the day itself is exposed (i.e. YYYY-MM-DD).
 - **multiple scan instances** - this parameter represents occurrences where the other device has been actively identified during the scanning process. A scan instance consists of "seconds since last scan", i.e. for how long the other device was identified, and attenuation information as a measure of distance between the devices.
-
-### Attenuation Buckets
-
-While in the first version of the Exposure Notification Framework, Apple and Google allowed to define multiple thresholds for the attenuation, this functionality can now be implemented within the application through the data from the exposure windows.
-
-Currently, the application forms four attenuation ranges (sometimes also called "buckets"), which have a specific weight applied:
-
-- Very far
-- Far
-- Medium
-- Close
 
 ### Risk Calculation
 
