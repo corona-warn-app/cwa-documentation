@@ -303,7 +303,7 @@ The different patterns are:
 
     </details>
 
-2. **No symptoms** - the user indicates that he/she has symptoms
+2. **No symptoms** - the user indicates that he/she has no symptoms
 
     <details>
     <summary>Figure 18: Determine DSOS for 'No symptoms'</summary>
