@@ -303,7 +303,7 @@ The different patterns are:
 
     </details>
 
-2. **No symptoms** - the user indicates that he/she has no symptoms
+2. **No symptoms** - the user has no symptoms
 
     <details>
     <summary>Figure 18: Determine DSOS for 'No symptoms'</summary>
@@ -314,7 +314,7 @@ The different patterns are:
 
     </details>
 
-3. **No date information** - the user indicates that he/she has symptoms but declines to provide any date information
+3. **No date information** - the user has symptoms but declines to provide any date information
 
     <details>
     <summary>Figure 19: Determine DSOS for 'No date information'</summary>
@@ -325,7 +325,7 @@ The different patterns are:
 
     </details>
 
-4. **Date range** - the user indicates that he/she has symptoms and provides a date range (e.g. "within the last week", "1 to 2 weeks ago", "more than 2 weeks ago")
+4. **Date range** - the user has symptoms and provides a date range (e.g. "within the last week", "1 to 2 weeks ago", "more than 2 weeks ago")
 
     <details>
     <summary>Figure 20: Determine DSOS for 'Date range'</summary>
@@ -336,7 +336,7 @@ The different patterns are:
 
     </details>
 
-5. **Specific date** - the user indicates that he/she has symptoms and provides a specific date
+5. **Specific date** - the user has symptoms and provides a specific date
 
     <details>
     <summary>Figure 21: Determine DSOS for 'Specific date'</summary>
