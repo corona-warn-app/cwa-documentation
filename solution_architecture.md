@@ -231,7 +231,7 @@ For Android devices, the features are integrated into the [Google Play Services]
 
 ### ENF Usage
 
-The Exposure Notification Framework (ENF) encapsulates handling of the keys, including all cryptographic operations on them, and broadcasting and scanning for Bluetooth advertisement packages for the app (see *Figure 11* and *Figure 12*). The app itself does not have access to the collected exposures, i.e. the Rolling Proximity Identifiers, and neither is it informed if a new one has been collected by the framework. The only output of the ENF upon an infection is a collection of temporary exposure keys as shown in *Figure 11*. Those are subsequently called diagnosis keys.
+The Exposure Notification Framework (ENF) encapsulates handling of the keys, including all cryptographic operations on them, and broadcasting and scanning for Bluetooth advertisement packages for the app (see *Figure 11* and *Figure 12*). The app itself does not have access to the collected exposures, i.e. the Rolling Proximity Identifiers, and is not notified by the framework if the collected exposures change. This includes events such as the collection of a new exposure or deletion of the exposure history. The only output of the ENF upon an infection is a collection of temporary exposure keys as shown in *Figure 11*. Those are subsequently called diagnosis keys.
 
 | ![Figure 11: Architecture overview of the mobile application (focused on API usage/BLE communication)](images/solution_architecture/architecture_overview.svg "Figure 11: Architecture overview of the mobile application (focused on API usage/BLE communication)") |
 |:--:|
