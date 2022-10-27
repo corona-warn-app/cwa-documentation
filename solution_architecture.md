@@ -203,6 +203,12 @@ In order to ensure the authenticity of the files, they need to be signed (accord
 |:--:|
 | **Figure 9: Data format (protocol buffer) specified by Apple/Google**|
 
+The public key for verifying the signature is:
+
+```text
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEc7DEstcUIRcyk35OYDJ95/hTg3UVhsaDXKT0zK7NhHPXoyzipEnOp3GyNXDVpaPi3cAfQmxeuFMZAIX2+6A5Xg==
+```
+
 ### Data URL
 
 Retrieving the data in a RESTful format, making it clearer to make it available through a transparent CDN (only requesting the files once).
