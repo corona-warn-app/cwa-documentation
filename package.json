@@ -4,7 +4,7 @@
   "description": "Corona-Warn-App: Documentation repository",
   "main": "README.md",
   "dependencies": {
-    "alex": "^8.2.0",
+    "alex": "^10.0.0",
     "markdown-link-check": "~3.8.7",
     "markdownlint": "^0.26.2",
     "markdownlint-cli": "^0.32.2",
