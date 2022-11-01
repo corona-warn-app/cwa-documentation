@@ -20,7 +20,7 @@ This repository checks against following specification:
 
 ## Prerequisites
 
-Install the Node.js 16 Maintenance version of [Node.js](https://nodejs.org/en/) (which includes npm).
+Install the Node.js 18 Active LTS version of [Node.js](https://nodejs.org/en/) (which includes npm).
 
 ## Installation
 
