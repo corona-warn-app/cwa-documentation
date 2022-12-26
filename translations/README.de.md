@@ -66,7 +66,7 @@ Die technischen Dokumente sind für ein technisches Publikum bestimmt und reprä
 
 ## Lizenzierung
 
-Copyright (c) 2020-2022 Deutsche Telekom AG und SAP SE oder ein SAP-Konzernunternehmen.
+Copyright (c) 2020-2023 Deutsche Telekom AG und SAP SE oder ein SAP-Konzernunternehmen.
 
 Lizenziert unter **Apache-Lizenz, Version 2.0** (die "Lizenz"). Sie dürfen diese Datei ausschließlich im Einklang mit der Lizenz verwenden.
 
