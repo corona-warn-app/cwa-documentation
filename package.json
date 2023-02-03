@@ -4,7 +4,6 @@
   "description": "Corona-Warn-App: Documentation repository",
   "main": "README.md",
   "dependencies": {
-    "alex": "^10.0.0",
     "markdown-link-check": "~3.8.7",
     "markdownlint": "^0.26.2",
     "markdownlint-cli": "^0.32.2",
@@ -13,8 +12,7 @@
   "scripts": {
     "test": "run-s markdownlint checklinks",
     "markdownlint": "markdownlint '**/*.md' --ignore node_modules",
-    "checklinks": "find . -not -path \"*node_modules*\" -not -path \"*.github*\" -name \"*.md\" | xargs -n 1 markdown-link-check",
-    "detect-inconsiderate-language": "alex"
+    "checklinks": "find . -not -path \"*node_modules*\" -not -path \"*.github*\" -name \"*.md\" | xargs -n 1 markdown-link-check"
   },
   "repository": {
     "type": "git",
