@@ -99,12 +99,3 @@ All cross references and external URLs are resolved.
 ```shell
 npm run-script checklinks
 ```
-
-#### Inconsiderate language scanner
-
-This checks against profanity and inconsiderate language. This is helpful for
-non-natives to detect words that could be inconsiderate. This utilizes [alex](https://github.com/get-alex/alex)
-
-```shell
-npm run-script detect-inconsiderate-language
-```
