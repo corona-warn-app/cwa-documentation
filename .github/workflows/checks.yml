@@ -33,8 +33,3 @@ jobs:
         if: always()
         run: |
           npm run-script checklinks
-
-      #- name: Detect inconsiderate language
-      #  if: always()
-      #  run: |
-      #    npm run-script detect-inconsiderate-language
