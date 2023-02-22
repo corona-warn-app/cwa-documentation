@@ -396,6 +396,8 @@ If the back end calls from the mobile applications cannot be spread as evenly as
 
 ## CROSS-BORDER INTEROPERABILITY
 
+**Important update on cross-border interoperability: The European Federation Gateway Service was shut down EU-wide in February 2023. There is no more exchange of diagnosis keys via the gateway.** The following paragraphs describe the implementation up to the date of the shut down in Febraury 2023.
+
 A definite prerequisite for compatibility is that the identifiers of the mobile devices can be matched, i.e. the GAEN framework by Apple and Google is being used.
 
 [Most European countries are developing similar contact tracing apps](https://ec.europa.eu/info/live-work-travel-eu/coronavirus-response/travel-during-coronavirus-pandemic/mobile-contact-tracing-apps-eu-member-states_en). These apps may use the common frameworks by Google and Apple, enabling transmission and detection of GAEN format diagnosis keys between devices running different contact tracing applications.
