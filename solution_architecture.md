@@ -396,7 +396,7 @@ If the back end calls from the mobile applications cannot be spread as evenly as
 
 ## CROSS-BORDER INTEROPERABILITY
 
-**Important update on cross-border interoperability: The European Federation Gateway Service was shut down EU-wide in February 2023. There is no more exchange of diagnosis keys via the gateway.** The following paragraphs describe the implementation up to the date of the shut down in Febraury 2023.
+**Important update on cross-border interoperability: The European Federation Gateway Service was shut down EU-wide in February 2023. There is no more exchange of diagnosis keys via the gateway.** The following paragraphs describe the implementation up to the date of the shutdown in February 2023.
 
 A definite prerequisite for compatibility is that the identifiers of the mobile devices can be matched, i.e. the GAEN framework by Apple and Google is being used.
 
